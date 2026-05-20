@@ -348,7 +348,7 @@ main {
   background: var(--color-surface);
   color: var(--color-ink);
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: 0.84rem;
   width: 200px;
   transition: all var(--transition);
 }
@@ -457,7 +457,7 @@ main {
 
 .poem-title {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--color-ink);
   line-height: 1.4;
@@ -495,10 +495,11 @@ main {
 
 .poem-text {
   font-family: var(--font-heading);
-  font-size: 0.95rem;
-  line-height: 2;
+  font-size: 1rem;
+  line-height: 2.2;
   color: var(--color-ink-light);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
+  text-align: justify;
 }
 
 .poem-text .line {
@@ -662,6 +663,8 @@ footer p { margin-bottom: 4px; }
 <a href="#main" class="skip-link">跳转到正文内容</a>
 <nav class="top-nav" aria-label="站点导航">
 <div class="top-nav-inner">
+<a href="index.html" class="top-nav-link">首页</a>
+<span class="top-nav-sep"></span>
 <a href="jingdian-tongyao.html" class="top-nav-link">经典童谣</a>
 <span class="top-nav-sep"></span>
 <a href="shenglv-qimeng.html" class="top-nav-link">声律启蒙</a>
@@ -722,16 +725,16 @@ footer p { margin-bottom: 4px; }
   <!-- Filter Bar -->
   <div class="filter-bar">
     <div class="filter-bar-inner">
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="searchInput" class="search-input" placeholder="搜索词名、作者…" aria-label="搜索宋词">
+      </div>
       <button class="filter-btn active" data-filter="all" onclick="filterPoems('all', this)">全部<span class="count">100</span></button>
       <button class="filter-btn" data-filter="haofang" onclick="filterPoems('haofang', this)">豪放词<span class="count">20</span></button>
       <button class="filter-btn" data-filter="wanyue" onclick="filterPoems('wanyue', this)">婉约词<span class="count">20</span></button>
       <button class="filter-btn" data-filter="xiejing" onclick="filterPoems('xiejing', this)">写景抒情<span class="count">20</span></button>
       <button class="filter-btn" data-filter="aiguo" onclick="filterPoems('aiguo', this)">爱国壮志<span class="count">20</span></button>
       <button class="filter-btn" data-filter="yongwu" onclick="filterPoems('yongwu', this)">咏物抒怀<span class="count">20</span></button>
-      <div class="search-wrap">
-        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" id="searchInput" class="search-input" placeholder="搜索词名、作者…" aria-label="搜索宋词">
-      </div>
     </div>
   </div>
 

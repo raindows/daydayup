@@ -67,16 +67,16 @@ main{max-width:1280px;margin:0 auto;padding:0 24px 80px}
 [data-period="newchina"] .section-era{background:#B22222}
 [data-period="sixties"] .section-era{background:var(--red-d)}
 .poem-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
-.poem-card{background:var(--surface);border:1px solid var(--bdr-l);border-radius:var(--r-md);padding:22px;transition:all 250ms ease;cursor:default;position:relative;overflow:hidden}
+.poem-card{background:var(--surface);border:1px solid var(--bdr-l);border-radius:var(--r-md);padding:28px 30px;transition:all 250ms ease;cursor:default;position:relative;overflow:hidden}
 .poem-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;border-radius:3px 0 0 3px;background:var(--red);opacity:0;transition:opacity var(--tr)}
 .poem-card:hover{box-shadow:var(--sh-m);transform:translateY(-2px);border-color:var(--bdr)}
 .poem-card:hover::before{opacity:1}
-.poem-card-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px}
+.poem-card-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px}
 .poem-title{font-family:var(--font-h);font-size:1.05rem;font-weight:600;color:var(--ink);line-height:1.4}
 .poem-form{flex-shrink:0;padding:2px 8px;border-radius:100px;font-size:.65rem;font-weight:500;letter-spacing:.04em;background:var(--bg-alt);color:var(--ink-m);margin-left:10px;align-self:flex-start;margin-top:3px}
 .poem-meta{font-size:.82rem;color:var(--ink-m);margin-bottom:12px;display:flex;align-items:center;gap:6px}
 .poem-year{font-size:.72rem;padding:1px 6px;background:var(--bg-alt);border-radius:var(--r-sm);color:var(--ink-m)}
-.poem-text{font-family:var(--font-h);font-size:.93rem;line-height:2;color:var(--ink-l);letter-spacing:.02em}
+.poem-text{font-family:var(--font-h);font-size:1rem;line-height:2.2;color:var(--ink-l);letter-spacing:.04em;text-align:justify}
 .poem-text .line{display:block}
 .poem-index{position:absolute;top:10px;right:14px;font-family:var(--font-h);font-size:.72rem;color:var(--ink-m);opacity:.35}
 .poem-tag{display:inline-block;margin-top:10px;padding:2px 8px;background:rgba(192,72,81,.08);color:var(--red);border-radius:100px;font-size:.7rem}
@@ -108,6 +108,8 @@ footer p{margin-bottom:4px}
 <a href="#main" class="skip-link">跳转到正文内容</a>
 <nav class="top-nav" aria-label="站点导航">
 <div class="top-nav-inner">
+<a href="index.html" class="top-nav-link">首页</a>
+<span class="top-nav-sep"></span>
 <a href="jingdian-tongyao.html" class="top-nav-link">经典童谣</a>
 <span class="top-nav-sep"></span>
 <a href="shenglv-qimeng.html" class="top-nav-link">声律启蒙</a>

@@ -67,7 +67,7 @@ main{max-width:1280px;margin:0 auto;padding:0 24px 80px}
 [data-cat="phenomenon"] .section-badge{background:var(--c-phenomenon)}
 [data-cat="daily"] .section-badge{background:var(--c-daily)}
 .char-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
-.char-card{background:var(--surface);border:1px solid var(--bdr-l);border-radius:var(--r-md);padding:22px;transition:all 250ms ease;cursor:default;position:relative;overflow:hidden}
+.char-card{background:var(--surface);border:1px solid var(--bdr-l);border-radius:var(--r-md);padding:28px 30px;transition:all 250ms ease;cursor:default;position:relative;overflow:hidden}
 .char-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;border-radius:3px 0 0 3px;opacity:0;transition:opacity var(--tr)}
 [data-cat="nature"] .char-card::before{background:var(--c-nature)}
 [data-cat="body"] .char-card::before{background:var(--c-body)}
@@ -83,9 +83,9 @@ main{max-width:1280px;margin:0 auto;padding:0 24px 80px}
 .char-info{display:flex;flex-direction:column;gap:2px}
 .char-pinyin{font-size:.9rem;color:var(--ink-m);font-weight:500}
 .char-category{font-size:.72rem;padding:2px 8px;border-radius:100px;background:var(--bg-alt);color:var(--ink-l);border:1px solid var(--bdr-l);display:inline-block;width:fit-content}
-.char-origin{font-size:.88rem;color:var(--ink-l);line-height:1.8}
+.char-origin{font-family:var(--font-h);font-size:1rem;color:var(--ink-l);line-height:2.2;letter-spacing:.04em;text-align:justify}
 .char-origin strong{color:var(--accent)}
-.char-story{font-size:.9rem;color:var(--ink-l);line-height:1.8}
+.char-story{font-family:var(--font-h);font-size:1rem;color:var(--ink-l);line-height:2.2;letter-spacing:.04em;text-align:justify}
 .char-words{font-size:.85rem;color:var(--ink);padding:10px 12px;background:var(--bg-alt);border-radius:var(--r-sm);border-left:3px solid var(--accent)}
 .char-words strong{color:var(--accent-d)}
 .char-tag{font-size:.72rem;padding:2px 10px;border-radius:100px;background:var(--bg-alt);color:var(--ink-l);border:1px solid var(--bdr-l);display:inline-block;width:fit-content}
@@ -122,6 +122,8 @@ main{padding:0 16px 60px}
 <a href="#main" class="skip-link">跳到正文</a>
 <nav class="top-nav" aria-label="站点导航">
 <div class="top-nav-inner">
+<a href="index.html" class="top-nav-link">首页</a>
+<span class="top-nav-sep"></span>
 <a href="jingdian-tongyao.html" class="top-nav-link">经典童谣</a>
 <span class="top-nav-sep"></span>
 <a href="shenglv-qimeng.html" class="top-nav-link">声律启蒙</a>
