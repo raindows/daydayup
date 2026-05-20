@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>天天向上 - 少儿启蒙学习乐园</title>
+<meta name="description" content="天天向上——少儿启蒙学习乐园，精选童谣、诗词、成语、历史、科学等12大模块，陪伴孩子快乐成长。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF7F2;--surface:#FFF;--ink:#2C2420;--ink-l:#5C524A;--ink-m:#8A7F75;--bdr-l:#EDE8E1;--accent:#C9A96E;--green:#7CB87C;--font-d:'Noto Serif SC',serif;--font-h:'Noto Serif SC',serif;--font-b:'Noto Sans SC',sans-serif;--r-md:12px;--tr:300ms ease}
+[data-theme="dark"]{--bg:#1A1714;--surface:#2A2621;--ink:#E8E0D6;--ink-l:#BFB5A8;--ink-m:#8A7F72;--bdr-l:#302B25;--accent:#E0C888}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-b);background:var(--bg);color:var(--ink);line-height:1.7;min-height:100vh;transition:background var(--tr),color var(--tr)}
+
+body::before{content:'';position:fixed;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--green),var(--accent));z-index:10000}
+
+.skip-link{position:absolute;top:-100%;left:16px;padding:8px 16px;background:var(--accent);color:#fff;border-radius:var(--r-md);z-index:10000;font-size:14px;text-decoration:none}
+.skip-link:focus{top:16px}
+
+.top-nav{position:sticky;top:0;z-index:1001;background:var(--surface);border-bottom:1px solid var(--bdr-l);padding:0 24px;transition:background var(--tr)}
+.top-nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;height:44px;gap:4px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+.top-nav-inner::-webkit-scrollbar{display:none}
+.top-nav-link{font-family:var(--font-b);font-size:.84rem;color:var(--ink-l);text-decoration:none;padding:6px 14px;border-radius:100px;border:1px solid transparent;transition:all var(--tr);white-space:nowrap;flex-shrink:0}
+.top-nav-link:hover{background:var(--bg);border-color:var(--bdr-l)}
+.top-nav-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.top-nav-link.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.top-nav-sep{width:1px;height:16px;background:var(--bdr-l);margin:0 4px;flex-shrink:0}
+
+.theme-toggle{position:fixed;top:52px;right:20px;z-index:1000;width:44px;height:44px;border:1px solid var(--bdr-l);border-radius:50%;background:var(--surface);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(44,36,32,.08);transition:all var(--tr)}
+.theme-toggle:hover{transform:scale(1.08);box-shadow:0 8px 32px rgba(44,36,32,.12)}
+.theme-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.theme-toggle svg{width:20px;height:20px;color:var(--ink)}
+[data-theme="dark"] .theme-toggle .icon-moon{display:none}
+[data-theme="light"] .theme-toggle .icon-sun{display:none}
+
+.hero{position:relative;min-height:max(75vh,520px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 24px;text-align:center}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 900px 600px at 50% 45%,rgba(201,169,110,.05),transparent);pointer-events:none}
+.hero h1{font-family:var(--font-d);font-size:clamp(3.5rem,10vw,7.5rem);font-weight:900;letter-spacing:.18em;line-height:1.15;color:var(--ink);animation:fu .8s ease both}
+.hero-line{width:56px;height:2px;background:var(--accent);margin:28px auto;border-radius:1px;animation:fu .8s ease .15s both}
+.hero-sub{font-family:var(--font-h);font-size:clamp(.88rem,2vw,1.08rem);font-weight:400;color:var(--ink-m);letter-spacing:.35em;animation:fu .8s ease .3s both}
+.hero-meta{font-size:.84rem;color:var(--ink-m);letter-spacing:.12em;margin-top:24px;opacity:.65;animation:fu .8s ease .45s both}
+@keyframes fu{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+
+.modules{max-width:1200px;margin:0 auto;padding:0 24px 120px}
+.module-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.module-card{display:flex;flex-direction:column;align-items:center;text-align:center;padding:40px 16px 34px;background:var(--surface);border:1px solid var(--bdr-l);border-radius:var(--r-md);text-decoration:none;color:var(--ink);transition:all var(--tr);position:relative;opacity:0;transform:translateY(24px)}
+.module-card.visible{opacity:1;transform:translateY(0)}
+.module-card::after{content:'';position:absolute;bottom:0;left:20%;right:20%;height:2px;border-radius:1px;background:var(--accent);opacity:0;transition:opacity var(--tr)}
+.module-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(44,36,32,.1);border-color:var(--accent)}
+.module-card:hover::after{opacity:0}
+[data-theme="dark"] .module-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.3)}
+.module-icon{font-size:2rem;margin-bottom:16px;display:block;transition:transform var(--tr)}
+.module-card:hover .module-icon{transform:scale(1.1)}
+.module-title{font-family:var(--font-h);font-size:.98rem;font-weight:600;letter-spacing:.05em}
+.module-desc{font-size:.78rem;color:var(--ink-m);line-height:1.5;margin-top:6px}
+
+footer{text-align:center;padding:56px 24px;border-top:1px solid var(--bdr-l)}
+footer::before{content:'';display:block;width:36px;height:2px;background:var(--accent);margin:0 auto 20px;border-radius:1px}
+footer p{font-size:.8rem;color:var(--ink-m);letter-spacing:.06em}
+footer+p{text-align:center;padding-bottom:48px}
+footer a{color:var(--accent);text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+@media(max-width:960px){.module-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){.module-grid{grid-template-columns:repeat(2,1fr);gap:12px}.module-card{padding:28px 12px 24px}.hero h1{letter-spacing:.1em}.hero-sub{letter-spacing:.2em}.top-nav{padding:0 16px}}
+@media print{.theme-toggle,.top-nav,body::before{display:none}}
+</style>
+</head>
+<body data-theme="light">
+<a href="#main" class="skip-link">跳转到主要内容</a>
+<nav class="top-nav" aria-label="站点导航">
+<div class="top-nav-inner">
+<a href="index.html" class="top-nav-link active">首页</a><span class="top-nav-sep"></span>
+<a href="jingdian-tongyao.html" class="top-nav-link">经典童谣</a><span class="top-nav-sep"></span>
+<a href="shenglv-qimeng.html" class="top-nav-link">声律启蒙</a><span class="top-nav-sep"></span>
+<a href="shaoer-tonghua.html" class="top-nav-link">少儿童话</a><span class="top-nav-sep"></span>
+<a href="shaoer-qimeng-shici.html" class="top-nav-link">启蒙诗词</a><span class="top-nav-sep"></span>
+<a href="hanzi-gushi.html" class="top-nav-link">汉字故事</a><span class="top-nav-sep"></span>
+<a href="baihua-shici.html" class="top-nav-link">百花诗词</a><span class="top-nav-sep"></span>
+<a href="shi-wan-ge-weishenme.html" class="top-nav-link">十万个为什么</a><span class="top-nav-sep"></span>
+<a href="shaoer-chengyu.html" class="top-nav-link">少儿成语</a><span class="top-nav-sep"></span>
+<a href="shangxia-wuqiannian.html" class="top-nav-link">上下五千年</a><span class="top-nav-sep"></span>
+<a href="sanshiliuji.html" class="top-nav-link">三十六计</a><span class="top-nav-sep"></span>
+<a href="song-ci-jingxuan.html" class="top-nav-link">宋词精选</a><span class="top-nav-sep"></span>
+<a href="maozedong-shici.html" class="top-nav-link">毛主席诗词</a>
+</div>
+</nav>
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="切换深色/浅色模式">
+<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+
+<section class="hero">
+<h1>天天向上</h1>
+<div class="hero-line"></div>
+<p class="hero-sub">少儿启蒙学习乐园</p>
+<p class="hero-meta">12 个模块 · 600+ 篇内容 · 100+ 位名人经典</p>
+</section>
+
+<main id="main">
+<section class="modules">
+<div class="module-grid">
+<a href="jingdian-tongyao.html" class="module-card"><span class="module-icon">🎵</span><h3 class="module-title">经典童谣</h3><p class="module-desc">朗朗上口的传统儿歌</p></a>
+<a href="shenglv-qimeng.html" class="module-card"><span class="module-icon">🎶</span><h3 class="module-title">声律启蒙</h3><p class="module-desc">感受汉语韵律之美</p></a>
+<a href="shaoer-tonghua.html" class="module-card"><span class="module-icon">📖</span><h3 class="module-title">少儿童话</h3><p class="module-desc">精彩有趣的童话故事</p></a>
+<a href="shaoer-qimeng-shici.html" class="module-card"><span class="module-icon">📝</span><h3 class="module-title">启蒙诗词</h3><p class="module-desc">百首经典诗词入门</p></a>
+<a href="hanzi-gushi.html" class="module-card"><span class="module-icon">📕</span><h3 class="module-title">汉字故事</h3><p class="module-desc">每个汉字都有故事</p></a>
+<a href="baihua-shici.html" class="module-card"><span class="module-icon">🌸</span><h3 class="module-title">百花诗词</h3><p class="module-desc">百花争艳诗意盎然</p></a>
+<a href="shi-wan-ge-weishenme.html" class="module-card"><span class="module-icon">🔬</span><h3 class="module-title">十万个为什么</h3><p class="module-desc">探索世界的奥秘</p></a>
+<a href="shaoer-chengyu.html" class="module-card"><span class="module-icon">💡</span><h3 class="module-title">少儿成语</h3><p class="module-desc">四字词语里的智慧</p></a>
+<a href="shangxia-wuqiannian.html" class="module-card"><span class="module-icon">🏯</span><h3 class="module-title">上下五千年</h3><p class="module-desc">中华五千年文明</p></a>
+<a href="sanshiliuji.html" class="module-card"><span class="module-icon">♟️</span><h3 class="module-title">三十六计</h3><p class="module-desc">古代兵法智慧谋略</p></a>
+<a href="song-ci-jingxuan.html" class="module-card"><span class="module-icon">🎭</span><h3 class="module-title">宋词精选</h3><p class="module-desc">婉约豪放宋词之美</p></a>
+<a href="maozedong-shici.html" class="module-card"><span class="module-icon">⭐</span><h3 class="module-title">毛主席诗词</h3><p class="module-desc">领袖诗词风采</p></a>
+</div>
+</section>
+</main>
+
+<footer>
+<p>天天向上 · 少儿启蒙学习乐园</p>
+</footer>
+<p style="text-align:center;padding-bottom:48px"><a href="https://github.com/raindows/daydayup" target="_blank" rel="noopener" style="font-size:.8rem;color:var(--ink-m);letter-spacing:.06em;text-decoration:none">GitHub</a></p>
+
+<script>
+function toggleTheme(){var t=document.body.dataset.theme==='dark'?'light':'dark';document.body.dataset.theme=t;localStorage.setItem('daydayup-theme',t)}
+(function(){var s=localStorage.getItem('daydayup-theme');if(s)document.body.dataset.theme=s})();
+(function(){var c=document.querySelectorAll('.module-card');c.forEach(function(e,i){e.style.transitionDelay=(i%4)*80+'ms'});var o=new IntersectionObserver(function(a){a.forEach(function(b){if(b.isIntersecting)b.target.classList.add('visible')})},{threshold:.1,rootMargin:'0px 0px -30px 0px'});c.forEach(function(e){o.observe(e)})})();
+</script>
+</body>
+</html>
