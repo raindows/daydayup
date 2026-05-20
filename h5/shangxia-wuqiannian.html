@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>上下五千年 - 中华历史故事Top100</title>
+<meta name="description" content="精选中华上下五千年经典历史故事Top100，按远古传说、夏商周、春秋战国、秦汉、三国两晋、隋唐、宋元、明清八大时期分类。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FDF8F4;--bg-alt:#F7EDE5;--surface:#FFF;--surface-h:#FFF9F5;--ink:#2C2420;--ink-l:#5C524A;--ink-m:#8A7F75;--bdr:#E5DDD3;--bdr-l:#EDE8E1;--accent:#B8382A;--accent-d:#962D22;--gold:#C9A96E;--gold-l:#E8D5A8;--c-ancient:#B8382A;--c-xia:#8B5E3C;--c-chunqiu:#5B6AAF;--c-qin:#2E7D5E;--c-sanguo:#9B5B8C;--c-tang:#C48830;--c-song:#5BA5C9;--c-ming:#E8843C;--font-d:'Noto Serif SC',serif;--font-h:'Noto Serif SC',serif;--font-b:'Noto Sans SC',sans-serif;--r-sm:6px;--r-md:12px;--r-lg:20px;--sh-s:0 1px 3px rgba(44,36,32,.06);--sh-m:0 4px 16px rgba(44,36,32,.08);--sh-l:0 8px 32px rgba(44,36,32,.10);--tr:200ms ease}
+[data-theme="dark"]{--bg:#1A1714;--bg-alt:#23201B;--surface:#2A2621;--surface-h:#342F29;--ink:#E8E0D6;--ink-l:#BFB5A8;--ink-m:#8A7F72;--bdr:#3A352E;--bdr-l:#302B25;--accent:#E8584A;--accent-d:#F07060;--gold:#E0C888;--gold-l:#A08040;--c-ancient:#E8584A;--c-xia:#C89070;--c-chunqiu:#7B8AD0;--c-qin:#4EC99A;--c-sanguo:#C87BB8;--c-tang:#E0A850;--c-song:#7CC0E0;--c-ming:#F0A060;--sh-s:0 1px 3px rgba(0,0,0,.2);--sh-m:0 4px 16px rgba(0,0,0,.3);--sh-l:0 8px 32px rgba(0,0,0,.35)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-b);background:var(--bg);color:var(--ink);line-height:1.7;min-height:100vh;transition:background var(--tr),color var(--tr)}
+.skip-link{position:absolute;top:-100%;left:16px;padding:8px 16px;background:var(--accent);color:#fff;border-radius:var(--r-sm);z-index:10000;font-size:14px;text-decoration:none}
+.skip-link:focus{top:16px}
+a{color:var(--accent-d);text-decoration:none}
+.top-nav{position:sticky;top:0;z-index:1001;background:var(--surface);border-bottom:1px solid var(--bdr-l);padding:0 24px;transition:background var(--tr)}
+.top-nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;height:44px;gap:4px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+.top-nav-inner::-webkit-scrollbar{display:none}
+.top-nav-link{font-family:var(--font-b);font-size:.84rem;color:var(--ink-l);text-decoration:none;padding:6px 14px;border-radius:100px;border:1px solid transparent;transition:all var(--tr);white-space:nowrap;flex-shrink:0}
+.top-nav-link:hover{background:var(--bg-alt);border-color:var(--bdr)}
+.top-nav-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.top-nav-link.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.top-nav-sep{width:1px;height:16px;background:var(--bdr-l);margin:0 4px;flex-shrink:0}
+.theme-toggle{position:fixed;top:52px;right:20px;z-index:1000;width:44px;height:44px;border:1px solid var(--bdr);border-radius:50%;background:var(--surface);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-m);transition:all var(--tr)}
+.theme-toggle:hover{transform:scale(1.08);box-shadow:var(--sh-l)}
+.theme-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.theme-toggle svg{width:20px;height:20px;color:var(--ink)}
+[data-theme="dark"] .theme-toggle .icon-moon{display:none}
+[data-theme="light"] .theme-toggle .icon-sun{display:none}
+.hero{position:relative;min-height:42vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:72px 24px 48px;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 600px 400px at 25% 35%,rgba(184,56,42,.10),transparent),radial-gradient(ellipse 500px 350px at 75% 65%,rgba(155,91,140,.08),transparent),radial-gradient(ellipse 400px 300px at 50% 50%,rgba(201,169,110,.06),transparent);pointer-events:none}
+.hero-deco{font-size:2rem;margin-bottom:12px;letter-spacing:.4em;filter:grayscale(.1)}
+.hero-ornament{width:80px;height:2px;background:linear-gradient(90deg,transparent,var(--accent),var(--gold),transparent);margin-bottom:20px}
+.hero h1{font-family:var(--font-d);font-size:clamp(2.6rem,7vw,5rem);font-weight:400;color:var(--ink);letter-spacing:.06em;line-height:1.2}
+.hero-sub{font-family:var(--font-h);font-size:clamp(.92rem,2.2vw,1.12rem);color:var(--ink-m);font-weight:400;letter-spacing:.15em;margin-top:8px}
+.hero-desc{font-size:.92rem;color:var(--ink-m);max-width:560px;margin-top:16px}
+.hero-stats{display:flex;gap:32px;margin-top:28px;flex-wrap:wrap;justify-content:center}
+.hero-stat{text-align:center}
+.hero-stat-num{font-family:var(--font-h);font-size:2rem;font-weight:700;color:var(--accent);display:block}
+.hero-stat-label{font-size:.78rem;color:var(--ink-m);letter-spacing:.08em}
+main{max-width:1280px;margin:0 auto;padding:0 24px 80px}
+.filter-bar{position:sticky;top:44px;z-index:100;background:var(--bg);border-bottom:1px solid var(--bdr-l);padding:16px 0;margin-bottom:40px;transition:background var(--tr)}
+.filter-bar-inner{display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.filter-bar-inner::-webkit-scrollbar{display:none}
+.filter-btn{flex-shrink:0;padding:8px 18px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink-l);font-family:var(--font-b);font-size:.84rem;cursor:pointer;transition:all var(--tr);white-space:nowrap;user-select:none}
+.filter-btn:hover{background:var(--surface-h);border-color:var(--ink-m)}
+.filter-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.filter-btn .count{display:inline-block;margin-left:3px;font-size:.72rem;opacity:.7}
+.search-wrap{position:relative;flex-shrink:0}
+.search-input{padding:8px 16px 8px 36px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink);font-family:var(--font-b);font-size:.84rem;width:200px;transition:all var(--tr)}
+.search-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(184,56,42,.12);width:260px}
+.search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--ink-m);pointer-events:none}
+.story-section{margin-bottom:48px}
+.section-header{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--bdr-l)}
+.section-badge{font-family:var(--font-h);font-size:.75rem;font-weight:500;padding:3px 10px;border-radius:100px;color:#fff;letter-spacing:.06em}
+.section-title{font-family:var(--font-h);font-size:1.35rem;font-weight:600;color:var(--ink)}
+.section-count{font-size:.82rem;color:var(--ink-m);margin-left:auto}
+[data-cat="ancient"] .section-badge{background:var(--c-ancient)}
+[data-cat="xia"] .section-badge{background:var(--c-xia)}
+[data-cat="chunqiu"] .section-badge{background:var(--c-chunqiu)}
+[data-cat="qin"] .section-badge{background:var(--c-qin)}
+[data-cat="sanguo"] .section-badge{background:var(--c-sanguo)}
+[data-cat="tang"] .section-badge{background:var(--c-tang)}
+[data-cat="song"] .section-badge{background:var(--c-song)}
+[data-cat="ming"] .section-badge{background:var(--c-ming)}
+.story-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
+.story-card{background:var(--surface);border:1px solid var(--bdr-l);border-radius:var(--r-md);padding:22px;transition:all 250ms ease;cursor:default;position:relative;overflow:hidden}
+.story-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;border-radius:3px 0 0 3px;opacity:0;transition:opacity var(--tr)}
+[data-cat="ancient"] .story-card::before{background:var(--c-ancient)}
+[data-cat="xia"] .story-card::before{background:var(--c-xia)}
+[data-cat="chunqiu"] .story-card::before{background:var(--c-chunqiu)}
+[data-cat="qin"] .story-card::before{background:var(--c-qin)}
+[data-cat="sanguo"] .story-card::before{background:var(--c-sanguo)}
+[data-cat="tang"] .story-card::before{background:var(--c-tang)}
+[data-cat="song"] .story-card::before{background:var(--c-song)}
+[data-cat="ming"] .story-card::before{background:var(--c-ming)}
+.story-card:hover{box-shadow:var(--sh-m);transform:translateY(-2px);border-color:var(--bdr)}
+.story-card:hover::before{opacity:1}
+.story-index{position:absolute;top:10px;right:14px;font-family:var(--font-h);font-size:.72rem;color:var(--ink-m);opacity:.3}
+.story-card-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px}
+.story-title{font-family:var(--font-h);font-size:1.12rem;font-weight:600;color:var(--ink);line-height:1.4}
+.story-dynasty{flex-shrink:0;padding:2px 8px;border-radius:100px;font-size:.65rem;font-weight:500;letter-spacing:.04em;background:var(--bg-alt);color:var(--ink-m);margin-left:10px;align-self:flex-start;margin-top:2px;white-space:nowrap}
+.story-meta{font-size:.82rem;color:var(--ink-m);margin-bottom:10px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.story-tag{display:inline-block;padding:1px 7px;background:rgba(184,56,42,.08);color:var(--accent-d);border-radius:100px;font-size:.68rem}
+[data-theme="dark"] .story-tag{background:rgba(232,88,74,.12)}
+.story-content{font-family:var(--font-b);font-size:.88rem;line-height:1.85;color:var(--ink-l);letter-spacing:.02em}
+.story-moral{margin-top:12px;padding:10px 14px;background:var(--bg-alt);border-radius:var(--r-sm);font-size:.82rem;color:var(--ink-m);border-left:3px solid var(--gold)}
+.story-moral strong{color:var(--accent-d);font-weight:500}
+.no-results{text-align:center;padding:60px 24px;color:var(--ink-m)}
+.no-results-icon{font-size:3rem;margin-bottom:16px;opacity:.5}
+.no-results-text{font-size:1rem;margin-bottom:8px}
+.no-results-hint{font-size:.84rem;opacity:.7}
+.back-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-m);transition:all var(--tr);opacity:0;pointer-events:none;z-index:999}
+.back-top.visible{opacity:1;pointer-events:auto}
+.back-top:hover{transform:translateY(-2px);box-shadow:var(--sh-l)}
+.back-top:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.back-top svg{width:20px;height:20px}
+footer{text-align:center;padding:40px 24px;color:var(--ink-m);font-size:.82rem;border-top:1px solid var(--bdr-l)}
+@media(max-width:768px){
+.hero{min-height:32vh;padding:56px 20px 36px}
+.hero h1{letter-spacing:.04em}
+.hero-stats{gap:20px}
+main{padding:0 16px 60px}
+.filter-bar{position:sticky;top:44px;z-index:100;background:var(--bg);border-bottom:1px solid var(--bdr-l);padding:16px 0;margin-bottom:40px;transition:background var(--tr)}
+.search-wrap{position:relative;flex-shrink:0}
+.search-input{padding:8px 16px 8px 36px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink);font-family:var(--font-b);font-size:.84rem;width:150px;transition:all var(--tr)}
+.search-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(184,56,42,.12);width:200px}
+.story-grid{grid-template-columns:1fr}
+.top-nav{padding:0 16px}
+}
+@media(max-width:400px){
+.hero h1{font-size:2.2rem}
+.hero-sub{font-size:.85rem}
+}
+@media(prefers-reduced-motion:reduce){*{transition-duration:0s!important;animation-duration:0s!important}}
+</style>
+</head>
+<body data-theme="light">
+<a href="#main" class="skip-link">跳到正文</a>
+<nav class="top-nav" aria-label="站点导航">
+<div class="top-nav-inner">
+<a href="jingdian-tongyao.html" class="top-nav-link">经典童谣</a>
+<span class="top-nav-sep"></span>
+<a href="shenglv-qimeng.html" class="top-nav-link">声律启蒙</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-tonghua.html" class="top-nav-link">少儿童话</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-qimeng-shici.html" class="top-nav-link">启蒙诗词</a>
+<span class="top-nav-sep"></span>
+<a href="hanzi-gushi.html" class="top-nav-link">汉字故事</a>
+<span class="top-nav-sep"></span>
+<a href="baihua-shici.html" class="top-nav-link">百花诗词</a>
+<span class="top-nav-sep"></span>
+<a href="shi-wan-ge-weishenme.html" class="top-nav-link">十万个为什么</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-chengyu.html" class="top-nav-link">少儿成语</a>
+<span class="top-nav-sep"></span>
+<a href="shangxia-wuqiannian.html" class="top-nav-link active">上下五千年</a>
+<span class="top-nav-sep"></span>
+<a href="sanshiliuji.html" class="top-nav-link">三十六计</a>
+<span class="top-nav-sep"></span>
+<a href="song-ci-jingxuan.html" class="top-nav-link">宋词精选</a>
+<span class="top-nav-sep"></span>
+<a href="maozedong-shici.html" class="top-nav-link">毛主席诗词</a>
+</div>
+</nav>
+<button class="theme-toggle" aria-label="切换深色模式" title="切换深色模式">
+<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
+<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+<header class="hero">
+<div class="hero-deco" aria-hidden="true">&#x1F3DB; &#x2694; &#x1F3F4; &#x2728;</div>
+<div class="hero-ornament" aria-hidden="true"></div>
+<h1>上下五千年</h1>
+<p class="hero-sub">历史故事 &#xB7; 英雄传奇 &#xB7; 文明传承</p>
+<p class="hero-desc">精选中华五千年经典历史故事100篇，从远古传说到明清，带孩子穿越时空，感受中华文明的辉煌历程。</p>
+<div class="hero-stats">
+<div class="hero-stat"><span class="hero-stat-num">100</span><span class="hero-stat-label">历史故事</span></div>
+<div class="hero-stat"><span class="hero-stat-num">8</span><span class="hero-stat-label">历史时期</span></div>
+<div class="hero-stat"><span class="hero-stat-num">5000+</span><span class="hero-stat-label">年文明史</span></div>
+</div>
+</header>
+<main id="main">
+<div class="filter-bar" role="toolbar" aria-label="故事筛选">
+<div class="filter-bar-inner">
+<div class="search-wrap"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="text" class="search-input" placeholder="搜索历史故事..." id="searchInput" aria-label="搜索故事"></div>
+<button class="filter-btn active" data-filter="all">全部<span class="count">(99)</span></button>
+<button class="filter-btn" data-filter="ancient">远古传说<span class="count">(14)</span></button>
+<button class="filter-btn" data-filter="xia">夏商周<span class="count">(12)</span></button>
+<button class="filter-btn" data-filter="chunqiu">春秋战国<span class="count">(14)</span></button>
+<button class="filter-btn" data-filter="qin">秦汉<span class="count">(13)</span></button>
+<button class="filter-btn" data-filter="sanguo">三国两晋<span class="count">(13)</span></button>
+<button class="filter-btn" data-filter="tang">隋唐<span class="count">(14)</span></button>
+<button class="filter-btn" data-filter="song">宋元<span class="count">(12)</span></button>
+<button class="filter-btn" data-filter="ming">明清<span class="count">(7)</span></button>
+</div>
+</div>
+
+<!-- 远古传说 -->
+<section class="story-section" data-cat="ancient" id="ancient">
+<div class="section-header">
+<span class="section-badge">远古传说</span>
+<h2 class="section-title">远古传说</h2>
+<span class="section-count">14个故事</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="ancient" data-title="盘古开天辟地"><span class="story-index">#001</span><div class="story-card-header"><h3 class="story-title">盘古开天辟地</h3><span class="story-dynasty">远古</span></div><div class="story-meta"><span class="story-tag">创世</span><span class="story-tag">神话</span></div><div class="story-content">很久很久以前，天地还没有分开，宇宙混沌一片，像一个大鸡蛋。盘古在这颗"大鸡蛋"里睡了整整一万八千年。有一天他醒来，发现周围黑漆漆的，就拿起大斧头用力一劈——轰隆一声，混沌分开了！轻而清的东西上升变成了天，重而浊的东西下降变成了地。盘古头顶天、脚踏地，天每天高一丈，地每天厚一丈，盘古也跟着长。又过了一万八千年，天终于不会再塌下来了。盘古累倒了，他的身体化作了日月星辰、山川河流、风雨雷电，整个世界都是盘古变的。</div><div class="story-moral"><strong>寓意：</strong>盘古用生命创造了世界，告诉我们奉献和牺牲的伟大。中华先民用这个神话解释了天地的起源。</div></article>
+<article class="story-card" data-cat="ancient" data-title="女娲补天"><span class="story-index">#002</span><div class="story-card-header"><h3 class="story-title">女娲补天</h3><span class="story-dynasty">远古</span></div><div class="story-meta"><span class="story-tag">创世</span><span class="story-tag">拯救</span></div><div class="story-content">水神共工和火神祝融打架，共工打输了，一气之下撞倒了不周山。不周山是撑天的柱子，天塌了一个大窟窿，洪水从天上倾泻而下，猛兽也跑出来伤害人类。女娲看到人们受苦，非常心疼。她收集了五颜六色的石头，用神火熔炼成浆，飞到天上把窟窿补好了。她又斩下大龟的四条腿当柱子撑住天，用芦苇灰堵住洪水，赶走了猛兽。从此天下又太平了，人们又可以安居乐业。</div><div class="story-moral"><strong>寓意：</strong>女娲不怕困难、拯救苍生的精神令人敬佩。遇到灾难要勇敢面对，想办法解决问题。</div></article>
+<article class="story-card" data-cat="ancient" data-title="夸父追日"><span class="story-index">#003</span><div class="story-card-header"><h3 class="story-title">夸父追日</h3><span class="story-dynasty">远古</span></div><div class="story-meta"><span class="story-tag">勇气</span><span class="story-tag">坚持</span></div><div class="story-content">夸父是一个力大无穷的巨人。他看到太阳每天落山后世界就变得又黑又冷，决定去追赶太阳，把它留住。夸父迈开大步追了上去，追了九天九夜，离太阳越来越近。可是他实在太渴了，喝干了黄河和渭河的水还是不够。他又向北方跑去想喝大泽的水，可惜还没跑到就渴倒了。夸父倒下后，他手中的桃杖落在地上，化作了一片桃林，结满了鲜甜的桃子，给后来赶路的人解渴。</div><div class="story-moral"><strong>寓意：</strong>夸父虽然失败了，但他的勇气和毅力令人感动。即使目标无法实现，追求的过程也有意义。</div></article>
+<article class="story-card" data-cat="ancient" data-title="精卫填海"><span class="story-index">#004</span><div class="story-card-header"><h3 class="story-title">精卫填海</h3><span class="story-dynasty">远古</span></div><div class="story-meta"><span class="story-tag">坚韧</span><span class="story-tag">不屈</span></div><div class="story-content">炎帝的小女儿叫女娃，有一天她去东海游玩，不幸被大浪吞没了。她的灵魂化作了一只小鸟，花脑袋、白嘴壳、红脚爪，名叫"精卫"。精卫每天从发鸠山衔来小石子和小树枝，投到东海里，发誓要把大海填平。大海嘲笑她说："你一只小鸟，填到什么时候才能填平我？"精卫坚定地说："就算填一百万年，我也要把你填平！"日复一日，年复一年，精卫从不停歇。</div><div class="story-moral"><strong>寓意：</strong>精卫虽小却志向远大，不怕困难、坚持不懈。再小的力量，只要坚持，也能做出了不起的事。</div></article>
+<article class="story-card" data-cat="ancient" data-title="大禹治水"><span class="story-index">#005</span><div class="story-card-header"><h3 class="story-title">大禹治水</h3><span class="story-dynasty">远古</span></div><div class="story-meta"><span class="story-tag">奉献</span><span class="story-tag">智慧</span></div><div class="story-content">黄河泛滥成灾，大禹的父亲鲧用堵的方法治水，结果失败了。大禹接替父亲治水，他吸取教训，改用疏导的方法——开凿河道，让洪水流入大海。大禹带领百姓挖河修堤，走遍了天下九州。他三次路过自己的家门口都没有进去，因为治水太忙了。他治水十三年，终于把洪水治理好了。人们从此安居乐业，大禹也因此受到了天下人的拥戴。</div><div class="story-moral"><strong>寓意：</strong>大禹三过家门而不入的奉献精神和善于总结教训的智慧，值得每一个人学习。</div></article>
+<article class="story-card" data-cat="ancient" data-title="神农尝百草"><span class="story-index">#006</span><div class="story-card-header"><h3 class="story-title">神农尝百草</h3><span class="story-dynasty">远古</span></div><div class="story-meta"><span class="story-tag">勇敢</span><span class="story-tag">奉献</span></div><div class="story-content">远古时候，人们不知道哪些植物能吃、哪些能治病。神农氏为了帮助百姓，决定亲自去尝遍天下草木。他背着竹篓，翻山越岭，每到一处就采摘各种草木来尝。有时候尝到有毒的草，他就会肚子疼、头晕，但他从不放弃。据说他一天最多中毒七十多次！靠着自己的身体，神农分辨出了哪些是粮食、哪些是草药，教会了人们种地和治病。最后他尝到了断肠草，不幸中毒身亡。</div><div class="story-moral"><strong>寓意：</strong>神农为了百姓的健康不惜牺牲自己。中医药的伟大就是由这样无私的奉献精神开创的。</div></article>
+<article class="story-card" data-cat="ancient" data-title="黄帝战蚩尤"><span class="story-index">#007</span><div class="story-card-header"><h3 class="story-title">黄帝战蚩尤</h3><span class="story-dynasty">远古</span></div><div class="story-meta"><span class="story-tag">战争</span><span class="story-tag">统一</span></div><div class="story-content">蚩尤是九黎族的首领，非常勇猛。他带领大军向黄帝发起挑战。蚩尤能呼风唤雨、制造浓雾，黄帝的军队在雾中迷失了方向。黄帝发明了指南车，在浓雾中也能辨别方向。双方在涿鹿展开大战，黄帝还请来应龙喷水、旱魃放热，最终打败了蚩尤。黄帝统一了各部落，成为了中华民族的共同始祖，我们因此自称"炎黄子孙"。</div><div class="story-moral"><strong>寓意：</strong>团结就是力量。黄帝之所以能胜利，是因为他善于创新、团结各方。中华文明由此奠定了基础。</div></article>
+<article class="story-card" data-cat="ancient" data-title="后羿射日"><span class="story-index">#008</span><div class="story-card-header"><h3 class="story-title">后羿射日</h3><span class="story-dynasty">远古</span></div><div class="story-meta"><span class="story-tag">勇气</span><span class="story-tag">英雄</span></div><div class="story-content">天帝有十个太阳儿子，本来他们每天轮流出来一个。可有一天，十个太阳一起跑到了天上。大地被烤得像蒸笼一样，庄稼枯死，河流干涸，人们苦不堪言。神射手后羿看到百姓受苦，决定射下多余的太阳。他登上高山，拉开神弓，嗖嗖嗖连射九箭，九个太阳应声落地。最后一个太阳吓得认错求饶，后羿才留了他，让他每天按时升落，给大地带来光明和温暖。</div><div class="story-moral"><strong>寓意：</strong>后羿为民除害的勇气令人敬佩。遇到危害大家的事情，要有勇气站出来。</div></article>
+<article class="story-card" data-cat="ancient" data-title="嫦娥奔月"><span class="story-index">#009</span><div class="story-card-header"><h3 class="story-title">嫦娥奔月</h3><span class="story-dynasty">远古</span></div><div class="story-meta"><span class="story-tag">传说</span><span class="story-tag">思念</span></div><div class="story-content">后羿射下九个太阳后，西王母赏给他一颗不死仙药。后羿舍不得离开妻子嫦娥，就把仙药交给她保管。有一天，坏人逢蒙趁后羿不在，想偷走仙药。嫦娥为了不让仙药落入坏人之手，自己吞下了仙药。她的身体变得轻飘飘的，飞上了天空，一直飞到了月亮上的广寒宫。从此嫦娥和后羿天各一方，只能在每年八月十五月亮最圆的时候遥遥相望。人们在中秋节吃月饼，就是为了纪念嫦娥和后羿。</div><div class="story-moral"><strong>寓意：</strong>这是一个关于思念和选择的故事。嫦娥为了保护仙药牺牲了和丈夫的团圆，令人感慨。</div></article>
+<article class="story-card" data-cat="ancient" data-title="愚公移山"><span class="story-index">#010</span><div class="story-card-header"><h3 class="story-title">愚公移山</h3><span class="story-dynasty">远古</span></div><div class="story-meta"><span class="story-tag">坚持</span><span class="story-tag">毅力</span></div><div class="story-content">愚公家门前有两座大山，挡住了出行的路。九十岁的愚公决定把山搬走，带领全家每天挖山。有个叫智叟的老人笑话他："你这么老了，能挖掉多少土？"愚公说："我死了有儿子，儿子死了有孙子，子子孙孙无穷无尽，而山不会增高，总有一天能挖平！"智叟被说得哑口无言。天帝被愚公的精神感动，派了两个大力神把两座山搬走了。</div><div class="story-moral"><strong>寓意：</strong>只要有恒心、有毅力，再大的困难也能克服。不怕困难、坚持到底，就一定能成功。</div></article>
+<article class="story-card" data-cat="ancient" data-title="仓颉造字"><span class="story-index">#011</span><div class="story-card-header"><h3 class="story-title">仓颉造字</h3><span class="story-dynasty">远古</span></div><div class="story-meta"><span class="story-tag">发明</span><span class="story-tag">文化</span></div><div class="story-content">黄帝的史官仓颉，长着四只眼睛，特别聪明。他负责记录牲畜和粮食的数量，用打绳结的办法，时间长了就记不清了。有一天他看到鸟兽的脚印，每种都不一样，灵机一动：为什么不画不同的符号来代表不同的事物呢？于是他观察日月星辰、山川草木、鸟兽虫鱼的形状，创造了最早的文字——象形文字。据说仓颉造出字的那天，天降谷子，鬼在夜里哭泣，因为从此人类有了文字，天地间的一切都能被记录下来了。</div><div class="story-moral"><strong>寓意：</strong>汉字是中华文明最伟大的发明之一。善于观察和思考，就能创造出改变世界的东西。</div></article>
+<article class="story-card" data-cat="ancient" data-title="燧人取火"><span class="story-index">#012</span><div class="story-card-header"><h3 class="story-title">燧人取火</h3><span class="story-dynasty">远古</span></div><div class="story-meta"><span class="story-tag">发明</span><span class="story-tag">智慧</span></div><div class="story-content">远古时候人们不知道用火，只能吃生肉、生果子，冬天冻得发抖。有个叫燧人的聪明人，看到鸟啄树木时闪出火花，就折了一根树枝在另一根木头上钻来钻去，钻了很久很久，终于冒出了火星。他把火星吹大，点着了干草，终于生出了火！人们从此可以吃熟食、取暖、照明了。燧人氏教会了所有人取火的方法，被尊为"火祖"。</div><div class="story-moral"><strong>寓意：</strong>善于观察自然现象并动手实践，就能发现改变生活的方法。火的发现是人类文明的一大飞跃。</div></article>
+<article class="story-card" data-cat="ancient" data-title="伏羲画卦"><span class="story-index">#013</span><div class="story-card-header"><h3 class="story-title">伏羲画卦</h3><span class="story-dynasty">远古</span></div><div class="story-meta"><span class="story-tag">哲学</span><span class="story-tag">智慧</span></div><div class="story-content">伏羲是中华民族的人文始祖之一。他仰观天象、俯察地理，发现天地万物都由阴和阳两种力量组成。他用一条长线代表阳（—），两条短线代表阴（--），组成了八个基本符号，叫做"八卦"——乾、坤、震、巽、坎、离、艮、兑，分别代表天、地、雷、风、水、火、山、泽。八卦后来发展成了《易经》，成为中国最早的哲学著作，影响了中华文化几千年。</div><div class="story-moral"><strong>寓意：</strong>伏羲从自然中总结规律，创造了影响深远的哲学体系。善于观察和总结，是人类智慧的开端。</div></article>
+<article class="story-card" data-cat="ancient" data-title="共工怒触不周山"><span class="story-index">#014</span><div class="story-card-header"><h3 class="story-title">共工怒触不周山</h3><span class="story-dynasty">远古</span></div><div class="story-meta"><span class="story-tag">神话</span><span class="story-tag">性格</span></div><div class="story-content">水神共工和火神祝融为了争夺帝位展开大战。共工节节败退，一直退到了不周山下。不周山是撑天的柱子，也是系地的绳索。共工又羞又怒，一头撞向不周山。只听轰隆一声巨响，不周山被他撞断了！天塌了一半，大地也裂开了一个大口子。从此天向西北倾斜，太阳、月亮和星星都往西落；地向东南倾斜，江河的水都往东流。这就是为什么中国的江河都是向东流的。</div><div class="story-moral"><strong>寓意：</strong>这个故事用神话的方式解释了自然现象。也告诉我们，冲动和暴怒会带来灾难性的后果。</div></article>
+</div>
+</section>
+
+<!-- 夏商周 -->
+<section class="story-section" data-cat="xia" id="xia">
+<div class="section-header">
+<span class="section-badge">夏商周</span>
+<h2 class="section-title">夏商周</h2>
+<span class="section-count">12个故事</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="xia" data-title="大禹传位启"><span class="story-index">#015</span><div class="story-card-header"><h3 class="story-title">大禹传位启</h3><span class="story-dynasty">夏朝</span></div><div class="story-meta"><span class="story-tag">王朝</span><span class="story-tag">制度</span></div><div class="story-content">大禹治水有功，舜把帝位传给了他。大禹死后，本来应该按"禅让制"传位给伯益，但大禹的儿子启很有才能，各部落首领都拥护启。启于是建立了中国历史上第一个王朝——夏朝。从此"公天下"变成了"家天下"，帝位由父子相传。夏朝存在了约四百年，是中国文明史上划时代的一步。</div><div class="story-moral"><strong>寓意：</strong>从禅让制到世袭制，是中国政治制度的重大转变。夏朝的建立标志着中华文明进入了王朝时代。</div></article>
+<article class="story-card" data-cat="xia" data-title="少康中兴"><span class="story-index">#016</span><div class="story-card-header"><h3 class="story-title">少康中兴</h3><span class="story-dynasty">夏朝</span></div><div class="story-meta"><span class="story-tag">复国</span><span class="story-tag">坚韧</span></div><div class="story-content">夏朝大臣后羿（不是射日的那个）夺取了王位，后来后羿又被他的手下寒浞杀死。夏禹的后代少康从小流亡在外，受尽苦难。但他暗中积蓄力量，联络旧臣，终于打败了寒浞，夺回了王位。少康复国后勤政爱民，夏朝又兴旺起来，历史上称为"少康中兴"。</div><div class="story-moral"><strong>寓意：</strong>少康在逆境中不放弃，最终复国成功。只要心怀希望、坚持不懈，绝境也能变为生机。</div></article>
+<article class="story-card" data-cat="xia" data-title="商汤灭夏"><span class="story-index">#017</span><div class="story-card-header"><h3 class="story-title">商汤灭夏</h3><span class="story-dynasty">商朝</span></div><div class="story-meta"><span class="story-tag">更替</span><span class="story-tag">仁德</span></div><div class="story-content">夏朝最后一个王叫桀，是个暴君，整天喝酒享乐，不管百姓死活。商部落的首领汤仁慈爱民，深受百姓爱戴。汤看到夏桀残暴无道，决定推翻他。他联合各部落，在鸣条大战中打败了夏军。夏桀被流放，商朝建立了。商汤成为新王后，减轻赋税、鼓励生产，百姓过上了好日子。</div><div class="story-moral"><strong>寓意：</strong>得民心者得天下。商汤因为仁德而得天下，夏桀因为暴虐而失天下，这是千古不变的道理。</div></article>
+<article class="story-card" data-cat="xia" data-title="姜太公钓鱼"><span class="story-index">#018</span><div class="story-card-header"><h3 class="story-title">姜太公钓鱼</h3><span class="story-dynasty">商末周初</span></div><div class="story-meta"><span class="story-tag">智慧</span><span class="story-tag">耐心</span></div><div class="story-content">姜子牙是一位很有才能的老人，但他一直得不到重用。他来到渭水边，用直钩钓鱼——钩上不挂鱼饵，离水面还有三尺高。有人笑他："你这样怎么钓得到鱼？"姜子牙说："我钓的不是鱼，是愿意上钩的王侯。"他在渭水边等了整整三年，终于等来了周文王姬昌。文王发现姜子牙是天下奇才，请他出山辅佐。姜子牙帮助周文王和周武王，最终灭了商朝，建立了周朝。</div><div class="story-moral"><strong>寓意：</strong>真正有才能的人要有耐心等待时机。姜太公钓鱼——愿者上钩，也告诉我们做事要有独特的方法。</div></article>
+<article class="story-card" data-cat="xia" data-title="武王伐纣"><span class="story-index">#019</span><div class="story-card-header"><h3 class="story-title">武王伐纣</h3><span class="story-dynasty">商末周初</span></div><div class="story-meta"><span class="story-tag">正义</span><span class="story-tag">更替</span></div><div class="story-content">商朝最后一个王叫纣，他比夏桀更加残暴。他造了酒池肉林，发明了炮烙之刑，百姓恨透了他。周武王姬发在姜太公的辅佐下，率领各路诸侯讨伐商纣。在牧野之战中，商军阵前倒戈，纣王见大势已去，逃到鹿台上放火自焚。周朝建立后，实行分封制和礼乐制度，开创了中华文明的新纪元。</div><div class="story-moral"><strong>寓意：</strong>暴政终将被推翻，正义终将战胜邪恶。周武王伐纣是正义之战，开创了周朝八百年基业。</div></article>
+<article class="story-card" data-cat="xia" data-title="周公辅政"><span class="story-index">#020</span><div class="story-card-header"><h3 class="story-title">周公辅政</h3><span class="story-dynasty">西周</span></div><div class="story-meta"><span class="story-tag">忠诚</span><span class="story-tag">礼乐</span></div><div class="story-content">周武王去世时，儿子成王还很小。武王的弟弟周公旦挺身而出，代替年幼的成王治理天下。有人造谣说周公想篡位，连成王都怀疑他。但周公忠心耿耿，等成王长大后，就把权力还给了他。周公制礼作乐，建立了完善的政治制度。后来成王明白了周公的一片忠心，非常后悔当初怀疑他。</div><div class="story-moral"><strong>寓意：</strong>周公"一沐三握发、一饭三吐哺"的勤勉和忠诚，是千古典范。忠心为国，终会得到认可。</div></article>
+<article class="story-card" data-cat="xia" data-title="烽火戏诸侯"><span class="story-index">#021</span><div class="story-card-header"><h3 class="story-title">烽火戏诸侯</h3><span class="story-dynasty">西周</span></div><div class="story-meta"><span class="story-tag">教训</span><span class="story-tag">诚信</span></div><div class="story-content">周幽王有个妃子叫褒姒，长得很美但从来不笑。幽王想尽办法逗她笑，都不成功。有人出了一个馊主意：点燃烽火台，诸侯们以为犬戎入侵，会带兵赶来，褒姒看到他们白跑一趟的样子一定觉得好笑。幽王果然点了烽火，各路诸侯急忙赶来，发现没有敌人，褒姒看到他们狼狈的样子，终于笑了。后来犬戎真的打来了，幽王再点烽火，诸侯们以为又在开玩笑，谁也没来。幽王被杀，西周灭亡了。</div><div class="story-moral"><strong>寓意：</strong>诚信是最宝贵的品质。周幽王为博一笑失信于天下，最终丢了国家和性命。狼来了的故事说的也是这个道理。</div></article>
+<article class="story-card" data-cat="xia" data-title="伯夷叔齐"><span class="story-index">#022</span><div class="story-card-header"><h3 class="story-title">伯夷叔齐</h3><span class="story-dynasty">商末周初</span></div><div class="story-meta"><span class="story-tag">气节</span><span class="story-tag">品格</span></div><div class="story-content">伯夷和叔齐是孤竹国国君的两个儿子。父亲死后，两人互相推让王位，最后都离开了国家。他们听说周文王仁德，就投奔了周国。后来周武王伐纣，他们认为臣子不该攻打君主，极力劝阻。武王灭商后，伯夷叔齐耻食周粟，跑到首阳山上采薇菜吃，最后饿死在山上。孔子和孟子都高度赞扬了他们的气节。</div><div class="story-moral"><strong>寓意：</strong>伯夷叔齐为了心中的道义不惜牺牲生命。虽然他们的做法可以讨论，但坚守原则的精神值得敬佩。</div></article>
+<article class="story-card" data-cat="xia" data-title="盘庚迁殷"><span class="story-index">#023</span><div class="story-card-header"><h3 class="story-title">盘庚迁殷</h3><span class="story-dynasty">商朝</span></div><div class="story-meta"><span class="story-tag">改革</span><span class="story-tag">决心</span></div><div class="story-content">商朝中期经常发洪水，都城被淹了好几次。国王盘庚决定把都城迁到殷（今河南安阳），那里地势高、土地肥沃。但贵族们不愿意搬家，因为他们在旧都城有大宅子和田地。盘庚反复劝说，讲道理、摆事实，终于说服了大家。迁到殷后，商朝重新兴旺起来，所以商朝又叫"殷商"。</div><div class="story-moral"><strong>寓意：</strong>改革需要决心和智慧。盘庚不畏阻力、坚持正确的决定，最终让国家重新繁荣。</div></article>
+<article class="story-card" data-cat="xia" data-title="甲骨文的发现"><span class="story-index">#024</span><div class="story-card-header"><h3 class="story-title">甲骨文的发现</h3><span class="story-dynasty">商朝</span></div><div class="story-meta"><span class="story-tag">文字</span><span class="story-tag">考古</span></div><div class="story-content">商朝人非常迷信，做什么事都要占卜。他们把问题刻在龟甲和牛骨上，用火烧烤，根据裂纹来判断吉凶，然后把结果也刻在上面。这些刻在龟甲和兽骨上的文字，就是"甲骨文"。清朝末年，有个叫王懿荣的学者生病抓药，发现药材"龙骨"上刻着奇怪的符号。他仔细研究，认出这是古代文字。甲骨文是至今发现的最早的成熟汉字，证明商朝已经有了高度发达的文明。</div><div class="story-moral"><strong>寓意：</strong>甲骨文的发现是20世纪中国最重大的考古发现之一，它证明了汉字已有三千多年的历史。</div></article>
+<article class="story-card" data-cat="xia" data-title="文王拘而演周易"><span class="story-index">#025</span><div class="story-card-header"><h3 class="story-title">文王拘而演周易</h3><span class="story-dynasty">商末</span></div><div class="story-meta"><span class="story-tag">坚持</span><span class="story-tag">文化</span></div><div class="story-content">周文王姬昌是很有仁德的诸侯，引起了商纣王的猜忌，把他囚禁在羑里。在牢中七年，文王没有消沉，他把伏羲的八卦反复推演，从八个卦变成了六十四卦，并为每一卦写了说明文字，这就是《周易》。后来人们说"文王拘而演周易，仲尼厄而作春秋"，意思是不好的遭遇反而能成就伟大的事业。</div><div class="story-moral"><strong>寓意：</strong>身处逆境时不要放弃，把困难转化为学习和创造的机会。文王在狱中写出了《周易》，至今影响深远。</div></article>
+<article class="story-card" data-cat="xia" data-title="国人暴动"><span class="story-index">#026</span><div class="story-card-header"><h3 class="story-title">国人暴动</h3><span class="story-dynasty">西周</span></div><div class="story-meta"><span class="story-tag">反抗</span><span class="story-tag">历史</span></div><div class="story-content">周厉王是个贪暴的国王，他把山林川泽都据为己有，不让百姓打猎砍柴。谁敢抱怨就处罚谁，搞得人们路上见面都不敢说话，只能用眼神交流——"道路以目"。大臣召公劝他："防民之口，甚于防川。"厉王不听。终于，百姓忍无可忍，拿着农具冲进了王宫。厉王吓得逃跑了，死后由周公和召公共同执政，史称"共和行政"。这是中国历史上确切纪年的开始。</div><div class="story-moral"><strong>寓意：</strong>压制人民的言论自由，就像堵住洪水一样危险。到了极限就会爆发，这个教训值得铭记。</div></article>
+</div>
+</section>
+
+<!-- 春秋战国 -->
+<section class="story-section" data-cat="chunqiu" id="chunqiu">
+<div class="section-header">
+<span class="section-badge">春秋战国</span>
+<h2 class="section-title">春秋战国</h2>
+<span class="section-count">14个故事</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="chunqiu" data-title="管鲍之交"><span class="story-index">#027</span><div class="story-card-header"><h3 class="story-title">管鲍之交</h3><span class="story-dynasty">春秋</span></div><div class="story-meta"><span class="story-tag">友情</span><span class="story-tag">宽容</span></div><div class="story-content">管仲和鲍叔牙是好朋友。他们一起做生意，管仲多分钱，鲍叔牙不怪他，知道他家里穷。管仲当兵时临阵逃跑，鲍叔牙不笑他，知道他有老母要奉养。后来两人分别辅佐公子纠和小白，管仲甚至曾射了小白一箭。小白当了齐桓公后要杀管仲，鲍叔牙极力推荐管仲的才能。齐桓公放了管仲并拜他为相。管仲感慨地说："生我者父母，知我者鲍子也。"</div><div class="story-moral"><strong>寓意：</strong>真正的朋友能理解你的难处，欣赏你的才能。鲍叔牙的宽容和大度，成就了千古友谊的佳话。</div></article>
+<article class="story-card" data-cat="chunqiu" data-title="退避三舍"><span class="story-index">#028</span><div class="story-card-header"><h3 class="story-title">退避三舍</h3><span class="story-dynasty">春秋</span></div><div class="story-meta"><span class="story-tag">诚信</span><span class="story-tag">智慧</span></div><div class="story-content">晋国公子重耳流亡时经过楚国，楚成王热情招待了他。楚成王问重耳将来如何报答，重耳说："如果将来晋楚交战，我愿意退避三舍（九十里）以报您的恩情。"后来重耳回国当了晋文公，晋楚果然发生了城濮之战。晋文公信守承诺，下令后退九十里。楚军以为晋军害怕了，追了上来，结果中了晋军的埋伏，大败而归。</div><div class="story-moral"><strong>寓意：</strong>一诺千金，信守承诺。晋文公退避三舍看似退让，实则是以退为进的高明策略。</div></article>
+<article class="story-card" data-cat="chunqiu" data-title="围魏救赵"><span class="story-index">#029</span><div class="story-card-header"><h3 class="story-title">围魏救赵</h3><span class="story-dynasty">战国</span></div><div class="story-meta"><span class="story-tag">兵法</span><span class="story-tag">智慧</span></div><div class="story-content">魏国大军包围了赵国都城邯郸，赵国向齐国求救。齐国将军田忌和军师孙膑率兵救援。孙膑没有直接去邯郸，而是率军攻打魏国都城大梁。魏军听说国都告急，急忙从赵国撤军回救。孙膑在半路上的桂陵设下伏兵，把疲惫不堪的魏军打得大败。赵国之围不救而解。</div><div class="story-moral"><strong>寓意：</strong>解决问题的最好办法有时不是直接面对，而是找到对方的弱点。孙膑的智慧就在于"攻其必救"。</div></article>
+<article class="story-card" data-cat="chunqiu" data-title="完璧归赵"><span class="story-index">#030</span><div class="story-card-header"><h3 class="story-title">完璧归赵</h3><span class="story-dynasty">战国</span></div><div class="story-meta"><span class="story-tag">勇气</span><span class="story-tag">智慧</span></div><div class="story-content">赵国得到了一块稀世宝玉——和氏璧。秦昭王想要，假装用十五座城来换。赵国派蔺相如带着和氏璧去秦国。蔺相如看出秦王根本不想给城，就机智地要回和氏璧，站在柱子旁说："你如果不守信用，我就和这块宝玉一起撞碎在这根柱子上！"秦王怕毁了宝玉，只好放他走。蔺相如偷偷派人把和氏璧送回了赵国。</div><div class="story-moral"><strong>寓意：</strong>蔺相如有勇有谋，在危急关头不慌不忙，用智慧和勇气保护了国家的利益。</div></article>
+<article class="story-card" data-cat="chunqiu" data-title="负荆请罪"><span class="story-index">#031</span><div class="story-card-header"><h3 class="story-title">负荆请罪</h3><span class="story-dynasty">战国</span></div><div class="story-meta"><span class="story-tag">认错</span><span class="story-tag">团结</span></div><div class="story-content">蔺相如完璧归赵后立了大功，被封为上卿，位在老将廉颇之上。廉颇很不服气，说要当面羞辱蔺相如。蔺相如知道后处处躲着廉颇。手下人不理解，蔺相如说："秦国不敢打我们，就是因为有我和廉将军。如果我们两人闹矛盾，秦国就有机可乘了。"廉颇听到这话，非常惭愧，光着膀子背着荆条到蔺相如门前请罪。从此两人成了好朋友，这就是"将相和"。</div><div class="story-moral"><strong>寓意：</strong>知错就改，善莫大焉。廉颇勇于认错的胸怀和蔺相如顾全大局的智慧，都令人敬佩。</div></article>
+<article class="story-card" data-cat="chunqiu" data-title="毛遂自荐"><span class="story-index">#032</span><div class="story-card-header"><h3 class="story-title">毛遂自荐</h3><span class="story-dynasty">战国</span></div><div class="story-meta"><span class="story-tag">自信</span><span class="story-tag">勇气</span></div><div class="story-content">秦军围攻赵国都城，赵国派平原君去楚国求援。平原君要挑选二十个文武双全的门客随行，挑了十九个就挑不出来了。这时门客毛遂站出来推荐自己。平原君说："有才能的人就像锥子放在口袋里，锥尖很快就会露出来。你在我门下三年了，我怎么没听说过你？"毛遂说："那是您一直没有把我放进口袋里呀！"平原君被他的自信打动，带上了他。到了楚国，毛遂果然说服楚王出兵救赵。</div><div class="story-moral"><strong>寓意：</strong>要敢于展示自己的才能。毛遂自荐告诉我们：是金子总会发光，但首先要敢于站出来。</div></article>
+<article class="story-card" data-cat="chunqiu" data-title="荆轲刺秦"><span class="story-index">#033</span><div class="story-card-header"><h3 class="story-title">荆轲刺秦</h3><span class="story-dynasty">战国</span></div><div class="story-meta"><span class="story-tag">壮烈</span><span class="story-tag">勇气</span></div><div class="story-content">秦国灭掉了韩赵之后，下一个目标就是燕国。燕太子丹决定派勇士荆轲去刺杀秦王嬴政。荆轲带着燕国地图和秦国叛将樊于期的头颅，假装投降。地图中藏着一把涂了毒药的匕首。荆轲展开地图，图穷匕首见！他抓住秦王的袖子刺去，可惜秦王挣脱了，绕着柱子跑。荆轲追不上，最终被秦王的卫兵杀死。荆轲虽然失败了，但他的勇气感动了后人。</div><div class="story-moral"><strong>寓意：</strong>荆轲虽然刺杀失败，但他的勇气和牺牲精神千古流传。"风萧萧兮易水寒，壮士一去兮不复还"令人动容。</div></article>
+<article class="story-card" data-cat="chunqiu" data-title="卧薪尝胆"><span class="story-index">#034</span><div class="story-card-header"><h3 class="story-title">卧薪尝胆</h3><span class="story-dynasty">春秋</span></div><div class="story-meta"><span class="story-tag">忍辱</span><span class="story-tag">发奋</span></div><div class="story-content">越王勾践被吴王夫差打败后，到吴国做了三年奴仆，受尽屈辱。回国后，他睡在柴草上，每天吃饭前都要尝一尝苦胆，提醒自己不忘亡国之耻。他任用贤臣、发展生产、训练军队，经过二十年的努力，终于一举打败了吴国。吴王夫差羞愤自杀。越王勾践成为春秋最后一位霸主。</div><div class="story-moral"><strong>寓意：</strong>有志者事竟成。勾践卧薪尝胆二十年，终于报仇雪恨。只要不放弃，再大的屈辱也能变成前进的动力。</div></article>
+<article class="story-card" data-cat="chunqiu" data-title="纸上谈兵"><span class="story-index">#035</span><div class="story-card-header"><h3 class="story-title">纸上谈兵</h3><span class="story-dynasty">战国</span></div><div class="story-meta"><span class="story-tag">教训</span><span class="story-tag">实践</span></div><div class="story-content">赵国名将赵奢的儿子赵括，从小读了很多兵书，谈起打仗来头头是道，谁也说不过他。赵奢临终前说："打仗是生死攸关的事，赵括只会纸上谈兵，如果让他带兵，一定会害了赵国。"后来赵王不听劝阻，让赵括代替廉颇指挥长平之战。赵括只会照搬兵书，不会根据实际情况变通，结果被秦将白起打得大败，四十万赵军全军覆没。</div><div class="story-moral"><strong>寓意：</strong>光有理论知识是不够的，一定要结合实际。书本知识只有通过实践才能真正变成能力。</div></article>
+<article class="story-card" data-cat="chunqiu" data-title="田忌赛马"><span class="story-index">#036</span><div class="story-card-header"><h3 class="story-title">田忌赛马</h3><span class="story-dynasty">战国</span></div><div class="story-meta"><span class="story-tag">策略</span><span class="story-tag">智慧</span></div><div class="story-content">齐国将军田忌和齐威王赛马，每人各出三匹马，分上中下三等。田忌的马都比齐威王的差一点，每次都输。孙膑给他出了个主意：用下等马对齐威王的上等马，输一局；然后用上等马对中等马，中等马对下等马，赢两局。结果田忌二胜一负，赢了！齐威王很惊讶，问田忌用了什么办法。田忌把孙膑推荐给了齐威王，孙膑从此受到重用。</div><div class="story-moral"><strong>寓意：</strong>善于运用策略，劣势也能变成优势。合理安排资源和顺序，就能取得意想不到的效果。</div></article>
+<article class="story-card" data-cat="chunqiu" data-title="狐假虎威"><span class="story-index">#037</span><div class="story-card-header"><h3 class="story-title">狐假虎威</h3><span class="story-dynasty">战国</span></div><div class="story-meta"><span class="story-tag">寓言</span><span class="story-tag">辨别</span></div><div class="story-content">一只老虎抓住了一只狐狸。狐狸说："你不能吃我！老天爷派我做百兽之王，你吃了我就是违抗天命。不信你跟在我后面走一圈，看看动物们怕不怕我。"老虎半信半疑，就跟在狐狸后面。果然，森林里的动物们看到他们，都吓得跑开了。老虎以为动物们真的怕狐狸，其实它们怕的是老虎。这个故事是战国时楚国大臣昭恤讲给楚宣王听的，用来提醒国王要明辨是非。</div><div class="story-moral"><strong>寓意：</strong>要善于分辨真假。有人借着别人的威势来欺负人，就是"狐假虎威"。</div></article>
+<article class="story-card" data-cat="chunqiu" data-title="商鞅变法"><span class="story-index">#038</span><div class="story-card-header"><h3 class="story-title">商鞅变法</h3><span class="story-dynasty">战国</span></div><div class="story-meta"><span class="story-tag">改革</span><span class="story-tag">法治</span></div><div class="story-content">战国时秦国比较落后，秦孝公任用商鞅进行变法。商鞅先在都城南门立了一根木头，说谁能搬到北门就赏五十金。有人搬了，商鞅立刻兑现承诺，以此树立威信。然后他推行了一系列改革：奖励耕战、废除世袭、实行郡县制、统一度量衡。虽然触动了贵族利益，但秦国迅速强大起来，为后来统一六国打下了基础。</div><div class="story-moral"><strong>寓意：</strong>改革需要勇气和智慧。商鞅徙木立信的做法告诉我们，取信于民是推行改革的第一步。</div></article>
+<article class="story-card" data-cat="chunqiu" data-title="晏子使楚"><span class="story-index">#039</span><div class="story-card-header"><h3 class="story-title">晏子使楚</h3><span class="story-dynasty">春秋</span></div><div class="story-meta"><span class="story-tag">外交</span><span class="story-tag">智慧</span></div><div class="story-content">齐国派矮小的晏婴出使楚国。楚王想羞辱他，在城门旁开了个小洞让他钻进去。晏子说："出使狗国才钻狗洞，今天我出使楚国，应该从哪个门进？"楚王只好打开大门。楚王又故意带来一个犯人说是齐国人，嘲笑齐国人生来就爱偷盗。晏子说："橘子在南方是甜的，到北方就变苦了，这是水土不同。这个人在齐国不偷盗，到了楚国就偷盗，莫非楚国的水土让人爱偷盗？"楚王被说得哑口无言。</div><div class="story-moral"><strong>寓意：</strong>晏子用智慧维护了国家的尊严。面对嘲笑不卑不亢，巧妙反击，是外交智慧的典范。</div></article>
+<article class="story-card" data-cat="chunqiu" data-title="朝秦暮楚"><span class="story-index">#040</span><div class="story-card-header"><h3 class="story-title">朝秦暮楚</h3><span class="story-dynasty">战国</span></div><div class="story-meta"><span class="story-tag">反复</span><span class="story-tag">教训</span></div><div class="story-content">战国时期，秦国和楚国是两个最强大的国家，夹在他们中间的小国就像夹心饼干。这些小国今天投靠秦国，明天又投靠楚国，看哪边强大就倒向哪边。特别是位于秦楚之间的那些小诸侯，更是反复无常。后来人们就用"朝秦暮楚"来形容人反复无常、立场不坚定。</div><div class="story-moral"><strong>寓意：</strong>做人做事要有坚定的立场，不能见风使舵。反复无常不仅得不到信任，最终还会两头不讨好。</div></article>
+</div>
+</section>
+
+<!-- 秦汉 -->
+<section class="story-section" data-cat="qin" id="qin">
+<div class="section-header">
+<span class="section-badge">秦汉</span>
+<h2 class="section-title">秦汉</h2>
+<span class="section-count">13个故事</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="qin" data-title="秦始皇统一六国"><span class="story-index">#041</span><div class="story-card-header"><h3 class="story-title">秦始皇统一六国</h3><span class="story-dynasty">秦朝</span></div><div class="story-meta"><span class="story-tag">统一</span><span class="story-tag">历史</span></div><div class="story-content">秦王嬴政从公元前230年开始，用了十年时间，先后灭掉了韩、赵、魏、楚、燕、齐六国，于公元前221年统一了中国。他认为自己的功绩超过了三皇五帝，所以自称"始皇帝"。秦始皇统一后推行了一系列重大措施：统一文字（小篆）、统一度量衡、统一货币、修筑万里长城、修建驰道。虽然秦朝只存在了十五年，但它奠定了中国大一统的格局。</div><div class="story-moral"><strong>寓意：</strong>秦始皇统一了中国，虽然方法残酷，但大一统的思想影响了中国两千多年。统一带来和平与发展。</div></article>
+<article class="story-card" data-cat="qin" data-title="陈胜吴广起义"><span class="story-index">#042</span><div class="story-card-header"><h3 class="story-title">陈胜吴广起义</h3><span class="story-dynasty">秦朝</span></div><div class="story-meta"><span class="story-tag">反抗</span><span class="story-tag">勇气</span></div><div class="story-content">秦朝末年，赋税沉重，百姓苦不堪言。陈胜、吴广等九百名农民被征去戍边，路上遇到大雨，误了期限。按秦法，误期就要处死。陈胜说："反正都是死，不如拼一把！"他喊出了那句千古名言："王侯将相，宁有种乎？"九百人揭竿而起，发动了中国历史上第一次大规模农民起义。虽然最终失败了，但点燃了反秦的烈火。</div><div class="story-moral"><strong>寓意：</strong>人民的力量是伟大的。"王侯将相宁有种乎"告诉后人：出身不能决定命运，要敢于争取自己的权利。</div></article>
+<article class="story-card" data-cat="qin" data-title="鸿门宴"><span class="story-index">#043</span><div class="story-card-header"><h3 class="story-title">鸿门宴</h3><span class="story-dynasty">秦末</span></div><div class="story-meta"><span class="story-tag">危机</span><span class="story-tag">智勇</span></div><div class="story-content">项羽率军进入关中后，听说刘邦先攻占了咸阳，非常生气。刘邦的谋士张良建议刘邦去鸿门向项羽赔罪。在宴会上，项羽的谋士范增一再暗示项羽杀掉刘邦，但项羽犹豫不决。范增叫项庄舞剑，想趁机刺杀刘邦。项伯也拔剑起舞，暗中保护刘邦。最后樊哙冲进宴会，刘邦借口上厕所逃走了。这场惊心动魄的宴会，成为历史上最著名的饭局。</div><div class="story-moral"><strong>寓意：</strong>关键时刻要保持冷静和机智。刘邦能从鸿门宴全身而退，靠的就是沉着应对和忠臣的保护。</div></article>
+<article class="story-card" data-cat="qin" data-title="四面楚歌"><span class="story-index">#044</span><div class="story-card-header"><h3 class="story-title">四面楚歌</h3><span class="story-dynasty">秦末</span></div><div class="story-meta"><span class="story-tag">心理</span><span class="story-tag">悲壮</span></div><div class="story-content">楚汉战争中，韩信设下十面埋伏，把项羽的楚军团团围住。夜里，汉军在四面唱起了楚地的民歌。项羽听到四面都是楚歌，大惊："汉军已经占领了楚地吗？怎么这么多楚人？"楚军听了家乡的歌，纷纷思念家乡，无心打仗，纷纷逃走。项羽带着八百骑兵突围，最后来到乌江边。他觉得无颜面对江东父老，拔剑自刎。一代霸王就此落幕。</div><div class="story-moral"><strong>寓意：</strong>心理战有时候比武力更厉害。项羽虽然勇猛无敌，但刚愎自用，最终败给了刘邦的谋略和人心。</div></article>
+<article class="story-card" data-cat="qin" data-title="张骞出使西域"><span class="story-index">#045</span><div class="story-card-header"><h3 class="story-title">张骞出使西域</h3><span class="story-dynasty">西汉</span></div><div class="story-meta"><span class="story-tag">探险</span><span class="story-tag">外交</span></div><div class="story-content">汉武帝想联合西域的大月氏一起攻打匈奴，派张骞出使西域。张骞出发后不久就被匈奴俘虏，关了整整十年。但他始终没有忘记使命，终于找机会逃了出来，继续西行。他历经千辛万苦，走过了几十个国家，十三年后才回到长安。出发时一百多人，回来时只剩两个人。虽然没能联合大月氏，但他开辟了"丝绸之路"，沟通了东西方文明。</div><div class="story-moral"><strong>寓意：</strong>张骞的坚韧和忠诚令人敬佩。丝绸之路的开辟，让中华文明走向了世界。</div></article>
+<article class="story-card" data-cat="qin" data-title="苏武牧羊"><span class="story-index">#046</span><div class="story-card-header"><h3 class="story-title">苏武牧羊</h3><span class="story-dynasty">西汉</span></div><div class="story-meta"><span class="story-tag">忠诚</span><span class="story-tag">气节</span></div><div class="story-content">汉武帝派苏武出使匈奴，却被匈奴扣留。匈奴单于想让苏武投降，苏武宁死不屈。单于把他流放到北海（今贝加尔湖）去牧羊，说等公羊生了小羊才放他回去。苏武在冰天雪地里牧羊十九年，渴了吃雪，饿了挖野菜，始终手持汉朝的节杖。节杖上的毛都脱落光了，但苏武的心从未动摇。十九年后，汉昭帝派人把苏武接回了长安，他须发皆白，但忠诚不改。</div><div class="story-moral"><strong>寓意：</strong>苏武十九年持节不屈，是中华民族忠诚气节的象征。无论环境多么恶劣，心中的信念不能丢。</div></article>
+<article class="story-card" data-cat="qin" data-title="昭君出塞"><span class="story-index">#047</span><div class="story-card-header"><h3 class="story-title">昭君出塞</h3><span class="story-dynasty">西汉</span></div><div class="story-meta"><span class="story-tag">和平</span><span class="story-tag">奉献</span></div><div class="story-content">王昭君是汉宫中的宫女，才貌双全。匈奴呼韩邪单于来长安请求和亲，昭君自愿前往。当她盛装出现在众人面前时，所有人都被她的美貌惊呆了——据说连天上的大雁都忘了飞翔，掉落下来，这就是"落雁"的由来。昭君到了匈奴后，把汉朝的文化和技术带到了草原，促进了汉匈之间的和平与交流。她用自己的一生换来了边境五十多年的安宁。</div><div class="story-moral"><strong>寓意：</strong>昭君为了国家和平，远嫁异域，令人敬佩。个人的牺牲换来了民族的安宁，这是大义之举。</div></article>
+<article class="story-card" data-cat="qin" data-title="班超投笔从戎"><span class="story-index">#048</span><div class="story-card-header"><h3 class="story-title">班超投笔从戎</h3><span class="story-dynasty">东汉</span></div><div class="story-meta"><span class="story-tag">志向</span><span class="story-tag">报国</span></div><div class="story-content">班超年轻时家里很穷，靠给官府抄写文书赚钱。有一天他抄着抄着突然把笔一扔，感叹说："大丈夫怎么能一辈子埋头抄写呢？应该像张骞那样出使西域，建功立业！"同事们都笑他不自量力。但班超说到做到，后来真的投笔从戎，出使西域。他在西域三十年，平定叛乱、打通丝路，重新确立了大汉在西域的威望，被封为"定远侯"。</div><div class="story-moral"><strong>寓意：</strong>有志不在年高。班超不甘平庸、勇于追求理想的决心，激励着后人要有远大的志向。</div></article>
+<article class="story-card" data-cat="qin" data-title="蔡伦造纸"><span class="story-index">#049</span><div class="story-card-header"><h3 class="story-title">蔡伦造纸</h3><span class="story-dynasty">东汉</span></div><div class="story-meta"><span class="story-tag">发明</span><span class="story-tag">文化</span></div><div class="story-content">在纸发明之前，中国人把字写在竹简上，一本书要用车来拉，非常不方便；写在丝帛上又太贵。东汉的蔡伦总结了前人的经验，用树皮、破布、麻头和旧渔网等便宜的材料，经过浸泡、蒸煮、捣烂、晾晒等工序，造出了又轻又便宜的纸。这种纸很快推广开来，被称为"蔡侯纸"。造纸术后来传到了全世界，是中国四大发明之一。</div><div class="story-moral"><strong>寓意：</strong>蔡伦改进造纸术，让知识传播变得更加容易。四大发明改变了世界，中华民族对人类文明贡献巨大。</div></article>
+<article class="story-card" data-cat="qin" data-title="司马迁写史记"><span class="story-index">#050</span><div class="story-card-header"><h3 class="story-title">司马迁写史记</h3><span class="story-dynasty">西汉</span></div><div class="story-meta"><span class="story-tag">坚持</span><span class="story-tag">文化</span></div><div class="story-content">司马迁因为替投降匈奴的李陵说情，被汉武帝处以宫刑。他悲痛欲绝，但想到父亲临终的嘱托和自己尚未完成的著作，决定忍辱偷生。他在狱中和出狱后，用了十四年时间，终于写成了《史记》——中国第一部纪传体通史。全书一百三十篇，记载了从黄帝到汉武帝三千多年的历史。鲁迅称赞《史记》为"史家之绝唱，无韵之离骚"。</div><div class="story-moral"><strong>寓意：</strong>司马迁忍辱负重，完成了不朽的著作。人固有一死，或重于泰山，或轻于鸿毛，他选择了前者。</div></article>
+<article class="story-card" data-cat="qin" data-title="张良拾履"><span class="story-index">#051</span><div class="story-card-header"><h3 class="story-title">张良拾履</h3><span class="story-dynasty">秦末</span></div><div class="story-meta"><span class="story-tag">尊老</span><span class="story-tag">机遇</span></div><div class="story-content">张良年轻时在桥上散步，一个老人故意把鞋子丢到桥下，让他去捡。张良虽然不高兴，但还是帮老人捡了上来。老人又让张良给他穿上，张良又跪下来帮老人穿好。老人笑着说："孺子可教！"让张良五天后的清早到桥上来。经过几次考验，老人给了张良一本《太公兵法》，说读了这本书就能做帝王的老师。张良后来辅佐刘邦建立汉朝，成为一代名臣。</div><div class="story-moral"><strong>寓意：</strong>尊重长辈、虚心求学，才能得到别人的赏识和帮助。张良正因为谦逊有礼，才得到了改变命运的机会。</div></article>
+<article class="story-card" data-cat="qin" data-title="韩信受胯下之辱"><span class="story-index">#052</span><div class="story-card-header"><h3 class="story-title">韩信受胯下之辱</h3><span class="story-dynasty">秦末</span></div><div class="story-meta"><span class="story-tag">忍耐</span><span class="story-tag">格局</span></div><div class="story-content">韩信年轻时很穷，一个市井无赖拦住他说："你虽然长得高大，其实是个胆小鬼。你如果不怕死，就拔剑刺我；如果怕死，就从我的裤裆底下钻过去。"韩信看了看他，没有拔剑，而是弯下腰从他的胯下钻了过去。周围的人都嘲笑韩信胆小。后来韩信帮助刘邦打下天下，被封为齐王。他派人找到那个无赖，不但没有杀他，还任命他做了中尉，说："如果没有当年的胯下之辱，就没有今天的韩信。"</div><div class="story-moral"><strong>寓意：</strong>小不忍则乱大谋。韩信能忍常人所不能忍，正是因为他有远大的志向和开阔的胸怀。</div></article>
+<article class="story-card" data-cat="qin" data-title="焚书坑儒"><span class="story-index">#053</span><div class="story-card-header"><h3 class="story-title">焚书坑儒</h3><span class="story-dynasty">秦朝</span></div><div class="story-meta"><span class="story-tag">教训</span><span class="story-tag">文化</span></div><div class="story-content">秦始皇为了统一思想，采纳丞相李斯的建议，下令烧毁除秦国以外的历史书籍和民间收藏的诗书百家语。第二年，又因为几个方士骗了他，一怒之下把四百六十多个儒生活埋了。这就是历史上著名的"焚书坑儒"。大量珍贵的先秦典籍被毁，给中华文化造成了巨大的损失。秦始皇的本意是加强统治，结果适得其反，加速了秦朝的灭亡。</div><div class="story-moral"><strong>寓意：</strong>用暴力和压制来统一思想是行不通的。文化需要包容和交流，焚书坑儒是中华文化史上最沉痛的教训之一。</div></article>
+</div>
+</section>
+
+<!-- 三国两晋 -->
+<section class="story-section" data-cat="sanguo" id="sanguo">
+<div class="section-header">
+<span class="section-badge">三国两晋</span>
+<h2 class="section-title">三国两晋</h2>
+<span class="section-count">13个故事</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="sanguo" data-title="三顾茅庐"><span class="story-index">#054</span><div class="story-card-header"><h3 class="story-title">三顾茅庐</h3><span class="story-dynasty">三国</span></div><div class="story-meta"><span class="story-tag">求贤</span><span class="story-tag">诚意</span></div><div class="story-content">刘备听说隐居在隆中的诸葛亮是个了不起的人才，就和关羽、张飞一起去请他出山。第一次去了没见到，第二次还是没见到。关羽和张飞都有些不耐烦了，但刘备坚持去了第三次。这次诸葛亮在家，但正在睡觉。刘备恭恭敬敬地在门外等了很久，诸葛亮醒来后，被刘备的诚意打动。他为刘备分析了天下形势，提出了著名的"隆中对"——联合孙权、对抗曹操、占据荆州和益州，三分天下。诸葛亮出山后，帮助刘备建立了蜀汉。</div><div class="story-moral"><strong>寓意：</strong>求贤若渴、礼贤下士。刘备三顾茅庐的故事告诉我们，真正的人才需要用诚意去打动。</div></article>
+<article class="story-card" data-cat="sanguo" data-title="草船借箭"><span class="story-index">#055</span><div class="story-card-header"><h3 class="story-title">草船借箭</h3><span class="story-dynasty">三国</span></div><div class="story-meta"><span class="story-tag">智慧</span><span class="story-tag">巧计</span></div><div class="story-content">赤壁之战前，周瑜故意刁难诸葛亮，让他三天内造十万支箭。诸葛亮一口答应，并立下军令状。他向鲁肃借了二十条船，每条船上扎满草人。第三天夜里，江上大雾弥漫，诸葛亮让船队靠近曹军水寨，擂鼓呐喊。曹操看不清虚实，不敢出战，命令弓箭手万箭齐发。箭像雨点一样射在草人身上。天亮后，二十条船的草人上插满了箭，足有十多万支。诸葛亮就这样不费一兵一卒，"借"来了十万支箭。</div><div class="story-moral"><strong>寓意：</strong>诸葛亮借大雾和曹操多疑的性格，巧妙地完成了任务。善用天时地利和对方弱点，是智慧的体现。</div></article>
+<article class="story-card" data-cat="sanguo" data-title="赤壁之战"><span class="story-index">#056</span><div class="story-card-header"><h3 class="story-title">赤壁之战</h3><span class="story-dynasty">三国</span></div><div class="story-meta"><span class="story-tag">战争</span><span class="story-tag">转折</span></div><div class="story-content">曹操统一北方后，率八十万大军南下，企图一举消灭孙权和刘备。孙刘联军只有五万人，力量悬殊。周瑜和诸葛亮决定用火攻。诸葛亮借来东风，黄盖假装投降，带着装满易燃物的船冲向曹军舰队。火船引燃了曹操用铁链连在一起的战船，大火烧了三天三夜。曹军大败，曹操狼狈逃回北方。赤壁之战奠定了三国鼎立的局面。</div><div class="story-moral"><strong>寓意：</strong>以弱胜强、以少胜多的经典战役。团结合作、善用策略，弱者也能打败强者。</div></article>
+<article class="story-card" data-cat="sanguo" data-title="七擒孟获"><span class="story-index">#057</span><div class="story-card-header"><h3 class="story-title">七擒孟获</h3><span class="story-dynasty">三国</span></div><div class="story-meta"><span class="story-tag">仁德</span><span class="story-tag">智慧</span></div><div class="story-content">蜀汉南方的少数民族首领孟获起兵造反，诸葛亮率军南征。诸葛亮第一次抓住了孟获，问他服不服，孟获说不服。诸葛亮就放了他。如此反复七次，每次孟获被抓后都不服气，诸葛亮就放他回去，让他重新来战。第七次被抓后，孟获真心佩服了，说："丞相天威，南人不复反矣！"从此南方安定，诸葛亮得以专心北伐。</div><div class="story-moral"><strong>寓意：</strong>攻心为上。诸葛亮七擒七纵，以仁德服人，比用武力征服更加持久有效。</div></article>
+<article class="story-card" data-cat="sanguo" data-title="乐不思蜀"><span class="story-index">#058</span><div class="story-card-header"><h3 class="story-title">乐不思蜀</h3><span class="story-dynasty">三国</span></div><div class="story-meta"><span class="story-tag">讽刺</span><span class="story-tag">亡国</span></div><div class="story-content">蜀国灭亡后，后主刘禅被押到洛阳。魏国司马昭设宴招待他，故意安排蜀国的歌舞表演。蜀国旧臣听了都流泪，刘禅却高兴地又吃又喝。司马昭问他想不想蜀国，刘禅说："此间乐，不思蜀。"旧臣郤正教他下次说想念先人坟墓，司马昭再问时，刘禅果然照说。司马昭看出是郤正教的，刘禅竟承认了。司马昭大笑。从此"乐不思蜀"就成了没心没肺、忘本的代名词。</div><div class="story-moral"><strong>寓意：</strong>做人不能忘本。刘禅身为亡国之君却毫无忧患意识，实在令人叹息。</div></article>
+<article class="story-card" data-cat="sanguo" data-title="闻鸡起舞"><span class="story-index">#059</span><div class="story-card-header"><h3 class="story-title">闻鸡起舞</h3><span class="story-dynasty">东晋</span></div><div class="story-meta"><span class="story-tag">勤奋</span><span class="story-tag">立志</span></div><div class="story-content">东晋将领祖逖和好友刘琨年轻时一起练习武艺。有一天半夜，祖逖听到鸡叫，就把刘琨叫醒，说："别人觉得半夜鸡叫不吉利，我不这么认为！我们起来练剑吧！"从此每天听到鸡叫，他们就起床练武。后来祖逖成为了东晋的名将，率军北伐，收复了大片失地。刘琨也成为了镇守北方的重要将领。</div><div class="story-moral"><strong>寓意：</strong>勤奋刻苦、发奋图强。把别人觉得不好的事情变成激励自己的动力，就是闻鸡起舞的精神。</div></article>
+<article class="story-card" data-cat="sanguo" data-title="淝水之战"><span class="story-index">#060</span><div class="story-card-header"><h3 class="story-title">淝水之战</h3><span class="story-dynasty">东晋</span></div><div class="story-meta"><span class="story-tag">以少胜多</span><span class="story-tag">经典</span></div><div class="story-content">前秦皇帝苻坚率八十万大军南下，想一举消灭东晋。东晋只有八万兵力，但谢安沉着指挥，谢玄率军迎战。谢玄让秦军后退一点以便渡河决战。苻坚想趁东晋军半渡时出击，就下令后退。谁知秦军一退就不可收拾，前军以为后面打了败仗，纷纷逃跑。东晋军趁机追杀，秦军大败。苻坚望见八公山上草木晃动，以为都是晋军，吓得魂飞魄散。这就是"草木皆兵"的由来。</div><div class="story-moral"><strong>寓意：</strong>沉着冷静、以少胜多。淝水之战是中国历史上最著名的以弱胜强的战役之一。</div></article>
+<article class="story-card" data-cat="sanguo" data-title="桃园三结义"><span class="story-index">#061</span><div class="story-card-header"><h3 class="story-title">桃园三结义</h3><span class="story-dynasty">三国</span></div><div class="story-meta"><span class="story-tag">友情</span><span class="story-tag">义气</span></div><div class="story-content">东汉末年，天下大乱。刘备、关羽、张飞三人志同道合，在张飞庄后的桃园里焚香结拜，发誓："不求同年同月同日生，但求同年同月同日死。"刘备是大哥，关羽是二哥，张飞是三弟。从此三人一起征战天下，不离不弃。虽然最终没能实现匡扶汉室的理想，但他们三人的兄弟情义成为千古佳话。</div><div class="story-moral"><strong>寓意：</strong>真挚的友情和信义是最珍贵的。桃园三结义告诉我们，志同道合的人团结在一起，就能创造奇迹。</div></article>
+<article class="story-card" data-cat="sanguo" data-title="曹冲称象"><span class="story-index">#062</span><div class="story-card-header"><h3 class="story-title">曹冲称象</h3><span class="story-dynasty">三国</span></div><div class="story-meta"><span class="story-tag">智慧</span><span class="story-tag">创新</span></div><div class="story-content">有人送给曹操一头大象，曹操想知道它有多重。可是没有那么大的秤，大臣们都想不出办法。曹操的小儿子曹冲才五六岁，他说："我有办法！把大象牵到船上，在船身刻下水位线。然后把大象牵下来，往船上装石头，直到水位线和刻的一样高。称一称石头的重量，就知道大象有多重了。"曹操和大臣们都竖起了大拇指。</div><div class="story-moral"><strong>寓意：</strong>遇到问题要换个角度思考。曹冲用"等量代换"的方法巧妙解决了难题，这就是创新思维的力量。</div></article>
+<article class="story-card" data-cat="sanguo" data-title="望梅止渴"><span class="story-index">#063</span><div class="story-card-header"><h3 class="story-title">望梅止渴</h3><span class="story-dynasty">三国</span></div><div class="story-meta"><span class="story-tag">智慧</span><span class="story-tag">心理</span></div><div class="story-content">曹操带兵行军，正值盛夏，太阳如火。士兵们走得又累又渴，很多人都走不动了。曹操灵机一动，用马鞭指向前方说："前面有一大片梅林，梅子又酸又甜，可以解渴！"士兵们听了，嘴里不由得流出口水，精神一振，加快了脚步。终于走到了有水的地方，大家喝了个痛快。这就是"望梅止渴"的由来。</div><div class="story-moral"><strong>寓意：</strong>曹操善于利用心理暗示来鼓舞士气。在困难的时候，用美好的希望来激励自己，也是一种智慧。</div></article>
+<article class="story-card" data-cat="sanguo" data-title="祖逖北伐"><span class="story-index">#064</span><div class="story-card-header"><h3 class="story-title">祖逖北伐</h3><span class="story-dynasty">东晋</span></div><div class="story-meta"><span class="story-tag">报国</span><span class="story-tag">壮志</span></div><div class="story-content">西晋灭亡后，北方沦陷于少数民族政权。祖逖立志收复中原，他带着几百名部曲渡过长江。船到江心，他敲着船桨发誓："祖逖不能清中原而复济者，有如大江！"渡江后，他招募军队、屯田练兵，几年间收复了黄河以南的大片土地。可惜东晋朝廷对他心存猜忌，不给他支援。祖逖壮志难酬，忧愤成疾，含恨而终。</div><div class="story-moral"><strong>寓意：</strong>祖逖中流击楫的壮志令人感动。个人再有才能，如果没有国家的支持，也很难成就大业。</div></article>
+<article class="story-card" data-cat="sanguo" data-title="司马昭之心"><span class="story-index">#065</span><div class="story-card-header"><h3 class="story-title">司马昭之心</h3><span class="story-dynasty">三国</span></div><div class="story-meta"><span class="story-tag">权谋</span><span class="story-tag">历史</span></div><div class="story-content">魏国后期，大权落入了司马家族手中。司马懿、司马师、司马昭祖孙三代把持朝政。司马昭的野心越来越大，连魏国皇帝曹髦都知道他想篡位。曹髦愤怒地说："司马昭之心，路人皆知！"他率领几百名侍卫去讨伐司马昭，结果被司马昭的手下杀死。后来司马昭的儿子司马炎终于篡魏建立了晋朝。从此"司马昭之心"就成了形容野心暴露无遗的成语。</div><div class="story-moral"><strong>寓意：</strong>权力需要制衡。魏国皇帝大权旁落，最终连自己的命都保不住，这是深刻的历史教训。</div></article>
+<article class="story-card" data-cat="sanguo" data-title="王羲之写字换鹅"><span class="story-index">#066</span><div class="story-card-header"><h3 class="story-title">王羲之写字换鹅</h3><span class="story-dynasty">东晋</span></div><div class="story-meta"><span class="story-tag">艺术</span><span class="story-tag">痴迷</span></div><div class="story-content">王羲之是东晋最伟大的书法家，被称为"书圣"。他特别喜欢鹅，经常观察鹅游泳时脖子的姿态，从中领悟书法的运笔方法。有一次他看到一个道士养了一群白鹅，非常喜欢，想买下来。道士说："你帮我写一本《道德经》，这些鹅就归你。"王羲之欣然答应，写了整整半天。拿到鹅后，他高兴得不得了。据说他就是因为长期观察鹅的动作，才写出了天下第一行书《兰亭集序》。</div><div class="story-moral"><strong>寓意：</strong>艺术来源于生活又高于生活。王羲之从鹅身上领悟了书法之道，说明善于观察生活对创作多么重要。</div></article>
+</div>
+</section>
+
+<!-- 隋唐 -->
+<section class="story-section" data-cat="tang" id="tang">
+<div class="section-header">
+<span class="section-badge">隋唐</span>
+<h2 class="section-title">隋唐</h2>
+<span class="section-count">14个故事</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="tang" data-title="隋炀帝开运河"><span class="story-index">#067</span><div class="story-card-header"><h3 class="story-title">隋炀帝开运河</h3><span class="story-dynasty">隋朝</span></div><div class="story-meta"><span class="story-tag">工程</span><span class="story-tag">功过</span></div><div class="story-content">隋炀帝杨广虽然是个暴君，但他做了一件影响深远的大事——开凿京杭大运河。大运河以洛阳为中心，北到涿郡（今北京），南到余杭（今杭州），全长两千多公里，连接了海河、黄河、淮河、长江、钱塘江五大水系。运河的开通大大促进了南北经济文化交流。但因为工程太浩大，征调了无数民工，很多人累死在工地上。隋炀帝的好大喜功也加速了隋朝的灭亡。</div><div class="story-moral"><strong>寓意：</strong>大运河至今仍在使用，是古代最伟大的水利工程之一。但好事也要量力而行，不顾百姓死活的好大喜功终将遭到反噬。</div></article>
+<article class="story-card" data-cat="tang" data-title="玄武门之变"><span class="story-index">#068</span><div class="story-card-header"><h3 class="story-title">玄武门之变</h3><span class="story-dynasty">唐朝</span></div><div class="story-meta"><span class="story-tag">权力</span><span class="story-tag">历史</span></div><div class="story-content">唐高祖李渊建立唐朝后，太子李建成和秦王李世民之间的矛盾越来越深。李建成嫉妒李世民的功劳和才能，多次想加害他。公元626年，李世民先下手为强，在玄武门设下伏兵，杀死了太子李建成和弟弟李元吉。李渊被迫退位，李世民登基为帝，就是唐太宗。玄武门之变虽然手段残忍，但李世民当皇帝后开创了"贞观之治"，成为中国历史上最伟大的帝王之一。</div><div class="story-moral"><strong>寓意：</strong>历史是复杂的。玄武门之变虽然是不光彩的夺权，但李世民后来的治国成就不可否认。</div></article>
+<article class="story-card" data-cat="tang" data-title="贞观之治"><span class="story-index">#069</span><div class="story-card-header"><h3 class="story-title">贞观之治</h3><span class="story-dynasty">唐朝</span></div><div class="story-meta"><span class="story-tag">盛世</span><span class="story-tag">明君</span></div><div class="story-content">唐太宗李世民吸取隋朝灭亡的教训，勤政爱民、虚心纳谏。他常对大臣说："以铜为镜，可以正衣冠；以史为镜，可以知兴替；以人为镜，可以明得失。"他重用魏征、房玄龄、杜如晦等贤臣，轻徭薄赋、发展经济、完善科举。在他的治理下，唐朝政治清明、经济繁荣、文化昌盛、四方来朝，史称"贞观之治"，是中国古代最辉煌的时期之一。</div><div class="story-moral"><strong>寓意：</strong>唐太宗以史为鉴、虚心纳谏，开创了盛世。好的领导者要善于听取不同意见，勇于改正错误。</div></article>
+<article class="story-card" data-cat="tang" data-title="魏征进谏"><span class="story-index">#070</span><div class="story-card-header"><h3 class="story-title">魏征进谏</h3><span class="story-dynasty">唐朝</span></div><div class="story-meta"><span class="story-tag">直言</span><span class="story-tag">勇气</span></div><div class="story-content">魏征是唐太宗最信任的谏臣。他性格耿直，经常当面指出皇帝的错误，有时候让唐太宗下不了台。有一次唐太宗气得在后宫大骂："早晚我要杀了这个乡巴佬！"皇后长孙氏问他骂谁，他说魏征。皇后却祝贺他："魏征敢于直言，说明陛下是明君啊！"唐太宗这才消了气。魏征去世后，唐太宗痛哭："以铜为镜，以古为镜，以人为镜……魏征殂逝，遂亡一镜矣！"</div><div class="story-moral"><strong>寓意：</strong>说真话需要勇气，听真话需要胸怀。魏征敢于直言，唐太宗虚心接受，这对君臣成为千古典范。</div></article>
+<article class="story-card" data-cat="tang" data-title="文成公主入藏"><span class="story-index">#071</span><div class="story-card-header"><h3 class="story-title">文成公主入藏</h3><span class="story-dynasty">唐朝</span></div><div class="story-meta"><span class="story-tag">民族团结</span><span class="story-tag">文化</span></div><div class="story-content">吐蕃（今西藏）首领松赞干布派使者到长安求婚。唐太宗把文成公主嫁给了他。文成公主带着大量的种子、农具、医药书籍、工匠和技术人员入藏。她教当地人种庄稼、纺织、治病，把中原的先进文化带到了高原。松赞干布为她修建了布达拉宫。文成公主在西藏生活了四十年，深受藏族人民爱戴。她为汉藏两族的团结和文化交流做出了巨大贡献。</div><div class="story-moral"><strong>寓意：</strong>文成公主远嫁高原，促进了民族之间的团结和交流。她把先进的文化和技术带给了西藏人民。</div></article>
+<article class="story-card" data-cat="tang" data-title="玄奘西行"><span class="story-index">#072</span><div class="story-card-header"><h3 class="story-title">玄奘西行</h3><span class="story-dynasty">唐朝</span></div><div class="story-meta"><span class="story-tag">求法</span><span class="story-tag">毅力</span></div><div class="story-content">唐朝高僧玄奘为了弄清楚佛经的真义，不顾禁令，独自一人从长安出发，前往天竺（今印度）取经。他穿越了大沙漠、翻过了大雪山，经历了九死一生，走了整整三年才到达那烂陀寺。他在印度学习了十七年，遍访名师，成为了佛学大师。回国后，他翻译了七十五部一千三百多卷佛经，还口述了《大唐西域记》，记录了沿途一百多个国家的情况。</div><div class="story-moral"><strong>寓意：</strong>玄奘西行的精神和毅力令人震撼。为了追求真理，不畏艰险、百折不挠，这是中华民族的脊梁。</div></article>
+<article class="story-card" data-cat="tang" data-title="鉴真东渡"><span class="story-index">#073</span><div class="story-card-header"><h3 class="story-title">鉴真东渡</h3><span class="story-dynasty">唐朝</span></div><div class="story-meta"><span class="story-tag">传播文化</span><span class="story-tag">坚持</span></div><div class="story-content">日本僧人邀请唐朝高僧鉴真去日本传授佛法。鉴真答应了，但五次东渡都失败了——有的是遇到风暴，有的是被人阻拦。第五次渡海时，他双目失明了，但他没有放弃。第六次，六十六岁的鉴真终于成功到达了日本。他在日本传播佛法、医学和建筑技术，帮助日本修建了唐招提寺。鉴真在日本生活了十年，对日本文化产生了深远的影响。</div><div class="story-moral"><strong>寓意：</strong>鉴真六次东渡、双目失明仍不放弃，这种为了理想坚持到底的精神永远值得我们学习。</div></article>
+<article class="story-card" data-cat="tang" data-title="安史之乱"><span class="story-index">#074</span><div class="story-card-header"><h3 class="story-title">安史之乱</h3><span class="story-dynasty">唐朝</span></div><div class="story-meta"><span class="story-tag">转折</span><span class="story-tag">教训</span></div><div class="story-content">唐玄宗晚年沉迷享乐，宠信杨贵妃和奸相李林甫、杨国忠。节度使安禄山趁唐朝内地兵力空虚，发动叛乱。叛军势如破竹，攻占了洛阳和长安。唐玄宗仓皇逃往四川，途中在马嵬坡，将士们杀了杨国忠，逼死了杨贵妃。安史之乱持续了八年，虽然最终被平定，但唐朝从此由盛转衰，藩镇割据、宦官专权，再也没能恢复往日的辉煌。</div><div class="story-moral"><strong>寓意：</strong>居安思危，不能沉迷享乐。唐玄宗前半生创造了开元盛世，后半生却亲手毁掉了这一切，令人深思。</div></article>
+<article class="story-card" data-cat="tang" data-title="诗仙李白"><span class="story-index">#075</span><div class="story-card-header"><h3 class="story-title">诗仙李白</h3><span class="story-dynasty">唐朝</span></div><div class="story-meta"><span class="story-tag">文学</span><span class="story-tag">浪漫</span></div><div class="story-content">李白是唐代最伟大的诗人之一，被称为"诗仙"。他性格豪放不羁，喜欢饮酒作诗。他的诗想象奇特、气势磅礴，"飞流直下三千尺，疑是银河落九天""天生我材必有用，千金散尽还复来"都是千古名句。唐玄宗召他入宫做翰林，但他不肯趋炎附势，被赐金放还。李白一生游历大江南北，写下了近千首诗歌。据说他是在船上醉酒后看到水中月亮，伸手去捞，溺水而亡。</div><div class="story-moral"><strong>寓意：</strong>李白的诗歌是中华文化的瑰宝。他自由奔放的精神，鼓励我们要勇于追求自己的理想。</div></article>
+<article class="story-card" data-cat="tang" data-title="诗圣杜甫"><span class="story-index">#076</span><div class="story-card-header"><h3 class="story-title">诗圣杜甫</h3><span class="story-dynasty">唐朝</span></div><div class="story-meta"><span class="story-tag">文学</span><span class="story-tag">忧民</span></div><div class="story-content">杜甫和李白是同时代的人，但风格截然不同。杜甫一生坎坷，经历了安史之乱，亲眼看到了百姓的苦难。他的诗被称为"诗史"，真实记录了那个时代。最著名的是"三吏""三别"，写出了战争给人民带来的深重灾难。"朱门酒肉臭，路有冻死骨""安得广厦千万间，大庇天下寒士俱欢颜"都是他忧国忧民的千古名句。杜甫虽然穷困潦倒，但他心系苍生的高尚品格永远值得尊敬。</div><div class="story-moral"><strong>寓意：</strong>杜甫虽然自己生活困苦，却始终心系天下百姓。忧国忧民的情怀，是中华民族最崇高的品格。</div></article>
+<article class="story-card" data-cat="tang" data-title="武则天称帝"><span class="story-index">#077</span><div class="story-card-header"><h3 class="story-title">武则天称帝</h3><span class="story-dynasty">唐朝</span></div><div class="story-meta"><span class="story-tag">历史</span><span class="story-tag">女性</span></div><div class="story-content">武则天是中国历史上唯一的女皇帝。她从一个才人做起，凭借过人的才能和手腕，一步步登上了权力的巅峰。公元690年，她改国号为"周"，称帝。虽然她手段狠辣，但她善于用人、发展科举，国家治理得不错。她开创了殿试和武举制度，让更多人有出仕的机会。晚年她把皇位还给了李家，遗嘱中去帝号，称"则天大圣皇后"。无字碑是她留给后人最大的谜团。</div><div class="story-moral"><strong>寓意：</strong>武则天打破了性别的天花板，证明女性同样可以成为卓越的领导者。功过是非，留给后人评说。</div></article>
+<article class="story-card" data-cat="tang" data-title="曲辕犁与筒车"><span class="story-index">#078</span><div class="story-card-header"><h3 class="story-title">曲辕犁与筒车</h3><span class="story-dynasty">唐朝</span></div><div class="story-meta"><span class="story-tag">科技</span><span class="story-tag">发明</span></div><div class="story-content">唐代农业技术有了很大进步。农民发明了曲辕犁，把直辕改成了曲辕，操作更加灵活省力，一个人就能轻松耕田。又发明了筒车，利用水力把河里的水提升到高处的田里，不用人工提水灌溉。这些发明大大提高了农业生产力，加上唐朝政治清明，人口迅速增长到了八千万。唐朝能成为当时世界上最强大的国家，和这些科技进步是分不开的。</div><div class="story-moral"><strong>寓意：</strong>科技是第一生产力。劳动人民的智慧创造了先进的工具，推动了社会的进步和繁荣。</div></article>
+<article class="story-card" data-cat="tang" data-title="丝绸之路的繁荣"><span class="story-index">#079</span><div class="story-card-header"><h3 class="story-title">丝绸之路的繁荣</h3><span class="story-dynasty">唐朝</span></div><div class="story-meta"><span class="story-tag">交流</span><span class="story-tag">开放</span></div><div class="story-content">唐朝时期，丝绸之路空前繁荣。长安城里有来自日本、新罗、波斯、大食、天竺等各国的商人、僧侣和留学生。中国的丝绸、瓷器、茶叶运往西方，西方的珠宝、香料、音乐、舞蹈传入中国。日本的遣唐使来了十几批，把中国的文字、制度、建筑、服饰带回日本。唐朝的开放包容，使长安成为了当时世界上最国际化的城市。</div><div class="story-moral"><strong>寓意：</strong>开放带来繁荣，交流促进进步。唐朝之所以伟大，正是因为它包容万象、兼收并蓄。</div></article>
+<article class="story-card" data-cat="tang" data-title="女皇的科举改革"><span class="story-index">#080</span><div class="story-card-header"><h3 class="story-title">女皇的科举改革</h3><span class="story-dynasty">唐朝</span></div><div class="story-meta"><span class="story-tag">教育</span><span class="story-tag">公平</span></div><div class="story-content">隋朝创立的科举制度在唐朝得到了完善和发展。武则天时期更是大力推行科举，开创了"殿试"制度——皇帝亲自出题面试考生，还设立了武举来选拔军事人才。科举制打破了贵族垄断做官的局面，让普通人家的孩子也有机会通过考试出人头地。"朝为田舍郎，暮登天子堂"不再是梦想。科举制在中国实行了一千三百多年，深刻影响了中国的教育和文化。</div><div class="story-moral"><strong>寓意：</strong>教育公平是社会公平的基础。科举制度虽然不完美，但给了普通人改变命运的机会，这个理念至今仍有意义。</div></article>
+</div>
+</section>
+
+<!-- 宋元 -->
+<section class="story-section" data-cat="song" id="song">
+<div class="section-header">
+<span class="section-badge">宋元</span>
+<h2 class="section-title">宋元</h2>
+<span class="section-count">12个故事</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="song" data-title="陈桥兵变"><span class="story-index">#081</span><div class="story-card-header"><h3 class="story-title">陈桥兵变</h3><span class="story-dynasty">北宋</span></div><div class="story-meta"><span class="story-tag">历史</span><span class="story-tag">兵变</span></div><div class="story-content">后周世宗柴荣去世后，年仅七岁的柴宗训继位。殿前都点检赵匡胤率军北上抵御契丹，行军到陈桥驿时，部下把一件黄袍披在他身上，高呼"万岁"。赵匡胤"被迫"接受了推戴，率军回开封夺取了政权，建立了宋朝。这就是历史上著名的"陈桥兵变，黄袍加身"。赵匡胤后来通过"杯酒释兵权"和平收回了武将的兵权，避免了流血冲突。</div><div class="story-moral"><strong>寓意：</strong>赵匡胤兵不血刃地建立了宋朝，又和平地收回了兵权。用和平手段解决矛盾，是高明的政治智慧。</div></article>
+<article class="story-card" data-cat="song" data-title="杯酒释兵权"><span class="story-index">#082</span><div class="story-card-header"><h3 class="story-title">杯酒释兵权</h3><span class="story-dynasty">北宋</span></div><div class="story-meta"><span class="story-tag">智慧</span><span class="story-tag">和平</span></div><div class="story-content">宋太祖赵匡胤当了皇帝后，担心手下的大将也学他"黄袍加身"。有一天他设宴请石守信等几位高级将领喝酒，酒过三巡，他叹气说："当皇帝太难了，我每晚都睡不着觉。"石守信问为什么，赵匡胤说："如果你们的部下也给你们黄袍加身呢？"将领们吓得跪地求饶。赵匡胤说："你们不如交出兵权，多买田宅，安享富贵。"第二天，将领们都称病辞去了军职。赵匡胤用一杯酒和平解决了可能威胁皇权的问题。</div><div class="story-moral"><strong>寓意：</strong>用和平的方式解决问题，比用暴力好得多。一杯酒化解了一场可能的腥风血雨，这就是政治智慧。</div></article>
+<article class="story-card" data-cat="song" data-title="司马光砸缸"><span class="story-index">#083</span><div class="story-card-header"><h3 class="story-title">司马光砸缸</h3><span class="story-dynasty">北宋</span></div><div class="story-meta"><span class="story-tag">机智</span><span class="story-tag">果断</span></div><div class="story-content">司马光小时候和小朋友们一起玩耍。院子里有一口大水缸，一个小朋友爬到缸沿上玩，不小心掉进了缸里。缸大水深，小朋友挣扎着喊救命。其他孩子都吓坏了，有的哭、有的跑去找大人。只有司马光沉着冷静，他搬起一块大石头，用力砸向水缸。缸被砸破了，水流了出来，小朋友得救了。大人们赶来后，都夸司马光聪明勇敢。</div><div class="story-moral"><strong>寓意：</strong>遇到突发事件要冷静思考，打破常规寻找解决办法。司马光砸缸的故事告诉我们，关键时刻要敢于果断行动。</div></article>
+<article class="story-card" data-cat="song" data-title="岳飞抗金"><span class="story-index">#084</span><div class="story-card-header"><h3 class="story-title">岳飞抗金</h3><span class="story-dynasty">南宋</span></div><div class="story-meta"><span class="story-tag">忠烈</span><span class="story-tag">悲壮</span></div><div class="story-content">南宋时期，金兵南下，北宋灭亡。岳飞组建了"岳家军"，纪律严明，作战勇猛，打得金兵闻风丧胆——"撼山易，撼岳家军难"。岳飞一路北伐，收复了大片失地，正要直捣黄龙时，宋高宗和奸相秦桧连下十二道金牌，命他班师回朝。岳飞悲愤不已，十年之功废于一旦。回到临安后，秦桧以"莫须有"的罪名杀害了岳飞。岳飞遇害时年仅三十九岁。</div><div class="story-moral"><strong>寓意：</strong>岳飞的忠义精神和悲壮结局令人扼腕。他背上的"尽忠报国"四个字，成为中华民族爱国精神的象征。</div></article>
+<article class="story-card" data-cat="song" data-title="成吉思汗统一蒙古"><span class="story-index">#085</span><div class="story-card-header"><h3 class="story-title">成吉思汗统一蒙古</h3><span class="story-dynasty">元朝</span></div><div class="story-meta"><span class="story-tag">征服</span><span class="story-tag">历史</span></div><div class="story-content">铁木真出生在蒙古草原上，九岁时父亲被毒死，他和母亲在困苦中长大。他凭借过人的勇气和智慧，统一了蒙古各部落，被推举为"成吉思汗"（意为像大海一样伟大的汗）。他建立了强大的蒙古帝国，发动了大规模的西征，征服了中亚、俄罗斯等广大地区，建立了横跨欧亚的蒙古帝国。成吉思汗和他的子孙们建立了元朝，统一了中国。</div><div class="story-moral"><strong>寓意：</strong>成吉思汗从孤儿成长为世界征服者，靠的是坚韧不拔的意志和卓越的领导才能。历史人物需要全面看待。</div></article>
+<article class="story-card" data-cat="song" data-title="马可波罗来华"><span class="story-index">#086</span><div class="story-card-header"><h3 class="story-title">马可波罗来华</h3><span class="story-dynasty">元朝</span></div><div class="story-meta"><span class="story-tag">交流</span><span class="story-tag">文化</span></div><div class="story-content">意大利商人马可波罗十七岁时跟随父亲和叔叔，沿着丝绸之路来到了中国。他在中国住了十七年，受到了元世祖忽必烈的信任，到过中国很多地方。他回到欧洲后，口述了《马可波罗游记》，向欧洲人描绘了一个富庶繁华的东方世界——宏伟的都城、通畅的运河、精美的丝绸和瓷器。这本书引发了欧洲人对东方的向往，后来间接推动了地理大发现。</div><div class="story-moral"><strong>寓意：</strong>文化交流是推动世界进步的重要力量。马可波罗的游记让世界了解了东方，也促进了东西方的交流。</div></article>
+<article class="story-card" data-cat="song" data-title="活字印刷术"><span class="story-index">#087</span><div class="story-card-header"><h3 class="story-title">活字印刷术</h3><span class="story-dynasty">北宋</span></div><div class="story-meta"><span class="story-tag">发明</span><span class="story-tag">科技</span></div><div class="story-content">北宋的毕昇发明了活字印刷术。以前的雕版印刷要在一整块木板上刻字，刻错一个字整块板就废了。毕昇用胶泥做成一个个方块，在上面刻字，然后用火烧硬。排版时把需要的字排列在铁板上，用松脂蜡固定，就可以印刷了。印完后把字拆下来，下次还能用。活字印刷大大提高了印刷效率，降低了书籍成本，是中国四大发明之一，后来传到了全世界。</div><div class="story-moral"><strong>寓意：</strong>小小的改进也能带来巨大的进步。毕昇是一个普通的工匠，但他的发明改变了世界。</div></article>
+<article class="story-card" data-cat="song" data-title="指南针用于航海"><span class="story-index">#088</span><div class="story-card-header"><h3 class="story-title">指南针用于航海</h3><span class="story-dynasty">北宋</span></div><div class="story-meta"><span class="story-tag">发明</span><span class="story-tag">航海</span></div><div class="story-content">中国人很早就发现了磁石指南的特性，战国时发明了"司南"。到了宋代，人们把磁针装在可以自由转动的轴上，制成了更方便的指南针。北宋时，指南针开始被用于航海。有了指南针，船只在茫茫大海上也能辨别方向，不再怕迷失。这大大促进了远洋航行，中国的商船可以航行到东南亚、印度甚至非洲。指南针后来传到欧洲，帮助欧洲人完成了地理大发现。</div><div class="story-moral"><strong>寓意：</strong>四大发明中的指南针，改变了人类的航海历史。科技发明虽然小，但影响可以改变世界。</div></article>
+<article class="story-card" data-cat="song" data-title="清明上河图"><span class="story-index">#089</span><div class="story-card-header"><h3 class="story-title">清明上河图</h3><span class="story-dynasty">北宋</span></div><div class="story-meta"><span class="story-tag">艺术</span><span class="story-tag">文化</span></div><div class="story-content">北宋画家张择端画了一幅长卷《清明上河图》，描绘了北宋都城汴京（今开封）的繁华景象。画中有八百多个人物，有做买卖的商人、赶车的脚夫、划船的船夫、说书的艺人、逛街的妇女、玩耍的儿童……还有各种店铺、桥梁、船只、车辆。这幅五米多长的画卷，完整地展现了宋代城市生活的方方面面，是了解宋代社会的珍贵资料，也是中国绘画史上的巅峰之作。</div><div class="story-moral"><strong>寓意：</strong>一幅画记录了一个时代。《清明上河图》让我们看到了一千年前中国人的生活，艺术的记录功能价值连城。</div></article>
+<article class="story-card" data-cat="song" data-title="包青天断案"><span class="story-index">#090</span><div class="story-card-header"><h3 class="story-title">包青天断案</h3><span class="story-dynasty">北宋</span></div><div class="story-meta"><span class="story-tag">公正</span><span class="story-tag">清廉</span></div><div class="story-content">包拯是北宋最著名的清官，人称"包青天"。他做官铁面无私，不畏权贵。有个权贵犯法，所有人都怕得罪他不敢审理，包拯却依法判了他的罪。他还改革了诉讼制度，让百姓可以直接到衙门告状，不必经过中间人。包拯办案公正廉洁，从不接受贿赂，百姓非常敬爱他。民间流传着很多包公断案的故事，比如"铡美案""狸猫换太子"等，虽然很多是虚构的，但包拯的清官形象深入人心。</div><div class="story-moral"><strong>寓意：</strong>公正廉洁是为官之本。包拯不畏权贵、秉公执法的精神，是每一个公职人员都应该学习的。</div></article>
+<article class="story-card" data-cat="song" data-title="文天祥宁死不屈"><span class="story-index">#091</span><div class="story-card-header"><h3 class="story-title">文天祥宁死不屈</h3><span class="story-dynasty">南宋</span></div><div class="story-meta"><span class="story-tag">忠烈</span><span class="story-tag">气节</span></div><div class="story-content">南宋末年，元军南下，文天祥变卖家产组织义军抗元。兵败被俘后，元世祖忽必烈亲自劝降，许他高官厚禄。文天祥严词拒绝，写下了千古绝唱《过零丁洋》："人生自古谁无死，留取丹心照汗青。"他被关押三年，始终不屈。临刑前，他面向南方（宋朝的方向）跪拜，从容就义。文天祥用生命诠释了什么是忠义和气节。</div><div class="story-moral"><strong>寓意：</strong>"人生自古谁无死，留取丹心照汗青。"文天祥的忠义气节，是中华民族精神的最高体现。</div></article>
+<article class="story-card" data-cat="song" data-title="靖康之耻"><span class="story-index">#092</span><div class="story-card-header"><h3 class="story-title">靖康之耻</h3><span class="story-dynasty">北宋</span></div><div class="story-meta"><span class="story-tag">教训</span><span class="story-tag">国耻</span></div><div class="story-content">公元1127年，金兵攻破北宋都城汴京，掳走了宋徽宗和宋钦宗两位皇帝，以及后妃、皇子、公主等三千多人，还有大量金银财宝。北宋灭亡。这就是历史上著名的"靖康之耻"，是中原王朝最屈辱的时刻之一。宋高宗赵构南渡建立了南宋，定都临安（今杭州）。南宋名将岳飞写下了"靖康耻，犹未雪"的名句，表达了收复失地的决心。</div><div class="story-moral"><strong>寓意：</strong>落后就要挨打。靖康之耻是中华民族永远不能忘记的教训，它激励着后人奋发图强。</div></article>
+</div>
+</section>
+
+<!-- 明清 -->
+<section class="story-section" data-cat="ming" id="ming">
+<div class="section-header">
+<span class="section-badge">明清</span>
+<h2 class="section-title">明清</h2>
+<span class="section-count">7个故事</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="ming" data-title="朱元璋从乞丐到皇帝"><span class="story-index">#093</span><div class="story-card-header"><h3 class="story-title">朱元璋从乞丐到皇帝</h3><span class="story-dynasty">明朝</span></div><div class="story-meta"><span class="story-tag">传奇</span><span class="story-tag">奋斗</span></div><div class="story-content">朱元璋是中国历史上出身最卑微的皇帝。他小时候家里很穷，父母和大哥都饿死了。他当过和尚、讨过饭，后来加入了红巾军起义。因为作战勇敢又有谋略，他逐渐成为红巾军的首领。他采纳谋士朱升"高筑墙、广积粮、缓称王"的建议，一步步消灭了陈友谅、张士诚等对手，最终推翻了元朝，建立了明朝。朱元璋从一个放牛娃、小和尚变成了大明开国皇帝，是中国历史上最传奇的人物之一。</div><div class="story-moral"><strong>寓意：</strong>出身不能决定命运。朱元璋的奋斗史告诉我们，只要有才能、有志向、肯努力，就能改变命运。</div></article>
+<article class="story-card" data-cat="ming" data-title="郑和下西洋"><span class="story-index">#094</span><div class="story-card-header"><h3 class="story-title">郑和下西洋</h3><span class="story-dynasty">明朝</span></div><div class="story-meta"><span class="story-tag">航海</span><span class="story-tag">交流</span></div><div class="story-content">明成祖朱棣派太监郑和率领庞大的船队出使西洋。从1405年到1433年，郑和先后七次下西洋，到过东南亚、印度、阿拉伯、非洲东海岸等三十多个国家和地区。船队最大的宝船长达一百多米，是当时世界上最大的帆船。郑和带去了中国的丝绸、瓷器、茶叶，换回了香料、宝石、珍禽异兽。这是世界航海史上的伟大壮举，比哥伦布发现美洲早了近百年。</div><div class="story-moral"><strong>寓意：</strong>郑和下西洋是和平友好的外交之旅，展示了中华文明的海纳百川。开放交流才能让国家更加繁荣。</div></article>
+<article class="story-card" data-cat="ming" data-title="戚继光抗倭"><span class="story-index">#095</span><div class="story-card-header"><h3 class="story-title">戚继光抗倭</h3><span class="story-dynasty">明朝</span></div><div class="story-meta"><span class="story-tag">爱国</span><span class="story-tag">军事</span></div><div class="story-content">明朝中期，日本海盗（倭寇）经常骚扰中国东南沿海，烧杀抢掠。戚继光被派到浙江抗倭，他招募了一批义乌矿工和农民，训练成一支精锐之师——"戚家军"。他发明了"鸳鸯阵"，根据南方地形特点作战，屡战屡胜。经过十几年的战斗，终于肃清了东南沿海的倭患。戚继光不仅是一位伟大的军事家，还写下了《纪效新书》等军事著作。</div><div class="story-moral"><strong>寓意：</strong>保家卫国是军人的天职。戚继光的爱国精神和军事才能，是中国历史上最闪耀的一页。</div></article>
+<article class="story-card" data-cat="ming" data-title="郑成功收复台湾"><span class="story-index">#096</span><div class="story-card-header"><h3 class="story-title">郑成功收复台湾</h3><span class="story-dynasty">明末清初</span></div><div class="story-meta"><span class="story-tag">爱国</span><span class="story-tag">统一</span></div><div class="story-content">明末，荷兰殖民者占领了台湾。民族英雄郑成功决心收复台湾。1661年，他率领两万五千名将士、数百艘战船从厦门出发，横渡台湾海峡。荷兰人在台湾修建了坚固的城堡，但郑成功巧妙地切断了他们的水源和补给。经过九个月的围困，荷兰殖民者被迫投降。郑成功收复台湾后，大力发展生产，让汉文化在台湾扎下了根。</div><div class="story-moral"><strong>寓意：</strong>台湾自古以来就是中国领土不可分割的一部分。郑成功收复台湾的壮举，永远值得中华民族铭记。</div></article>
+<article class="story-card" data-cat="ming" data-title="曹雪芹写红楼梦"><span class="story-index">#098</span><div class="story-card-header"><h3 class="story-title">曹雪芹写红楼梦</h3><span class="story-dynasty">清朝</span></div><div class="story-meta"><span class="story-tag">文学</span><span class="story-tag">经典</span></div><div class="story-content">曹雪芹出身于富贵人家，少年时过着锦衣玉食的生活。后来家道中落，穷困潦倒，搬到北京西郊的茅屋里住。在艰苦的环境中，他用了十年时间，写下了中国最伟大的小说《红楼梦》。小说以贾、史、王、薛四大家族的兴衰为背景，描写了贾宝玉和林黛玉的爱情悲剧。可惜曹雪芹只写完了前八十回就去世了，后四十回由高鹗续写。《红楼梦》是中国古典小说的巅峰之作。</div><div class="story-moral"><strong>寓意：</strong>伟大的作品往往诞生于苦难之中。曹雪芹"批阅十载、增删五次"的创作精神，值得每一个创作者学习。</div></article>
+<article class="story-card" data-cat="ming" data-title="鸦片战争"><span class="story-index">#099</span><div class="story-card-header"><h3 class="story-title">鸦片战争</h3><span class="story-dynasty">清朝</span></div><div class="story-meta"><span class="story-tag">国耻</span><span class="story-tag">教训</span></div><div class="story-content">清朝闭关锁国期间，英国为了扭转对华贸易逆差，大量向中国走私鸦片。鸦片摧残了中国人民的身体和精神。林则徐虎门销烟后，英国以此为借口发动了鸦片战争（1840年）。落后的清王朝被英国的坚船利炮打败，被迫签订了《南京条约》，割让香港岛、赔款、开放通商口岸。鸦片战争是中国近代史的开端，从此中国沦为半殖民地半封建社会。</div><div class="story-moral"><strong>寓意：</strong>落后就要挨打。鸦片战争是中华民族永远的痛，它告诉我们：只有强大起来，才不会受人欺负。</div></article>
+<article class="story-card" data-cat="ming" data-title="四大名著的诞生"><span class="story-index">#100</span><div class="story-card-header"><h3 class="story-title">四大名著的诞生</h3><span class="story-dynasty">明清</span></div><div class="story-meta"><span class="story-tag">文学</span><span class="story-tag">经典</span></div><div class="story-content">明清时期，中国古典小说达到了巅峰，诞生了四大名著：《三国演义》写三国时代的英雄故事，诸葛亮、关羽、曹操等人物家喻户晓；《水浒传》写一百零八位好汉的传奇故事，官逼民反的主题深入人心；《西游记》写唐僧师徒四人西天取经的故事，想象力天马行空；《红楼梦》写四大家族的兴衰和宝黛爱情悲剧，是中国小说的最高成就。四大名著影响了每一个中国人，是中华文化最灿烂的瑰宝。</div><div class="story-moral"><strong>寓意：</strong>四大名著是中华文化的精华，凝聚了无数前人的智慧和心血。阅读经典，是了解中华文化最好的方式。</div></article>
+</div>
+</section>
+
+<div class="no-results" id="noResults" style="display:none">
+<div class="no-results-icon" aria-hidden="true">&#x1F50D;</div>
+<p class="no-results-text">没有找到匹配的故事</p>
+<p class="no-results-hint">试试其他关键词或切换分类</p>
+</div>
+</main>
+<button class="back-top" id="backTop" aria-label="回到顶部" title="回到顶部">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+<footer>
+<p>上下五千年 &mdash; 精选中华历史故事100篇</p>
+</footer>
+<script>
+(function(){
+var themeBtn=document.querySelector('.theme-toggle');
+var body=document.body;
+var saved=localStorage.getItem('history-theme');
+if(!saved&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches){saved='dark'}
+if(saved){body.setAttribute('data-theme',saved)}
+themeBtn.addEventListener('click',function(){
+var cur=body.getAttribute('data-theme');
+var next=cur==='dark'?'light':'dark';
+body.setAttribute('data-theme',next);
+localStorage.setItem('history-theme',next);
+});
+var filterBtns=document.querySelectorAll('.filter-btn');
+var cards=document.querySelectorAll('.story-card');
+var sections=document.querySelectorAll('.story-section');
+var searchInput=document.querySelector('.search-input');
+var noResults=document.getElementById('noResults');
+function filterCards(cat,query){
+var q=query?q.trim().toLowerCase():'';
+var visibleCount=0;
+cards.forEach(function(c){
+var show=true;
+if(cat!=='all'&&c.getAttribute('data-cat')!==cat)show=false;
+if(q){
+var title=(c.getAttribute('data-title')||'').toLowerCase();
+var text=(c.textContent||'').toLowerCase();
+if(title.indexOf(q)===-1&&text.indexOf(q)===-1)show=false;
+}
+c.style.display=show?'':'none';
+if(show)visibleCount++;
+});
+sections.forEach(function(s){
+var cat2=s.getAttribute('data-cat');
+if(cat!=='all'&&cat2!==cat){s.style.display='none';return}
+s.style.display='';
+var vis=0;
+s.querySelectorAll('.story-card').forEach(function(c){if(c.style.display!=='none')vis++});
+s.style.display=vis?'':'none';
+});
+noResults.style.display=visibleCount?'none':'';
+}
+filterBtns.forEach(function(btn){
+btn.addEventListener('click',function(){
+filterBtns.forEach(function(b){b.classList.remove('active')});
+btn.classList.add('active');
+filterCards(btn.getAttribute('data-filter'),searchInput.value);
+});
+});
+var debounceTimer;
+searchInput.addEventListener('input',function(){
+clearTimeout(debounceTimer);
+debounceTimer=setTimeout(function(){
+var activeFilter=document.querySelector('.filter-btn.active');
+filterCards(activeFilter?activeFilter.getAttribute('data-filter'):'all',searchInput.value);
+},200);
+});
+var backTop=document.getElementById('backTop');
+window.addEventListener('scroll',function(){
+backTop.classList.toggle('visible',window.scrollY>400);
+},{passive:true});
+backTop.addEventListener('click',function(){
+window.scrollTo({top:0,behavior:'smooth'});
+});
+})();
+</script>
+</body>
+</html>

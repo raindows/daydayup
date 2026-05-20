@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>汉字故事 - 字源识字启蒙Top100</title>
+<meta name="description" content="精选100个常用汉字的字源故事，从甲骨文到楷书，按天文地理、人体器官、动物植物、数字方位、自然现象、生活器物六大类分类，轻松识字。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FDF8F4;--bg-alt:#F7EDE5;--surface:#FFF;--surface-h:#FFF9F5;--ink:#2C2420;--ink-l:#5C524A;--ink-m:#8A7F75;--bdr:#E5DDD3;--bdr-l:#EDE8E1;--accent:#2E7D5E;--accent-d:#1E5B42;--gold:#C9A96E;--gold-l:#E8D5A8;--c-nature:#2E7D5E;--c-body:#B8382A;--c-animal:#E8843C;--c-number:#5B6AAF;--c-phenomenon:#5BA5C9;--c-daily:#C48830;--font-d:'Noto Serif SC',serif;--font-h:'Noto Serif SC',serif;--font-b:'Noto Sans SC',sans-serif;--r-sm:6px;--r-md:12px;--r-lg:20px;--sh-s:0 1px 3px rgba(44,36,32,.06);--sh-m:0 4px 16px rgba(44,36,32,.08);--sh-l:0 8px 32px rgba(44,36,32,.10);--tr:200ms ease}
+[data-theme="dark"]{--bg:#1A1714;--bg-alt:#23201B;--surface:#2A2621;--surface-h:#342F29;--ink:#E8E0D6;--ink-l:#BFB5A8;--ink-m:#8A7F72;--bdr:#3A352E;--bdr-l:#302B25;--accent:#4EC99A;--accent-d:#2E7D5E;--gold:#E0C888;--gold-l:#A08040;--c-nature:#4EC99A;--c-body:#E8584A;--c-animal:#F0A060;--c-number:#7B8AD0;--c-phenomenon:#7CC0E0;--c-daily:#E0A850;--sh-s:0 1px 3px rgba(0,0,0,.2);--sh-m:0 4px 16px rgba(0,0,0,.3);--sh-l:0 8px 32px rgba(0,0,0,.35)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-b);background:var(--bg);color:var(--ink);line-height:1.7;min-height:100vh;transition:background var(--tr),color var(--tr)}
+.skip-link{position:absolute;top:-100%;left:16px;padding:8px 16px;background:var(--accent);color:#fff;border-radius:var(--r-sm);z-index:10000;font-size:14px;text-decoration:none}
+.skip-link:focus{top:16px}
+a{color:var(--accent-d);text-decoration:none}
+.top-nav{position:sticky;top:0;z-index:1001;background:var(--surface);border-bottom:1px solid var(--bdr-l);padding:0 24px;transition:background var(--tr)}
+.top-nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;height:44px;gap:4px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+.top-nav-inner::-webkit-scrollbar{display:none}
+.top-nav-link{font-family:var(--font-b);font-size:.84rem;color:var(--ink-l);text-decoration:none;padding:6px 14px;border-radius:100px;border:1px solid transparent;transition:all var(--tr);white-space:nowrap;flex-shrink:0}
+.top-nav-link:hover{background:var(--bg-alt);border-color:var(--bdr)}
+.top-nav-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.top-nav-link.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.top-nav-sep{width:1px;height:16px;background:var(--bdr-l);margin:0 4px;flex-shrink:0}
+.theme-toggle{position:fixed;top:52px;right:20px;z-index:1000;width:44px;height:44px;border:1px solid var(--bdr);border-radius:50%;background:var(--surface);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-m);transition:all var(--tr)}
+.theme-toggle:hover{transform:scale(1.08);box-shadow:var(--sh-l)}
+.theme-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.theme-toggle svg{width:20px;height:20px;color:var(--ink)}
+[data-theme="dark"] .theme-toggle .icon-moon{display:none}
+[data-theme="light"] .theme-toggle .icon-sun{display:none}
+.hero{position:relative;min-height:42vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:72px 24px 48px;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 600px 400px at 25% 35%,rgba(46,125,94,.10),transparent),radial-gradient(ellipse 500px 350px at 75% 65%,rgba(91,106,175,.08),transparent),radial-gradient(ellipse 400px 300px at 50% 50%,rgba(201,169,110,.06),transparent);pointer-events:none}
+.hero-deco{font-size:2rem;margin-bottom:12px;letter-spacing:.4em;filter:grayscale(.1)}
+.hero-ornament{width:80px;height:2px;background:linear-gradient(90deg,transparent,var(--accent),var(--gold),transparent);margin-bottom:20px}
+.hero h1{font-family:var(--font-d);font-size:clamp(2.6rem,7vw,5rem);font-weight:400;color:var(--ink);letter-spacing:.06em;line-height:1.2}
+.hero-sub{font-family:var(--font-h);font-size:clamp(.92rem,2.2vw,1.12rem);color:var(--ink-m);font-weight:400;letter-spacing:.15em;margin-top:8px}
+.hero-desc{font-size:.92rem;color:var(--ink-m);max-width:560px;margin-top:16px}
+.hero-stats{display:flex;gap:32px;margin-top:28px;flex-wrap:wrap;justify-content:center}
+.hero-stat{text-align:center}
+.hero-stat-num{font-family:var(--font-h);font-size:2rem;font-weight:700;color:var(--accent);display:block}
+.hero-stat-label{font-size:.78rem;color:var(--ink-m);letter-spacing:.08em}
+main{max-width:1280px;margin:0 auto;padding:0 24px 80px}
+.filter-bar{position:sticky;top:44px;z-index:100;background:var(--bg);border-bottom:1px solid var(--bdr-l);padding:16px 0;margin-bottom:40px;transition:background var(--tr)}
+.filter-bar-inner{display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.filter-bar-inner::-webkit-scrollbar{display:none}
+.filter-btn{flex-shrink:0;padding:8px 18px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink-l);font-family:var(--font-b);font-size:.84rem;cursor:pointer;transition:all var(--tr);white-space:nowrap;user-select:none}
+.filter-btn:hover{background:var(--surface-h);border-color:var(--ink-m)}
+.filter-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.filter-btn .count{display:inline-block;margin-left:3px;font-size:.72rem;opacity:.7}
+.search-wrap{position:relative;flex-shrink:0}
+.search-input{padding:8px 16px 8px 36px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink);font-family:var(--font-b);font-size:.84rem;width:200px;transition:all var(--tr)}
+.search-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(46,125,94,.12);width:260px}
+.search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--ink-m);pointer-events:none}
+.char-section{margin-bottom:48px}
+.section-header{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--bdr-l)}
+.section-badge{font-family:var(--font-h);font-size:.75rem;font-weight:500;padding:3px 10px;border-radius:100px;color:#fff;letter-spacing:.06em}
+.section-title{font-family:var(--font-h);font-size:1.35rem;font-weight:600;color:var(--ink)}
+.section-count{font-size:.82rem;color:var(--ink-m);margin-left:auto}
+[data-cat="nature"] .section-badge{background:var(--c-nature)}
+[data-cat="body"] .section-badge{background:var(--c-body)}
+[data-cat="animal"] .section-badge{background:var(--c-animal)}
+[data-cat="number"] .section-badge{background:var(--c-number)}
+[data-cat="phenomenon"] .section-badge{background:var(--c-phenomenon)}
+[data-cat="daily"] .section-badge{background:var(--c-daily)}
+.char-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
+.char-card{background:var(--surface);border:1px solid var(--bdr-l);border-radius:var(--r-md);padding:22px;transition:all 250ms ease;cursor:default;position:relative;overflow:hidden}
+.char-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;border-radius:3px 0 0 3px;opacity:0;transition:opacity var(--tr)}
+[data-cat="nature"] .char-card::before{background:var(--c-nature)}
+[data-cat="body"] .char-card::before{background:var(--c-body)}
+[data-cat="animal"] .char-card::before{background:var(--c-animal)}
+[data-cat="number"] .char-card::before{background:var(--c-number)}
+[data-cat="phenomenon"] .char-card::before{background:var(--c-phenomenon)}
+[data-cat="daily"] .char-card::before{background:var(--c-daily)}
+.char-card:hover{box-shadow:var(--sh-m);transform:translateY(-2px);border-color:var(--bdr)}
+.char-card:hover::before{opacity:1}
+.char-index{position:absolute;top:10px;right:14px;font-family:var(--font-h);font-size:.72rem;color:var(--ink-m);opacity:.3}
+.char-card-header{display:flex;align-items:center;gap:16px}
+.char-big{font-family:var(--font-d);font-size:3rem;font-weight:900;color:var(--accent);line-height:1;min-width:60px;text-align:center}
+.char-info{display:flex;flex-direction:column;gap:2px}
+.char-pinyin{font-size:.9rem;color:var(--ink-m);font-weight:500}
+.char-category{font-size:.72rem;padding:2px 8px;border-radius:100px;background:var(--bg-alt);color:var(--ink-l);border:1px solid var(--bdr-l);display:inline-block;width:fit-content}
+.char-origin{font-size:.88rem;color:var(--ink-l);line-height:1.8}
+.char-origin strong{color:var(--accent)}
+.char-story{font-size:.9rem;color:var(--ink-l);line-height:1.8}
+.char-words{font-size:.85rem;color:var(--ink);padding:10px 12px;background:var(--bg-alt);border-radius:var(--r-sm);border-left:3px solid var(--accent)}
+.char-words strong{color:var(--accent-d)}
+.char-tag{font-size:.72rem;padding:2px 10px;border-radius:100px;background:var(--bg-alt);color:var(--ink-l);border:1px solid var(--bdr-l);display:inline-block;width:fit-content}
+.no-results{text-align:center;padding:60px 24px;color:var(--ink-m)}
+.no-results-icon{font-size:3rem;margin-bottom:16px;opacity:.5}
+.no-results-text{font-size:1rem;margin-bottom:8px}
+.no-results-hint{font-size:.84rem;opacity:.7}
+.back-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-m);transition:all var(--tr);opacity:0;pointer-events:none;z-index:999}
+.back-top.visible{opacity:1;pointer-events:auto}
+.back-top:hover{transform:translateY(-2px);box-shadow:var(--sh-l)}
+.back-top:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.back-top svg{width:20px;height:20px}
+footer{text-align:center;padding:40px 24px;color:var(--ink-m);font-size:.82rem;border-top:1px solid var(--bdr-l)}
+@media(max-width:768px){
+.hero{min-height:32vh;padding:56px 20px 36px}
+.hero h1{letter-spacing:.04em}
+.hero-stats{gap:20px}
+main{padding:0 16px 60px}
+.filter-bar{position:sticky;top:44px;z-index:100;background:var(--bg);border-bottom:1px solid var(--bdr-l);padding:16px 0;margin-bottom:40px;transition:background var(--tr)}
+.search-wrap{position:relative;flex-shrink:0}
+.search-input{padding:8px 16px 8px 36px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink);font-family:var(--font-b);font-size:.84rem;width:150px;transition:all var(--tr)}
+.search-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(46,125,94,.12);width:200px}
+.char-grid{grid-template-columns:1fr}
+.top-nav{padding:0 16px}
+}
+@media(max-width:400px){
+.hero h1{font-size:2.2rem}
+.hero-sub{font-size:.85rem}
+}
+@media(prefers-reduced-motion:reduce){*{transition-duration:0s!important;animation-duration:0s!important}}
+</style>
+</head>
+<body data-theme="light">
+<a href="#main" class="skip-link">跳到正文</a>
+<nav class="top-nav" aria-label="站点导航">
+<div class="top-nav-inner">
+<a href="jingdian-tongyao.html" class="top-nav-link">经典童谣</a>
+<span class="top-nav-sep"></span>
+<a href="shenglv-qimeng.html" class="top-nav-link">声律启蒙</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-tonghua.html" class="top-nav-link">少儿童话</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-qimeng-shici.html" class="top-nav-link">启蒙诗词</a>
+<span class="top-nav-sep"></span>
+<a href="hanzi-gushi.html" class="top-nav-link active">汉字故事</a>
+<span class="top-nav-sep"></span>
+<a href="baihua-shici.html" class="top-nav-link">百花诗词</a>
+<span class="top-nav-sep"></span>
+<a href="shi-wan-ge-weishenme.html" class="top-nav-link">十万个为什么</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-chengyu.html" class="top-nav-link">少儿成语</a>
+<span class="top-nav-sep"></span>
+<a href="shangxia-wuqiannian.html" class="top-nav-link">上下五千年</a>
+<span class="top-nav-sep"></span>
+<a href="sanshiliuji.html" class="top-nav-link">三十六计</a>
+<span class="top-nav-sep"></span>
+<a href="song-ci-jingxuan.html" class="top-nav-link">宋词精选</a>
+<span class="top-nav-sep"></span>
+<a href="maozedong-shici.html" class="top-nav-link">毛主席诗词</a>
+</div>
+</nav>
+<button class="theme-toggle" aria-label="切换深色模式" title="切换深色模式">
+<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
+<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+<header class="hero">
+<div class="hero-deco" aria-hidden="true">&#x1F4D6; &#x1F9EC; &#x1F4DA; &#x2728;</div>
+<div class="hero-ornament" aria-hidden="true"></div>
+<h1>汉字故事</h1>
+<p class="hero-sub">字源探索 &#xB7; 识字启蒙 &#xB7; 文化传承</p>
+<p class="hero-desc">精选100个常用汉字的字源故事，从甲骨文到楷书，了解每个汉字的前世今生，轻松识字、快乐学习。</p>
+<div class="hero-stats">
+<div class="hero-stat"><span class="hero-stat-num">100</span><span class="hero-stat-label">精选汉字</span></div>
+<div class="hero-stat"><span class="hero-stat-num">6</span><span class="hero-stat-label">分类主题</span></div>
+<div class="hero-stat"><span class="hero-stat-num">3000+</span><span class="hero-stat-label">年文字史</span></div>
+</div>
+</header>
+<main id="main">
+<div class="filter-bar" role="toolbar" aria-label="汉字筛选">
+<div class="filter-bar-inner">
+<div class="search-wrap"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="text" class="search-input" placeholder="搜索汉字或拼音..." id="searchInput" aria-label="搜索汉字"></div>
+<button class="filter-btn active" data-filter="all">全部<span class="count">(100)</span></button>
+<button class="filter-btn" data-filter="nature">天文地理<span class="count">(16)</span></button>
+<button class="filter-btn" data-filter="body">人体器官<span class="count">(13)</span></button>
+<button class="filter-btn" data-filter="animal">动物植物<span class="count">(16)</span></button>
+<button class="filter-btn" data-filter="number">数字方位<span class="count">(16)</span></button>
+<button class="filter-btn" data-filter="phenomenon">自然现象<span class="count">(14)</span></button>
+<button class="filter-btn" data-filter="daily">生活器物<span class="count">(25)</span></button>
+</div>
+</div>
+
+<!-- 天文地理 -->
+<section class="char-section" data-cat="nature" id="nature">
+<div class="section-header">
+<span class="section-badge">天文地理</span>
+<h2 class="section-title">天文地理</h2>
+<span class="section-count">16个汉字</span>
+</div>
+<div class="char-grid">
+<article class="char-card" data-cat="nature" data-title="日"><span class="char-index">#001</span><div class="char-card-header"><span class="char-big">日</span><div class="char-info"><span class="char-pinyin">rì</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"日"画成一个圆圈，中间加一点，就像天上的太阳。后来为了书写方便，圆圈慢慢变成了方形。</div><div class="char-story">古人抬头看天，最明亮的就是太阳。太阳每天东升西落，带来光明和温暖。所以古人画了一个圆圆的太阳，中间加点表示光芒。金文和小篆保持了圆形，到了隶书和楷书才变成了方形。</div><div class="char-words"><strong>常用词语：</strong>日月、日出、日记、生日、假日</div></article>
+<article class="char-card" data-cat="nature" data-title="月"><span class="char-index">#002</span><div class="char-card-header"><span class="char-big">月</span><div class="char-info"><span class="char-pinyin">yuè</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"月"画成一弯新月的样子。月有圆缺变化，古人画的是最常见的弯月形状。</div><div class="char-story">月亮是夜空中最美丽的天体。它有时圆如玉盘，有时弯如镰刀。古人看到弯弯的月亮，就画下了这个形状。和太阳的圆满不同，月亮的形状一直在变化，所以"月"字始终保留了弯弯的样子。</div><div class="char-words"><strong>常用词语：</strong>月亮、月光、月份、月饼、岁月</div></article>
+<article class="char-card" data-cat="nature" data-title="星"><span class="char-index">#003</span><div class="char-card-header"><span class="char-big">星</span><div class="char-info"><span class="char-pinyin">xīng</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"星"由三个小圆圈或小方块组成，代表夜空中闪烁的星星。后来加了"生"作声旁。</div><div class="char-story">夜晚的天空中有无数闪烁的光点，那就是星星。古人发现星星数量很多，就画了几个小点来表示。因为"星"和"生"读音相近，后来就在星星下面加上了"生"字，变成了今天的"星"字。</div><div class="char-words"><strong>常用词语：</strong>星星、星空、星球、明星、星光</div></article>
+<article class="char-card" data-cat="nature" data-title="天"><span class="char-index">#004</span><div class="char-card-header"><span class="char-big">天</span><div class="char-info"><span class="char-pinyin">tiān</span><span class="char-category">指事字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"天"像一个正面站立的人，上面加一横或一个方框，表示人头顶上方的天空。</div><div class="char-story">古人觉得天空是人头顶上最远最高的地方，所以在"人"的头上加了一横，表示头顶上的天。天是最高的，所以"天"也有"最大的、最重要的"意思，比如"天才""天下"。</div><div class="char-words"><strong>常用词语：</strong>天空、天气、今天、天地、天才</div></article>
+<article class="char-card" data-cat="nature" data-title="地"><span class="char-index">#005</span><div class="char-card-header"><span class="char-big">地</span><div class="char-info"><span class="char-pinyin">dì</span><span class="char-category">形声字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"地"由"土"（形旁，表示和土地有关）和"也"（声旁，表示读音）组成。</div><div class="char-story">天和地是古人眼中最大的两样东西。"天"用人的头顶表示，"地"则和"土"有关。古人在"土"旁边加上表示读音的"也"字，就成了"地"。大地上有山有水有草木，养育了一切生命。</div><div class="char-words"><strong>常用词语：</strong>大地、地面、地方、地图、地球</div></article>
+<article class="char-card" data-cat="nature" data-title="山"><span class="char-index">#006</span><div class="char-card-header"><span class="char-big">山</span><div class="char-info"><span class="char-pinyin">shān</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"山"画成三个山峰并列的样子，中间高两边低，非常像真实的山的轮廓。</div><div class="char-story">古人看到远处连绵起伏的山脉，有三座突出的山峰，中间的最高。他们就画下了这个形状来表示"山"。这个字从甲骨文到今天几乎没有变化，是最古老的汉字之一，一眼就能看出是山的模样。</div><div class="char-words"><strong>常用词语：</strong>山水、山上、高山、山林、山谷</div></article>
+<article class="char-card" data-cat="nature" data-title="水"><span class="char-index">#007</span><div class="char-card-header"><span class="char-big">水</span><div class="char-info"><span class="char-pinyin">shuǐ</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"水"画成流水的样子，中间是一条水线，两边的点表示水花和波纹。</div><div class="char-story">水是生命之源。古人看到河水流动的样子，中间是水流，两边溅起水花，就画下了这个形状。后来中间的弯曲线条保留了下来，两边的点变成了横撇和捺，但还能看出流水的模样。</div><div class="char-words"><strong>常用词语：</strong>水果、山水、河水、喝水、雨水</div></article>
+<article class="char-card" data-cat="nature" data-title="火"><span class="char-index">#008</span><div class="char-card-header"><span class="char-big">火</span><div class="char-info"><span class="char-pinyin">huǒ</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"火"画成火焰上窜的样子，中间是火苗，两边是飞溅的火星。</div><div class="char-story">远古时代，人类发现了火，从此告别了茹毛饮血的生活。古人观察火焰燃烧的样子——中间的火苗最高最亮，两边的火星向两旁飞散，就画下了这个字。火给人类带来了温暖和熟食，是文明的起点。</div><div class="char-words"><strong>常用词语：</strong>火车、大火、火山、火苗、灭火</div></article>
+<article class="char-card" data-cat="nature" data-title="土"><span class="char-index">#009</span><div class="char-card-header"><span class="char-big">土</span><div class="char-info"><span class="char-pinyin">tǔ</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"土"像地上的一堆土，上面一横代表地面，下面的一竖和一点代表土块。</div><div class="char-story">土地是万物生长的基础。古人看到地面上的土堆，就画了一条横线代表地面，下面画了突出的土块。农民在土地上耕种，粮食从土里长出来，所以"土"对古人来说是最重要的东西之一。</div><div class="char-words"><strong>常用词语：</strong>土地、泥土、尘土、国土、乡土</div></article>
+<article class="char-card" data-cat="nature" data-title="石"><span class="char-index">#010</span><div class="char-card-header"><span class="char-big">石</span><div class="char-info"><span class="char-pinyin">shí</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"石"像山崖下面有一块石头掉落的样子。上面是"厂"（山崖），下面是"口"（石头）。</div><div class="char-story">古人看到山崖上经常有石头滚落下来，就画了山崖下面有一块方方的石头。后来上面变成了"厂"字头，下面保留了一个"口"形，代表石块。石头坚硬耐磨，古人用它做工具和武器。</div><div class="char-words"><strong>常用词语：</strong>石头、石子、宝石、石桥、化石</div></article>
+<article class="char-card" data-cat="nature" data-title="川"><span class="char-index">#011</span><div class="char-card-header"><span class="char-big">川</span><div class="char-info"><span class="char-pinyin">chuān</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"川"画成河流蜿蜒流过的样子，两边的曲线是河岸，中间是流水。</div><div class="char-story">古人看到河水在两岸之间奔流，就画下了三条曲线表示河流。这个字非常生动，中间的线是水流，两边的线是河岸。"川"也有平原的意思，比如"平川""一马平川"，因为河流两岸往往有平坦的土地。</div><div class="char-words"><strong>常用词语：</strong>山川、河川、四川、百川、川流不息</div></article>
+<article class="char-card" data-cat="nature" data-title="云"><span class="char-index">#012</span><div class="char-card-header"><span class="char-big">云</span><div class="char-info"><span class="char-pinyin">yún</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"云"画成天上卷曲的云朵形状，上下两条弧线代表云层的翻卷。</div><div class="char-story">抬头看天，白云飘飘，形状千变万化。古人画了两条弯弯的弧线来表示天空中卷曲的云朵。繁体的"雲"加上了"雨"字头，表示云和雨有关。简化字恢复了最古老的写法。</div><div class="char-words"><strong>常用词语：</strong>白云、云朵、云彩、云海、乌云</div></article>
+<article class="char-card" data-cat="nature" data-title="风"><span class="char-index">#013</span><div class="char-card-header"><span class="char-big">风</span><div class="char-info"><span class="char-pinyin">fēng</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"风"画成一只展翅飞翔的鸟——凤鸟，古人认为风是由神鸟扇动翅膀产生的。</div><div class="char-story">风看不见摸不着，但古人觉得风一定是什么东西扇动产生的，就想到了会飞的鸟。于是用凤鸟来表示"风"。后来"风"和"凤"分开了，"风"加上了"虫"旁（古人认为风是虫子变化来的），简化后又去掉了虫旁。</div><div class="char-words"><strong>常用词语：</strong>大风、风筝、风景、风雨、春风</div></article>
+<article class="char-card" data-cat="nature" data-title="雨"><span class="char-index">#014</span><div class="char-card-header"><span class="char-big">雨</span><div class="char-info"><span class="char-pinyin">yǔ</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"雨"上面一横代表天空，下面的小点代表从天降落的雨滴。</div><div class="char-story">下雨是古人最常看到的自然现象之一。天上一片云，雨滴纷纷落下来。古人就画了一条横线代表天空，下面画了几个小点代表雨滴。这个字从古到今变化不大，一看就知道是下雨。</div><div class="char-words"><strong>常用词语：</strong>下雨、雨水、雨伞、暴雨、风雨</div></article>
+<article class="char-card" data-cat="nature" data-title="雪"><span class="char-index">#015</span><div class="char-card-header"><span class="char-big">雪</span><div class="char-info"><span class="char-pinyin">xuě</span><span class="char-category">会意字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"雪"由"雨"（形旁，表示和降水有关）和"彐"（手，表示可以用手捧起）组成。会意：天上下的可以用手接住的白色降水。</div><div class="char-story">雪是从天上飘落的白色雪花，古人觉得它和雨一样是从天上降下来的，所以用"雨"字头。雪花可以用手接住，所以下面是表示手的"彐"。雪是白色的、冰凉的，冬天才会下，给大地披上银装。</div><div class="char-words"><strong>常用词语：</strong>下雪、雪人、雪花、白雪、雪地</div></article>
+<article class="char-card" data-cat="nature" data-title="田"><span class="char-index">#016</span><div class="char-card-header"><span class="char-big">田</span><div class="char-info"><span class="char-pinyin">tián</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"田"画成一块方方正正的农田，中间有纵横交错的田埂，分成了四小块。</div><div class="char-story">中国是农业大国，田地是最重要的东西。古人把田地画成一个大方块，里面分成小块，就像我们今天看到的棋盘一样。中间的线条是田埂，把整块田分成了几部分。这个字从甲骨文到今天几乎没变，一看就知道是种庄稼的田地。</div><div class="char-words"><strong>常用词语：</strong>田地、种田、稻田、田地、田野</div></article>
+</div>
+</section>
+
+<!-- 人体器官 -->
+<section class="char-section" data-cat="body" id="body">
+<div class="section-header">
+<span class="section-badge">人体器官</span>
+<h2 class="section-title">人体器官</h2>
+<span class="section-count">13个汉字</span>
+</div>
+<div class="char-grid">
+<article class="char-card" data-cat="body" data-title="人"><span class="char-index">#017</span><div class="char-card-header"><span class="char-big">人</span><div class="char-info"><span class="char-pinyin">rén</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"人"画成一个侧身站立的人，弯着腰、垂着臂，是人在行走或劳作时的姿态。</div><div class="char-story">"人"是最基本的汉字之一。古人画了一个侧身站立的人形——两条腿、一个身体，非常简单。这个字虽然简单，但它是一切的开始。有了人，才有家庭、有社会、有文明。中国文化中特别重视"人"——仁义礼智信，都和人有关。</div><div class="char-words"><strong>常用词语：</strong>人民、大人、人物、人生、人们</div></article>
+<article class="char-card" data-cat="body" data-title="口"><span class="char-index">#018</span><div class="char-card-header"><span class="char-big">口</span><div class="char-info"><span class="char-pinyin">kǒu</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"口"画成张开的嘴巴形状，圆圆的，和真实的嘴巴很像。</div><div class="char-story">嘴巴是人身上最重要的器官之一——吃饭、说话都离不开它。古人张大了嘴巴看了看，就画了一个圆圆的形状来表示。嘴巴可以吃东西、可以说话、可以唱歌，所以很多和说话、吃有关的字都有"口"字旁。</div><div class="char-words"><strong>常用词语：</strong>口水、人口、出口、口头、开口</div></article>
+<article class="char-card" data-cat="body" data-title="目"><span class="char-index">#019</span><div class="char-card-header"><span class="char-big">目</span><div class="char-info"><span class="char-pinyin">mù</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"目"画成一只人的眼睛，有眼眶和瞳孔，竖立的椭圆形，和横着写的"眼睛"不同。</div><div class="char-story">古人画眼睛时是竖着画的，因为人的眼睛在脸上是竖立的形状。里面有圆圆的瞳孔，外面是眼眶。后来"目"字慢慢变横了，但里面还是有两个小横代表眼珠。现在"目"就是"眼睛"的意思，比如"目不转睛"。</div><div class="char-words"><strong>常用词语：</strong>目光、目前、题目、目的、目光</div></article>
+<article class="char-card" data-cat="body" data-title="耳"><span class="char-index">#020</span><div class="char-card-header"><span class="char-big">耳</span><div class="char-info"><span class="char-pinyin">ěr</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"耳"画成人耳朵的形状，有耳廓和外耳道，非常逼真。</div><div class="char-story">耳朵长在头的两边，用来听声音。古人仔细观察了耳朵的形状——上面宽、下面窄，像一个大椭圆形，里面还有耳洞。他们就照着画了下来。现在的"耳"字已经变得方正了，但还能看出耳朵的轮廓。</div><div class="char-words"><strong>常用词语：</strong>耳朵、木耳、耳边、耳光、耳语</div></article>
+<article class="char-card" data-cat="body" data-title="手"><span class="char-index">#021</span><div class="char-card-header"><span class="char-big">手</span><div class="char-info"><span class="char-pinyin">shǒu</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"手"画成一只张开的手掌，有五个手指和手掌，指向下方。</div><div class="char-story">手是人最灵巧的器官，可以拿东西、写字、做各种事情。古人张开手掌看了看，画下了五个手指和手掌。不过现在的"手"字已经看不出了手指的样子，变成了一个简洁的符号。和手有关的动作很多，所以有大量带"扌"（手字旁）的字。</div><div class="char-words"><strong>常用词语：</strong>手机、手册、握手、手指、双手</div></article>
+<article class="char-card" data-cat="body" data-title="足"><span class="char-index">#022</span><div class="char-card-header"><span class="char-big">足</span><div class="char-info"><span class="char-pinyin">zú</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"足"画成一只脚和腿的下半部分，有脚趾和脚踝，是一个完整的脚的形状。</div><div class="char-story">脚和腿合在一起叫做"足"。古人画了一只脚，有圆圆的膝盖和下面的脚掌、脚趾。"足"本来指整条腿和脚，后来渐渐专指脚了。走路上山、跑步跳跃都离不开脚，所以"足"也有"足够"的意思——脚力够，才能走得远。</div><div class="char-words"><strong>常用词语：</strong>足球、足够、手足、画蛇添足、不足</div></article>
+<article class="char-card" data-cat="body" data-title="心"><span class="char-index">#023</span><div class="char-card-header"><span class="char-big">心</span><div class="char-info"><span class="char-pinyin">xīn</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"心"画成心脏的形状，有心房、心室和血管，非常像真实的心脏解剖图。</div><div class="char-story">古人知道心脏在胸腔里，是人体最重要的器官。他们画了心脏的形状——上面是血管，下面是心室。中国文化中"心"不仅指心脏，还指思想和感情。"心想""开心""爱心""用心"都是用"心"来表达思维和情感。</div><div class="char-words"><strong>常用词语：</strong>开心、心里、爱心、心情、中心</div></article>
+<article class="char-card" data-cat="body" data-title="头"><span class="char-index">#024</span><div class="char-card-header"><span class="char-big">头</span><div class="char-info"><span class="char-pinyin">tóu</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"头"的繁体"頭"由"豆"和"页"组成。"页"本来就是头的意思，象形，画了人的头和身体。</div><div class="char-story">头是人体最高的部位，眼睛、耳朵、鼻子、嘴巴都在头上，是"五官"所在。繁体的"頭"右边是"页"，在古文字中"页"就是人头的象形字，有头发、眼睛和下巴。简化字用"大"加两点表示头，非常简洁。</div><div class="char-words"><strong>常用词语：</strong>头发、点头、石头、木头、从头</div></article>
+<article class="char-card" data-cat="body" data-title="齿"><span class="char-index">#025</span><div class="char-card-header"><span class="char-big">齿</span><div class="char-info"><span class="char-pinyin">chǐ</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"齿"画成张开的嘴巴里露出上下两排牙齿的形状。</div><div class="char-story">张开嘴巴就能看到牙齿。古人画了一个张开的嘴，里面露出了上面一排和下面一排整齐的牙齿。"齿"和"牙"都是牙齿的意思，但"齿"强调的是排列整齐的牙齿。"唇亡齿寒"说的就是嘴唇没了，牙齿就会受寒。</div><div class="char-words"><strong>常用词语：</strong>牙齿、齿轮、口齿、唇亡齿寒</div></article>
+<article class="char-card" data-cat="body" data-title="舌"><span class="char-index">#026</span><div class="char-card-header"><span class="char-big">舌</span><div class="char-info"><span class="char-pinyin">shé</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"舌"画成从嘴里伸出来的舌头形状，上面是口，下面伸出的部分是否头。</div><div class="char-story">舌头在嘴里，能尝味道、能帮助说话。古人画了一个方框代表嘴巴，下面伸出一个尖尖的东西代表舌头。说话需要舌头，所以"舌"也引申出"说话"的意思，比如"学舌""舌战"。</div><div class="char-words"><strong>常用词语：</strong>舌头、口舌、学舌、七嘴八舌</div></article>
+<article class="char-card" data-cat="body" data-title="女"><span class="char-index">#027</span><div class="char-card-header"><span class="char-big">女</span><div class="char-info"><span class="char-pinyin">nǚ</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"女"画成一个跪坐的人形，双手交叉放在胸前，是古代女子常见的姿势。</div><div class="char-story">在古代，女子多在家里操持家务，所以画了一个跪坐的人形来表示"女"。双手交叉在胸前，表示安静、顺从的姿态。虽然现代女性不再跪坐，但"女"字保留了下来。汉字中和女性有关的字很多都带"女"字旁，比如"妈""姐""妹""好"。</div><div class="char-words"><strong>常用词语：</strong>女孩、女儿、女人、男女、女生</div></article>
+<article class="char-card" data-cat="body" data-title="子"><span class="char-index">#028</span><div class="char-card-header"><span class="char-big">子</span><div class="char-info"><span class="char-pinyin">zǐ</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"子"画成一个大脑袋、小身体的婴儿形象，有手有脚，非常可爱。</div><div class="char-story">"子"最初的意思就是婴儿或小孩子。古人画了一个大头小身体的婴儿，两条小胳膊举着，就像婴儿在挥舞小手。后来"子"的意思扩大了，可以指儿子、孩子，也可以作为对人的尊称，比如"孔子""孟子""女子"。</div><div class="char-words"><strong>常用词语：</strong>孩子、儿子、女子、日子、种子</div></article>
+<article class="char-card" data-cat="body" data-title="男"><span class="char-index">#029</span><div class="char-card-header"><span class="char-big">男</span><div class="char-info"><span class="char-pinyin">nán</span><span class="char-category">会意字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"男"由"田"和"力"组成，会意：在田里用力劳动的人就是男人。</div><div class="char-story">在古代农业社会，男人主要负责在田地里干重活。上面是"田"代表田地，下面是"力"代表力气，合起来就是"在田里出力的人"——这就是"男"。这个字生动地反映了古代社会的分工。</div><div class="char-words"><strong>常用词语：</strong>男生、男人、男孩、男女、男生</div></article>
+</div>
+</section>
+
+<!-- 动物植物 -->
+<section class="char-section" data-cat="animal" id="animal">
+<div class="section-header">
+<span class="section-badge">动物植物</span>
+<h2 class="section-title">动物植物</h2>
+<span class="section-count">16个汉字</span>
+</div>
+<div class="char-grid">
+<article class="char-card" data-cat="animal" data-title="牛"><span class="char-index">#030</span><div class="char-card-header"><span class="char-big">牛</span><div class="char-info"><span class="char-pinyin">niú</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"牛"画成牛头的正面形状，有两个角、两只耳朵和一张脸。</div><div class="char-story">牛是古代最重要的家畜，帮助农民耕地。古人特别熟悉牛，就画了牛头的正面——两个尖尖的牛角向上翘起，两只耳朵在两边，中间是牛脸。这个形象非常传神，一眼就能认出是牛。在汉字中，牛字旁"牜"的字大多和牛有关。</div><div class="char-words"><strong>常用词语：</strong>牛奶、牛肉、公牛、水牛、牛角</div></article>
+<article class="char-card" data-cat="animal" data-title="马"><span class="char-index">#031</span><div class="char-card-header"><span class="char-big">马</span><div class="char-info"><span class="char-pinyin">mǎ</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"马"画成一匹马的侧面，有鬃毛、四条腿和长长的马尾，非常生动。</div><div class="char-story">马是古代最重要的交通工具和战争伙伴。古人画了一匹骏马的侧面——竖起的鬃毛、健壮的四条腿、飘逸的马尾。繁体的"馬"还能看出马的样子，简化后的"马"更加简洁。和马有关的成语很多：马到成功、一马当先、千军万马。</div><div class="char-words"><strong>常用词语：</strong>马上、小马、马路、木马、白马</div></article>
+<article class="char-card" data-cat="animal" data-title="羊"><span class="char-index">#032</span><div class="char-card-header"><span class="char-big">羊</span><div class="char-info"><span class="char-pinyin">yáng</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"羊"画成羊头的正面，有两个向下弯曲的角，是绵羊角的形状。</div><div class="char-story">羊是最早被驯化的动物之一，性情温顺。古人画了羊头的正面——两只弯弯的角向下垂着，非常可爱。"羊"在古代是吉祥的象征，"祥""善""美"等字都有"羊"（或"羊"变形），因为羊代表美好和善良。</div><div class="char-words"><strong>常用词语：</strong>小羊、山羊、羊毛、牛羊、羊角</div></article>
+<article class="char-card" data-cat="animal" data-title="鸟"><span class="char-index">#033</span><div class="char-card-header"><span class="char-big">鸟</span><div class="char-info"><span class="char-pinyin">niǎo</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"鸟"画成一只鸟的侧面，有圆圆的头、尖尖的嘴、翅膀和尾巴，非常逼真。</div><div class="char-story">鸟在天上飞，古人抬头就能看到。他们画了一只鸟的侧面——圆圆的小脑袋、尖尖的嘴巴、展开的翅膀和翘起的尾巴。繁体的"鳥"更加形象，有羽毛和爪子。简化后的"鸟"还能看出鸟的基本轮廓。鸟类让古人羡慕，因为它们能自由飞翔。</div><div class="char-words"><strong>常用词语：</strong>小鸟、飞鸟、鸟儿、小鸟、鸟巢</div></article>
+<article class="char-card" data-cat="animal" data-title="鱼"><span class="char-index">#034</span><div class="char-card-header"><span class="char-big">鱼</span><div class="char-info"><span class="char-pinyin">yú</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"鱼"画成一条鱼的侧面，有头、身体、鳍和尾巴，是水中的鱼的形象。</div><div class="char-story">鱼生活在水里，是古人重要的食物来源。他们画了一条鱼的侧面——圆圆的鱼头、菱形的鱼身、分开的鱼尾，非常生动。繁体的"魚"下面有四点水（灬），表示鱼生活在水中。简化后的"鱼"更加简洁，但还能看出鱼的基本形状。</div><div class="char-words"><strong>常用词语：</strong>小鱼、金鱼、鱼儿、钓鱼、鱼塘</div></article>
+<article class="char-card" data-cat="animal" data-title="虫"><span class="char-index">#035</span><div class="char-card-header"><span class="char-big">虫</span><div class="char-info"><span class="char-pinyin">chóng</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"虫"画成一条蛇的形状，有三角形的头和弯曲的身体。在古代，"虫"泛指所有爬行动物。</div><div class="char-story">在古代，"虫"不仅仅指小虫子，还包括蛇、蜥蜴等爬行动物。古人画了一条蛇——三角形的头、弯曲扭动的身体。后来"虫"的范围缩小了，主要指昆虫类的小动物。但一些和蛇有关的字还保留着虫字旁，比如"蛇""虹"。</div><div class="char-words"><strong>常用词语：</strong>虫子、小虫、害虫、昆虫、甲虫</div></article>
+<article class="char-card" data-cat="animal" data-title="犬"><span class="char-index">#036</span><div class="char-card-header"><span class="char-big">犬</span><div class="char-info"><span class="char-pinyin">quǎn</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"犬"画成一只狗的侧面，有竖起的耳朵、翘起的尾巴和弯曲的身体。</div><div class="char-story">狗是人类最早驯化的动物，是人类忠实的朋友。古人画了一只狗的侧面——竖着耳朵、翘着尾巴、身体微微弯曲，好像在奔跑。"犬"和"狗"是同一个意思，但"犬"多用于书面语。和狗有关的字都有"犭"（反犬旁），比如"猫""猪""狼"。</div><div class="char-words"><strong>常用词语：</strong>犬吠、警犬、猎犬、犬牙、犬马</div></article>
+<article class="char-card" data-cat="animal" data-title="龙"><span class="char-index">#037</span><div class="char-card-header"><span class="char-big">龙</span><div class="char-info"><span class="char-pinyin">lóng</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"龙"画成一条巨大的神兽，有大口、弯曲的身体和角，是中华图腾的形象。</div><div class="char-story">龙是中华民族的图腾，代表着力量和吉祥。古人想象出一种神奇的动物——头上有角、身体像蛇、有鳞有爪、能飞能潜水。他们把这种想象中的神兽画了下来。繁体的"龍"非常复杂，简化后的"龙"保留了基本的轮廓。中国人自称"龙的传人"。</div><div class="char-words"><strong>常用词语：</strong>龙舟、恐龙、龙年、巨龙、龙凤</div></article>
+<article class="char-card" data-cat="animal" data-title="虎"><span class="char-index">#038</span><div class="char-card-header"><span class="char-big">虎</span><div class="char-info"><span class="char-pinyin">hǔ</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"虎"画成老虎的侧面，有大大的头、张开的大嘴、身体和尾巴，非常凶猛。</div><div class="char-story">老虎是百兽之王，非常凶猛。古人画了一只在山间行走的猛虎——大大的头、张开的嘴、强壮的身体和长长的尾巴。繁体的"虎"下面有"儿"字底，像老虎蹲坐的样子。虎代表勇猛和威武，中国文化中有很多和虎有关的词语。</div><div class="char-words"><strong>常用词语：</strong>老虎、虎年、虎头、猛虎、虎口</div></article>
+<article class="char-card" data-cat="animal" data-title="木"><span class="char-index">#039</span><div class="char-card-header"><span class="char-big">木</span><div class="char-info"><span class="char-pinyin">mù</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"木"画成一棵树的形状，上面是树枝，下面是树根，中间是树干。</div><div class="char-story">树木是古人最常见的植物。他们画了一棵树——上面分叉的是树枝和树叶，下面分叉的是树根，中间竖着的是树干。"木"就是树的意思。后来很多和树木有关的字都带"木"字旁，比如"林""森""树""桥""桌"，说明木材在古代生活中非常重要。</div><div class="char-words"><strong>常用词语：</strong>木头、树木、木板、木马、木材</div></article>
+<article class="char-card" data-cat="animal" data-title="竹"><span class="char-index">#040</span><div class="char-card-header"><span class="char-big">竹</span><div class="char-info"><span class="char-pinyin">zhú</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"竹"画成两片竹叶的形状，左右对称，非常像风中摇曳的竹叶。</div><div class="char-story">竹子是中国最常见的植物之一，四季常青、中空有节。古人画了两片下垂的竹叶，非常形象。竹子在古代用途广泛——可以建房、做家具、编竹篮、做箭杆，还能吃竹笋。文人特别喜欢竹子，因为它"虚心有节"，代表正直的品格。</div><div class="char-words"><strong>常用词语：</strong>竹子、竹林、竹笋、竹篮、竹叶</div></article>
+<article class="char-card" data-cat="animal" data-title="禾"><span class="char-index">#041</span><div class="char-card-header"><span class="char-big">禾</span><div class="char-info"><span class="char-pinyin">hé</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"禾"画成一棵成熟的稻谷，弯弯的谷穗沉甸甸地垂下来，下面是茎叶。</div><div class="char-story">"禾"就是庄稼，特指水稻。古人看到稻谷成熟时，金黄的谷穗沉甸甸地弯下来，就画下了这个形状——上面弯曲的是谷穗，下面是茎和叶。粮食是古人的命根子，所以"禾"字很重要。现在"禾"主要出现在"和""种""秋""稼"等字中。</div><div class="char-words"><strong>常用词语：</strong>禾苗、禾草、庄稼、禾场</div></article>
+<article class="char-card" data-cat="animal" data-title="草"><span class="char-index">#042</span><div class="char-card-header"><span class="char-big">草</span><div class="char-info"><span class="char-pinyin">cǎo</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>繁体的"艸"画成两棵小草从地面长出的样子。简化后的"草"由"艹"（草字头）和"早"组成。</div><div class="char-story">草是最常见的植物，到处都能看到。古人画了两棵从地面长出来的小草。后来"艹"（草字头）成了表示植物的偏旁部首，大量和植物有关的字都有草字头，比如"花""菜""茶""药""菊"。草虽然平凡，但"野火烧不尽，春风吹又生"，生命力极其顽强。</div><div class="char-words"><strong>常用词语：</strong>草地、小草、花草、草原、草书</div></article>
+<article class="char-card" data-cat="animal" data-title="花"><span class="char-index">#043</span><div class="char-card-header"><span class="char-big">花</span><div class="char-info"><span class="char-pinyin">huā</span><span class="char-category">形声字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"花"由"艹"（形旁，表示植物）和"化"（声旁，表示读音）组成。是"華"的简化字。</div><div class="char-story">花是植物最美的部分，五颜六色、芬芳扑鼻。"花"字上面是草字头，说明它是一种植物；下面是"化"，既表示读音，也暗示花开花落的"变化"。繁体字"華"像一棵开满花的树，简化后变成了"花"。中国文化中经常用花来比喻美好的事物。</div><div class="char-words"><strong>常用词语：</strong>花朵、花园、开花、鲜花、花生</div></article>
+<article class="char-card" data-cat="animal" data-title="果"><span class="char-index">#044</span><div class="char-card-header"><span class="char-big">果</span><div class="char-info"><span class="char-pinyin">guǒ</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"果"画成树上结了果实的样子，上面是三个圆圆的果实，下面是树。</div><div class="char-story">果树结果子是古人最高兴的事。古人画了一棵树，树上结了几个圆圆的果子。"果"字上面圆圆的部分就是果实，下面的"木"是果树。后来引申为"结果""成果"等意思，表示经过努力后得到的东西。</div><div class="char-words"><strong>常用词语：</strong>水果、结果、果园、果子、果实</div></article>
+<article class="char-card" data-cat="animal" data-title="丝"><span class="char-index">#045</span><div class="char-card-header"><span class="char-big">丝</span><div class="char-info"><span class="char-pinyin">sī</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"丝"画成两束丝线绞在一起的形状，上下都有丝线的头绪。</div><div class="char-story">中国是丝绸的故乡。古人把蚕吐的丝线拧成一股，画了两束丝线绞在一起的样子。繁体的"絲"更加形象，下面还有"糸"表示丝线。简化后变成了"丝"。丝绸是古代中国最重要的出口商品，"丝绸之路"因此得名。</div><div class="char-words"><strong>常用词语：</strong>丝绸、丝瓜、铁丝、钢丝、蚕丝</div></article>
+</div>
+</section>
+
+<!-- 数字方位 -->
+<section class="char-section" data-cat="number" id="number">
+<div class="section-header">
+<span class="section-badge">数字方位</span>
+<h2 class="section-title">数字方位</h2>
+<span class="section-count">16个汉字</span>
+</div>
+<div class="char-grid">
+<article class="char-card" data-cat="number" data-title="一"><span class="char-index">#046</span><div class="char-card-header"><span class="char-big">一</span><div class="char-info"><span class="char-pinyin">yī</span><span class="char-category">指事字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"一"就是一条横线，代表最基本的一个单位。</div><div class="char-story">一条横线，简单却是最重要的汉字。一切从"一"开始——一个世界、一个太阳、一条路。"一"虽然简单，但包含了很多哲理：专一、统一、始终如一。老子说"道生一，一生二，二生三，三生万物"，"一"是万物的起点。</div><div class="char-words"><strong>常用词语：</strong>一个、一起、一天、一定、第一</div></article>
+<article class="char-card" data-cat="number" data-title="二"><span class="char-index">#047</span><div class="char-card-header"><span class="char-big">二</span><div class="char-info"><span class="char-pinyin">èr</span><span class="char-category">指事字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"二"用两条横线表示两个，上面长下面短（或等长）。</div><div class="char-story">在"一"的基础上再加一条横线，就变成了"二"。天和地是"二"，日和月是"二"，白天和黑夜也是"二"。"二"表示成双成对的概念，中国人喜欢"好事成双"，所以"二"也有好的意思。</div><div class="char-words"><strong>常用词语：</strong>第二、二月、两个、二者、十二</div></article>
+<article class="char-card" data-cat="number" data-title="三"><span class="char-index">#048</span><div class="char-card-header"><span class="char-big">三</span><div class="char-info"><span class="char-pinyin">sān</span><span class="char-category">指事字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"三"用三条横线表示三个，积画而成。</div><div class="char-story">三条横线表示"三"。在中国文化中，"三"是个很重要的数字——天地人"三才"、日月星"三光"、松竹梅"岁寒三友"。古人说"三人行必有我师"，又说"事不过三"。"三"也泛指"多"，比如"三思而行"不是真的只想三次，而是要多想想。</div><div class="char-words"><strong>常用词语：</strong>三个、三月、三明、三天、第三</div></article>
+<article class="char-card" data-cat="number" data-title="十"><span class="char-index">#049</span><div class="char-card-header"><span class="char-big">十</span><div class="char-info"><span class="char-pinyin">shí</span><span class="char-category">指事字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"十"画成一条竖线中间加一个圆点或一横，表示一个结绳的十位数。</div><div class="char-story">古人用结绳记数，到十个就打一个大结。甲骨文的"十"像一根绳子中间打了一个结。后来变成了竖画加横画。"十"是十进制的基数，中国人特别重视"十"——十全十美是最大的圆满，十字是方向和信仰的象征。</div><div class="char-words"><strong>常用词语：</strong>十个、十月、十分、十三、十一</div></article>
+<article class="char-card" data-cat="number" data-title="百"><span class="char-index">#050</span><div class="char-card-header"><span class="char-big">百</span><div class="char-info"><span class="char-pinyin">bǎi</span><span class="char-category">会意字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"百"由"一"和"白"组成。一说"白"是声旁，一说表示很多、明白（全部）。</div><div class="char-story">十个十就是一百。"百"上面是"一"，下面是"白"。古人觉得一百已经很多了，所以"百"也用来表示"多"——百草、百花、百鸟、百科全书。但"百闻不如一见"告诉我们，听得再多不如亲眼看看。</div><div class="char-words"><strong>常用词语：</strong>一百、百姓、百花、百分、百科</div></article>
+<article class="char-card" data-cat="number" data-title="千"><span class="char-index">#051</span><div class="char-card-header"><span class="char-big">千</span><div class="char-info"><span class="char-pinyin">qiān</span><span class="char-category">指事字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"千"在"人"字上加一横，表示一个人加很多，即一千。</div><div class="char-story">一千是个很大的数字。古人用"人"加一横来表示一千——一个人太多了，数不过来。千比百更大，所以"千"用来表示"非常多"——千军万马、千山万水、千言万语、千变万化。千里之行，始于足下。</div><div class="char-words"><strong>常用词语：</strong>一千、千万、千金、千年、千山</div></article>
+<article class="char-card" data-cat="number" data-title="万"><span class="char-index">#052</span><div class="char-card-header"><span class="char-big">万</span><div class="char-info"><span class="char-pinyin">wàn</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>繁体"萬"是象形字，画成一只蝎子的样子。"万"是草书简化而来的。</div><div class="char-story">一万是极大的数字，古人觉得这个数已经大到无法想象了。繁体的"萬"本来是蝎子的象形字，后来借用来表示一万。简化字"万"来自草书的写法。中国文化中"万"表示"一切、全部"——万物、万众、万事如意。</div><div class="char-words"><strong>常用词语：</strong>一万、万能、万分、万物、万里</div></article>
+<article class="char-card" data-cat="number" data-title="上"><span class="char-index">#053</span><div class="char-card-header"><span class="char-big">上</span><div class="char-info"><span class="char-pinyin">shàng</span><span class="char-category">指事字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"上"是一条长横上面加一条短横，表示在某个基准之上的位置。</div><div class="char-story">古人用一条横线代表地面或基准线，上面加一条短线表示"上面、上方"的意思。后来短横移到了长横的上面。天在上面，地在下面，所以"上"和天、高、尊有关——上天、上级、皇上。</div><div class="char-words"><strong>常用词语：</strong>上面、上学、上山、上午、上学</div></article>
+<article class="char-card" data-cat="number" data-title="下"><span class="char-index">#054</span><div class="char-card-header"><span class="char-big">下</span><div class="char-info"><span class="char-pinyin">xià</span><span class="char-category">指事字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"下"是一条长横下面加一条短横，表示在某个基准之下的位置。</div><div class="char-story">和"上"相反，"下"是在基准线下面加一条短线，表示"下面、下方"。地在下面，所以"下"和地、低有关——地下、下雨、下山。但"下"也有动作的意思——下棋、下笔、下雨，都表示一种动作的开始。</div><div class="char-words"><strong>常用词语：</strong>下面、下山、下雨、下午、天下</div></article>
+<article class="char-card" data-cat="number" data-title="左"><span class="char-index">#055</span><div class="char-card-header"><span class="char-big">左</span><div class="char-info"><span class="char-pinyin">zuǒ</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"左"画成一只左手的样子。后来加上了"工"旁（工具），表示用左手拿工具。</div><div class="char-story">大多数人是右手更灵活，左手辅助。古人画了左手的样子，后来加上"工"表示手在工作。"左"在古代有时候地位比"右"低——"左迁"就是被贬官的意思。但也有例外，比如"男左女右""文左武右"。</div><div class="char-words"><strong>常用词语：</strong>左手、左右、左边、左耳、左面</div></article>
+<article class="char-card" data-cat="number" data-title="右"><span class="char-index">#056</span><div class="char-card-header"><span class="char-big">右</span><div class="char-info"><span class="char-pinyin">yòu</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"右"画成一只右手的样子。后来加上了"口"旁，表示用右手吃饭做事。</div><div class="char-story">右手是大多数人更灵活的手，写字、拿筷子都习惯用右手。古人画了右手的样子，后来加上了"口"表示嘴巴（吃饭用手）。"右"在古代通常地位比"左"高——"右迁"就是升官。成语"左右为难"形容两边都不好选。</div><div class="char-words"><strong>常用词语：</strong>右手、左右、右边、右耳、右面</div></article>
+<article class="char-card" data-cat="number" data-title="中"><span class="char-index">#057</span><div class="char-card-header"><span class="char-big">中</span><div class="char-info"><span class="char-pinyin">zhōng</span><span class="char-category">指事字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"中"画成一面旗子在队伍中间飘扬的样子，中间的圆圈代表中心。</div><div class="char-story">古代打仗或出巡时，旗子插在队伍的正中间。古人画了一面旗子，中间加一个圆圈或方框表示"正中间"的位置。后来旗子简化掉了，只保留了中间的部分。"中"在中国文化中非常重要——中国（居天地之中）、中庸（不偏不倚）、中心。</div><div class="char-words"><strong>常用词语：</strong>中间、中国、中心、中午、空中</div></article>
+<article class="char-card" data-cat="number" data-title="东"><span class="char-index">#058</span><div class="char-card-header"><span class="char-big">东</span><div class="char-info"><span class="char-pinyin">dōng</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>繁体"東"像太阳从树木中间升起的形象。简化为"东"。</div><div class="char-story">太阳从东方升起，这是古人最重要的天文观察。繁体的"東"画了太阳在树木中间升起的样子——"木"中间的"日"就是太阳。"东"代表春天、开始、生机。中国人常说"紫气东来"，认为东方是吉祥的方向。</div><div class="char-words"><strong>常用词语：</strong>东方、东西、广东、东北、房东</div></article>
+<article class="char-card" data-cat="number" data-title="西"><span class="char-index">#059</span><div class="char-card-header"><span class="char-big">西</span><div class="char-info"><span class="char-pinyin">xī</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"西"画成一个鸟巢的样子，鸟儿傍晚归巢时面朝西方。</div><div class="char-story">太阳从西方落下，傍晚时鸟儿纷纷归巢。古人画了一个鸟巢的形状来表示"西方"。后来字形慢慢变化，变成了今天的"西"。中国文化中"西"代表秋天、结束——日薄西山。"西天"在佛教中是极乐世界的方向。</div><div class="char-words"><strong>常用词语：</strong>西方、东西、山西、西北、西边</div></article>
+<article class="char-card" data-cat="number" data-title="南"><span class="char-index">#060</span><div class="char-card-header"><span class="char-big">南</span><div class="char-info"><span class="char-pinyin">nán</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"南"画成一种乐器（铎）的样子，挂在南面。一说像古代的编钟。</div><div class="char-story">中国大部分地区在北半球，南方温暖、阳光充足。古人用一种悬挂的乐器来表示"南方"——古代乐器的排列有方位讲究。繁体"南"还保留着乐器的形状，简化后变化较大。南代表夏天、温暖、生长。</div><div class="char-words"><strong>常用词语：</strong>南方、东南、河南、南瓜、南下</div></article>
+<article class="char-card" data-cat="number" data-title="北"><span class="char-index">#061</span><div class="char-card-header"><span class="char-big">北</span><div class="char-info"><span class="char-pinyin">běi</span><span class="char-category">会意字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"北"画成两个人背靠背坐着的样子，"背"的本字。</div><div class="char-story">两个人背靠背站着，表示"背面、背后"。古代宫殿坐北朝南，皇帝面向南方，背后就是北方，所以"北"引申为北方。"北"最初的意思是"背"——打败仗逃跑也叫"败北"（背向敌人）。北代表冬天、寒冷。</div><div class="char-words"><strong>常用词语：</strong>北方、北京、东北、北斗、北风</div></article>
+</div>
+</section>
+
+<!-- 自然现象 -->
+<section class="char-section" data-cat="phenomenon" id="phenomenon">
+<div class="section-header">
+<span class="section-badge">自然现象</span>
+<h2 class="section-title">自然现象</h2>
+<span class="section-count">14个汉字</span>
+</div>
+<div class="char-grid">
+<article class="char-card" data-cat="phenomenon" data-title="明"><span class="char-index">#062</span><div class="char-card-header"><span class="char-big">明</span><div class="char-info"><span class="char-pinyin">míng</span><span class="char-category">会意字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"明"由"日"和"月"组成，日和月都是发光的天体，合在一起就是明亮。</div><div class="char-story">太阳是白天最亮的，月亮是夜晚最亮的，日和月合在一起就是"明亮"的意思。古人觉得日月光辉照耀大地，带来光明，所以创造了"明"字。"明"也引申为"明白""聪明"——心里亮堂就是聪明。明朝的建立者朱元璋也曾用"明"来号召光明正大。</div><div class="char-words"><strong>常用词语：</strong>明天、明亮、明白、光明、明天</div></article>
+<article class="char-card" data-cat="phenomenon" data-title="暗"><span class="char-index">#063</span><div class="char-card-header"><span class="char-big">暗</span><div class="char-info"><span class="char-pinyin">àn</span><span class="char-category">形声字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"暗"由"日"（形旁，和光有关）和"音"（声旁）组成。光被挡住就暗了。</div><div class="char-story">没有光就是黑暗。"暗"字左边是"日"，代表日光；右边是"音"，代表声音被遮蔽。没有日光、声音传不出来，就是"暗"的意思。天黑了叫"天暗"，心里不明白叫"暗暗"，偷偷做事叫"暗暗"。</div><div class="char-words"><strong>常用词语：</strong>黑暗、暗处、暗暗、阴暗、暗中</div></article>
+<article class="char-card" data-cat="phenomenon" data-title="晨"><span class="char-index">#064</span><div class="char-card-header"><span class="char-big">晨</span><div class="char-info"><span class="char-pinyin">chén</span><span class="char-category">会意字</span></div></div><div class="char-origin"><strong>字源演变：</strong>繁体"晨"由"日"和"辰"组成，表示太阳到了辰时（早晨七点到九点）的位置。</div><div class="char-story">"晨"就是早晨的意思。上面是"日"代表太阳，下面是"辰"代表时间——太阳升起的时间就是早晨。古人把一天分为十二个时辰，辰时大约是早上七点到九点，正是太阳刚刚升起的时候。"一年之计在于春，一日之计在于晨。"</div><div class="char-words"><strong>常用词语：</strong>早晨、清晨、晨光、晨风、晨练</div></article>
+<article class="char-card" data-cat="phenomenon" data-title="暮"><span class="char-index">#065</span><div class="char-card-header"><span class="char-big">暮</span><div class="char-info"><span class="char-pinyin">mù</span><span class="char-category">形声字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"暮"由"莫"（古字形像太阳落在草丛中）和"日"组成，表示太阳落山的时刻。</div><div class="char-story">太阳落山的时候就是"暮"。繁体字下面加了"日"表示太阳。上面"莫"的古字形像太阳落到草丛里，表示傍晚时分。暮色苍茫、暮年、暮春——都和傍晚、时光将尽有关。</div><div class="char-words"><strong>常用词语：</strong>暮色、傍晚、暮年、暮春、朝暮</div></article>
+<article class="char-card" data-cat="phenomenon" data-title="春"><span class="char-index">#066</span><div class="char-card-header"><span class="char-big">春</span><div class="char-info"><span class="char-pinyin">chūn</span><span class="char-category">会意字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"春"由"艹""日""屯"组成，表示草木在阳光下生长，春天来了。</div><div class="char-story">春天万物复苏、草木萌发。"春"字里有"日"（阳光）、"艹"（植物），表示在阳光照耀下，植物开始生长。简化后的"春"保留了春天的三个"横"，像三条阳光。春天是一年的开始，充满了希望和生机。</div><div class="char-words"><strong>常用词语：</strong>春天、春风、春季、春雨、早春</div></article>
+<article class="char-card" data-cat="phenomenon" data-title="夏"><span class="char-index">#067</span><div class="char-card-header"><span class="char-big">夏</span><div class="char-info"><span class="char-pinyin">xià</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"夏"画成一个威武的人形，有头、身体和手脚。</div><div class="char-story">夏天是最热的季节。"夏"最初的意思是"大"或"人"。古人可能觉得夏天万物生长最为盛大，所以用"夏"来表示这个季节。华夏民族的名字就和"夏"有关——"华夏"原指中国，"华"是美丽，"夏"是盛大。</div><div class="char-words"><strong>常用词语：</strong>夏天、夏季、初夏、夏日、华夏</div></article>
+<article class="char-card" data-cat="phenomenon" data-title="秋"><span class="char-index">#068</span><div class="char-card-header"><span class="char-big">秋</span><div class="char-info"><span class="char-pinyin">qiū</span><span class="char-category">会意字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"秋"由"禾"（庄稼）和"火"组成，表示秋天用火烧庄稼来收割（或秋天的禾苗变黄如火）。</div><div class="char-story">秋天是收获的季节，庄稼成熟了。"秋"字左边是"禾"代表庄稼，右边是"火"代表火。一种说法是秋天用火烧田地来准备播种；另一种说法是成熟的庄稼金黄如火。秋天也是思念的季节——"秋风起，落叶黄"。</div><div class="char-words"><strong>常用词语：</strong>秋天、秋风、秋季、中秋、秋收</div></article>
+<article class="char-card" data-cat="phenomenon" data-title="冬"><span class="char-index">#069</span><div class="char-card-header"><span class="char-big">冬</span><div class="char-info"><span class="char-pinyin">dōng</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"冬"像一根丝线两端打结的样子，表示一年的终结。</div><div class="char-story">冬天是一年中最冷的季节。"冬"字最初像一根丝线两头打结，表示"终"——一年的终结。后来下面加了两点代表冰。冬天万物休眠、大地沉睡，等待来年春天的苏醒。"冬"也有"终了"的意思，比如"寒冬腊月"就是一年最后的日子。</div><div class="char-words"><strong>常用词语：</strong>冬天、冬季、冬瓜、冬至、寒冬</div></article>
+<article class="char-card" data-cat="phenomenon" data-title="光"><span class="char-index">#070</span><div class="char-card-header"><span class="char-big">光</span><div class="char-info"><span class="char-pinyin">guāng</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"光"画成一个人跪坐在火堆旁的样子，下面是火，上面是人。</div><div class="char-story">在没有电灯的古代，火就是最重要的光源。"光"字上面是"火"，下面是"人"（简化后变成了"兀"），表示人跪坐在火旁，被火光照亮。光是温暖的、明亮的，给人带来希望。"光芒""光荣""光明"都是好词。</div><div class="char-words"><strong>常用词语：</strong>阳光、光明、月光、光滑、时光</div></article>
+<article class="char-card" data-cat="phenomenon" data-title="影"><span class="char-index">#071</span><div class="char-card-header"><span class="char-big">影</span><div class="char-info"><span class="char-pinyin">yǐng</span><span class="char-category">形声字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"影"由"景"（形旁，日光）和"彡"（形旁，毛发/细纹）组成，表示光线被遮挡产生的暗影。</div><div class="char-story">有光就有影。当光线被物体挡住时，背后就会出现影子。"影"字用"景"（日光）和"彡"（细密的花纹）表示太阳光被遮挡后形成的暗色图案。影子虽然不是实物，但它忠实地跟随着我们。</div><div class="char-words"><strong>常用词语：</strong>影子、影响、电影、合影、摄影</div></article>
+<article class="char-card" data-cat="phenomenon" data-title="声"><span class="char-index">#072</span><div class="char-card-header"><span class="char-big">声</span><div class="char-info"><span class="char-pinyin">shēng</span><span class="char-category">形声字</span></div></div><div class="char-origin"><strong>字源演变：</strong>繁体"聲"由"耳"和"殸"（声旁）组成，表示耳朵听到的声音。</div><div class="char-story">声音是耳朵听到的。"声"字上面是"士"，下面是"尸"加"耳"，简化后和原来的字形不太一样了。繁体的"聲"很清楚——耳朵（耳）听到敲击（殸）就是声音。声音有高低大小、悦耳刺耳之分，音乐就是最美妙的声音。</div><div class="char-words"><strong>常用词语：</strong>声音、大声、歌声、笑声、风声</div></article>
+<article class="char-card" data-cat="phenomenon" data-title="色"><span class="char-index">#073</span><div class="char-card-header"><span class="char-big">色</span><div class="char-info"><span class="char-pinyin">sè</span><span class="char-category">会意字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"色"由"刀"（人的身体）和"巴"（人的跪坐姿势）组成，表示人的脸色、外貌。</div><div class="char-story">"色"最初的意思是人脸上的颜色、表情。一个人高兴时脸色红润，害怕时脸色发白。后来"色"的意思扩大了，变成了所有颜色——红色、蓝色、绿色都是"色"。在佛教中，"色"还有"物质世界"的意思——"色即是空"。</div><div class="char-words"><strong>常用词语：</strong>颜色、色彩、红色、景色、出色</div></article>
+<article class="char-card" data-cat="phenomenon" data-title="电"><span class="char-index">#074</span><div class="char-card-header"><span class="char-big">电</span><div class="char-info"><span class="char-pinyin">diàn</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>繁体"電"像闪电划过天空的样子，有光芒四射的形象。</div><div class="char-story">闪电是自然界最壮观的现象之一。古人看到天空突然亮起一道光，伴随着雷声，就画下了闪电的形象——像蜿蜒的光芒。繁体"電"还保留着闪电的形状。现代人离不开电——电灯、电视、电脑、手机都靠电来工作。</div><div class="char-words"><strong>常用词语：</strong>电话、电视、电子、电力、电灯</div></article>
+<article class="char-card" data-cat="phenomenon" data-title="雷"><span class="char-index">#075</span><div class="char-card-header"><span class="char-big">雷</span><div class="char-info"><span class="char-pinyin">léi</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"雷"画成闪电中间有四个圆圈（或田字），表示雷电交加的景象。</div><div class="char-story">打雷下雨是自然界最壮观的现象。古人觉得雷声像天上的鼓声一样轰隆隆响，闪电和雷声同时出现。繁体的"雷"下面有"田"和"雨"，表示大雨中雷电交加。简化后变成了"雨"加"田"。</div><div class="char-words"><strong>常用词语：</strong>打雷、雷雨、雷声、春雷、雷电</div></article>
+</div>
+</section>
+
+<!-- 生活器物 -->
+<section class="char-section" data-cat="daily" id="daily">
+<div class="section-header">
+<span class="section-badge">生活器物</span>
+<h2 class="section-title">生活器物</h2>
+<span class="section-count">25个汉字</span>
+</div>
+<div class="char-grid">
+<article class="char-card" data-cat="daily" data-title="门"><span class="char-index">#076</span><div class="char-card-header"><span class="char-big">门</span><div class="char-info"><span class="char-pinyin">mén</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"门"画成两扇门板的样子，左右对称。</div><div class="char-story">门是房屋的出入口。古人画了两扇门板——左边一扇，右边一扇，中间可以打开。繁体的"門"还能看出两扇门的样子。简化后变成了"门"。门有开关的功能，所以"开门""关门"都和动作有关。中国文化中"门"也代表门第、家族。</div><div class="char-words"><strong>常用词语：</strong>大门、门口、开门、关门、门口</div></article>
+<article class="char-card" data-cat="daily" data-title="车"><span class="char-index">#077</span><div class="char-card-header"><span class="char-big">车</span><div class="char-info"><span class="char-pinyin">chē</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"车"画成古代马车的俯视图，有车轮、车轴和车厢。</div><div class="char-story">车是中国古代最重要的发明之一。古人从上面看一辆马车——两个圆圆的车轮，中间是车轴和车厢。繁体的"車"非常复杂，有很多部件。简化后的"车"保留了基本形状。从古代的马车到今天的汽车、火车、自行车，"车"一直是人类最重要的交通工具。</div><div class="char-words"><strong>常用词语：</strong>汽车、火车、上车、车站、开车</div></article>
+<article class="char-card" data-cat="daily" data-title="舟"><span class="char-index">#078</span><div class="char-card-header"><span class="char-big">舟</span><div class="char-info"><span class="char-pinyin">zhōu</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"舟"画成一只小船的侧面，有船身、船头和船尾。</div><div class="char-story">船是水上最重要的交通工具。古人画了一只小船——弯弯的船身，两头翘起。"舟"和"船"是同一个意思，但"舟"多用于书面语。很多和船有关的成语都用了"舟"——轻舟已过万重山、破釜沉舟、同舟共济。郑和下西洋的船队是当时世界上最伟大的船队。</div><div class="char-words"><strong>常用词语：</strong>舟车、龙舟、泛舟、舟船、轻舟</div></article>
+<article class="char-card" data-cat="daily" data-title="弓"><span class="char-index">#079</span><div class="char-card-header"><span class="char-big">弓</span><div class="char-info"><span class="char-pinyin">gōng</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"弓"画成一把弯弓的样子，有弓身和弦。</div><div class="char-story">弓是古代最重要的武器之一。古人画了一把弯弯的弓——弓身是弯曲的，弓弦绷得很紧。射箭时拉满弓弦，一松手箭就飞出去了。"弓"字很形象，一看就是一把弯弓。成语"弯弓射大雕"说的就是拉弓射箭。</div><div class="char-words"><strong>常用词语：</strong>弓箭、弯弓、弓手、弹弓、弓弦</div></article>
+<article class="char-card" data-cat="daily" data-title="刀"><span class="char-index">#080</span><div class="char-card-header"><span class="char-big">刀</span><div class="char-info"><span class="char-pinyin">dāo</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"刀"画成一把刀的形状，有刀刃和刀柄。</div><div class="char-story">刀是最古老、最常用的工具之一。古人画了一把刀——上面翘起的是刀刃，下面是刀柄。"刀"字很简洁，但非常形象。在汉字中，"刀"字旁（刂）出现在很多和切割有关的字里——切、分、剪、刻。</div><div class="char-words"><strong>常用词语：</strong>小刀、刀子、菜刀、刀片、尖刀</div></article>
+<article class="char-card" data-cat="daily" data-title="衣"><span class="char-index">#081</span><div class="char-card-header"><span class="char-big">衣</span><div class="char-info"><span class="char-pinyin">yī</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"衣"画成一件上衣的形状，有领子和衣襟，像一件衣服平铺的样子。</div><div class="char-story">衣服是人类文明的重要标志。古人画了一件上衣——上面是衣领，两边是衣袖，下面是衣身。繁体的"衣"还能看出衣服的轮廓。"衣"字旁（衤）出现在很多和衣物有关的字里——裤、袍、袜、被。</div><div class="char-words"><strong>常用词语：</strong>衣服、上衣、大衣、雨衣、衣领</div></article>
+<article class="char-card" data-cat="daily" data-title="食"><span class="char-index">#082</span><div class="char-card-header"><span class="char-big">食</span><div class="char-info"><span class="char-pinyin">shí</span><span class="char-category">会意字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"食"上面像张开的嘴（倒三角），下面是装食物的器皿（皀），表示吃饭。</div><div class="char-story">"民以食为天"，吃饭是最重要的事情。古人画了一个张开的嘴巴（上面的"人"），下面是装食物的器皿（"良"），合起来就是吃东西。"食"不仅是食物，也是吃的行为——"进食""日食三餐"。很多和吃有关的字都有"饣"旁。</div><div class="char-words"><strong>常用词语：</strong>食物、饮食、粮食、食品、零食</div></article>
+<article class="char-card" data-cat="daily" data-title="住"><span class="char-index">#083</span><div class="char-card-header"><span class="char-big">住</span><div class="char-info"><span class="char-pinyin">zhù</span><span class="char-category">会意字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"住"由"人"和"主"组成，表示人在屋里停留、居住。</div><div class="char-story">"住"是人在一个地方停下来、定居的意思。左边是"人"（亻），右边是"主"（主人），表示人待在自己的家里。安居才能乐业，有一个安定的住所是每个人的基本需求。衣食住行是人类四大基本需求，"住"就是其中之一。</div><div class="char-words"><strong>常用词语：</strong>住处、居住、住房、住在、住宅</div></article>
+<article class="char-card" data-cat="daily" data-title="行"><span class="char-index">#084</span><div class="char-card-header"><span class="char-big">行</span><div class="char-info"><span class="char-pinyin">xíng</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"行"画成十字路口的样子，四通八达，是道路的象形。</div><div class="char-story">"行"最初的意思是"道路"——四通八达的十字路口。一个人走在路上就是"行"。后来"行"的意思非常丰富——行走、行为、行业、银行。"行"字很常用，它也是中国最重要的姓氏之一。</div><div class="char-words"><strong>常用词语：</strong>行走、行人、行动、行走、不行</div></article>
+<article class="char-card" data-cat="daily" data-title="书"><span class="char-index">#085</span><div class="char-card-header"><span class="char-big">书</span><div class="char-info"><span class="char-pinyin">shū</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>繁体"書"由"聿"（毛笔）和"曰"（说话）组成，表示用笔写下要说的话。</div><div class="char-story">在纸发明之前，古人用毛笔在竹简上写字。"书"字用"聿"（毛笔）和"曰"（说话），表示用笔记录语言。简化后的"书"（书）更加简洁。书是人类知识的载体，读书可以让我们了解古人的智慧和经验。"读万卷书，行万里路。"</div><div class="char-words"><strong>常用词语：</strong>书本、读书、书写、书法、书包</div></article>
+<article class="char-card" data-cat="daily" data-title="笔"><span class="char-index">#086</span><div class="char-card-header"><span class="char-big">笔</span><div class="char-info"><span class="char-pinyin">bǐ</span><span class="char-category">会意字</span></div></div><div class="char-origin"><strong>字源演变：</strong>繁体"筆"由"竹"（竹管）和"聿"（毛）组成，表示用竹管装毛制成的笔。</div><div class="char-story">毛笔是中国古代最重要的书写工具。古人用竹管做笔杆，上面装上动物的毛做成笔头，这就是"筆"（毛笔）。简化后变成了"笔"（竹字头+毛）。毛笔书法是中国独特的艺术形式。今天我们用的铅笔、钢笔、圆珠笔虽然不同，但"笔"这个字一直保留着。</div><div class="char-words"><strong>常用词语：</strong>毛笔、铅笔、笔记、笔直、画笔</div></article>
+<article class="char-card" data-cat="daily" data-title="纸"><span class="char-index">#087</span><div class="char-card-header"><span class="char-big">纸</span><div class="char-info"><span class="char-pinyin">zhǐ</span><span class="char-category">形声字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"纸"由"纟"（形旁，和丝帛有关）和"氏"（声旁）组成。纸最初是用丝絮制成的。</div><div class="char-story">在纸发明之前，中国人写在竹简和丝帛上。蔡伦改进造纸术后，用树皮、破布等便宜材料造纸。"纸"用"纟"（丝）旁，因为最初的纸和丝织品有关。纸的出现大大促进了文化的传播和发展。今天我们有各种各样的纸——打印纸、宣纸、卫生纸。</div><div class="char-words"><strong>常用词语：</strong>纸张、白纸、报纸、纸巾、剪纸</div></article>
+<article class="char-card" data-cat="daily" data-title="墨"><span class="char-index">#088</span><div class="char-card-header"><span class="char-big">墨</span><div class="char-info"><span class="char-pinyin">mò</span><span class="char-category">会意字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"墨"由"黑"和"土"组成，表示用黑色的土制成的书写颜料。</div><div class="char-story">墨是中国文房四宝之一（笔墨纸砚）。古人发现黑色的泥土可以用来写字画画，就在"土"上加"黑"创造了"墨"字。后来的墨是用松烟和胶制成的，更加精细。中国水墨画只用黑色的墨就能画出千变万化的画面。</div><div class="char-words"><strong>常用词语：</strong>墨水、墨汁、笔墨、墨镜、墨绿</div></article>
+<article class="char-card" data-cat="daily" data-title="金"><span class="char-index">#089</span><div class="char-card-header"><span class="char-big">金</span><div class="char-info"><span class="char-pinyin">jīn</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"金"像冶炼金属的样子，有坩埚和液滴，表示金属冶炼。</div><div class="char-story">金属是古人最重要的材料之一。古人画了冶炼金属的场景——上面像屋顶的盖子，下面有两个金属块。金是最珍贵的金属，所以"金"代表贵重——金钱、金子、黄金。汉字中带"金"（钅）旁的字大多和金属有关——铁、铜、银、钢。</div><div class="char-words"><strong>常用词语：</strong>金色、金子、黄金、金属、金鱼</div></article>
+<article class="char-card" data-cat="daily" data-title="玉"><span class="char-index">#090</span><div class="char-card-header"><span class="char-big">玉</span><div class="char-info"><span class="char-pinyin">yù</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"玉"画成几块玉串在一起的形状，中间的一横（或一点）表示玉和石头的区别。</div><div class="char-story">玉是中国人最珍爱的宝石。古人把玉石打磨穿孔，串成饰品佩戴。为了和普通的"王"区分，"玉"字右边加了一点。玉在中国文化中代表美好、纯洁和高贵——"宁为玉碎，不为瓦全""玉不琢不成器"。带"玉"旁的字很多都和美好有关——宝、碧、瑞、琳。</div><div class="char-words"><strong>常用词语：</strong>玉米、玉石、宝玉、白玉、玉佩</div></article>
+<article class="char-card" data-cat="daily" data-title="网"><span class="char-index">#091</span><div class="char-card-header"><span class="char-big">网</span><div class="char-info"><span class="char-pinyin">wǎng</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"网"画成渔网的形状，有经线和纬线交叉的网格。</div><div class="char-story">网是古人捕鱼的重要工具。古人用绳子编织成有网格的渔网，画下了网的形状——交叉的网格非常清晰。繁体的"網"还保留了绳网的模样。简化后变成了"网"。今天我们说的"上网""网络"虽然不再是真正的渔网，但"网"的基本含义——相互连接——没有变。</div><div class="char-words"><strong>常用词语：</strong>上网、网络、网球、鱼网、网鱼</div></article>
+<article class="char-card" data-cat="daily" data-title="贝"><span class="char-index">#092</span><div class="char-card-header"><span class="char-big">贝</span><div class="char-info"><span class="char-pinyin">bèi</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"贝"画成一个贝壳的形状，有壳和开合的纹路。</div><div class="char-story">贝壳在古代被用作货币——"宝贝""财宝"的"贝"就来自这里。古人沿海地区用贝壳做钱，贝壳就成了财富的象征。汉字中带"贝"旁的字大多和钱财有关——财、贫、贪、购、账。虽然今天不再用贝壳做钱，但这个字记录了那段历史。</div><div class="char-words"><strong>常用词语：</strong>宝贝、贝壳、宝贝、扇贝、贝类</div></article>
+<article class="char-card" data-cat="daily" data-title="酒"><span class="char-index">#093</span><div class="char-card-header"><span class="char-big">酒</span><div class="char-info"><span class="char-pinyin">jiǔ</span><span class="char-category">会意字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"酒"由"水"（氵）和"酉"（酒坛子）组成，表示用水和粮食发酵制成的饮品。</div><div class="char-story">酒是中国饮食文化的重要组成部分。古人用粮食发酵酿酒，所以"酒"字有"氵"（水）和"酉"（酒坛子）。中国有很多和酒有关的文化——"对酒当歌""把酒问月""醉翁之意不在酒"。李白被称为"诗仙"，也被称为"酒仙"，他的很多诗都是在醉后写的。</div><div class="char-words"><strong>常用词语：</strong>白酒、红酒、啤酒、酒杯、酒店</div></article>
+<article class="char-card" data-cat="daily" data-title="茶"><span class="char-index">#094</span><div class="char-card-header"><span class="char-big">茶</span><div class="char-info"><span class="char-pinyin">chá</span><span class="char-category">会意字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"茶"由"艹"（植物）、"人"和"木"（树木）组成，表示一种长在树上的植物。</div><div class="char-story">茶是中国最重要的饮品之一。传说神农氏发现了茶叶。"茶"字很有趣——"艹"表示它是植物，"人"表示人来采摘，"木"表示茶树长在树上。中国是茶的故乡，有绿茶、红茶、乌龙茶、白茶等很多种类。中国人"以茶会友"，茶文化源远流长。</div><div class="char-words"><strong>常用词语：</strong>茶叶、喝茶、绿茶、茶杯、茶花</div></article>
+<article class="char-card" data-cat="daily" data-title="米"><span class="char-index">#095</span><div class="char-card-header"><span class="char-big">米</span><div class="char-info"><span class="char-pinyin">mǐ</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"米"画成几粒米散落的样子，中间有四个小点，像一粒粒的米。</div><div class="char-story">米是中国人最重要的主食。"米"字画了几粒米的样子——中间的四点像一粒粒白色的米粒。南方人吃大米，北方人吃小米（后来改吃小麦面粉）。中国人说"民以食为天"，而"食"的主要来源就是"米"。</div><div class="char-words"><strong>常用词语：</strong>大米、米饭、玉米、小米、白米</div></article>
+<article class="char-card" data-cat="daily" data-title="船"><span class="char-index">#096</span><div class="char-card-header"><span class="char-big">船</span><div class="char-info"><span class="char-pinyin">chuán</span><span class="char-category">形声字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"船"由"舟"（形旁，船体）和"㕣"（声旁）组成，表示水上的交通工具。</div><div class="char-story">船是水上的大型交通工具。"船"字左边是"舟"（小船），右边是"㕣"（表示读音）。大船比小舟更大、更安全，可以装载更多的人和货物。中国有漫长的海岸线和众多河流，船在中国历史上非常重要。</div><div class="char-words"><strong>常用词语：</strong>船上、船长、船只、轮船、帆船</div></article>
+<article class="char-card" data-cat="daily" data-title="桥"><span class="char-index">#097</span><div class="char-card-header"><span class="char-big">桥</span><div class="char-info"><span class="char-pinyin">qiáo</span><span class="char-category">形声字</span></div></div><div class="char-origin"><strong>字源演变：</strong>"桥"由"木"（形旁，材料）和"乔"（声旁）组成，表示用木材搭建的过河通道。</div><div class="char-story">桥是跨越河流、山谷的建筑。"桥"字用"木"旁，说明最早的桥是木头做的。后来有了石桥（赵州桥就是著名的石拱桥）、铁桥、钢筋混凝土桥。桥让天堑变通途，是人类智慧的结晶。"桥"也比喻连接和沟通——"心桥""桥梁"。</div><div class="char-words"><strong>常用词语：</strong>大桥、木桥、石桥、天桥、桥上</div></article>
+<article class="char-card" data-cat="daily" data-title="钟"><span class="char-index">#098</span><div class="char-card-header"><span class="char-big">钟</span><div class="char-info"><span class="char-pinyin">zhōng</span><span class="char-category">形声字</span></div></div><div class="char-origin"><strong>字源演变：</strong>繁体"鐘"由"金"（金属）和"童"（声旁）组成，表示金属制成的报时器。</div><div class="char-story">钟是报时的工具。古代的钟是用铜铸造的，敲击时发出洪亮的声音。繁体的"鐘"用"金"旁说明是金属做的。简化后变成了"钟"。今天我们看到的钟有挂钟、闹钟、座钟。"钟"也引申为"时间"——"钟点""时钟"。</div><div class="char-words"><strong>常用词语：</strong>时钟、闹钟、分钟、钟声、钟表</div></article>
+<article class="char-card" data-cat="daily" data-title="鼓"><span class="char-index">#099</span><div class="char-card-header"><span class="char-big">鼓</span><div class="char-info"><span class="char-pinyin">gǔ</span><span class="char-category">象形字</span></div></div><div class="char-origin"><strong>字源演变：</strong>甲骨文的"鼓"画成一面鼓的侧面，有鼓架、鼓面和击鼓的手（支）。</div><div class="char-story">鼓是最古老的乐器之一。古人画了一面鼓放在架子上，旁边有一只手拿着鼓槌在敲。敲鼓时发出咚咚的响声，可以伴奏、发信号、鼓舞士气。"鼓舞""鼓励"都是从鼓的声音引申出来的。成语"一鼓作气"说的就是敲一声鼓来振奋精神。</div><div class="char-words"><strong>常用词语：</strong>打鼓、鼓声、鼓励、鼓掌、花鼓</div></article>
+<article class="char-card" data-cat="daily" data-title="灯"><span class="char-index">#100</span><div class="char-card-header"><span class="char-big">灯</span><div class="char-info"><span class="char-pinyin">dēng</span><span class="char-category">形声字</span></div></div><div class="char-origin"><strong>字源演变：</strong>繁体"燈"由"火"和"登"组成，表示用火照明的器具。</div><div class="char-story">灯是照明用的器具。古代最早用火把照明，后来发明了油灯、蜡烛。繁体的"燈"有"火"旁，说明和火有关。简化后的"灯"用"火"旁，更简洁明了。电灯是爱迪生发明的，彻底改变了人类的照明方式。灯是光明和希望的象征——"万家灯火"。</div><div class="char-words"><strong>常用词语：</strong>灯泡、电灯、灯光、台灯、路灯</div></article>
+</div>
+</section>
+
+<div class="no-results" id="noResults" style="display:none">
+<div class="no-results-icon" aria-hidden="true">&#x1F50D;</div>
+<p class="no-results-text">没有找到匹配的汉字</p>
+<p class="no-results-hint">试试其他关键词或切换分类</p>
+</div>
+</main>
+<button class="back-top" id="backTop" aria-label="回到顶部" title="回到顶部">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+<footer>
+<p>汉字故事 &mdash; 精选100个常用汉字字源故事</p>
+</footer>
+<script>
+(function(){
+var themeBtn=document.querySelector('.theme-toggle');
+var body=document.body;
+var saved=localStorage.getItem('hanzi-theme');
+if(!saved&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches){saved='dark'}
+if(saved){body.setAttribute('data-theme',saved)}
+themeBtn.addEventListener('click',function(){
+var cur=body.getAttribute('data-theme');
+var next=cur==='dark'?'light':'dark';
+body.setAttribute('data-theme',next);
+localStorage.setItem('hanzi-theme',next);
+});
+var filterBtns=document.querySelectorAll('.filter-btn');
+var cards=document.querySelectorAll('.char-card');
+var sections=document.querySelectorAll('.char-section');
+var searchInput=document.querySelector('.search-input');
+var noResults=document.getElementById('noResults');
+function filterCards(cat,query){
+var q=query?q.trim().toLowerCase():'';
+var visibleCount=0;
+cards.forEach(function(c){
+var show=true;
+if(cat!=='all'&&c.getAttribute('data-cat')!==cat)show=false;
+if(q){
+var title=(c.getAttribute('data-title')||'').toLowerCase();
+var text=(c.textContent||'').toLowerCase();
+if(title.indexOf(q)===-1&&text.indexOf(q)===-1)show=false;
+}
+c.style.display=show?'':'none';
+if(show)visibleCount++;
+});
+sections.forEach(function(s){
+var cat2=s.getAttribute('data-cat');
+if(cat!=='all'&&cat2!==cat){s.style.display='none';return}
+s.style.display='';
+var vis=0;
+s.querySelectorAll('.char-card').forEach(function(c){if(c.style.display!=='none')vis++});
+s.style.display=vis?'':'none';
+});
+noResults.style.display=visibleCount?'none':'';
+}
+filterBtns.forEach(function(btn){
+btn.addEventListener('click',function(){
+filterBtns.forEach(function(b){b.classList.remove('active')});
+btn.classList.add('active');
+filterCards(btn.getAttribute('data-filter'),searchInput.value);
+});
+});
+var debounceTimer;
+searchInput.addEventListener('input',function(){
+clearTimeout(debounceTimer);
+debounceTimer=setTimeout(function(){
+var activeFilter=document.querySelector('.filter-btn.active');
+filterCards(activeFilter?activeFilter.getAttribute('data-filter'):'all',searchInput.value);
+},200);
+});
+var backTop=document.getElementById('backTop');
+window.addEventListener('scroll',function(){
+backTop.classList.toggle('visible',window.scrollY>400);
+},{passive:true});
+backTop.addEventListener('click',function(){
+window.scrollTo({top:0,behavior:'smooth'});
+});
+})();
+</script>
+</body>
+</html>

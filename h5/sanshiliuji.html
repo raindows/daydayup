@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三十六计 - 中华兵法智慧</title>
+<meta name="description" content="完整收录三十六计，按胜战计、敌战计、攻战计、混战计、并战计、败战计六大类分类，每计附原文、白话解读与经典战例，传承中华兵法智慧。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FDF8F4;--bg-alt:#F7EDE5;--surface:#FFF;--surface-h:#FFF9F5;--ink:#2C2420;--ink-l:#5C524A;--ink-m:#8A7F75;--bdr:#E5DDD3;--bdr-l:#EDE8E1;--accent:#B8382A;--accent-d:#962D22;--gold:#C9A96E;--gold-l:#E8D5A8;--rose:#E8637A;--sky:#5BA5C9;--green:#5BAF7B;--purple:#9B7CB8;--font-d:'Noto Serif SC',serif;--font-h:'Noto Serif SC',serif;--font-b:'Noto Sans SC',sans-serif;--r-sm:6px;--r-md:12px;--r-lg:20px;--sh-s:0 1px 3px rgba(44,36,32,.06);--sh-m:0 4px 16px rgba(44,36,32,.08);--sh-l:0 8px 32px rgba(44,36,32,.10);--tr:200ms ease}
+[data-theme="dark"]{--bg:#1A1714;--bg-alt:#23201B;--surface:#2A2621;--surface-h:#342F29;--ink:#E8E0D6;--ink-l:#BFB5A8;--ink-m:#8A7F72;--bdr:#3A352E;--bdr-l:#302B25;--accent:#E8584A;--accent-d:#F07060;--gold:#E0C888;--gold-l:#A08040;--rose:#F08090;--sky:#7CC0E0;--green:#70D090;--purple:#B898D0;--sh-s:0 1px 3px rgba(0,0,0,.2);--sh-m:0 4px 16px rgba(0,0,0,.3);--sh-l:0 8px 32px rgba(0,0,0,.35)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-b);background:var(--bg);color:var(--ink);line-height:1.7;min-height:100vh;transition:background var(--tr),color var(--tr)}
+.skip-link{position:absolute;top:-100%;left:16px;padding:8px 16px;background:var(--accent);color:#fff;border-radius:var(--r-sm);z-index:10000;font-size:14px;text-decoration:none}
+.skip-link:focus{top:16px}
+a{color:var(--accent-d);text-decoration:none}
+.top-nav{position:sticky;top:0;z-index:1001;background:var(--surface);border-bottom:1px solid var(--bdr-l);padding:0 24px;transition:background var(--tr)}
+.top-nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;height:44px;gap:4px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+.top-nav-inner::-webkit-scrollbar{display:none}
+.top-nav-link{font-family:var(--font-b);font-size:.84rem;color:var(--ink-l);text-decoration:none;padding:6px 14px;border-radius:100px;border:1px solid transparent;transition:all var(--tr);white-space:nowrap;flex-shrink:0}
+.top-nav-link:hover{background:var(--bg-alt);border-color:var(--bdr)}
+.top-nav-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.top-nav-link.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.top-nav-sep{width:1px;height:16px;background:var(--bdr-l);margin:0 4px;flex-shrink:0}
+.theme-toggle{position:fixed;top:52px;right:20px;z-index:1000;width:44px;height:44px;border:1px solid var(--bdr);border-radius:50%;background:var(--surface);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-m);transition:all var(--tr)}
+.theme-toggle:hover{transform:scale(1.08);box-shadow:var(--sh-l)}
+.theme-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.theme-toggle svg{width:20px;height:20px;color:var(--ink)}
+[data-theme="dark"] .theme-toggle .icon-moon{display:none}
+[data-theme="light"] .theme-toggle .icon-sun{display:none}
+.hero{position:relative;min-height:42vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:72px 24px 48px;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 600px 400px at 25% 35%,rgba(184,56,42,.10),transparent),radial-gradient(ellipse 500px 350px at 75% 65%,rgba(155,124,184,.08),transparent),radial-gradient(ellipse 400px 300px at 50% 50%,rgba(201,169,110,.06),transparent);pointer-events:none}
+.hero-deco{font-size:2rem;margin-bottom:12px;letter-spacing:.4em;filter:grayscale(.1)}
+.hero-ornament{width:80px;height:2px;background:linear-gradient(90deg,transparent,var(--accent),var(--gold),var(--rose),transparent);margin-bottom:20px}
+.hero h1{font-family:var(--font-d);font-size:clamp(2.6rem,7vw,5rem);font-weight:400;color:var(--ink);letter-spacing:.06em;line-height:1.2}
+.hero-sub{font-family:var(--font-h);font-size:clamp(.92rem,2.2vw,1.12rem);color:var(--ink-m);font-weight:400;letter-spacing:.15em;margin-top:8px}
+.hero-desc{font-size:.92rem;color:var(--ink-m);max-width:560px;margin-top:16px}
+.hero-stats{display:flex;gap:32px;margin-top:28px;flex-wrap:wrap;justify-content:center}
+.hero-stat{text-align:center}
+.hero-stat-num{font-family:var(--font-h);font-size:2rem;font-weight:700;color:var(--accent);display:block}
+.hero-stat-label{font-size:.78rem;color:var(--ink-m);letter-spacing:.08em}
+main{max-width:1280px;margin:0 auto;padding:0 24px 80px}
+.filter-bar{position:sticky;top:44px;z-index:100;background:var(--bg);border-bottom:1px solid var(--bdr-l);padding:16px 0;margin-bottom:40px;transition:background var(--tr)}
+.filter-bar-inner{display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.filter-bar-inner::-webkit-scrollbar{display:none}
+.filter-btn{flex-shrink:0;padding:8px 18px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink-l);font-family:var(--font-b);font-size:.84rem;cursor:pointer;transition:all var(--tr);white-space:nowrap;user-select:none}
+.filter-btn:hover{background:var(--surface-h);border-color:var(--ink-m)}
+.filter-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.filter-btn .count{display:inline-block;margin-left:3px;font-size:.72rem;opacity:.7}
+.search-wrap{position:relative;flex-shrink:0}
+.search-input{padding:8px 16px 8px 36px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink);font-family:var(--font-b);font-size:.84rem;width:200px;transition:all var(--tr)}
+.search-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(184,56,42,.12);width:260px}
+.search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--ink-m);pointer-events:none}
+.story-section{margin-bottom:48px}
+.section-header{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--bdr-l)}
+.section-badge{font-family:var(--font-h);font-size:.75rem;font-weight:500;padding:3px 10px;border-radius:100px;color:#fff;letter-spacing:.06em}
+.section-title{font-family:var(--font-h);font-size:1.35rem;font-weight:600;color:var(--ink)}
+.section-count{font-size:.82rem;color:var(--ink-m);margin-left:auto}
+[data-cat="shengzhan"] .section-badge{background:var(--accent)}
+[data-cat="dizhan"] .section-badge{background:var(--purple)}
+[data-cat="gongzhan"] .section-badge{background:var(--sky)}
+[data-cat="hunzhan"] .section-badge{background:var(--rose)}
+[data-cat="bingzhan"] .section-badge{background:var(--green)}
+[data-cat="baizhan"] .section-badge{background:var(--gold)}
+.story-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
+.story-card{background:var(--surface);border:1px solid var(--bdr-l);border-radius:var(--r-md);padding:22px;transition:all 250ms ease;cursor:default;position:relative;overflow:hidden}
+.story-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;border-radius:3px 0 0 3px;opacity:0;transition:opacity var(--tr)}
+[data-cat="shengzhan"] .story-card::before{background:var(--accent)}
+[data-cat="dizhan"] .story-card::before{background:var(--purple)}
+[data-cat="gongzhan"] .story-card::before{background:var(--sky)}
+[data-cat="hunzhan"] .story-card::before{background:var(--rose)}
+[data-cat="bingzhan"] .story-card::before{background:var(--green)}
+[data-cat="baizhan"] .story-card::before{background:var(--gold)}
+.story-card:hover{box-shadow:var(--sh-m);transform:translateY(-2px);border-color:var(--bdr)}
+.story-card:hover::before{opacity:1}
+.story-card-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px}
+.story-title{font-family:var(--font-h);font-size:1.12rem;font-weight:600;color:var(--ink);line-height:1.4}
+.story-origin{flex-shrink:0;padding:2px 8px;border-radius:100px;font-size:.65rem;font-weight:500;letter-spacing:.04em;background:var(--bg-alt);color:var(--ink-m);margin-left:10px;align-self:flex-start;margin-top:2px;white-space:nowrap}
+.story-meta{font-size:.82rem;color:var(--ink-m);margin-bottom:10px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.story-tag{display:inline-block;padding:1px 7px;background:rgba(184,56,42,.08);color:var(--accent-d);border-radius:100px;font-size:.68rem}
+[data-theme="dark"] .story-tag{background:rgba(232,88,74,.12)}
+.story-content{font-family:var(--font-b);font-size:.88rem;line-height:1.85;color:var(--ink-l);letter-spacing:.02em}
+.story-quote{margin-top:10px;padding:10px 14px;background:var(--bg-alt);border-radius:var(--r-sm);font-family:var(--font-h);font-size:.85rem;color:var(--ink-m);font-style:italic;border-left:3px solid var(--gold)}
+.story-moral{margin-top:12px;padding:10px 14px;background:var(--bg-alt);border-radius:var(--r-sm);font-size:.82rem;color:var(--ink-m);border-left:3px solid var(--accent)}
+.story-moral strong{color:var(--accent-d);font-weight:500}
+.story-index{position:absolute;top:10px;right:14px;font-family:var(--font-h);font-size:.72rem;color:var(--ink-m);opacity:.3}
+.no-results{text-align:center;padding:60px 24px;color:var(--ink-m)}
+.no-results-icon{font-size:3rem;margin-bottom:16px;opacity:.5}
+.no-results-text{font-size:1rem;margin-bottom:8px}
+.no-results-hint{font-size:.84rem;opacity:.7}
+.back-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-m);transition:all var(--tr);opacity:0;pointer-events:none;z-index:999}
+.back-top.visible{opacity:1;pointer-events:auto}
+.back-top:hover{transform:translateY(-2px);box-shadow:var(--sh-l)}
+.back-top:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.back-top svg{width:20px;height:20px}
+footer{text-align:center;padding:40px 24px;color:var(--ink-m);font-size:.82rem;border-top:1px solid var(--bdr-l)}
+@media(max-width:768px){
+.hero{min-height:32vh;padding:56px 20px 36px}
+.hero h1{letter-spacing:.04em}
+.hero-stats{gap:20px}
+main{padding:0 16px 60px}
+.filter-bar{position:sticky;top:44px;z-index:100;background:var(--bg);border-bottom:1px solid var(--bdr-l);padding:16px 0;margin-bottom:40px;transition:background var(--tr)}
+.search-wrap{position:relative;flex-shrink:0}
+.search-input{padding:8px 16px 8px 36px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink);font-family:var(--font-b);font-size:.84rem;width:150px;transition:all var(--tr)}
+.search-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(184,56,42,.12);width:200px}
+.story-grid{grid-template-columns:1fr}
+.top-nav{padding:0 16px}
+}
+@media(max-width:400px){
+.hero h1{font-size:2.2rem}
+.hero-sub{font-size:.85rem}
+}
+@media(prefers-reduced-motion:reduce){*{transition-duration:0s!important;animation-duration:0s!important}}
+</style>
+</head>
+<body data-theme="light">
+<a href="#main" class="skip-link">跳到正文</a>
+<nav class="top-nav" aria-label="站点导航">
+<div class="top-nav-inner">
+<a href="jingdian-tongyao.html" class="top-nav-link">经典童谣</a>
+<span class="top-nav-sep"></span>
+<a href="shenglv-qimeng.html" class="top-nav-link">声律启蒙</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-tonghua.html" class="top-nav-link">少儿童话</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-qimeng-shici.html" class="top-nav-link">启蒙诗词</a>
+<span class="top-nav-sep"></span>
+<a href="hanzi-gushi.html" class="top-nav-link">汉字故事</a>
+<span class="top-nav-sep"></span>
+<a href="baihua-shici.html" class="top-nav-link">百花诗词</a>
+<span class="top-nav-sep"></span>
+<a href="shi-wan-ge-weishenme.html" class="top-nav-link">十万个为什么</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-chengyu.html" class="top-nav-link">少儿成语</a>
+<span class="top-nav-sep"></span>
+<a href="shangxia-wuqiannian.html" class="top-nav-link">上下五千年</a>
+<span class="top-nav-sep"></span>
+<a href="sanshiliuji.html" class="top-nav-link active">三十六计</a>
+<span class="top-nav-sep"></span>
+<a href="song-ci-jingxuan.html" class="top-nav-link">宋词精选</a>
+<span class="top-nav-sep"></span>
+<a href="maozedong-shici.html" class="top-nav-link">毛主席诗词</a>
+</div>
+</nav>
+<button class="theme-toggle" aria-label="切换深色模式" title="切换深色模式">
+<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
+<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+<header class="hero">
+<div class="hero-deco" aria-hidden="true">&#x2694;&#xFE0F; &#x1F3F9;&#xFE0F; &#x1F3DA;&#xFE0F; &#x1F4DC;</div>
+<div class="hero-ornament" aria-hidden="true"></div>
+<h1>三十六计</h1>
+<p class="hero-sub">中华兵法 &#xB7; 谋略智慧 &#xB7; 千古奇书</p>
+<p class="hero-desc">完整收录三十六计，按胜战、敌战、攻战、混战、并战、败战六篇分类，每计附原文、白话解读与经典战例，传承中华兵法智慧。</p>
+<div class="hero-stats">
+<div class="hero-stat"><span class="hero-stat-num">36</span><span class="hero-stat-label">兵法计谋</span></div>
+<div class="hero-stat"><span class="hero-stat-num">6</span><span class="hero-stat-label">战略分类</span></div>
+<div class="hero-stat"><span class="hero-stat-num">1800+</span><span class="hero-stat-label">年历史传承</span></div>
+</div>
+</header>
+<main id="main">
+<div class="filter-bar" role="toolbar" aria-label="分类筛选">
+<div class="filter-bar-inner">
+<div class="search-wrap"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="text" class="search-input" placeholder="搜索计谋..." id="searchInput" aria-label="搜索计谋"></div>
+<button class="filter-btn active" data-filter="all">全部<span class="count">(36)</span></button>
+<button class="filter-btn" data-filter="shengzhan">胜战计<span class="count">(6)</span></button>
+<button class="filter-btn" data-filter="dizhan">敌战计<span class="count">(6)</span></button>
+<button class="filter-btn" data-filter="gongzhan">攻战计<span class="count">(6)</span></button>
+<button class="filter-btn" data-filter="hunzhan">混战计<span class="count">(6)</span></button>
+<button class="filter-btn" data-filter="bingzhan">并战计<span class="count">(6)</span></button>
+<button class="filter-btn" data-filter="baizhan">败战计<span class="count">(6)</span></button>
+</div>
+</div>
+
+<!-- 第一篇：胜战计 -->
+<section class="story-section" data-cat="shengzhan" id="shengzhan">
+<div class="section-header">
+<span class="section-badge">胜战计</span>
+<h2 class="section-title">第一篇 胜战计</h2>
+<span class="section-count">6计</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="shengzhan" data-title="瞒天过海"><span class="story-index">#001</span><div class="story-card-header"><h3 class="story-title">瞒天过海</h3><span class="story-origin">第一计</span></div><div class="story-meta"><span class="story-tag">欺骗</span><span class="story-tag">隐蔽</span></div><div class="story-content">备周则意怠，常见则不疑。阴在阳之内，不在阳之对。太阳，太阴。防备得周全，往往容易松懈；常见的事物，人们往往不会怀疑。秘密隐藏在公开的事物之中，而不是与公开的事物相对立。最公开的事物中往往隐藏着最机密的阴谋。</div><div class="story-quote">"备周则意怠，常见则不疑。阴在阳之内，不在阳之对。"</div><div class="story-moral"><strong>经典战例：</strong>隋文帝时，隋将贺若弼奉命伐陈。他每次调防都让军队在历阳集中，大张旗鼓，陈国以为隋军只是换防，渐渐不再戒备。当贺若弼突然率大军渡江时，陈国毫无防备，隋军一举成功。这就是利用"常见则不疑"的原理，在对方麻痹大意时突然发难。</div></article>
+<article class="story-card" data-cat="shengzhan" data-title="围魏救赵"><span class="story-index">#002</span><div class="story-card-header"><h3 class="story-title">围魏救赵</h3><span class="story-origin">第二计</span></div><div class="story-meta"><span class="story-tag">迂回</span><span class="story-tag">解围</span></div><div class="story-content">共敌不如分敌，敌阳不如敌阴。与其去攻打兵力集中的强大敌人，不如去分散敌人的兵力后再打。与其攻击敌人坚固的正面，不如攻击敌人虚弱的后方。避开敌人的锋芒，攻击其要害，迫使敌人回师自救，从而达到解围的目的。</div><div class="story-quote">"共敌不如分敌，敌阳不如敌阴。"</div><div class="story-moral"><strong>经典战例：</strong>战国时，魏国大将庞涓率军围攻赵国都城邯郸。赵国向齐国求救，齐国派田忌和孙膑出兵。孙膑没有直接去邯郸与魏军交战，而是率军直捣魏国都城大梁。庞涓闻讯急忙回师救援，孙膑在桂陵设伏，大败魏军，赵国之围遂解。此计精妙之处在于不正面硬碰，而是攻其必救。</div></article>
+<article class="story-card" data-cat="shengzhan" data-title="借刀杀人"><span class="story-index">#003</span><div class="story-card-header"><h3 class="story-title">借刀杀人</h3><span class="story-origin">第三计</span></div><div class="story-meta"><span class="story-tag">借力</span><span class="story-tag">离间</span></div><div class="story-content">敌已明，友未定，引友杀敌，不自出力，以损推演。敌人的情况已经明了，友方的态度尚未确定，要引导友方去消灭敌人，自己不消耗力量。这是损卦的推演——表面上损失了，实际上获得了更大的利益。善于借用第三方的力量来达成自己的目的。</div><div class="story-quote">"敌已明，友未定，引友杀敌，不自出力。"</div><div class="story-moral"><strong>经典战例：</strong>三国时期，曹操与袁绍对峙。曹操谋士荀彧建议利用刘备去攻击吕布，曹操便上表朝廷封刘备为豫州牧，使刘备与吕布产生矛盾。后来刘备果然与吕布交战，曹操坐收渔翁之利。不直接出手，借用他人之力达成目标，正是此计的精髓。</div></article>
+<article class="story-card" data-cat="shengzhan" data-title="以逸待劳"><span class="story-index">#004</span><div class="story-card-header"><h3 class="story-title">以逸待劳</h3><span class="story-origin">第四计</span></div><div class="story-meta"><span class="story-tag">防守</span><span class="story-tag">后发制人</span></div><div class="story-content">困敌之势，不以战；损刚益柔。使敌人陷入困境，不一定要通过交战。这是损卦的道理——减少敌人的刚强，增加自己的柔韧。掌握战争的主动权，以充分的准备等待疲惫的敌人，以静制动，以逸待劳，后发制人。</div><div class="story-quote">"困敌之势，不以战；损刚益柔。"</div><div class="story-moral"><strong>经典战例：</strong>春秋时，晋文公率军与楚军在城濮交战。晋军退避三舍（九十里），使楚军追击后疲惫不堪。晋军以逸待劳，在城濮大败楚军。退让不是怯弱，而是诱敌深入、消耗敌军体力的策略。掌握主动权，在最有利的时机出击，才是用兵之道。</div></article>
+<article class="story-card" data-cat="shengzhan" data-title="趁火打劫"><span class="story-index">#005</span><div class="story-card-header"><h3 class="story-title">趁火打劫</h3><span class="story-origin">第五计</span></div><div class="story-meta"><span class="story-tag">时机</span><span class="story-tag">乘虚</span></div><div class="story-content">敌之害大，就势取利，刚决柔也。当敌人遇到严重困难或危机时，要乘机获取利益。这是夬卦的道理——以刚决柔，果断地利用敌人的困境。善于把握时机，在对手最脆弱的时候出击，往往能以最小的代价获得最大的胜利。</div><div class="story-quote">"敌之害大，就势取利，刚决柔也。"</div><div class="story-moral"><strong>经典战例：</strong>明朝末年，李自成攻入北京，崇祯帝自缢。吴三桂本在山海关守卫，见明朝已亡，便打开山海关引清军入关。清军趁明朝内乱之际长驱直入，一举定鼎中原。正是"趁火打劫"的典型——趁中原大乱之际夺取天下。</div></article>
+<article class="story-card" data-cat="shengzhan" data-title="声东击西"><span class="story-index">#006</span><div class="story-card-header"><h3 class="story-title">声东击西</h3><span class="story-origin">第六计</span></div><div class="story-meta"><span class="story-tag">佯攻</span><span class="story-tag">迷惑</span></div><div class="story-content">敌志乱萃，不虞，坤下兑上之象。利其不自主而取之。当敌人的意志混乱、判断失误时，就像萃卦所示，地在水上，混沌不清。要利用敌人失去自主判断力的时机加以攻击。表面上在东边造势，实际上在西边出击，使敌人产生错觉，然后出其不意地打击真正的目标。</div><div class="story-quote">"敌志乱萃，不虞，坤下兑上之象。利其不自主而取之。"</div><div class="story-moral"><strong>经典战例：</strong>楚汉战争时，韩信率军攻打魏国。魏王豹在蒲坂布重兵防守，韩信则在蒲坂对面扎营，广布旌旗，佯装要从蒲坂渡河。暗地里却派精兵从夏阳用木桶渡河，直捣魏国后方安邑。魏王豹仓促回师，被韩信击败。声东击西的关键是让敌人误判主攻方向。</div></article>
+</div>
+</section>
+
+<!-- 第二篇：敌战计 -->
+<section class="story-section" data-cat="dizhan" id="dizhan">
+<div class="section-header">
+<span class="section-badge">敌战计</span>
+<h2 class="section-title">第二篇 敌战计</h2>
+<span class="section-count">6计</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="dizhan" data-title="无中生有"><span class="story-index">#007</span><div class="story-card-header"><h3 class="story-title">无中生有</h3><span class="story-origin">第七计</span></div><div class="story-meta"><span class="story-tag">虚实</span><span class="story-tag">假象</span></div><div class="story-content">诳也，非诳也，实其所诳也。少阴、太阴、太阳。用假象欺骗敌人，但并非始终是假象。假象要做得逼真，由假变真，由虚变实。少阴是微小的假象，太阴是大的假象，太阳则是真实。通过反复的假象使敌人麻痹，当敌人不再相信时，突然变为真实行动，一击成功。</div><div class="story-quote">"诳也，非诳也，实其所诳也。少阴、太阴、太阳。"</div><div class="story-moral"><strong>经典战例：</strong>唐代的安史之乱中，张巡守睢阳。城中粮草将尽，张巡令士兵扎了一千多个草人，趁夜用绳子放到城下。叛军以为是偷袭，射了数万支箭。张巡获得了大量箭矢。几天后，张巡又放下草人，叛军以为还是计谋，不再射箭。张巡趁机放下五百精兵，叛军猝不及防，被杀得大败。这就是"由虚变实"的妙用。</div></article>
+<article class="story-card" data-cat="dizhan" data-title="暗渡陈仓"><span class="story-index">#008</span><div class="story-card-header"><h3 class="story-title">暗渡陈仓</h3><span class="story-origin">第八计</span></div><div class="story-meta"><span class="story-tag">奇袭</span><span class="story-tag">迂回</span></div><div class="story-content">示之以动，利其静而有主，益动而巽。向敌人展示我方的行动，吸引其注意力，暗中却从另一条路发起攻击。这是益卦的道理——利用敌人的静止状态出其不意。明修栈道以吸引敌人，暗渡陈仓以出奇制胜。</div><div class="story-quote">"示之以动，利其静而有主，益动而巽。"</div><div class="story-moral"><strong>经典战例：</strong>楚汉相争时，韩信受命东征。他派人大张旗鼓地修复被烧毁的栈道，吸引章邯的注意力。章邯认为修复栈道需要数年，便不以为意。然而韩信却率主力绕道陈仓小路，出其不意地出现在关中平原。章邯措手不及，关中遂被韩信占领。"明修栈道，暗渡陈仓"从此成为千古名计。</div></article>
+<article class="story-card" data-cat="dizhan" data-title="隔岸观火"><span class="story-index">#009</span><div class="story-card-header"><h3 class="story-title">隔岸观火</h3><span class="story-origin">第九计</span></div><div class="story-meta"><span class="story-tag">旁观</span><span class="story-tag">坐收渔利</span></div><div class="story-content">阳乖序乱，阴以待逆。暴戾恣睢，其势自毙。顺以动豫，豫顺以动。当敌人内部产生矛盾、秩序混乱时，我方应静观其变。敌人暴虐无道，必然会自我毁灭。顺应时势而行动，如同豫卦所示。敌方内斗愈烈，我方愈应按兵不动，待其两败俱伤后坐收渔翁之利。</div><div class="story-quote">"阳乖序乱，阴以待逆。暴戾恣睢，其势自毙。"</div><div class="story-moral"><strong>经典战例：</strong>三国末期，袁绍死后，其子袁谭、袁尚争权夺利。曹操没有急于进攻，而是坐山观虎斗。待袁氏兄弟互相攻伐、两败俱伤后，曹操才出兵，一举击败了已经元气大伤的袁氏势力。不急于出手，让对手自相残杀，最终坐收全功。</div></article>
+<article class="story-card" data-cat="dizhan" data-title="笑里藏刀"><span class="story-index">#010</span><div class="story-card-header"><h3 class="story-title">笑里藏刀</h3><span class="story-origin">第十计</span></div><div class="story-meta"><span class="story-tag">伪装</span><span class="story-tag">阴险</span></div><div class="story-content">信而安之，阴以图之；备而后动，勿使有变。刚中柔外也。表面上对敌人笑脸相迎、示以友好，使其放松警惕，暗地里却在策划消灭对方。做好准备后再行动，确保万无一失。这是兑卦的道理——外柔内刚，表面柔和而内藏杀机。</div><div class="story-quote">"信而安之，阴以图之；备而后动，勿使有变。"</div><div class="story-moral"><strong>经典战例：</strong>战国时，吴国公子光想杀吴王僚夺取王位。他表面上对吴王僚百般恭敬，设宴款待，并在席间让专诸献上烤鱼。专诸将匕首藏在鱼腹中，趁献鱼之机刺杀了吴王僚。公子光遂夺位，即后来的吴王阖闾。笑容背后暗藏杀机，正是此计的写照。</div></article>
+<article class="story-card" data-cat="dizhan" data-title="李代桃僵"><span class="story-index">#011</span><div class="story-card-header"><h3 class="story-title">李代桃僵</h3><span class="story-origin">第十一计</span></div><div class="story-meta"><span class="story-tag">牺牲</span><span class="story-tag">保全</span></div><div class="story-content">势必有损，损阴以益阳。当形势迫使必须有所损失时，要牺牲局部的、次要的利益，来保全整体的、主要的利益。如同李树代替桃树承受虫害。在军事上，有时需要牺牲一部分力量来换取全局的胜利。</div><div class="story-quote">"势必有损，损阴以益阳。"</div><div class="story-moral"><strong>经典战例：</strong>战国时田忌赛马的故事即是此计的体现。孙膑建议田忌：用下等马对齐王的上等马（牺牲一局），用上等马对齐王的中等马，用中等马对齐王的下等马。虽然输了一局，但赢得了两局，最终三局两胜。牺牲局部换取全局胜利，正是"李代桃僵"的智慧。</div></article>
+<article class="story-card" data-cat="dizhan" data-title="顺手牵羊"><span class="story-index">#012</span><div class="story-card-header"><h3 class="story-title">顺手牵羊</h3><span class="story-origin">第十二计</span></div><div class="story-meta"><span class="story-tag">乘机</span><span class="story-tag">获利</span></div><div class="story-content">微隙在所必乘，微利在所必得。少阴，少阳。敌人的微小漏洞必须利用，微小的利益必须争取。这是少阴变为少阳的道理。在主要行动中，不要忽略附带的机会。发现敌人暴露出的弱点，要及时抓住，乘机获取利益。</div><div class="story-quote">"微隙在所必乘，微利在所必得。少阴，少阳。"</div><div class="story-moral"><strong>经典战例：</strong>春秋时，晋国公子重耳流亡途中经过楚国。楚成王热情款待他，问他将来如何报答。重耳说若两国交战，他愿退避三舍。后来重耳即位为晋文公，与楚军交战时果然退避三舍。但退避中他顺手截获了楚军运粮车队，导致楚军补给困难，最终被晋军击败。趁行军之便顺手获取战果，即是此计。</div></article>
+</div>
+</section>
+
+<!-- 第三篇：攻战计 -->
+<section class="story-section" data-cat="gongzhan" id="gongzhan">
+<div class="section-header">
+<span class="section-badge">攻战计</span>
+<h2 class="section-title">第三篇 攻战计</h2>
+<span class="section-count">6计</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="gongzhan" data-title="打草惊蛇"><span class="story-index">#013</span><div class="story-card-header"><h3 class="story-title">打草惊蛇</h3><span class="story-origin">第十三计</span></div><div class="story-meta"><span class="story-tag">试探</span><span class="story-tag">侦察</span></div><div class="story-content">疑以叩实，察而后动；复者，阴之媒也。遇到可疑的情况要先查探清楚，然后再采取行动。反复的试探是了解敌方隐藏实力的手段。如同在草丛中打草，蛇受惊后会暴露行踪。在进攻之前，先要摸清敌人的虚实，避免盲目行动。</div><div class="story-quote">"疑以叩实，察而后动；复者，阴之媒也。"</div><div class="story-moral"><strong>经典战例：</strong>唐代，王鲁任当涂县令，贪赃枉法。一天有人状告他的部下，王鲁看到诉状中描述的罪行自己也有份，不由自主地在诉状上批了"汝虽打草，吾已惊蛇"八个字。意为你虽然只是打草（告部下），我已经像蛇一样被惊动了。此计的军事含义是：通过小的试探动作来探查敌情。</div></article>
+<article class="story-card" data-cat="gongzhan" data-title="借尸还魂"><span class="story-index">#014</span><div class="story-card-header"><h3 class="story-title">借尸还魂</h3><span class="story-origin">第十四计</span></div><div class="story-meta"><span class="story-tag">利用</span><span class="story-tag">借势</span></div><div class="story-content">有用者，不可借；不能用者，求借。借不能用者而用之，匪我求童蒙，童蒙求我。有用的东西不能借用，不能用的东西反而可以借助。借用看似无用的东西来发挥作用，不是我去求它，而是它来求我。在军事上，善于利用已经衰亡或看似无用的势力来达成自己的目的。</div><div class="story-quote">"有用者，不可借；不能用者，求借。"</div><div class="story-moral"><strong>经典战例：</strong>秦末陈胜吴广起义失败后，项梁找到了楚怀王的孙子熊心，立他为楚怀王。借已灭亡的楚国王室的名义来号召天下，获得了广泛的支持。项梁借"楚怀王"这具"尸"还了反秦的"魂"。利用历史名号来凝聚人心，是借尸还魂在政治军事中的经典应用。</div></article>
+<article class="story-card" data-cat="gongzhan" data-title="调虎离山"><span class="story-index">#015</span><div class="story-card-header"><h3 class="story-title">调虎离山</h3><span class="story-origin">第十五计</span></div><div class="story-meta"><span class="story-tag">引诱</span><span class="story-tag">伏击</span></div><div class="story-content">待天以困之，用人以诱之，往蹇来连。利用天时来困住敌人，利用人力来引诱敌人。这是蹇卦的道理——前路艰难，要设法引敌离开其有利的地形。虎在山中威猛无比，但一旦离开了熟悉的地形，就会陷入被动。设法将敌人从有利位置引出来，在有利于我方的位置歼灭之。</div><div class="story-quote">"待天以困之，用人以诱之，往蹇来连。"</div><div class="story-moral"><strong>经典战例：</strong>东汉末年，孙策想要攻取庐江。庐江太守刘勋拥兵自守，城池坚固。孙策派人送信给刘勋，谎称上缭有大量财物，建议他去夺取。刘勋贪利，率主力离开庐江。孙策趁机轻取庐江。引虎出山后再攻其巢穴，正是此计的精妙运用。</div></article>
+<article class="story-card" data-cat="gongzhan" data-title="欲擒故纵"><span class="story-index">#016</span><div class="story-card-header"><h3 class="story-title">欲擒故纵</h3><span class="story-origin">第十六计</span></div><div class="story-meta"><span class="story-tag">放纵</span><span class="story-tag">反制</span></div><div class="story-content">逼则反兵，走则减势，紧随勿迫。累其气力，消其斗志，散而后擒，兵不血刃。需，有孚，光。逼得太紧，敌人就会拼死反扑；让其逃跑，反而会削弱其气势。紧紧跟随但不直接攻击，消耗其体力，瓦解其斗志，等其溃散后再一举擒获，可以兵不血刃。</div><div class="story-quote">"逼则反兵，走则减势。紧随勿迫，累其气力。"</div><div class="story-moral"><strong>经典战例：</strong>三国时诸葛亮七擒孟获。每次擒获后都放走他，让他回去重整旗鼓。孟获被释放七次后心服口服，表示"丞相天威，南人不复反矣"。诸葛亮以七次释放换来南方长治久安，比一味杀伐更加高明。给对手以退路，反而能彻底收服人心。</div></article>
+<article class="story-card" data-cat="gongzhan" data-title="抛砖引玉"><span class="story-index">#017</span><div class="story-card-header"><h3 class="story-title">抛砖引玉</h3><span class="story-origin">第十七计</span></div><div class="story-meta"><span class="story-tag">诱饵</span><span class="story-tag">试探</span></div><div class="story-content">类以诱之，击蒙也。用类似的东西去引诱敌人，趁其迷惑时发起攻击。如同用砖头去引出美玉。在军事上，用小的代价或虚假的行动引诱敌人暴露真实意图，从而获取更大的利益。抛出的"砖"可以是小股部队、假情报、小利等。</div><div class="story-quote">"类以诱之，击蒙也。"</div><div class="story-moral"><strong>经典战例：</strong>楚汉战争中，刘邦派少量军队佯攻项羽的正面，实际上这是"抛砖"。项羽集中兵力迎击刘邦的正面进攻时，彭越却在后方骚扰项羽的粮道。项羽分兵去追彭越，刘邦正面趁机反击。用少量兵力引诱敌军分散，再集中力量各个击破，正是"抛砖引玉"的军事应用。</div></article>
+<article class="story-card" data-cat="gongzhan" data-title="擒贼擒王"><span class="story-index">#018</span><div class="story-card-header"><h3 class="story-title">擒贼擒王</h3><span class="story-origin">第十八计</span></div><div class="story-meta"><span class="story-tag">核心</span><span class="story-tag">关键</span></div><div class="story-content">摧其坚，夺其魁，以解其体。龙战于野，其道穷也。摧毁敌人的坚锐力量，擒获敌人的首领，就能瓦解其整个体系。如同龙战于野外，走投无路。在战争中，打蛇打七寸，擒贼先擒王。抓住关键人物或核心力量，就能使敌方群龙无首，不战而溃。</div><div class="story-quote">"摧其坚，夺其魁，以解其体。龙战于野，其道穷也。"</div><div class="story-moral"><strong>经典战例：</strong>唐安史之乱中，张巡守睢阳，与叛军尹子奇对峙。张巡在阵上仔细辨认，用箭射中尹子奇的左眼。叛军主将受伤，军心大乱，张巡趁机反击，大败叛军。直取敌方主帅，使其指挥系统瘫痪，这就是擒贼擒王的道理。抓住核心目标，其余问题迎刃而解。</div></article>
+</div>
+</section>
+
+<!-- 第四篇：混战计 -->
+<section class="story-section" data-cat="hunzhan" id="hunzhan">
+<div class="section-header">
+<span class="section-badge">混战计</span>
+<h2 class="section-title">第四篇 混战计</h2>
+<span class="section-count">6计</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="hunzhan" data-title="釜底抽薪"><span class="story-index">#019</span><div class="story-card-header"><h3 class="story-title">釜底抽薪</h3><span class="story-origin">第十九计</span></div><div class="story-meta"><span class="story-tag">根本</span><span class="story-tag">断源</span></div><div class="story-content">不敌其力，而消其势，兑下乾上之象。当不能正面迎击敌人的力量时，就要设法消除其气势。这是履卦的道理——从根本上去瓦解敌人。水沸腾是因柴火在锅底燃烧，要止沸水，抽去柴火即可。解决问题要找到根源，从根本上瓦解敌人的力量。</div><div class="story-quote">"不敌其力，而消其势，兑下乾上之象。"</div><div class="story-moral"><strong>经典战例：</strong>东汉末年官渡之战，曹操以少敌多对抗袁绍。曹操采纳许攸的计策，亲率精兵夜袭乌巢，烧毁了袁绍的粮草辎重。袁绍大军断粮，军心大乱，曹操乘势反击，大获全胜。烧毁粮草就是"釜底抽薪"——断绝了敌军生存的根本，再强大的军队也会崩溃。</div></article>
+<article class="story-card" data-cat="hunzhan" data-title="混水摸鱼"><span class="story-index">#020</span><div class="story-card-header"><h3 class="story-title">混水摸鱼</h3><span class="story-origin">第二十计</span></div><div class="story-meta"><span class="story-tag">混乱</span><span class="story-tag">趁乱</span></div><div class="story-content">乘其阴乱，利其弱而无主。随，以向晦入宴息。趁敌人内部混乱之际，利用其虚弱而无主的状态采取行动。这是随卦的道理——顺应混乱的局面从中获利。水浑了鱼就分辨不清方向，容易被摸到。在混乱中保持清醒，趁乱取利。</div><div class="story-quote">"乘其阴乱，利其弱而无主。随，以向晦入宴息。"</div><div class="story-moral"><strong>经典战例：</strong>唐玄宗时期，安禄山趁唐朝内部空虚、朝政腐败之机发动叛乱，一度攻占洛阳、长安。安禄山就是趁唐朝这潭"浑水"摸到了"鱼"。在混乱的局面中，有准备的一方往往能获得最大的利益。反之，保持内部清明、防止混乱，才是最好的防御。</div></article>
+<article class="story-card" data-cat="hunzhan" data-title="金蝉脱壳"><span class="story-index">#021</span><div class="story-card-header"><h3 class="story-title">金蝉脱壳</h3><span class="story-origin">第二十一计</span></div><div class="story-meta"><span class="story-tag">撤退</span><span class="story-tag">伪装</span></div><div class="story-content">存其形，完其势；友不疑，敌不动。巽而止蛊。保存原来的阵势，维持完整的外表，使友军不怀疑，敌军不敢妄动。这是蛊卦的道理——表面上一切如常，暗中已经转移。金蝉脱壳是最高明的撤退之法，在敌人毫无察觉的情况下完成转移。</div><div class="story-quote">"存其形，完其势；友不疑，敌不动。巽而止蛊。"</div><div class="story-moral"><strong>经典战例：</strong>三国时，诸葛亮病逝五丈原。蜀军秘密撤退，姜维命人做了诸葛亮的木雕像放在车上，推出营外。司马懿见蜀军营中旗帜如常，诸葛亮"端坐"车中，怀疑是诱敌之计，不敢追击。蜀军得以安全撤退。用假象迷惑敌人，掩护真实的行动，是金蝉脱壳的精髓。</div></article>
+<article class="story-card" data-cat="hunzhan" data-title="关门捉贼"><span class="story-index">#022</span><div class="story-card-header"><h3 class="story-title">关门捉贼</h3><span class="story-origin">第二十二计</span></div><div class="story-meta"><span class="story-tag">包围</span><span class="story-tag">歼灭</span></div><div class="story-content">小敌困之。剥，不利有攸往。对弱小的敌人要加以围困。这是剥卦的道理——不宜让敌人逃跑。贼进了屋，关上门就能捉住。在军事上，切断敌人的退路，将其包围歼灭。关键是不能让敌人逃脱，否则就会后患无穷。</div><div class="story-quote">"小敌困之。剥，不利有攸往。"</div><div class="story-moral"><strong>经典战例：</strong>战国时长平之战，秦将白起率军包围了赵军。赵括率四十万大军突围，白起将赵军团团围住，切断其粮道和水源。赵军被困四十六天，突围失败，四十万赵军全部投降。关门捉贼的关键在于先切断退路，形成合围，使敌军插翅难飞。</div></article>
+<article class="story-card" data-cat="hunzhan" data-title="远交近攻"><span class="story-index">#023</span><div class="story-card-header"><h3 class="story-title">远交近攻</h3><span class="story-origin">第二十三计</span></div><div class="story-meta"><span class="story-tag">外交</span><span class="story-tag">蚕食</span></div><div class="story-content">形禁势格，利从近取，害以远隔。上火下泽。当受到地理形势的限制时，进攻近处的敌人有利，而远隔的敌人只能暂时结交。这是睽卦的道理——利用远近不同的关系来制定战略。结交远方的国家，攻打邻近的国家，稳扎稳打，逐步扩张。</div><div class="story-quote">"形禁势格，利从近取，害以远隔。上火下泽。"</div><div class="story-moral"><strong>经典战例：</strong>战国时范雎向秦昭王献策：与远方的齐国、楚国交好，集中力量攻取邻近的韩国、魏国。这样攻下的土地与秦国相连，便于统治和防守。秦国采纳此策后，逐步蚕食六国，最终统一天下。远交近攻成为秦国统一六国的基本国策。</div></article>
+<article class="story-card" data-cat="hunzhan" data-title="假途伐虢"><span class="story-index">#024</span><div class="story-card-header"><h3 class="story-title">假途伐虢</h3><span class="story-origin">第二十四计</span></div><div class="story-meta"><span class="story-tag">借口</span><span class="story-tag">渗透</span></div><div class="story-content">两大之间，敌胁以从，我假以势。困，有言不信。处在两个大国之间的小国，受到敌方的胁迫而屈从时，我方可以借机出兵援助，趁机扩大势力。这是困卦的道理——用花言巧语取得信任。以借路为名，行灭国之实。</div><div class="story-quote">"两大之间，敌胁以从，我假以势。困，有言不信。"</div><div class="story-moral"><strong>经典战例：</strong>春秋时，晋国想灭虢国，但中间隔着一个虞国。晋国用名马和美玉贿赂虞国国君，请求借道伐虢。虞国大夫宫之奇劝谏：虢虞两国如同唇齿相依，"唇亡则齿寒"。虞国国君贪图财物，答应了晋国。晋国灭虢后回师途中顺手灭了虞国。贪小利而忘大害，虞国的灭亡令人深思。</div></article>
+</div>
+</section>
+
+<!-- 第五篇：并战计 -->
+<section class="story-section" data-cat="bingzhan" id="bingzhan">
+<div class="section-header">
+<span class="section-badge">并战计</span>
+<h2 class="section-title">第五篇 并战计</h2>
+<span class="section-count">6计</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="bingzhan" data-title="偷梁换柱"><span class="story-index">#025</span><div class="story-card-header"><h3 class="story-title">偷梁换柱</h3><span class="story-origin">第二十五计</span></div><div class="story-meta"><span class="story-tag">替换</span><span class="story-tag">暗中</span></div><div class="story-content">频更其阵，抽其劲旅，待其自败，而后乘之。曳其轮也。频繁地改变敌人的阵型，暗中抽换其主力部队，等待其自行败亡，然后乘机取胜。这是既济卦的道理——暗中改变事物的核心结构。如同偷换了房屋的梁柱，表面上看不出变化，实质已经完全不同。</div><div class="story-quote">"频更其阵，抽其劲旅，待其自败，而后乘之。曳其轮也。"</div><div class="story-moral"><strong>经典战例：</strong>秦始皇统一六国后，赵高篡权。秦始皇死后，赵高篡改遗诏，逼死公子扶苏，立胡亥为秦二世。他又设计害死丞相李斯，自己当上丞相。赵高通过一系列"偷梁换柱"的手段，逐步架空皇权，最终指鹿为马，控制了整个朝政。暗中替换关键人物和权力结构，是其得手的关键。</div></article>
+<article class="story-card" data-cat="bingzhan" data-title="指桑骂槐"><span class="story-index">#026</span><div class="story-card-header"><h3 class="story-title">指桑骂槐</h3><span class="story-origin">第二十六计</span></div><div class="story-meta"><span class="story-tag">暗示</span><span class="story-tag">威慑</span></div><div class="story-content">大凌小者，警以诱之。刚中而应，行险而顺。强者要制服弱者，要用警告的方法来诱导他服从。这是师卦的道理——以刚强的手段施加影响，使对方心服口服。表面上骂桑树，实际上骂的是槐树。通过旁敲侧击来达到警告和威慑的目的。</div><div class="story-quote">"大凌小者，警以诱之。刚中而应，行险而顺。"</div><div class="story-moral"><strong>经典战例：</strong>春秋时，齐景公手下有三位勇士：公孙接、田开疆、古冶子，恃勇而骄。相国晏婴想除掉他们，但又不能硬来。他便向齐景公建议：赐两个桃子给三位勇士，让他们按功劳分桃。三人争功，最终都觉得自己功劳不如人而羞愤自杀。晏婴不直接动手，用"二桃杀三士"的间接手段达到了目的。</div></article>
+<article class="story-card" data-cat="bingzhan" data-title="假痴不癫"><span class="story-index">#027</span><div class="story-card-header"><h3 class="story-title">假痴不癫</h3><span class="story-origin">第二十七计</span></div><div class="story-meta"><span class="story-tag">装傻</span><span class="story-tag">隐忍</span></div><div class="story-content">宁伪作不知不为，不伪作假知妄为。静不露机，云雷屯也。宁可假装不知道而不行动，也不要假装知道而妄动。保持沉静不露锋芒，如同屯卦所示——云雷蓄势待发。假装糊涂是为了掩护真实意图，在适当的时机再一鸣惊人。大智若愚，大勇若怯。</div><div class="story-quote">"宁伪作不知不为，不伪作假知妄为。静不露机，云雷屯也。"</div><div class="story-moral"><strong>经典战例：</strong>三国时，司马懿面对诸葛亮的北伐大军，坚守不出。诸葛亮派人送来女装羞辱他，意在激怒他出战。司马懿却坦然穿上女装，假装毫不在意，还向使者详细询问诸葛亮的饮食起居。司马懿以"假痴不癫"之计，消耗蜀军的粮草和锐气，最终诸葛亮病逝五丈原，蜀军撤退。不战而屈人之兵，堪称此计典范。</div></article>
+<article class="story-card" data-cat="bingzhan" data-title="上屋抽梯"><span class="story-index">#028</span><div class="story-card-header"><h3 class="story-title">上屋抽梯</h3><span class="story-origin">第二十八计</span></div><div class="story-meta"><span class="story-tag">诱入</span><span class="story-tag">断退</span></div><div class="story-content">假之以便，唆之使前，断其援应，陷之死地。遇毒，位不当也。故意给敌人方便，引诱其深入，然后切断其退路和援应，使其陷入绝境。这是噬嗑卦的道理——设下圈套让敌人自投罗网。先让对方尝到甜头，再断其后路，使其进退不得。</div><div class="story-quote">"假之以便，唆之使前，断其援应，陷之死地。遇毒，位不当也。"</div><div class="story-moral"><strong>经典战例：</strong>东汉末年，吕布与袁术交战。袁术写信约吕布联合，吕布应允。但曹操暗中派人联络吕布，以更高官位拉拢他。吕布反复无常，先与袁术联合后又背盟。曹操在吕布与各方的矛盾中周旋，先给吕布甜头使其依附，待时机成熟后围困下邳，断其退路，最终生擒吕布。上屋抽梯是先给好处再收网的策略。</div></article>
+<article class="story-card" data-cat="bingzhan" data-title="树上开花"><span class="story-index">#029</span><div class="story-card-header"><h3 class="story-title">树上开花</h3><span class="story-origin">第二十九计</span></div><div class="story-meta"><span class="story-tag">虚张</span><span class="story-tag">借势</span></div><div class="story-content">借局布势，力小势大。鸿渐于陆，其羽可用为仪也。借助有利的局面布置阵势，使自己的力量看起来比实际强大。这是渐卦的道理——像大雁飞行一样循序渐进。在树上布置假花，远远看去如同真花盛开。用虚张声势来弥补实力的不足，震慑敌人。</div><div class="story-quote">"借局布势，力小势大。鸿渐于陆，其羽可用为仪也。"</div><div class="story-moral"><strong>经典战例：</strong>三国时，张飞在长坂坡断后。他命令士兵在马尾绑上树枝，在桥后的树林中来回奔跑，扬起漫天尘土。曹军追来时，只见桥上张飞怒目圆睁，身后烟尘滚滚，以为有大军埋伏，不敢前进。张飞仅凭数十人就吓退了曹操的大军。虚张声势，以弱示强，正是"树上开花"。</div></article>
+<article class="story-card" data-cat="bingzhan" data-title="反客为主"><span class="story-index">#030</span><div class="story-card-header"><h3 class="story-title">反客为主</h3><span class="story-origin">第三十计</span></div><div class="story-meta"><span class="story-tag">翻转</span><span class="story-tag">夺权</span></div><div class="story-content">乘隙插足，扼其主机，渐之进也。趁对方出现漏洞时插足其中，逐步控制其核心权力，循序渐进地夺取主导地位。这是渐卦的道理——由客位变为主位，由被动变为主动。原本是客方，通过逐步渗透和控制，最终反客为主，掌握局面。</div><div class="story-quote">"乘隙插足，扼其主机，渐之进也。"</div><div class="story-moral"><strong>经典战例：</strong>汉末三国时期，刘备寄居荆州刘表处，只是个"客"。但他趁刘表势力衰弱之际，逐步扩大自己的影响力。后来借荆州、取益州、夺汉中，从寄人篱下的客将变成了蜀汉皇帝。刘备的成功正是"反客为主"的体现——善于利用别人的资源来壮大自己，最终实现翻转。</div></article>
+</div>
+</section>
+
+<!-- 第六篇：败战计 -->
+<section class="story-section" data-cat="baizhan" id="baizhan">
+<div class="section-header">
+<span class="section-badge">败战计</span>
+<h2 class="section-title">第六篇 败战计</h2>
+<span class="section-count">6计</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="baizhan" data-title="美人计"><span class="story-index">#031</span><div class="story-card-header"><h3 class="story-title">美人计</h3><span class="story-origin">第三十一计</span></div><div class="story-meta"><span class="story-tag">攻心</span><span class="story-tag">软杀伤</span></div><div class="story-content">兵强者，攻其将；将智者，伐其情。将弱兵颓，其势自萎。利用将帅，即可保全。面对兵力强大的敌人，就去攻击他的将帅；将帅如果聪明，就去瓦解他的意志。将帅意志消沉、军队士气低落，其气势自然会萎靡。兵法云，强大的军队也有弱点——人心。</div><div class="story-quote">"兵强者，攻其将；将智者，伐其情。将弱兵颓，其势自萎。"</div><div class="story-moral"><strong>经典战例：</strong>春秋时越王勾践败于吴王夫差后，忍辱负重。他献上美女西施，让夫差沉溺于酒色之中。夫差从此不理朝政，忠臣伍子胥被疏远。越国趁机休养生息，二十年卧薪尝胆，最终一举灭吴。美人计是"攻心为上"的典型——从内部瓦解敌人的意志和决策能力。</div></article>
+<article class="story-card" data-cat="baizhan" data-title="空城计"><span class="story-index">#032</span><div class="story-card-header"><h3 class="story-title">空城计</h3><span class="story-origin">第三十二计</span></div><div class="story-meta"><span class="story-tag">虚张</span><span class="story-tag">冒险</span></div><div class="story-content">虚者虚之，疑中生疑；刚柔之际，奇而复奇。空虚就故意显示空虚，使敌人在疑惑中更加疑惑。这是在刚柔转换之际使用的奇计，奇妙无比。在走投无路时，反其道而行之，反而能迷惑敌人。此计风险极大，但若运用得当，效果惊人。</div><div class="story-quote">"虚者虚之，疑中生疑；刚柔之际，奇而复奇。"</div><div class="story-moral"><strong>经典战例：</strong>三国时，马谡失街亭后，诸葛亮在西城只有两千老弱残兵，而司马懿率十五万大军压境。诸葛亮大开城门，自己在城楼上焚香弹琴。司马懿见此情景，怀疑有伏兵，不敢进城，率军撤退。诸葛亮利用司马懿多疑的性格，以空城退敌。此计需要极深的胆识和对对手心理的精准把握。</div></article>
+<article class="story-card" data-cat="baizhan" data-title="反间计"><span class="story-index">#033</span><div class="story-card-header"><h3 class="story-title">反间计</h3><span class="story-origin">第三十三计</span></div><div class="story-meta"><span class="story-tag">离间</span><span class="story-tag">渗透</span></div><div class="story-content">疑中之疑，比之自内，不自失也。在敌人布置的疑阵中再布疑阵，或者利用敌人内部的间谍来传递假情报，使敌人产生内部分裂。如同比卦所示——从内部瓦解敌人。利用敌人的间谍来为我的目的服务，使敌人不战自乱。</div><div class="story-quote">"疑中之疑，比之自内，不自失也。"</div><div class="story-moral"><strong>经典战例：</strong>战国时，赵国名将李牧率军抵御匈奴。匈奴派间谍到赵国散布谣言，说李牧怯战、私通匈奴。赵王中计，将李牧撤换。新任将领主动出击，被匈奴大败。后来赵王重新起用李牧，李牧用反间计诱匈奴深入，设伏歼灭十余万骑兵。利用间谍反过来为己所用，是反间计的精髓。</div></article>
+<article class="story-card" data-cat="baizhan" data-title="苦肉计"><span class="story-index">#034</span><div class="story-card-header"><h3 class="story-title">苦肉计</h3><span class="story-origin">第三十四计</span></div><div class="story-meta"><span class="story-tag">自伤</span><span class="story-tag">取信</span></div><div class="story-content">人不自害，受害必真；假真真假，间以得行。童蒙之吉，顺以巽也。人通常不会自己伤害自己，所以受到伤害必是真的。利用这种常理，假装受伤来取信于敌人，从而达到打入敌人内部的目的。如同蒙卦所示——以退求进，以损求益。自己人打自己人，苦的是肉，得的是计。</div><div class="story-quote">"人不自害，受害必真；假真真假，间以得行。"</div><div class="story-moral"><strong>经典战例：</strong>三国赤壁之战前，周瑜和黄盖合演苦肉计。周瑜借故杖打黄盖，打得皮开肉绽。黄盖派人向曹操诈降，曹操见黄盖被打得如此惨烈，信以为真。赤壁之战时，黄盖率装满引火物资的船只靠近曹营水寨，一把火烧毁了曹操的连环战船。苦肉计以自伤换取敌人的信任，代价虽大但效果奇佳。</div></article>
+<article class="story-card" data-cat="baizhan" data-title="连环计"><span class="story-index">#035</span><div class="story-card-header"><h3 class="story-title">连环计</h3><span class="story-origin">第三十五计</span></div><div class="story-meta"><span class="story-tag">组合</span><span class="story-tag">连环</span></div><div class="story-content">将多兵众，不可以敌，使其自累，以杀其势。在师中吉，承天宠也。当敌人兵多将广难以正面抗衡时，就要设法使敌人自我牵制、互相拖累，从而削弱其整体实力。这是师卦的道理——巧妙地组合运用多种计策，环环相扣，使敌人防不胜防。</div><div class="story-quote">"将多兵众，不可以敌，使其自累，以杀其势。在师中吉，承天宠也。"</div><div class="story-moral"><strong>经典战例：</strong>赤壁之战是连环计的经典战例。庞统献连环计让曹操将战船用铁索连在一起（看似解决北方士兵晕船问题，实为火攻创造条件），周瑜施苦肉计让黄盖诈降，诸葛亮借东风火烧曹营。多个计策环环相扣，最终一举击败曹操八十万大军。连环计的精髓在于多个计策配合使用，效果远超单一计策。</div></article>
+<article class="story-card" data-cat="baizhan" data-title="走为上计"><span class="story-index">#036</span><div class="story-card-header"><h3 class="story-title">走为上计</h3><span class="story-origin">第三十六计</span></div><div class="story-meta"><span class="story-tag">撤退</span><span class="story-tag">保全</span></div><div class="story-content">全师避敌，左次无咎，未失常也。为了保全军队而避开敌人的锋芒，暂时退却并无过错，这不违背用兵的常理。当形势对我方不利时，主动撤退、保存实力是明智之举。撤退不是失败，而是为了将来更好的进攻。留得青山在，不怕没柴烧。</div><div class="story-quote">"全师避敌，左次无咎，未失常也。"</div><div class="story-moral"><strong>经典战例：</strong>春秋时，晋文公即位前曾流亡十九年。在多个国家之间辗转，每到一处遇到危险就及时离开，从不恋战。正是这种"走"的策略，使他最终保全了性命，回国即位后成就霸业。再看毛泽东的"四渡赤水"，面对数十万国民党军的围追堵截，红军通过四次渡过赤水河，灵活机动地跳出包围圈。"走"也是一种高超的战略。</div></article>
+</div>
+</section>
+
+<div class="no-results" id="noResults" style="display:none">
+<div class="no-results-icon" aria-hidden="true">&#x1F50D;</div>
+<p class="no-results-text">没有找到匹配的计谋</p>
+<p class="no-results-hint">试试其他关键词或切换分类</p>
+</div>
+</main>
+<button class="back-top" id="backTop" aria-label="回到顶部" title="回到顶部">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+<footer>
+<p>三十六计 &mdash; 中华兵法智慧，传承千年谋略经典</p>
+</footer>
+<script>
+(function(){
+var themeBtn=document.querySelector('.theme-toggle');
+var body=document.body;
+var saved=localStorage.getItem('slj-theme');
+if(!saved&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches){saved='dark'}
+if(saved){body.setAttribute('data-theme',saved)}
+themeBtn.addEventListener('click',function(){
+var cur=body.getAttribute('data-theme');
+var next=cur==='dark'?'light':'dark';
+body.setAttribute('data-theme',next);
+localStorage.setItem('slj-theme',next);
+});
+var filterBtns=document.querySelectorAll('.filter-btn');
+var cards=document.querySelectorAll('.story-card');
+var sections=document.querySelectorAll('.story-section');
+var searchInput=document.querySelector('.search-input');
+var noResults=document.getElementById('noResults');
+function filterCards(cat,query){
+var q=query?q.trim().toLowerCase():'';
+var visibleCount=0;
+cards.forEach(function(c){
+var show=true;
+if(cat!=='all'&&c.getAttribute('data-cat')!==cat)show=false;
+if(q){
+var title=(c.getAttribute('data-title')||'').toLowerCase();
+var text=(c.textContent||'').toLowerCase();
+if(title.indexOf(q)===-1&&text.indexOf(q)===-1)show=false;
+}
+c.style.display=show?'':'none';
+if(show)visibleCount++;
+});
+sections.forEach(function(s){
+var cat2=s.getAttribute('data-cat');
+if(cat!=='all'&&cat2!==cat){s.style.display='none';return}
+s.style.display='';
+var vis=0;
+s.querySelectorAll('.story-card').forEach(function(c){if(c.style.display!=='none')vis++});
+s.style.display=vis?'':'none';
+});
+noResults.style.display=visibleCount?'none':'';
+}
+filterBtns.forEach(function(btn){
+btn.addEventListener('click',function(){
+filterBtns.forEach(function(b){b.classList.remove('active')});
+btn.classList.add('active');
+filterCards(btn.getAttribute('data-filter'),searchInput.value);
+});
+});
+var debounceTimer;
+searchInput.addEventListener('input',function(){
+clearTimeout(debounceTimer);
+debounceTimer=setTimeout(function(){
+var activeFilter=document.querySelector('.filter-btn.active');
+filterCards(activeFilter?activeFilter.getAttribute('data-filter'):'all',searchInput.value);
+},200);
+});
+var backTop=document.getElementById('backTop');
+window.addEventListener('scroll',function(){
+backTop.classList.toggle('visible',window.scrollY>400);
+},{passive:true});
+backTop.addEventListener('click',function(){
+window.scrollTo({top:0,behavior:'smooth'});
+});
+})();
+</script>
+</body>
+</html>

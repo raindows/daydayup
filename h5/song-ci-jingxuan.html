@@ -1,0 +1,2370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宋词精选 - 宋词名篇Top100</title>
+<meta name="description" content="精选宋词名篇Top100，涵盖豪放词、婉约词、写景抒情、爱国壮志、咏物抒怀五大类，苏轼、李清照、辛弃疾等名家经典。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ========== Design Tokens ========== */
+:root {
+  --color-bg: #FAF7F2;
+  --color-bg-alt: #F3EDE4;
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #FFF9F5;
+  --color-ink: #2C2420;
+  --color-ink-light: #5C524A;
+  --color-ink-muted: #8A7F75;
+  --color-border: #E5DDD3;
+  --color-border-light: #EDE8E1;
+  --color-accent: #8B5E3C;
+  --color-accent-light: #B8896A;
+  --color-gold: #C9A96E;
+  --color-gold-light: #E8D5A8;
+  --color-vermilion: #B8382A;
+  --color-jade: #5B8C5A;
+  --color-indigo: #5B6AAF;
+  --color-plum: #9B5B8C;
+  --color-amber: #C48830;
+  --font-display: 'Noto Serif SC', serif;
+  --font-heading: 'Noto Serif SC', serif;
+  --font-body: 'Noto Sans SC', sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --shadow-sm: 0 1px 3px rgba(44,36,32,0.06);
+  --shadow-md: 0 4px 16px rgba(44,36,32,0.08);
+  --shadow-lg: 0 8px 32px rgba(44,36,32,0.10);
+  --shadow-xl: 0 16px 48px rgba(44,36,32,0.12);
+  --transition: 200ms ease;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --color-bg: #1A1714;
+  --color-bg-alt: #23201B;
+  --color-surface: #2A2621;
+  --color-surface-hover: #342F29;
+  --color-ink: #E8E0D6;
+  --color-ink-light: #BFB5A8;
+  --color-ink-muted: #8A7F72;
+  --color-border: #3A352E;
+  --color-border-light: #302B25;
+  --color-accent: #C89070;
+  --color-accent-light: #8B5E3C;
+  --color-gold: #E0C888;
+  --color-gold-light: #A08040;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.3);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.35);
+  --shadow-xl: 0 16px 48px rgba(0,0,0,0.4);
+}
+
+/* ========== Reset & Base ========== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  line-height: 1.7;
+  min-height: 100vh;
+  transition: background var(--transition), color var(--transition);
+}
+
+/* ========== Top Nav ========== */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border-light);
+  padding: 0 24px;
+  transition: background var(--transition);
+}
+
+.top-nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  gap: 4px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 0;
+}
+
+.top-nav-inner::-webkit-scrollbar { display: none; }
+
+.top-nav-link {
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  color: var(--color-ink-light);
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 100px;
+  border: 1px solid transparent;
+  transition: all var(--transition);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.top-nav-link:hover {
+  background: var(--color-bg-alt);
+  border-color: var(--color-border);
+}
+
+.top-nav-link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.top-nav-link.active {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+}
+
+.top-nav-sep {
+  width: 1px;
+  height: 16px;
+  background: var(--color-border-light);
+  margin: 0 4px;
+  flex-shrink: 0;
+}
+
+/* ========== Skip Link ========== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  padding: 8px 16px;
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  z-index: 10000;
+  font-size: 14px;
+  text-decoration: none;
+}
+.skip-link:focus { top: 16px; }
+
+/* ========== Theme Toggle ========== */
+.theme-toggle {
+  position: fixed;
+  top: 52px;
+  right: 20px;
+  z-index: 1000;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition);
+}
+.theme-toggle:hover { transform: scale(1.08); box-shadow: var(--shadow-lg); }
+.theme-toggle:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.theme-toggle svg { width: 20px; height: 20px; color: var(--color-ink); }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+
+/* ========== Header / Hero ========== */
+.hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px 60px;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 600px 400px at 20% 30%, rgba(139,94,60,0.12), transparent),
+    radial-gradient(ellipse 500px 350px at 80% 60%, rgba(201,169,110,0.10), transparent),
+    radial-gradient(ellipse 400px 300px at 50% 80%, rgba(91,106,175,0.08), transparent);
+  pointer-events: none;
+}
+
+.hero-ornament {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 400;
+  color: var(--color-ink);
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.hero-subtitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-ink-muted);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+}
+
+.hero-desc {
+  font-size: 0.95rem;
+  color: var(--color-ink-muted);
+  max-width: 520px;
+  margin-top: 12px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-stat { text-align: center; }
+
+.hero-stat-num {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  display: block;
+}
+
+.hero-stat-label {
+  font-size: 0.8rem;
+  color: var(--color-ink-muted);
+  letter-spacing: 0.1em;
+}
+
+/* ========== Main Content ========== */
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* ========== Filter Bar ========== */
+.filter-bar {
+  position: sticky;
+  top: 44px;
+  z-index: 100;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border-light);
+  padding: 16px 0;
+  margin-bottom: 40px;
+  transition: background var(--transition);
+}
+
+.filter-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 4px;
+}
+
+.filter-bar-inner::-webkit-scrollbar { display: none; }
+
+.filter-btn {
+  flex-shrink: 0;
+  padding: 8px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  background: var(--color-surface);
+  color: var(--color-ink-light);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.filter-btn:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-ink-muted);
+}
+
+.filter-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.filter-btn.active {
+  background: var(--color-ink);
+  color: var(--color-bg);
+  border-color: var(--color-ink);
+}
+
+.filter-btn .count {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* ========== Search ========== */
+.search-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.search-input {
+  padding: 8px 16px 8px 36px;
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  width: 200px;
+  transition: all var(--transition);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(139,94,60,0.12);
+  width: 260px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: var(--color-ink-muted);
+  pointer-events: none;
+}
+
+/* ========== Section ========== */
+.ci-section {
+  margin-bottom: 56px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.section-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.section-count {
+  font-size: 0.85rem;
+  color: var(--color-ink-muted);
+  margin-left: auto;
+}
+
+/* ========== Poem Grid ========== */
+.poem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* ========== Poem Card ========== */
+.poem-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  transition: all 250ms ease;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.poem-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  border-radius: 3px 0 0 3px;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.poem-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--color-border);
+}
+
+.poem-card:hover::before { opacity: 1; }
+
+.poem-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.poem-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  line-height: 1.4;
+}
+
+.poem-badge {
+  flex-shrink: 0;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #fff;
+  margin-left: 12px;
+  align-self: flex-start;
+  margin-top: 2px;
+}
+
+.poem-author {
+  font-size: 0.85rem;
+  color: var(--color-ink-muted);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.poem-author-dynasty {
+  font-size: 0.75rem;
+  padding: 1px 6px;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-sm);
+  color: var(--color-ink-muted);
+}
+
+.poem-text {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  line-height: 2;
+  color: var(--color-ink-light);
+  letter-spacing: 0.02em;
+}
+
+.poem-text .line {
+  display: block;
+}
+
+.poem-index {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  color: var(--color-ink-muted);
+  opacity: 0.4;
+}
+
+/* ========== Category Color Themes ========== */
+[data-category="haofang"] .poem-card::before { background: var(--color-vermilion); }
+[data-category="haofang"] .section-icon { background: rgba(184,56,42,0.12); }
+[data-category="haofang"] .poem-badge { background: var(--color-vermilion); }
+
+[data-category="wanyue"] .poem-card::before { background: var(--color-plum); }
+[data-category="wanyue"] .section-icon { background: rgba(155,91,140,0.12); }
+[data-category="wanyue"] .poem-badge { background: var(--color-plum); }
+
+[data-category="xiejing"] .poem-card::before { background: var(--color-jade); }
+[data-category="xiejing"] .section-icon { background: rgba(91,140,90,0.12); }
+[data-category="xiejing"] .poem-badge { background: var(--color-jade); }
+
+[data-category="aiguo"] .poem-card::before { background: var(--color-indigo); }
+[data-category="aiguo"] .section-icon { background: rgba(91,106,175,0.12); }
+[data-category="aiguo"] .poem-badge { background: var(--color-indigo); }
+
+[data-category="yongwu"] .poem-card::before { background: var(--color-amber); }
+[data-category="yongwu"] .section-icon { background: rgba(196,136,48,0.12); }
+[data-category="yongwu"] .poem-badge { background: var(--color-amber); color: #2C2420; }
+
+/* ========== Footer ========== */
+footer {
+  text-align: center;
+  padding: 40px 24px;
+  border-top: 1px solid var(--color-border-light);
+  color: var(--color-ink-muted);
+  font-size: 0.85rem;
+}
+
+footer p { margin-bottom: 4px; }
+
+/* ========== Back to Top ========== */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+}
+
+.back-to-top.visible { opacity: 1; visibility: visible; }
+.back-to-top:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.back-to-top:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.back-to-top svg { width: 20px; height: 20px; color: var(--color-ink); }
+
+/* ========== Empty State ========== */
+.empty-state {
+  text-align: center;
+  padding: 80px 24px;
+  color: var(--color-ink-muted);
+}
+
+.empty-state svg {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  opacity: 0.4;
+}
+
+/* ========== Animations ========== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.poem-card { animation: fadeInUp 0.4s ease both; }
+
+.poem-grid .poem-card:nth-child(1) { animation-delay: 0ms; }
+.poem-grid .poem-card:nth-child(2) { animation-delay: 50ms; }
+.poem-grid .poem-card:nth-child(3) { animation-delay: 100ms; }
+.poem-grid .poem-card:nth-child(4) { animation-delay: 150ms; }
+.poem-grid .poem-card:nth-child(5) { animation-delay: 200ms; }
+.poem-grid .poem-card:nth-child(6) { animation-delay: 250ms; }
+
+/* ========== Reduced Motion ========== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .top-nav { padding: 0 16px; }
+  .hero { padding: 60px 20px 40px; min-height: 40vh; }
+  .hero-stats { gap: 20px; }
+  .poem-grid { grid-template-columns: 1fr; }
+  .filter-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 4px;
+}
+  .search-input { width: 150px; }
+  .search-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(139,94,60,0.12);
+  width: 200px;
+  }
+  main { padding: 0 16px 60px; }
+  .theme-toggle { top: 48px; right: 12px; }
+}
+
+@media (max-width: 375px) {
+  .poem-card { padding: 18px; }
+  .hero h1 { letter-spacing: 0.04em; }
+}
+
+@media (min-width: 1024px) {
+  .poem-grid { grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); }
+}
+
+/* ========== Print ========== */
+@media print {
+  .theme-toggle, .back-to-top, .filter-bar, .search-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+  .poem-card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+  body { background: #fff; color: #000; }
+}
+</style>
+</head>
+<body data-theme="light">
+
+<a href="#main" class="skip-link">跳转到正文内容</a>
+<nav class="top-nav" aria-label="站点导航">
+<div class="top-nav-inner">
+<a href="jingdian-tongyao.html" class="top-nav-link">经典童谣</a>
+<span class="top-nav-sep"></span>
+<a href="shenglv-qimeng.html" class="top-nav-link">声律启蒙</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-tonghua.html" class="top-nav-link">少儿童话</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-qimeng-shici.html" class="top-nav-link">启蒙诗词</a>
+<span class="top-nav-sep"></span>
+<a href="hanzi-gushi.html" class="top-nav-link">汉字故事</a>
+<span class="top-nav-sep"></span>
+<a href="baihua-shici.html" class="top-nav-link">百花诗词</a>
+<span class="top-nav-sep"></span>
+<a href="shi-wan-ge-weishenme.html" class="top-nav-link">十万个为什么</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-chengyu.html" class="top-nav-link">少儿成语</a>
+<span class="top-nav-sep"></span>
+<a href="shangxia-wuqiannian.html" class="top-nav-link">上下五千年</a>
+<span class="top-nav-sep"></span>
+<a href="sanshiliuji.html" class="top-nav-link">三十六计</a>
+<span class="top-nav-sep"></span>
+<a href="song-ci-jingxuan.html" class="top-nav-link active">宋词精选</a>
+<span class="top-nav-sep"></span>
+<a href="maozedong-shici.html" class="top-nav-link">毛主席诗词</a>
+</div>
+</nav>
+
+<!-- Theme Toggle -->
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="切换深色/浅色模式">
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-ornament"></div>
+  <p class="hero-subtitle">宋词名篇精选</p>
+  <h1>宋词精选</h1>
+  <p class="hero-desc">收录两宋词坛名篇佳作，豪放婉约各领风骚，品味千年词韵之美</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="hero-stat-num">100</span>
+      <span class="hero-stat-label">经典词作</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">5</span>
+      <span class="hero-stat-label">分类专题</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">50+</span>
+      <span class="hero-stat-label">词坛名家</span>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main id="main">
+
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <div class="filter-bar-inner">
+      <button class="filter-btn active" data-filter="all" onclick="filterPoems('all', this)">全部<span class="count">100</span></button>
+      <button class="filter-btn" data-filter="haofang" onclick="filterPoems('haofang', this)">豪放词<span class="count">20</span></button>
+      <button class="filter-btn" data-filter="wanyue" onclick="filterPoems('wanyue', this)">婉约词<span class="count">20</span></button>
+      <button class="filter-btn" data-filter="xiejing" onclick="filterPoems('xiejing', this)">写景抒情<span class="count">20</span></button>
+      <button class="filter-btn" data-filter="aiguo" onclick="filterPoems('aiguo', this)">爱国壮志<span class="count">20</span></button>
+      <button class="filter-btn" data-filter="yongwu" onclick="filterPoems('yongwu', this)">咏物抒怀<span class="count">20</span></button>
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="searchInput" class="search-input" placeholder="搜索词名、作者…" aria-label="搜索宋词">
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 一、豪放词 ===== -->
+  <section class="ci-section" data-category="haofang">
+    <div class="section-header">
+      <div class="section-icon">&#9876;</div>
+      <h2 class="section-title">豪放词</h2>
+      <span class="section-count">20首</span>
+    </div>
+    <div class="poem-grid">
+
+      <article class="poem-card">
+        <span class="poem-index">#001</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">念奴娇·赤壁怀古</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 苏轼</div>
+        <div class="poem-text">
+          <span class="line">大江东去，浪淘尽，千古风流人物。</span>
+          <span class="line">故垒西边，人道是，三国周郎赤壁。</span>
+          <span class="line">乱石穿空，惊涛拍岸，卷起千堆雪。</span>
+          <span class="line">江山如画，一时多少豪杰。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#002</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">水调歌头·明月几时有</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 苏轼</div>
+        <div class="poem-text">
+          <span class="line">明月几时有？把酒问青天。</span>
+          <span class="line">不知天上宫阙，今夕是何年。</span>
+          <span class="line">我欲乘风归去，又恐琼楼玉宇，高处不胜寒。</span>
+          <span class="line">起舞弄清影，何似在人间。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#003</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">江城子·密州出猎</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 苏轼</div>
+        <div class="poem-text">
+          <span class="line">老夫聊发少年狂，左牵黄，右擎苍。</span>
+          <span class="line">锦帽貂裘，千骑卷平冈。</span>
+          <span class="line">为报倾城随太守，亲射虎，看孙郎。</span>
+          <span class="line">酒酣胸胆尚开张，鬓微霜，又何妨！</span>
+          <span class="line">持节云中，何日遣冯唐？</span>
+          <span class="line">会挽雕弓如满月，西北望，射天狼。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#004</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">破阵子·为陈同甫赋壮词以寄之</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">醉里挑灯看剑，梦回吹角连营。</span>
+          <span class="line">八百里分麾下炙，五十弦翻塞外声。</span>
+          <span class="line">沙场秋点兵。</span>
+          <span class="line">马作的卢飞快，弓如霹雳弦惊。</span>
+          <span class="line">了却君王天下事，赢得生前身后名。</span>
+          <span class="line">可怜白发生！</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#005</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">永遇乐·京口北固亭怀古</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">千古江山，英雄无觅孙仲谋处。</span>
+          <span class="line">舞榭歌台，风流总被雨打风吹去。</span>
+          <span class="line">斜阳草树，寻常巷陌，人道寄奴曾住。</span>
+          <span class="line">想当年，金戈铁马，气吞万里如虎。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#006</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">满江红·怒发冲冠</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 岳飞</div>
+        <div class="poem-text">
+          <span class="line">怒发冲冠，凭栏处、潇潇雨歇。</span>
+          <span class="line">抬望眼，仰天长啸，壮怀激烈。</span>
+          <span class="line">三十功名尘与土，八千里路云和月。</span>
+          <span class="line">莫等闲，白了少年头，空悲切！</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#007</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">念奴娇·过洞庭</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 张孝祥</div>
+        <div class="poem-text">
+          <span class="line">洞庭青草，近中秋，更无一点风色。</span>
+          <span class="line">玉鉴琼田三万顷，着我扁舟一叶。</span>
+          <span class="line">素月分辉，明河共影，表里俱澄澈。</span>
+          <span class="line">悠然心会，妙处难与君说。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#008</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">水调歌头·游览</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 黄庭坚</div>
+        <div class="poem-text">
+          <span class="line">瑶草一何碧，春入武陵溪。</span>
+          <span class="line">溪上桃花无数，花上有黄鹂。</span>
+          <span class="line">我欲穿花寻路，直入白云深处，浩气展虹霓。</span>
+          <span class="line">只恐花深里，红露湿人衣。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#009</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">水龙吟·登建康赏心亭</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">楚天千里清秋，水随天去秋无际。</span>
+          <span class="line">遥岑远目，献愁供恨，玉簪螺髻。</span>
+          <span class="line">落日楼头，断鸿声里，江南游子。</span>
+          <span class="line">把吴钩看了，栏杆拍遍，无人会，登临意。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#010</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">贺新郎·甚矣吾衰矣</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">甚矣吾衰矣。怅平生、交游零落，只今余几！</span>
+          <span class="line">白发空垂三千丈，一笑人间万事。</span>
+          <span class="line">问何物、能令公喜？</span>
+          <span class="line">我见青山多妩媚，料青山见我应如是。</span>
+          <span class="line">情与貌，略相似。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#011</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">定风波·莫听穿林打叶声</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 苏轼</div>
+        <div class="poem-text">
+          <span class="line">莫听穿林打叶声，何妨吟啸且徐行。</span>
+          <span class="line">竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。</span>
+          <span class="line">料峭春风吹酒醒，微冷，山头斜照却相迎。</span>
+          <span class="line">回首向来萧瑟处，归去，也无风雨也无晴。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#012</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">沁园春·孤馆灯青</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 苏轼</div>
+        <div class="poem-text">
+          <span class="line">孤馆灯青，野店鸡号，旅枕梦残。</span>
+          <span class="line">渐月华收练，晨霜耿耿；云山摛锦，朝露漙漙。</span>
+          <span class="line">世路无穷，劳生有限，似此区区长鲜欢。</span>
+          <span class="line">微吟罢，凭征鞍无语，往事千端。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#013</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">八声甘州·对潇潇暮雨洒江天</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 柳永</div>
+        <div class="poem-text">
+          <span class="line">对潇潇暮雨洒江天，一番洗清秋。</span>
+          <span class="line">渐霜风凄紧，关河冷落，残照当楼。</span>
+          <span class="line">是处红衰翠减，苒苒物华休。</span>
+          <span class="line">惟有长江水，无语东流。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#014</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">六州歌头·长淮望断</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 张孝祥</div>
+        <div class="poem-text">
+          <span class="line">长淮望断，关塞莽然平。</span>
+          <span class="line">征尘暗，霜风劲，悄边声。黯销凝。</span>
+          <span class="line">追想当年事，殆天数，非人力，洙泗上，弦歌地，亦膻腥。</span>
+          <span class="line">隔水毡乡，落日牛羊下，区脱纵横。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#015</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">满庭芳·山抹微云</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 秦观</div>
+        <div class="poem-text">
+          <span class="line">山抹微云，天连衰草，画角声断谯门。</span>
+          <span class="line">暂停征棹，聊共引离尊。</span>
+          <span class="line">多少蓬莱旧事，空回首、烟霭纷纷。</span>
+          <span class="line">斜阳外，寒鸦万点，流水绕孤村。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#016</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">青玉案·元夕</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">东风夜放花千树，更吹落、星如雨。</span>
+          <span class="line">宝马雕车香满路。</span>
+          <span class="line">凤箫声动，玉壶光转，一夜鱼龙舞。</span>
+          <span class="line">蛾儿雪柳黄金缕，笑语盈盈暗香去。</span>
+          <span class="line">众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#017</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">水调歌头·落日古城角</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 范成大</div>
+        <div class="poem-text">
+          <span class="line">落日古城角，把酒劝君留。</span>
+          <span class="line">长安路远，何事风雪敝貂裘。</span>
+          <span class="line">散尽黄金身世，不管秦楼人怨，归计狎沙鸥。</span>
+          <span class="line">明夜扁舟去，和月载离愁。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#018</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">贺新郎·别茂嘉十二弟</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">将军百战身名裂。向河梁、回头万里，故人长绝。</span>
+          <span class="line">易水萧萧西风冷，满座衣冠似雪。</span>
+          <span class="line">正壮士、悲歌未彻。</span>
+          <span class="line">啼鸟还知如许恨，料不啼清泪长啼血。</span>
+          <span class="line">谁共我，醉明月？</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#019</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">清平乐·独宿博山王氏庵</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">绕床饥鼠，蝙蝠翻灯舞。</span>
+          <span class="line">屋上松风吹急雨，破纸窗间自语。</span>
+          <span class="line">平生塞北江南，归来华发苍颜。</span>
+          <span class="line">布被秋宵梦觉，眼前万里江山。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#020</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">临江仙·夜饮东坡醒复醉</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 苏轼</div>
+        <div class="poem-text">
+          <span class="line">夜饮东坡醒复醉，归来仿佛三更。</span>
+          <span class="line">家童鼻息已雷鸣。</span>
+          <span class="line">敲门都不应，倚杖听江声。</span>
+          <span class="line">长恨此身非我有，何时忘却营营。</span>
+          <span class="line">夜阑风静縠纹平。</span>
+          <span class="line">小舟从此逝，江海寄余生。</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== 二、婉约词 ===== -->
+  <section class="ci-section" data-category="wanyue">
+    <div class="section-header">
+      <div class="section-icon">&#127800;</div>
+      <h2 class="section-title">婉约词</h2>
+      <span class="section-count">20首</span>
+    </div>
+    <div class="poem-grid">
+
+      <article class="poem-card">
+        <span class="poem-index">#021</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">声声慢·寻寻觅觅</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 李清照</div>
+        <div class="poem-text">
+          <span class="line">寻寻觅觅，冷冷清清，凄凄惨惨戚戚。</span>
+          <span class="line">乍暖还寒时候，最难将息。</span>
+          <span class="line">三杯两盏淡酒，怎敌他、晚来风急！</span>
+          <span class="line">雁过也，正伤心，却是旧时相识。</span>
+          <span class="line">满地黄花堆积，憔悴损，如今有谁堪摘？</span>
+          <span class="line">守着窗儿，独自怎生得黑！</span>
+          <span class="line">梧桐更兼细雨，到黄昏、点点滴滴。</span>
+          <span class="line">这次第，怎一个愁字了得！</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#022</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">一剪梅·红藕香残玉簟秋</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 李清照</div>
+        <div class="poem-text">
+          <span class="line">红藕香残玉簟秋。轻解罗裳，独上兰舟。</span>
+          <span class="line">云中谁寄锦书来，雁字回时，月满西楼。</span>
+          <span class="line">花自飘零水自流。一种相思，两处闲愁。</span>
+          <span class="line">此情无计可消除，才下眉头，却上心头。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#023</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">醉花阴·薄雾浓云愁永昼</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 李清照</div>
+        <div class="poem-text">
+          <span class="line">薄雾浓云愁永昼，瑞脑销金兽。</span>
+          <span class="line">佳节又重阳，玉枕纱厨，半夜凉初透。</span>
+          <span class="line">东篱把酒黄昏后，有暗香盈袖。</span>
+          <span class="line">莫道不销魂，帘卷西风，人比黄花瘦。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#024</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">如梦令·昨夜雨疏风骤</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 李清照</div>
+        <div class="poem-text">
+          <span class="line">昨夜雨疏风骤，浓睡不消残酒。</span>
+          <span class="line">试问卷帘人，却道海棠依旧。</span>
+          <span class="line">知否，知否？应是绿肥红瘦。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#025</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">雨霖铃·寒蝉凄切</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 柳永</div>
+        <div class="poem-text">
+          <span class="line">寒蝉凄切，对长亭晚，骤雨初歇。</span>
+          <span class="line">都门帐饮无绪，留恋处，兰舟催发。</span>
+          <span class="line">执手相看泪眼，竟无语凝噎。</span>
+          <span class="line">念去去，千里烟波，暮霭沉沉楚天阔。</span>
+          <span class="line">多情自古伤离别，更那堪，冷落清秋节！</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#026</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">蝶恋花·伫倚危楼风细细</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 柳永</div>
+        <div class="poem-text">
+          <span class="line">伫倚危楼风细细，望极春愁，黯黯生天际。</span>
+          <span class="line">草色烟光残照里，无言谁会凭阑意。</span>
+          <span class="line">拟把疏狂图一醉，对酒当歌，强乐还无味。</span>
+          <span class="line">衣带渐宽终不悔，为伊消得人憔悴。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#027</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">鹊桥仙·纤云弄巧</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 秦观</div>
+        <div class="poem-text">
+          <span class="line">纤云弄巧，飞星传恨，银汉迢迢暗度。</span>
+          <span class="line">金风玉露一相逢，便胜却人间无数。</span>
+          <span class="line">柔情似水，佳期如梦，忍顾鹊桥归路。</span>
+          <span class="line">两情若是久长时，又岂在朝朝暮暮。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#028</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">浣溪沙·一曲新词酒一杯</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 晏殊</div>
+        <div class="poem-text">
+          <span class="line">一曲新词酒一杯，去年天气旧亭台。</span>
+          <span class="line">夕阳西下几时回？</span>
+          <span class="line">无可奈何花落去，似曾相识燕归来。</span>
+          <span class="line">小园香径独徘徊。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#029</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">蝶恋花·槛菊愁烟兰泣露</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 晏殊</div>
+        <div class="poem-text">
+          <span class="line">槛菊愁烟兰泣露，罗幕轻寒，燕子双飞去。</span>
+          <span class="line">明月不谙离恨苦，斜光到晓穿朱户。</span>
+          <span class="line">昨夜西风凋碧树，独上高楼，望尽天涯路。</span>
+          <span class="line">欲寄彩笺兼尺素，山长水阔知何处？</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#030</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">踏莎行·郴州旅舍</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 秦观</div>
+        <div class="poem-text">
+          <span class="line">雾失楼台，月迷津渡。</span>
+          <span class="line">桃源望断无寻处。</span>
+          <span class="line">可堪孤馆闭春寒，杜鹃声里斜阳暮。</span>
+          <span class="line">驿寄梅花，鱼传尺素。</span>
+          <span class="line">砌成此恨无重数。</span>
+          <span class="line">郴江幸自绕郴山，为谁流下潇湘去。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#031</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">玉楼春·春恨</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 晏殊</div>
+        <div class="poem-text">
+          <span class="line">绿杨芳草长亭路，年少抛人容易去。</span>
+          <span class="line">楼头残梦五更钟，花底离愁三月雨。</span>
+          <span class="line">无情不似多情苦，一寸还成千万缕。</span>
+          <span class="line">天涯地角有穷时，只有相思无尽处。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#032</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">清平乐·别来春半</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">南唐</span> 李煜</div>
+        <div class="poem-text">
+          <span class="line">别来春半，触目柔肠断。</span>
+          <span class="line">砌下落梅如雪乱，拂了一身还满。</span>
+          <span class="line">雁来音信无凭，路遥归梦难成。</span>
+          <span class="line">离恨恰如春草，更行更远还生。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#033</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">苏幕遮·怀旧</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 范仲淹</div>
+        <div class="poem-text">
+          <span class="line">碧云天，黄叶地，秋色连波，波上寒烟翠。</span>
+          <span class="line">山映斜阳天接水，芳草无情，更在斜阳外。</span>
+          <span class="line">黯乡魂，追旅思，夜夜除非，好梦留人睡。</span>
+          <span class="line">明月楼高休独倚，酒入愁肠，化作相思泪。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#034</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">卜算子·我住长江头</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 李之仪</div>
+        <div class="poem-text">
+          <span class="line">我住长江头，君住长江尾。</span>
+          <span class="line">日日思君不见君，共饮长江水。</span>
+          <span class="line">此水几时休，此恨何时已。</span>
+          <span class="line">只愿君心似我心，定不负相思意。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#035</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">相见欢·无言独上西楼</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">南唐</span> 李煜</div>
+        <div class="poem-text">
+          <span class="line">无言独上西楼，月如钩。</span>
+          <span class="line">寂寞梧桐深院锁清秋。</span>
+          <span class="line">剪不断，理还乱，是离愁。</span>
+          <span class="line">别是一般滋味在心头。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#036</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">生查子·元夕</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 欧阳修</div>
+        <div class="poem-text">
+          <span class="line">去年元夜时，花市灯如昼。</span>
+          <span class="line">月上柳梢头，人约黄昏后。</span>
+          <span class="line">今年元夜时，月与灯依旧。</span>
+          <span class="line">不见去年人，泪湿春衫袖。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#037</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">武陵春·春晚</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 李清照</div>
+        <div class="poem-text">
+          <span class="line">风住尘香花已尽，日晚倦梳头。</span>
+          <span class="line">物是人非事事休，欲语泪先流。</span>
+          <span class="line">闻说双溪春尚好，也拟泛轻舟。</span>
+          <span class="line">只恐双溪舴艋舟，载不动许多愁。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#038</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">蝶恋花·春景</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 苏轼</div>
+        <div class="poem-text">
+          <span class="line">花褪残红青杏小。燕子飞时，绿水人家绕。</span>
+          <span class="line">枝上柳绵吹又少，天涯何处无芳草。</span>
+          <span class="line">墙里秋千墙外道。墙外行人，墙里佳人笑。</span>
+          <span class="line">笑渐不闻声渐悄，多情却被无情恼。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#039</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">临江仙·梦后楼台高锁</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 晏几道</div>
+        <div class="poem-text">
+          <span class="line">梦后楼台高锁，酒醒帘幕低垂。</span>
+          <span class="line">去年春恨却来时。</span>
+          <span class="line">落花人独立，微雨燕双飞。</span>
+          <span class="line">记得小蘋初见，两重心字罗衣。</span>
+          <span class="line">琵琶弦上说相思。</span>
+          <span class="line">当时明月在，曾照彩云归。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#040</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">鹧鸪天·彩袖殷勤捧玉钟</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 晏几道</div>
+        <div class="poem-text">
+          <span class="line">彩袖殷勤捧玉钟，当年拚却醉颜红。</span>
+          <span class="line">舞低杨柳楼心月，歌尽桃花扇底风。</span>
+          <span class="line">从别后，忆相逢，几回魂梦与君同。</span>
+          <span class="line">今宵剩把银釭照，犹恐相逢是梦中。</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== 三、写景抒情 ===== -->
+  <section class="ci-section" data-category="xiejing">
+    <div class="section-header">
+      <div class="section-icon">&#127796;</div>
+      <h2 class="section-title">写景抒情</h2>
+      <span class="section-count">20首</span>
+    </div>
+    <div class="poem-grid">
+
+      <article class="poem-card">
+        <span class="poem-index">#041</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">望海潮·东南形胜</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 柳永</div>
+        <div class="poem-text">
+          <span class="line">东南形胜，三吴都会，钱塘自古繁华。</span>
+          <span class="line">烟柳画桥，风帘翠幕，参差十万人家。</span>
+          <span class="line">云树绕堤沙，怒涛卷霜雪，天堑无涯。</span>
+          <span class="line">市列珠玑，户盈罗绮，竞豪奢。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#042</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">采桑子·群芳过后西湖好</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 欧阳修</div>
+        <div class="poem-text">
+          <span class="line">群芳过后西湖好，狼籍残红，飞絮濛濛。</span>
+          <span class="line">垂柳阑干尽日风。</span>
+          <span class="line">笙歌散尽游人去，始觉春空。</span>
+          <span class="line">垂下帘栊，双燕归来细雨中。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#043</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">如梦令·常记溪亭日暮</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 李清照</div>
+        <div class="poem-text">
+          <span class="line">常记溪亭日暮，沉醉不知归路。</span>
+          <span class="line">兴尽晚回舟，误入藕花深处。</span>
+          <span class="line">争渡，争渡，惊起一滩鸥鹭。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#044</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">西江月·夜行黄沙道中</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">明月别枝惊鹊，清风半夜鸣蝉。</span>
+          <span class="line">稻花香里说丰年，听取蛙声一片。</span>
+          <span class="line">七八个星天外，两三点雨山前。</span>
+          <span class="line">旧时茅店社林边，路转溪桥忽见。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#045</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">浣溪沙·簌簌衣巾落枣花</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 苏轼</div>
+        <div class="poem-text">
+          <span class="line">簌簌衣巾落枣花，村南村北响缫车。</span>
+          <span class="line">牛衣古柳卖黄瓜。</span>
+          <span class="line">酒困路长惟欲睡，日高人渴漫思茶。</span>
+          <span class="line">敲门试问野人家。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#046</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">采桑子·天容水色西湖好</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 欧阳修</div>
+        <div class="poem-text">
+          <span class="line">天容水色西湖好，云物俱鲜。</span>
+          <span class="line">鸥鹭闲眠，应惯寻常听管弦。</span>
+          <span class="line">风清月白偏宜夜，一片琼田。</span>
+          <span class="line">谁羡骖鸾，人在舟中便是仙。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#047</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">行香子·树绕村庄</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 秦观</div>
+        <div class="poem-text">
+          <span class="line">树绕村庄，水满陂塘。</span>
+          <span class="line">倚东风、豪兴徜徉。</span>
+          <span class="line">小园几许，收尽春光。</span>
+          <span class="line">有桃花红，李花白，菜花黄。</span>
+          <span class="line">远远苔墙，隐隐茅堂。</span>
+          <span class="line">飏青旗、流水桥旁。</span>
+          <span class="line">偶然乘兴，步过东冈。</span>
+          <span class="line">正莺儿啼，燕儿舞，蝶儿忙。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#048</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">鹧鸪天·游鹅湖醉书酒家壁</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">春入平原荠菜花，新耕雨后落群鸦。</span>
+          <span class="line">多情白发春无奈，晚日青帘酒易赊。</span>
+          <span class="line">闲意态，细生涯，牛栏西畔有桑麻。</span>
+          <span class="line">青裙缟袂谁家女，去趁蚕生看外家。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#049</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">清平乐·村居</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">茅檐低小，溪上青青草。</span>
+          <span class="line">醉里吴音相媚好，白发谁家翁媪？</span>
+          <span class="line">大儿锄豆溪东，中儿正织鸡笼。</span>
+          <span class="line">最喜小儿亡赖，溪头卧剥莲蓬。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#050</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">卜算子·送鲍浩然之浙东</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 王观</div>
+        <div class="poem-text">
+          <span class="line">水是眼波横，山是眉峰聚。</span>
+          <span class="line">欲问行人去那边？眉眼盈盈处。</span>
+          <span class="line">才始送春归，又送君归去。</span>
+          <span class="line">若到江南赶上春，千万和春住。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#051</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">渔家傲·秋思</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 范仲淹</div>
+        <div class="poem-text">
+          <span class="line">塞下秋来风景异，衡阳雁去无留意。</span>
+          <span class="line">四面边声连角起，千嶂里，长烟落日孤城闭。</span>
+          <span class="line">浊酒一杯家万里，燕然未勒归无计。</span>
+          <span class="line">羌管悠悠霜满地，人不寐，将军白发征夫泪。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#052</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">江城子·乙卯正月二十日夜记梦</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 苏轼</div>
+        <div class="poem-text">
+          <span class="line">十年生死两茫茫，不思量，自难忘。</span>
+          <span class="line">千里孤坟，无处话凄凉。</span>
+          <span class="line">纵使相逢应不识，尘满面，鬓如霜。</span>
+          <span class="line">夜来幽梦忽还乡，小轩窗，正梳妆。</span>
+          <span class="line">相顾无言，惟有泪千行。</span>
+          <span class="line">料得年年肠断处，明月夜，短松冈。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#053</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">点绛唇·蹴罢秋千</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 李清照</div>
+        <div class="poem-text">
+          <span class="line">蹴罢秋千，起来慵整纤纤手。</span>
+          <span class="line">露浓花瘦，薄汗轻衣透。</span>
+          <span class="line">见客入来，袜刬金钗溜。</span>
+          <span class="line">和羞走，倚门回首，却把青梅嗅。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#054</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">诉衷情·当年万里觅封侯</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 陆游</div>
+        <div class="poem-text">
+          <span class="line">当年万里觅封侯，匹马戍梁州。</span>
+          <span class="line">关河梦断何处？尘暗旧貂裘。</span>
+          <span class="line">胡未灭，鬓先秋，泪空流。</span>
+          <span class="line">此生谁料，心在天山，身老沧洲。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#055</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">蝶恋花·庭院深深深几许</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 欧阳修</div>
+        <div class="poem-text">
+          <span class="line">庭院深深深几许，杨柳堆烟，帘幕无重数。</span>
+          <span class="line">玉勒雕鞍游冶处，楼高不见章台路。</span>
+          <span class="line">雨横风狂三月暮，门掩黄昏，无计留春住。</span>
+          <span class="line">泪眼问花花不语，乱红飞过秋千去。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#056</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">阮郎归·初夏</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 苏轼</div>
+        <div class="poem-text">
+          <span class="line">绿槐高柳咽新蝉，薰风入弦弦。</span>
+          <span class="line">碧纱窗下水沉烟，棋声惊昼眠。</span>
+          <span class="line">微雨过，小荷翻，榴花开欲然。</span>
+          <span class="line">玉盆纤手弄清泉，琼珠碎却圆。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#057</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">洞仙歌·冰肌玉骨</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 苏轼</div>
+        <div class="poem-text">
+          <span class="line">冰肌玉骨，自清凉无汗。</span>
+          <span class="line">水殿风来暗香满。</span>
+          <span class="line">绣帘开，一点明月窥人，人未寝，欹枕钗横鬓乱。</span>
+          <span class="line">起来携素手，庭户无声，时见疏星渡河汉。</span>
+          <span class="line">试问夜如何？夜已三更，金波淡，玉绳低转。</span>
+          <span class="line">但屈指西风几时来，又不道流年暗中偷换。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#058</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">鹧鸪天·代人赋</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">晚日寒鸦一片愁，柳塘新绿却温柔。</span>
+          <span class="line">若教眼底无离恨，不信人间有白头。</span>
+          <span class="line">肠已断，泪难收，相思重上小红楼。</span>
+          <span class="line">情知已被山遮断，频倚阑干不自由。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#059</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">苏幕遮·燎沉香</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 周邦彦</div>
+        <div class="poem-text">
+          <span class="line">燎沉香，消溽暑。</span>
+          <span class="line">鸟雀呼晴，侵晓窥檐语。</span>
+          <span class="line">叶上初阳干宿雨，水面清圆，一一风荷举。</span>
+          <span class="line">故乡遥，何日去？</span>
+          <span class="line">家住吴门，久作长安旅。</span>
+          <span class="line">五月渔郎相忆否？小楫轻舟，梦入芙蓉浦。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#060</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">蝶恋花·密州上元</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 苏轼</div>
+        <div class="poem-text">
+          <span class="line">灯火钱塘三五夜，明月如霜，照见人如画。</span>
+          <span class="line">帐底吹笙香吐麝，更无一点尘随马。</span>
+          <span class="line">寂寞山城人老也，击鼓吹箫，却入农桑社。</span>
+          <span class="line">火冷灯稀霜露下，昏昏雪意云垂野。</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== 四、爱国壮志 ===== -->
+  <section class="ci-section" data-category="aiguo">
+    <div class="section-header">
+      <div class="section-icon">&#9812;</div>
+      <h2 class="section-title">爱国壮志</h2>
+      <span class="section-count">20首</span>
+    </div>
+    <div class="poem-grid">
+
+      <article class="poem-card">
+        <span class="poem-index">#061</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">钗头凤·红酥手</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 陆游</div>
+        <div class="poem-text">
+          <span class="line">红酥手，黄縢酒，满城春色宫墙柳。</span>
+          <span class="line">东风恶，欢情薄。</span>
+          <span class="line">一怀愁绪，几年离索。</span>
+          <span class="line">错、错、错。</span>
+          <span class="line">春如旧，人空瘦，泪痕红浥鲛绡透。</span>
+          <span class="line">桃花落，闲池阁。</span>
+          <span class="line">山盟虽在，锦书难托。</span>
+          <span class="line">莫、莫、莫！</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#062</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">秋波媚·七月十六日晚登高兴亭望长安南山</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 陆游</div>
+        <div class="poem-text">
+          <span class="line">秋到边城角声哀，烽火照高台。</span>
+          <span class="line">悲歌击筑，凭高酹酒，此兴悠哉！</span>
+          <span class="line">多情谁似南山月，特地暮云开。</span>
+          <span class="line">灞桥烟柳，曲江池馆，应待人来。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#063</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">鹧鸪天·有客慨然谈功名</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">有客慨然谈功名，因追念少年时事，戏作。</span>
+          <span class="line">壮岁旌旗拥万夫，锦襜突骑渡江初。</span>
+          <span class="line">燕兵夜娖银胡觮，汉箭朝飞金仆姑。</span>
+          <span class="line">追往事，叹今吾，春风不染白髭须。</span>
+          <span class="line">却将万字平戎策，换得东家种树书。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#064</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">南乡子·登京口北固亭有怀</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">何处望神州？满眼风光北固楼。</span>
+          <span class="line">千古兴亡多少事？悠悠。不尽长江滚滚流。</span>
+          <span class="line">年少万兜鍪，坐断东南战未休。</span>
+          <span class="line">天下英雄谁敌手？曹刘。生子当如孙仲谋。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#065</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">菩萨蛮·书江西造口壁</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">郁孤台下清江水，中间多少行人泪。</span>
+          <span class="line">西北望长安，可怜无数山。</span>
+          <span class="line">青山遮不住，毕竟东流去。</span>
+          <span class="line">江晚正愁余，山深闻鹧鸪。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#066</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">渔家傲·寄仲高</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 陆游</div>
+        <div class="poem-text">
+          <span class="line">东望山阴何处是？往来一万三千里。</span>
+          <span class="line">写得家书空满纸。</span>
+          <span class="line">流清泪，书回已是明年事。</span>
+          <span class="line">寄语红桥桥下水，扁舟何日寻兄弟？</span>
+          <span class="line">行遍天涯真老亦。</span>
+          <span class="line">愁无寐，鬓丝几缕茶烟里。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#067</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">贺新郎·同父见嘲用韵答之</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">老大那堪说。</span>
+          <span class="line">似而今、元龙臭味，孟公煎迫。</span>
+          <span class="line">我觉其间，雄深雅健，如对文章太史。</span>
+          <span class="line">男儿到死心如铁。</span>
+          <span class="line">看试手，补天裂。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#068</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">水调歌头·和马叔度游月波楼</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">客子久不到，好景为君留。</span>
+          <span class="line">西楼着意羁留，枝上软春柔。</span>
+          <span class="line">乱水穿空，浮云叠嶂，孤鸿横阵。</span>
+          <span class="line">且吟哦，诗酒消磨，更何事，功名堪叹。</span>
+          <span class="line">唤起一天明月，照我满怀冰雪，浩荡百川流。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#069</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">念奴娇·登多景楼</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 陈亮</div>
+        <div class="poem-text">
+          <span class="line">危楼还望，叹此意、今古几人曾会？</span>
+          <span class="line">鬼设神施，浑认作、天限南疆北界。</span>
+          <span class="line">一水横陈，连岗三面，做出争雄势。</span>
+          <span class="line">六朝何事，只成门户私计！</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#070</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">桂枝香·金陵怀古</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 王安石</div>
+        <div class="poem-text">
+          <span class="line">登临送目，正故国晚秋，天气初肃。</span>
+          <span class="line">千里澄江似练，翠峰如簇。</span>
+          <span class="line">归帆去棹残阳里，背西风、酒旗斜矗。</span>
+          <span class="line">彩舟云淡，星河鹭起，画图难足。</span>
+          <span class="line">念往昔，繁华竞逐。</span>
+          <span class="line">叹门外楼头，悲恨相续。</span>
+          <span class="line">千古凭高对此，谩嗟荣辱。</span>
+          <span class="line">六朝旧事随流水，但寒烟衰草凝绿。</span>
+          <span class="line">至今商女，时时犹唱，后庭遗曲。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#071</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">满江红·写怀</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 岳飞</div>
+        <div class="poem-text">
+          <span class="line">怒发冲冠，凭栏处、潇潇雨歇。</span>
+          <span class="line">抬望眼，仰天长啸，壮怀激烈。</span>
+          <span class="line">三十功名尘与土，八千里路云和月。</span>
+          <span class="line">莫等闲，白了少年头，空悲切！</span>
+          <span class="line">靖康耻，犹未雪。</span>
+          <span class="line">臣子恨，何时灭！</span>
+          <span class="line">驾长车，踏破贺兰山缺。</span>
+          <span class="line">壮志饥餐胡虏肉，笑谈渴饮匈奴血。</span>
+          <span class="line">待从头、收拾旧山河，朝天阙。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#072</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">太常引·建康中秋夜为吕叔潜赋</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">一轮秋影转金波，飞镜又重磨。</span>
+          <span class="line">把酒问姮娥：被白发、欺人奈何？</span>
+          <span class="line">乘风好去，长空万里，直下看山河。</span>
+          <span class="line">斫去桂婆娑，人道是、清光更多。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#073</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">水龙吟·登建康赏心亭</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">楚天千里清秋，水随天去秋无际。</span>
+          <span class="line">遥岑远目，献愁供恨，玉簪螺髻。</span>
+          <span class="line">落日楼头，断鸿声里，江南游子。</span>
+          <span class="line">把吴钩看了，栏杆拍遍，无人会，登临意。</span>
+          <span class="line">休说鲈鱼堪脍，尽西风，季鹰归未？</span>
+          <span class="line">求田问舍，怕应羞见，刘郎才气。</span>
+          <span class="line">可惜流年，忧愁风雨，树犹如此！</span>
+          <span class="line">倩何人唤取，红巾翠袖，揾英雄泪！</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#074</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">好事近·汴京赐宴闻教坊乐有感</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 韩元吉</div>
+        <div class="poem-text">
+          <span class="line">凝碧旧池头，一听管弦凄切。</span>
+          <span class="line">多少梨园声在，总不堪华发。</span>
+          <span class="line">杏花开处忆儿嬉，游子恨何极。</span>
+          <span class="line">却是归鸿不能语，一岁一归来。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#075</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">水龙吟·春恨</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 陈亮</div>
+        <div class="poem-text">
+          <span class="line">闹花深处层楼，画帘半卷东风软。</span>
+          <span class="line">春归翠陌，平莎茸嫩，垂杨金浅。</span>
+          <span class="line">迟日催花，淡云阁雨，轻寒轻暖。</span>
+          <span class="line">恨芳菲世界，游人未赏，都付与、莺和燕。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#076</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">满江红·写怀</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 岳飞</div>
+        <div class="poem-text">
+          <span class="line">靖康耻，犹未雪。臣子恨，何时灭！</span>
+          <span class="line">驾长车，踏破贺兰山缺。</span>
+          <span class="line">壮志饥餐胡虏肉，笑谈渴饮匈奴血。</span>
+          <span class="line">待从头、收拾旧山河，朝天阙。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#077</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">破阵子·掷地刘郎玉斗</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">掷地刘郎玉斗，挂帆西子扁舟。</span>
+          <span class="line">千古风流今在此，万里功名莫放休。</span>
+          <span class="line">君王三百州。</span>
+          <span class="line">燕雀岂知鸿鹄，貂蝉元出兜鍪。</span>
+          <span class="line">却笑泸溪如斗大，肯把牛刀试手不？</span>
+          <span class="line">寿君双玉瓯。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#078</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">贺新郎·用前韵送杜叔高</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">细把君诗说。</span>
+          <span class="line">恍余音、钧天浩荡，洞庭胶葛。</span>
+          <span class="line">千尺阴崖尘不到，惟有层冰积雪。</span>
+          <span class="line">乍一见、寒生毛发。</span>
+          <span class="line">自昔佳人多薄命，对古来、一片伤心月。</span>
+          <span class="line">金屋冷，夜调瑟。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#079</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">汉宫春·立春日</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">春已归来，看美人头上，袅袅春幡。</span>
+          <span class="line">无端风雨，未肯收尽余寒。</span>
+          <span class="line">年时燕子，料今宵、梦到西园。</span>
+          <span class="line">浑未办，黄柑荐酒，更传青韭堆盘？</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#080</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">夜游宫·记梦寄师伯浑</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 陆游</div>
+        <div class="poem-text">
+          <span class="line">雪晓清笳乱起，梦游处、不知何地。</span>
+          <span class="line">铁骑无声望似水。</span>
+          <span class="line">想关河：雁门西，青海际。</span>
+          <span class="line">睡觉寒灯里，漏声断、月斜窗纸。</span>
+          <span class="line">自许封侯在万里。</span>
+          <span class="line">有谁知，鬓虽残，心未死。</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== 五、咏物抒怀 ===== -->
+  <section class="ci-section" data-category="yongwu">
+    <div class="section-header">
+      <div class="section-icon">&#127803;</div>
+      <h2 class="section-title">咏物抒怀</h2>
+      <span class="section-count">20首</span>
+    </div>
+    <div class="poem-grid">
+
+      <article class="poem-card">
+        <span class="poem-index">#081</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">卜算子·咏梅</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 陆游</div>
+        <div class="poem-text">
+          <span class="line">驿外断桥边，寂寞开无主。</span>
+          <span class="line">已是黄昏独自愁，更著风和雨。</span>
+          <span class="line">无意苦争春，一任群芳妒。</span>
+          <span class="line">零落成泥碾作尘，只有香如故。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#082</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">卜算子·黄州定慧院寓居作</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 苏轼</div>
+        <div class="poem-text">
+          <span class="line">缺月挂疏桐，漏断人初静。</span>
+          <span class="line">谁见幽人独往来，缥缈孤鸿影。</span>
+          <span class="line">惊起却回头，有恨无人省。</span>
+          <span class="line">拣尽寒枝不肯栖，寂寞沙洲冷。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#083</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">暗香·旧时月色</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 姜夔</div>
+        <div class="poem-text">
+          <span class="line">旧时月色，算几番照我，梅边吹笛？</span>
+          <span class="line">唤起玉人，不管清寒与攀摘。</span>
+          <span class="line">何逊而今渐老，都忘却春风词笔。</span>
+          <span class="line">但怪得竹外疏花，香冷入瑶席。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#084</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">疏影·苔枝缀玉</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 姜夔</div>
+        <div class="poem-text">
+          <span class="line">苔枝缀玉，有翠禽小小，枝上同宿。</span>
+          <span class="line">客里相逢，篱角黄昏，无言自倚修竹。</span>
+          <span class="line">昭君不惯胡沙远，但暗忆、江南江北。</span>
+          <span class="line">想佩环、月夜归来，化作此花幽独。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#085</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">扬州慢·淮左名都</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 姜夔</div>
+        <div class="poem-text">
+          <span class="line">淮左名都，竹西佳处，解鞍少驻初程。</span>
+          <span class="line">过春风十里，尽荠麦青青。</span>
+          <span class="line">自胡马窥江去后，废池乔木，犹厌言兵。</span>
+          <span class="line">渐黄昏，清角吹寒，都在空城。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#086</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">兰陵王·柳</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 周邦彦</div>
+        <div class="poem-text">
+          <span class="line">柳阴直，烟里丝丝弄碧。</span>
+          <span class="line">隋堤上、曾见几番，拂水飘绵送行色。</span>
+          <span class="line">登临望故国，谁识京华倦客？</span>
+          <span class="line">长亭路，年去岁来，应折柔条过千尺。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#087</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">齐天乐·蟋蟀</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 姜夔</div>
+        <div class="poem-text">
+          <span class="line">庾郎先自吟愁赋，凄凄更闻私语。</span>
+          <span class="line">露湿铜铺，苔侵石井，都是曾听伊处。</span>
+          <span class="line">哀音似诉，正思妇无眠，起寻机杼。</span>
+          <span class="line">曲曲屏山，夜凉独自甚情绪。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#088</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">一剪梅·舟过吴江</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 蒋捷</div>
+        <div class="poem-text">
+          <span class="line">一片春愁待酒浇。江上舟摇，楼上帘招。</span>
+          <span class="line">秋娘渡与泰娘桥，风又飘飘，雨又萧萧。</span>
+          <span class="line">何日归家洗客袍？银字笙调，心字香烧。</span>
+          <span class="line">流光容易把人抛，红了樱桃，绿了芭蕉。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#089</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">虞美人·听雨</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 蒋捷</div>
+        <div class="poem-text">
+          <span class="line">少年听雨歌楼上，红烛昏罗帐。</span>
+          <span class="line">壮年听雨客舟中，江阔云低、断雁叫西风。</span>
+          <span class="line">而今听雨僧庐下，鬓已星星也。</span>
+          <span class="line">悲欢离合总无情，一任阶前、点滴到天明。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#090</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">水龙吟·次韵章质夫杨花词</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 苏轼</div>
+        <div class="poem-text">
+          <span class="line">似花还似非花，也无人惜从教坠。</span>
+          <span class="line">抛家傍路，思量却是，无情有思。</span>
+          <span class="line">萦损柔肠，困酣娇眼，欲开还闭。</span>
+          <span class="line">梦随风万里，寻郎去处，又还被、莺呼起。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#091</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">蝶恋花·春涨一篙添水面</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 范成大</div>
+        <div class="poem-text">
+          <span class="line">春涨一篙添水面。芳草鹅儿，绿满微风岸。</span>
+          <span class="line">画舫夷犹湾百转，横塘塔近依前远。</span>
+          <span class="line">江国多寒农事晚。村北村南，谷雨才耕遍。</span>
+          <span class="line">秀麦连冈桑叶贱，看看尝面收新茧。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#092</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">虞美人·春花秋月何时了</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">南唐</span> 李煜</div>
+        <div class="poem-text">
+          <span class="line">春花秋月何时了？往事知多少。</span>
+          <span class="line">小楼昨夜又东风，故国不堪回首月明中。</span>
+          <span class="line">雕栏玉砌应犹在，只是朱颜改。</span>
+          <span class="line">问君能有几多愁？恰似一江春水向东流。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#093</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">青玉案·凌波不过横塘路</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 贺铸</div>
+        <div class="poem-text">
+          <span class="line">凌波不过横塘路，但目送、芳尘去。</span>
+          <span class="line">锦瑟华年谁与度？</span>
+          <span class="line">月桥花院，琐窗朱户，只有春知处。</span>
+          <span class="line">飞云冉冉蘅皋暮，彩笔新题断肠句。</span>
+          <span class="line">试问闲愁都几许？</span>
+          <span class="line">一川烟草，满城风絮，梅子黄时雨。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#094</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">念奴娇·萧条庭院</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 李清照</div>
+        <div class="poem-text">
+          <span class="line">萧条庭院，又斜斜细细的。</span>
+          <span class="line">门掩黄昏，无计留春住。</span>
+          <span class="line">泪眼问花花不语，乱红飞过秋千去。</span>
+          <span class="line">留不得，少年光阴催人老。</span>
+          <span class="line">断肠院落，一帘风絮。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#095</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">鹧鸪天·彩袖殷勤捧玉钟</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 晏几道</div>
+        <div class="poem-text">
+          <span class="line">彩袖殷勤捧玉钟，当年拚却醉颜红。</span>
+          <span class="line">舞低杨柳楼心月，歌尽桃花扇底风。</span>
+          <span class="line">从别后，忆相逢，几回魂梦与君同。</span>
+          <span class="line">今宵剩把银釭照，犹恐相逢是梦中。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#096</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">扬州慢·淮左名都</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 姜夔</div>
+        <div class="poem-text">
+          <span class="line">淮左名都，竹西佳处，解鞍少驻初程。</span>
+          <span class="line">过春风十里，尽荠麦青青。</span>
+          <span class="line">自胡马窥江去后，废池乔木，犹厌言兵。</span>
+          <span class="line">渐黄昏，清角吹寒，都在空城。</span>
+          <span class="line">杜郎俊赏，算而今重到须惊。</span>
+          <span class="line">纵豆蔻词工，青楼梦好，难赋深情。</span>
+          <span class="line">二十四桥仍在，波心荡、冷月无声。</span>
+          <span class="line">念桥边红药，年年知为谁生！</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#097</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">踏莎行·情似游丝</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 周紫芝</div>
+        <div class="poem-text">
+          <span class="line">情似游丝，人如飞絮。</span>
+          <span class="line">泪珠定空相觑。</span>
+          <span class="line">一碧烟村，半溪春雨。</span>
+          <span class="line">几多好梦，算来都是闲情绪。</span>
+          <span class="line">楚天长短黄昏雨，更那堪，明月千里。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#098</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">清平乐·年年雪里</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 李清照</div>
+        <div class="poem-text">
+          <span class="line">年年雪里，常插梅花醉。</span>
+          <span class="line">挼尽梅花无好意，赢得满衣清泪。</span>
+          <span class="line">今年海角天涯，萧萧两鬓生华。</span>
+          <span class="line">看取晚来风势，故应难看梅花。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#099</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">长相思·一重山</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">南唐</span> 李煜</div>
+        <div class="poem-text">
+          <span class="line">一重山，两重山。</span>
+          <span class="line">山远天高烟水寒，相思枫叶丹。</span>
+          <span class="line">菊花开，菊花残。</span>
+          <span class="line">塞雁高飞人未还，一帘风月闲。</span>
+        </div>
+      </article>
+
+      <article class="poem-card">
+        <span class="poem-index">#100</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">摸鱼儿·更能消几番风雨</h3>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 辛弃疾</div>
+        <div class="poem-text">
+          <span class="line">更能消、几番风雨，匆匆春又归去。</span>
+          <span class="line">惜春长怕花开早，何况落红无数。</span>
+          <span class="line">春且住，见说道、天涯芳草无归路。</span>
+          <span class="line">怨春不语。算只有殷勤，画檐蛛网，尽日惹飞絮。</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>宋词精选 — 两宋词坛名篇Top100</p>
+  <p>收录豪放词、婉约词、写景抒情、爱国壮志、咏物抒怀五大类经典词作</p>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0})" aria-label="返回顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+// Theme Toggle
+function toggleTheme() {
+  var body = document.body;
+  var isDark = body.getAttribute('data-theme') === 'dark';
+  body.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  localStorage.setItem('songci-theme', isDark ? 'light' : 'dark');
+}
+
+// Load saved theme
+(function() {
+  var saved = localStorage.getItem('songci-theme');
+  if (saved) {
+    document.body.setAttribute('data-theme', saved);
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.body.setAttribute('data-theme', 'dark');
+  }
+})();
+
+// Filter Poems
+function filterPoems(category, btn) {
+  document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+
+  var sections = document.querySelectorAll('.ci-section');
+  sections.forEach(function(section) {
+    if (category === 'all' || section.dataset.category === category) {
+      section.style.display = '';
+      section.querySelectorAll('.poem-card').forEach(function(card) {
+        card.style.display = '';
+      });
+    } else {
+      section.style.display = 'none';
+    }
+  });
+
+  document.getElementById('searchInput').value = '';
+
+  // Remove empty state
+  var emptyEl = document.querySelector('.empty-state');
+  if (emptyEl) emptyEl.style.display = 'none';
+}
+
+// Search
+document.getElementById('searchInput').addEventListener('input', function(e) {
+  var query = e.target.value.trim().toLowerCase();
+
+  document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+
+  var sections = document.querySelectorAll('.ci-section');
+  var totalVisible = 0;
+
+  sections.forEach(function(section) {
+    var cards = section.querySelectorAll('.poem-card');
+    var sectionVisible = 0;
+
+    cards.forEach(function(card) {
+      var title = card.querySelector('.poem-title').textContent.toLowerCase();
+      var author = card.querySelector('.poem-author').textContent.toLowerCase();
+      var text = card.querySelector('.poem-text').textContent.toLowerCase();
+      var match = !query || title.indexOf(query) !== -1 || author.indexOf(query) !== -1 || text.indexOf(query) !== -1;
+      card.style.display = match ? '' : 'none';
+      if (match) sectionVisible++;
+    });
+
+    section.style.display = sectionVisible > 0 ? '' : 'none';
+    totalVisible += sectionVisible;
+  });
+
+  var emptyEl = document.querySelector('.empty-state');
+  if (totalVisible === 0 && query) {
+    if (!emptyEl) {
+      emptyEl = document.createElement('div');
+      emptyEl.className = 'empty-state';
+      emptyEl.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><p>未找到匹配的词作</p>';
+      document.querySelector('main').appendChild(emptyEl);
+    }
+    emptyEl.style.display = '';
+  } else if (emptyEl) {
+    emptyEl.style.display = 'none';
+  }
+});
+
+// Back to Top
+var backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 400) {
+    backToTop.classList.add('visible');
+  } else {
+    backToTop.classList.remove('visible');
+  }
+}, { passive: true });
+</script>
+
+</body>
+</html>

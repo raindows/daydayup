@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>十万个为什么 - 少儿科学启蒙Top100</title>
+<meta name="description" content="精选100个少儿科学问答，涵盖天文宇宙、动物世界、植物王国、人体奥秘、生活常识、科技发明、地球奥秘、自然现象八大主题，激发好奇心，培养科学思维。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FDF8F4;--bg-alt:#F7EDE5;--surface:#FFF;--surface-h:#FFF9F5;--ink:#2C2420;--ink-l:#5C524A;--ink-m:#8A7F75;--bdr:#E5DDD3;--bdr-l:#EDE8E1;--accent:#5B6AAF;--accent-d:#4A5599;--gold:#C9A96E;--gold-l:#E8D5A8;--c-cosmos:#5B6AAF;--c-animal:#2E7D5E;--c-plant:#5BAF7B;--c-body:#B8382A;--c-daily:#C48830;--c-tech:#5BA5C9;--c-earth:#8B5E3C;--c-nature:#9B5B8C;--font-d:'Noto Serif SC',serif;--font-h:'Noto Serif SC',serif;--font-b:'Noto Sans SC',sans-serif;--r-sm:6px;--r-md:12px;--r-lg:20px;--sh-s:0 1px 3px rgba(44,36,32,.06);--sh-m:0 4px 16px rgba(44,36,32,.08);--sh-l:0 8px 32px rgba(44,36,32,.10);--tr:200ms ease}
+[data-theme="dark"]{--bg:#1A1714;--bg-alt:#23201B;--surface:#2A2621;--surface-h:#342F29;--ink:#E8E0D6;--ink-l:#BFB5A8;--ink-m:#8A7F72;--bdr:#3A352E;--bdr-l:#302B25;--accent:#7B8AD0;--accent-d:#5B6AAF;--gold:#E0C888;--gold-l:#A08040;--c-cosmos:#7B8AD0;--c-animal:#4EC99A;--c-plant:#70D090;--c-body:#E8584A;--c-daily:#E0A850;--c-tech:#7CC0E0;--c-earth:#C89070;--c-nature:#C87BB8;--sh-s:0 1px 3px rgba(0,0,0,.2);--sh-m:0 4px 16px rgba(0,0,0,.3);--sh-l:0 8px 32px rgba(0,0,0,.35)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-b);background:var(--bg);color:var(--ink);line-height:1.7;min-height:100vh;transition:background var(--tr),color var(--tr)}
+.skip-link{position:absolute;top:-100%;left:16px;padding:8px 16px;background:var(--accent);color:#fff;border-radius:var(--r-sm);z-index:10000;font-size:14px;text-decoration:none}
+.skip-link:focus{top:16px}
+a{color:var(--accent-d);text-decoration:none}
+.top-nav{position:sticky;top:0;z-index:1001;background:var(--surface);border-bottom:1px solid var(--bdr-l);padding:0 24px;transition:background var(--tr)}
+.top-nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;height:44px;gap:4px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+.top-nav-inner::-webkit-scrollbar{display:none}
+.top-nav-link{font-family:var(--font-b);font-size:.84rem;color:var(--ink-l);text-decoration:none;padding:6px 14px;border-radius:100px;border:1px solid transparent;transition:all var(--tr);white-space:nowrap;flex-shrink:0}
+.top-nav-link:hover{background:var(--bg-alt);border-color:var(--bdr)}
+.top-nav-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.top-nav-link.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.top-nav-sep{width:1px;height:16px;background:var(--bdr-l);margin:0 4px;flex-shrink:0}
+.theme-toggle{position:fixed;top:52px;right:20px;z-index:1000;width:44px;height:44px;border:1px solid var(--bdr);border-radius:50%;background:var(--surface);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-m);transition:all var(--tr)}
+.theme-toggle:hover{transform:scale(1.08);box-shadow:var(--sh-l)}
+.theme-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.theme-toggle svg{width:20px;height:20px;color:var(--ink)}
+[data-theme="dark"] .theme-toggle .icon-moon{display:none}
+[data-theme="light"] .theme-toggle .icon-sun{display:none}
+.hero{position:relative;min-height:42vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:72px 24px 48px;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 600px 400px at 25% 35%,rgba(91,106,175,.10),transparent),radial-gradient(ellipse 500px 350px at 75% 65%,rgba(46,125,94,.08),transparent),radial-gradient(ellipse 400px 300px at 50% 50%,rgba(91,165,201,.06),transparent);pointer-events:none}
+.hero-deco{font-size:2rem;margin-bottom:12px;letter-spacing:.4em;filter:grayscale(.1)}
+.hero-ornament{width:80px;height:2px;background:linear-gradient(90deg,transparent,var(--accent),var(--c-tech),var(--c-nature),transparent);margin-bottom:20px}
+.hero h1{font-family:var(--font-d);font-size:clamp(2.6rem,7vw,5rem);font-weight:400;color:var(--ink);letter-spacing:.06em;line-height:1.2}
+.hero-sub{font-family:var(--font-h);font-size:clamp(.92rem,2.2vw,1.12rem);color:var(--ink-m);font-weight:400;letter-spacing:.15em;margin-top:8px}
+.hero-desc{font-size:.92rem;color:var(--ink-m);max-width:560px;margin-top:16px}
+.hero-stats{display:flex;gap:32px;margin-top:28px;flex-wrap:wrap;justify-content:center}
+.hero-stat{text-align:center}
+.hero-stat-num{font-family:var(--font-h);font-size:2rem;font-weight:700;color:var(--accent);display:block}
+.hero-stat-label{font-size:.78rem;color:var(--ink-m);letter-spacing:.08em}
+main{max-width:1280px;margin:0 auto;padding:0 24px 80px}
+.filter-bar{position:sticky;top:44px;z-index:100;background:var(--bg);border-bottom:1px solid var(--bdr-l);padding:16px 0;margin-bottom:40px;transition:background var(--tr)}
+.filter-bar-inner{display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.filter-bar-inner::-webkit-scrollbar{display:none}
+.filter-btn{flex-shrink:0;padding:8px 18px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink-l);font-family:var(--font-b);font-size:.84rem;cursor:pointer;transition:all var(--tr);white-space:nowrap;user-select:none}
+.filter-btn:hover{background:var(--surface-h);border-color:var(--ink-m)}
+.filter-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.filter-btn .count{display:inline-block;margin-left:3px;font-size:.72rem;opacity:.7}
+.search-wrap{position:relative;flex-shrink:0}
+.search-input{padding:8px 16px 8px 36px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink);font-family:var(--font-b);font-size:.84rem;width:200px;transition:all var(--tr)}
+.search-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(91,106,175,.12);width:260px}
+.search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--ink-m);pointer-events:none}
+.qa-section{margin-bottom:48px}
+.section-header{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--bdr-l)}
+.section-badge{font-family:var(--font-h);font-size:.75rem;font-weight:500;padding:3px 10px;border-radius:100px;color:#fff;letter-spacing:.06em}
+.section-title{font-family:var(--font-h);font-size:1.35rem;font-weight:600;color:var(--ink)}
+.section-count{font-size:.82rem;color:var(--ink-m);margin-left:auto}
+[data-cat="cosmos"] .section-badge{background:var(--c-cosmos)}
+[data-cat="animal"] .section-badge{background:var(--c-animal)}
+[data-cat="plant"] .section-badge{background:var(--c-plant)}
+[data-cat="body"] .section-badge{background:var(--c-body)}
+[data-cat="daily"] .section-badge{background:var(--c-daily)}
+[data-cat="tech"] .section-badge{background:var(--c-tech)}
+[data-cat="earth"] .section-badge{background:var(--c-earth)}
+[data-cat="nature"] .section-badge{background:var(--c-nature)}
+.qa-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
+.qa-card{background:var(--surface);border:1px solid var(--bdr-l);border-radius:var(--r-md);padding:22px;transition:all 250ms ease;cursor:default;position:relative;overflow:hidden}
+.qa-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;border-radius:3px 0 0 3px;opacity:0;transition:opacity var(--tr)}
+[data-cat="cosmos"] .qa-card::before{background:var(--c-cosmos)}
+[data-cat="animal"] .qa-card::before{background:var(--c-animal)}
+[data-cat="plant"] .qa-card::before{background:var(--c-plant)}
+[data-cat="body"] .qa-card::before{background:var(--c-body)}
+[data-cat="daily"] .qa-card::before{background:var(--c-daily)}
+[data-cat="tech"] .qa-card::before{background:var(--c-tech)}
+[data-cat="earth"] .qa-card::before{background:var(--c-earth)}
+[data-cat="nature"] .qa-card::before{background:var(--c-nature)}
+.qa-card:hover{box-shadow:var(--sh-m);transform:translateY(-2px);border-color:var(--bdr)}
+.qa-card:hover::before{opacity:1}
+.qa-index{position:absolute;top:10px;right:14px;font-family:var(--font-h);font-size:.72rem;color:var(--ink-m);opacity:.3}
+.qa-card-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px}
+.qa-title{font-family:var(--font-h);font-size:1.1rem;font-weight:600;color:var(--accent);line-height:1.4}
+.qa-category{flex-shrink:0;padding:2px 8px;border-radius:100px;font-size:.65rem;font-weight:500;letter-spacing:.04em;background:var(--bg-alt);color:var(--ink-m);margin-left:10px;align-self:flex-start;margin-top:2px;white-space:nowrap}
+.qa-answer{font-family:var(--font-b);font-size:.88rem;line-height:1.85;color:var(--ink-l);letter-spacing:.02em;margin-bottom:12px}
+.qa-fact{margin-top:auto;padding:10px 14px;background:var(--bg-alt);border-radius:var(--r-sm);font-size:.82rem;color:var(--ink-m);border-left:3px solid var(--gold)}
+.qa-fact strong{color:var(--accent-d);font-weight:500}
+.no-results{text-align:center;padding:60px 24px;color:var(--ink-m)}
+.no-results-icon{font-size:3rem;margin-bottom:16px;opacity:.5}
+.no-results-text{font-size:1rem;margin-bottom:8px}
+.no-results-hint{font-size:.84rem;opacity:.7}
+.back-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-m);transition:all var(--tr);opacity:0;pointer-events:none;z-index:999}
+.back-top.visible{opacity:1;pointer-events:auto}
+.back-top:hover{transform:translateY(-2px);box-shadow:var(--sh-l)}
+.back-top:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.back-top svg{width:20px;height:20px}
+footer{text-align:center;padding:40px 24px;color:var(--ink-m);font-size:.82rem;border-top:1px solid var(--bdr-l)}
+@media(max-width:768px){
+.hero{min-height:32vh;padding:56px 20px 36px}
+.hero h1{letter-spacing:.04em}
+.hero-stats{gap:20px}
+main{padding:0 16px 60px}
+.filter-bar{position:sticky;top:44px;z-index:100;background:var(--bg);border-bottom:1px solid var(--bdr-l);padding:16px 0;margin-bottom:40px;transition:background var(--tr)}
+.search-wrap{position:relative;flex-shrink:0}
+.search-input{padding:8px 16px 8px 36px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink);font-family:var(--font-b);font-size:.84rem;width:150px;transition:all var(--tr)}
+.search-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(91,106,175,.12);width:200px}
+.qa-grid{grid-template-columns:1fr}
+.top-nav{padding:0 16px}
+}
+@media(max-width:400px){
+.hero h1{font-size:2.2rem}
+.hero-sub{font-size:.85rem}
+}
+@media(prefers-reduced-motion:reduce){*{transition-duration:0s!important;animation-duration:0s!important}}
+</style>
+</head>
+<body data-theme="light">
+<a href="#main" class="skip-link">跳到正文</a>
+<nav class="top-nav" aria-label="站点导航">
+<div class="top-nav-inner">
+<a href="jingdian-tongyao.html" class="top-nav-link">经典童谣</a>
+<span class="top-nav-sep"></span>
+<a href="shenglv-qimeng.html" class="top-nav-link">声律启蒙</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-tonghua.html" class="top-nav-link">少儿童话</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-qimeng-shici.html" class="top-nav-link">启蒙诗词</a>
+<span class="top-nav-sep"></span>
+<a href="hanzi-gushi.html" class="top-nav-link">汉字故事</a>
+<span class="top-nav-sep"></span>
+<a href="baihua-shici.html" class="top-nav-link">百花诗词</a>
+<span class="top-nav-sep"></span>
+<a href="shi-wan-ge-weishenme.html" class="top-nav-link active">十万个为什么</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-chengyu.html" class="top-nav-link">少儿成语</a>
+<span class="top-nav-sep"></span>
+<a href="shangxia-wuqiannian.html" class="top-nav-link">上下五千年</a>
+<span class="top-nav-sep"></span>
+<a href="sanshiliuji.html" class="top-nav-link">三十六计</a>
+<span class="top-nav-sep"></span>
+<a href="song-ci-jingxuan.html" class="top-nav-link">宋词精选</a>
+<span class="top-nav-sep"></span>
+<a href="maozedong-shici.html" class="top-nav-link">毛主席诗词</a>
+</div>
+</nav>
+<button class="theme-toggle" aria-label="切换深色模式" title="切换深色模式">
+<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
+<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+<header class="hero">
+<div class="hero-deco" aria-hidden="true">&#x1F52D; &#x1F30D; &#x1F9EA; &#x2728;</div>
+<div class="hero-ornament" aria-hidden="true"></div>
+<h1>十万个为什么</h1>
+<p class="hero-sub">科学探索 &#xB7; 好奇求知 &#xB7; 启迪思维</p>
+<p class="hero-desc">精选100个少儿科学问答，涵盖天文宇宙、动物世界、植物王国、人体奥秘、生活常识、科技发明、地球奥秘与自然现象，激发好奇心，培养科学思维。</p>
+<div class="hero-stats">
+<div class="hero-stat"><span class="hero-stat-num">100</span><span class="hero-stat-label">科学问答</span></div>
+<div class="hero-stat"><span class="hero-stat-num">8</span><span class="hero-stat-label">探索主题</span></div>
+<div class="hero-stat"><span class="hero-stat-num">4+</span><span class="hero-stat-label">适读年龄</span></div>
+</div>
+</header>
+<main id="main">
+<div class="filter-bar" role="toolbar" aria-label="问答筛选">
+<div class="filter-bar-inner">
+<div class="search-wrap"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="text" class="search-input" placeholder="搜索问题..." id="searchInput" aria-label="搜索问题"></div>
+<button class="filter-btn active" data-filter="all">全部<span class="count">(100)</span></button>
+<button class="filter-btn" data-filter="cosmos">天文宇宙<span class="count">(13)</span></button>
+<button class="filter-btn" data-filter="animal">动物世界<span class="count">(13)</span></button>
+<button class="filter-btn" data-filter="plant">植物王国<span class="count">(12)</span></button>
+<button class="filter-btn" data-filter="body">人体奥秘<span class="count">(13)</span></button>
+<button class="filter-btn" data-filter="daily">生活常识<span class="count">(13)</span></button>
+<button class="filter-btn" data-filter="tech">科技发明<span class="count">(12)</span></button>
+<button class="filter-btn" data-filter="earth">地球奥秘<span class="count">(12)</span></button>
+<button class="filter-btn" data-filter="nature">自然现象<span class="count">(12)</span></button>
+</div>
+</div>
+
+<!-- 天文宇宙 -->
+<section class="qa-section" data-cat="cosmos" id="cosmos">
+<div class="section-header">
+<span class="section-badge">天文宇宙</span>
+<h2 class="section-title">天文宇宙</h2>
+<span class="section-count">13个问答</span>
+</div>
+<div class="qa-grid">
+<article class="qa-card" data-cat="cosmos" data-title="太阳为什么发光"><span class="qa-index">#001</span><div class="qa-card-header"><h3 class="qa-title">太阳为什么发光?</h3><span class="qa-category">恒星</span></div><div class="qa-answer">太阳是一颗巨大的恒星，它的核心温度高达1500万摄氏度。在这样的高温高压下，氢原子核会发生"核聚变"反应——四个氢原子核聚变成一个氦原子核，同时释放出巨大的能量。这个过程就像一个超级核电站，每秒钟都有约6亿吨氢变成氦，释放的能量相当于几百万颗原子弹。这些能量以光和热的形式传到太阳表面，再辐射到太空中，所以我们能看到太阳发光。</div><div class="qa-fact"><strong>拓展：</strong>太阳已经燃烧了约46亿年，它内部的氢还能继续燃烧约50亿年。</div></article>
+<article class="qa-card" data-cat="cosmos" data-title="星星为什么会眨眼"><span class="qa-index">#002</span><div class="qa-card-header"><h3 class="qa-title">星星为什么会眨眼?</h3><span class="qa-category">光学</span></div><div class="qa-answer">星星本身并不会闪烁，它们发出的光是稳定的。我们看到的"眨眼"是因为地球大气层在捣鬼。地球周围包裹着厚厚的大气层，大气中有冷热不均的空气层，光线穿过这些不断流动的空气层时会发生折射（光线弯折），就像透过流动的水看东西会扭曲一样。空气不停流动，折射角度不断变化，所以我们看到的星光就忽明忽暗，像是星星在眨眼睛。</div><div class="qa-fact"><strong>拓展：</strong>天文学家给星星的亮度划分等级，最亮的叫"一等星"，肉眼能看到的最暗的约为六等星。</div></article>
+<article class="qa-card" data-cat="cosmos" data-title="月亮为什么会有阴晴圆缺"><span class="qa-index">#003</span><div class="qa-card-header"><h3 class="qa-title">月亮为什么会有阴晴圆缺?</h3><span class="qa-category">月相</span></div><div class="qa-answer">月亮本身不发光，我们看到的月光其实是它反射的太阳光。月亮绕着地球转，太阳、地球、月亮三者的相对位置不断变化。当月亮转到地球和太阳之间时，被太阳照亮的那一面背对着我们，我们就几乎看不到月亮，这就是"新月"。当月亮转到地球外侧、太阳照到面向我们的那一面时，我们就看到圆圆的"满月"。中间的变化就形成了弯月、半月等各种月相。</div><div class="qa-fact"><strong>拓展：</strong>月亮绕地球一圈约29.5天，这就是农历一个月大约30天的由来。</div></article>
+<article class="qa-card" data-cat="cosmos" data-title="宇宙有多大"><span class="qa-index">#004</span><div class="qa-card-header"><h3 class="qa-title">宇宙有多大?</h3><span class="qa-category">宇宙学</span></div><div class="qa-answer">宇宙大得超乎想象。目前人类能观测到的宇宙直径约为930亿光年。一光年就是光走一年的距离，约9.46万亿千米。而这还只是"可观测宇宙"，真正的宇宙可能比这大得多，甚至可能是无限的。在这个尺度上，地球连一粒沙子都算不上。</div><div class="qa-fact"><strong>拓展：</strong>宇宙中有超过2万亿个星系，每个星系里有数千亿颗恒星。</div></article>
+<article class="qa-card" data-cat="cosmos" data-title="为什么天是蓝色的"><span class="qa-index">#005</span><div class="qa-card-header"><h3 class="qa-title">为什么天是蓝色的?</h3><span class="qa-category">光学</span></div><div class="qa-answer">太阳光看起来是白色的，但其实由红橙黄绿蓝靛紫七种颜色组成。当阳光穿过大气层时，波长较短的蓝光和紫光更容易被空气分子散射到四面八方，而波长较长的红光和橙光则直接穿过大气层。我们的眼睛对蓝光更敏感，所以看到的天空是蓝色的。</div><div class="qa-fact"><strong>拓展：</strong>日出日落时天空是红色的，因为那时光线穿过的大气层更厚，蓝光几乎全被散射掉了。</div></article>
+<article class="qa-card" data-cat="cosmos" data-title="黑洞是什么"><span class="qa-index">#006</span><div class="qa-card-header"><h3 class="qa-title">黑洞是什么?</h3><span class="qa-category">天体</span></div><div class="qa-answer">黑洞是宇宙中引力极强的天体。当一颗大质量的恒星"死亡"时，它的核心会在自身引力作用下剧烈收缩，物质被压缩到一个极小的空间里，引力大到连光都逃不出去，形成一个"黑洞"。任何东西一旦靠近黑洞的边界（事件视界），就会被吸进去，再也出不来。</div><div class="qa-fact"><strong>拓展：</strong>2019年，人类首次拍摄到了黑洞的照片，位于室女座星系M87的中心。</div></article>
+<article class="qa-card" data-cat="cosmos" data-title="流星是什么"><span class="qa-index">#007</span><div class="qa-card-header"><h3 class="qa-title">流星是什么?</h3><span class="qa-category">天体</span></div><div class="qa-answer">宇宙中有许多小石块和冰块，叫做"流星体"。当它们靠近地球时，会被地球引力吸引，高速冲入大气层。与空气剧烈摩擦产生高温，流星体燃烧发光，在天空中划出一道亮光，这就是我们看到的流星。大部分流星体在大气层中就烧完了，少数没烧完的落到地面就成了"陨石"。</div><div class="qa-fact"><strong>拓展：</strong>每年有几次流星雨，是最适合观测流星的时间。</div></article>
+<article class="qa-card" data-cat="cosmos" data-title="银河是什么"><span class="qa-index">#008</span><div class="qa-card-header"><h3 class="qa-title">银河是什么?</h3><span class="qa-category">星系</span></div><div class="qa-answer">银河是我们所在的银河系在地球上看到的样貌。银河系是一个巨大的盘状星系，包含约2000亿到4000亿颗恒星，我们的太阳只是其中普通的一颗。因为地球位于银河系的盘面内，当我们向盘面方向看去时，无数恒星的星光汇聚在一起，就形成了一条横跨夜空的亮带，古人称之为"银河"。</div><div class="qa-fact"><strong>拓展：</strong>银河系的直径约为10万光年，太阳系距银河系中心约2.6万光年。</div></article>
+<article class="qa-card" data-cat="cosmos" data-title="太阳系有几颗行星"><span class="qa-index">#009</span><div class="qa-card-header"><h3 class="qa-title">太阳系有几颗行星?</h3><span class="qa-category">天文</span></div><div class="qa-answer">太阳系有八大行星，按离太阳从近到远排列：水星、金星、地球、火星、木星、土星、天王星、海王星。2006年以前冥王星也被列为第九大行星，但后来国际天文学联合会重新定义了行星的标准，冥王星因为个头太小、轨道特殊而被"降级"为矮行星。</div><div class="qa-fact"><strong>拓展：</strong>木星是太阳系最大的行星，体积是地球的1300多倍，可以装下1300多个地球。</div></article>
+<article class="qa-card" data-cat="cosmos" data-title="为什么会有日食"><span class="qa-index">#010</span><div class="qa-card-header"><h3 class="qa-title">为什么会有日食?</h3><span class="qa-category">天文</span></div><div class="qa-answer">日食是月亮正好挡住了太阳光而产生的现象。当月亮运行到太阳和地球之间，三者几乎在一条直线上时，月亮的影子投射到地球表面，处于影子里的人就会看到太阳被遮挡。日食有三种：日全食（太阳完全被遮挡）、日偏食（太阳被遮挡一部分）和日环食（月亮只遮挡了太阳中心，留下一圈光环）。</div><div class="qa-fact"><strong>拓展：</strong>日全食时可以看到太阳周围的"日冕"，那是太阳最外层的大气。</div></article>
+<article class="qa-card" data-cat="cosmos" data-title="宇航员在太空怎么生活"><span class="qa-index">#011</span><div class="qa-card-header"><h3 class="qa-title">宇航员在太空怎么生活?</h3><span class="qa-category">航天</span></div><div class="qa-answer">在太空站里，因为处于失重状态，一切都"飘"在空中。宇航员睡觉要把自己绑在睡袋里，不然会在舱内飘来飘去。吃的食物大多是脱水食品，加水就能吃，水也要用吸管从袋子里喝，因为水在失重环境下会变成飘浮的水珠。洗澡用的是湿毛巾擦身。太空站里有空气净化系统，可以循环使用水和空气。</div><div class="qa-fact"><strong>拓展：</strong>宇航员每天至少要锻炼两小时，否则在失重环境下肌肉会萎缩、骨骼会变脆弱。</div></article>
+<article class="qa-card" data-cat="cosmos" data-title="为什么星星有的大有的小"><span class="qa-index">#012</span><div class="qa-card-header"><h3 class="qa-title">为什么星星有的大有的小?</h3><span class="qa-category">天文</span></div><div class="qa-answer">星星看起来大小不同，主要有两个原因。一是星星本身的亮度不同，亮的恒星看起来就大一些；二是星星离我们的距离不同，离得近的看起来大，离得远的看起来小。其实大多数星星都比地球大得多，只是因为离我们太远了，所以看起来只是一个小光点。</div><div class="qa-fact"><strong>拓展：</strong>夜空中最亮的恒星是天狼星，它距地球约8.6光年，亮度是太阳的25倍。</div></article>
+<article class="qa-card" data-cat="cosmos" data-title="火星为什么叫红色星球"><span class="qa-index">#013</span><div class="qa-card-header"><h3 class="qa-title">火星为什么叫红色星球?</h3><span class="qa-category">行星</span></div><div class="qa-answer">火星的表面覆盖着大量的氧化铁，也就是我们常说的"铁锈"。铁锈是红棕色的，所以从远处看，火星呈现出红色。火星上的铁氧化物来自于几十亿年前，火星上有水的时候，岩石中的铁被氧化了。火星的土壤里铁含量很高，看起来就像一片红色的大漠。</div><div class="qa-fact"><strong>拓展：</strong>火星上有一座名叫"奥林帕斯山"的火山，高度约21千米，是太阳系中最高的火山。</div></article>
+</div>
+</section>
+
+<!-- 动物世界 -->
+<section class="qa-section" data-cat="animal" id="animal">
+<div class="section-header">
+<span class="section-badge">动物世界</span>
+<h2 class="section-title">动物世界</h2>
+<span class="section-count">13个问答</span>
+</div>
+<div class="qa-grid">
+<article class="qa-card" data-cat="animal" data-title="蝴蝶是怎么变成的"><span class="qa-index">#014</span><div class="qa-card-header"><h3 class="qa-title">蝴蝶是怎么变成的?</h3><span class="qa-category">昆虫</span></div><div class="qa-answer">蝴蝶的一生要经历四个阶段，这叫"完全变态"发育。第一阶段是卵，蝴蝶妈妈把卵产在叶子背面。卵孵化后变成毛毛虫（幼虫），这是第二阶段，毛毛虫拼命吃叶子长大。长大后的毛毛虫会吐丝把自己包起来，变成蛹（第三阶段），在蛹里面发生巨大的变化。最后，蛹破裂，一只美丽的蝴蝶（成虫）飞出来，这是第四阶段。</div><div class="qa-fact"><strong>拓展：</strong>毛毛虫在蛹里并不是在睡觉，它的身体组织会完全分解，再重新组合成蝴蝶的器官。</div></article>
+<article class="qa-card" data-cat="animal" data-title="鱼为什么能在水里呼吸"><span class="qa-index">#015</span><div class="qa-card-header"><h3 class="qa-title">鱼为什么能在水里呼吸?</h3><span class="qa-category">鱼类</span></div><div class="qa-answer">鱼用"鳃"来呼吸。鳃长在鱼头的两侧，看起来像一片片红色的梳子。当鱼张嘴吸水时，水流经过鳃，鳃上面有无数细小的"鳃丝"，鳃丝里布满了血管。水中的溶解氧通过鳃丝上的薄膜进入血液，同时血液中的二氧化碳排出到水中。这个过程和我们用肺呼吸本质上是一样的，只是鱼是从水里获取氧气。</div><div class="qa-fact"><strong>拓展：</strong>大多数鱼离开水后很快就会死，因为鳃丝在空气中会粘在一起，无法获取足够的氧气。</div></article>
+<article class="qa-card" data-cat="animal" data-title="大象的鼻子为什么那么长"><span class="qa-index">#016</span><div class="qa-card-header"><h3 class="qa-title">大象的鼻子为什么那么长?</h3><span class="qa-category">哺乳动物</span></div><div class="qa-answer">大象的鼻子是由上唇和鼻子合并演化而成的，经过了数百万年的进化。大象体型巨大，四肢粗壮，低头吃东西和喝水非常不方便，长鼻子就成了大象的"万能工具"——可以卷起食物送进嘴里，可以用鼻子吸水喷到嘴里喝，可以用来闻气味、发出声音、甚至洗澡。象鼻里有超过4万块肌肉，非常灵活有力。</div><div class="qa-fact"><strong>拓展：</strong>大象的鼻子能举起约300公斤的重物，也能轻轻地捡起一颗花生。</div></article>
+<article class="qa-card" data-cat="animal" data-title="蜜蜂是怎么采蜜的"><span class="qa-index">#017</span><div class="qa-card-header"><h3 class="qa-title">蜜蜂是怎么采蜜的?</h3><span class="qa-category">昆虫</span></div><div class="qa-answer">蜜蜂采集花蜜时，会用管状的口器（像一根吸管）伸进花朵中吸取花蜜，存入自己体内的"蜜胃"。一只蜜蜂一次大约能携带自己体重一半的花蜜。回到蜂巢后，蜜蜂会把花蜜吐出来交给内勤蜂，内勤蜂反复吞吐花蜜，并扇动翅膀蒸发水分，使花蜜浓缩成蜂蜜，最后用蜂蜡封存。</div><div class="qa-fact"><strong>拓展：</strong>一只蜜蜂一生只能酿造约十二分之一茶匙的蜂蜜，一瓶蜂蜜需要上万只蜜蜂共同努力。</div></article>
+<article class="qa-card" data-cat="animal" data-title="为什么猫喜欢抓老鼠"><span class="qa-index">#018</span><div class="qa-card-header"><h3 class="qa-title">为什么猫喜欢抓老鼠?</h3><span class="qa-category">哺乳动物</span></div><div class="qa-answer">猫抓老鼠是天性使然。猫的祖先是野生的非洲野猫，以捕猎小动物为生，老鼠就是它们的主要食物之一。虽然家猫已经被驯化了上千年，但它们体内仍然保留着强烈的狩猎本能。猫是天生的伏击型猎手，它们的眼睛在黑暗中也能看清东西，耳朵能灵活转动捕捉声音，身体柔软敏捷，非常适合捕捉快速移动的小动物。</div><div class="qa-fact"><strong>拓展：</strong>猫的夜视能力是人类的六倍，这得益于它们眼睛里特殊的"照膜"结构，能反射微弱的光线。</div></article>
+<article class="qa-card" data-cat="animal" data-title="蛇没有脚怎么走路"><span class="qa-index">#019</span><div class="qa-card-header"><h3 class="qa-title">蛇没有脚怎么走路?</h3><span class="qa-category">爬行动物</span></div><div class="qa-answer">蛇用腹部的鳞片和强壮的肌肉来移动。蛇的身体有几百块脊椎骨和肋骨，非常灵活。它们主要通过三种方式移动：蜿蜒运动（像波浪一样左右弯曲身体向前推进）、直线运动（利用腹鳞与地面的摩擦力直接向前滑动）、侧行运动（几组身体同时撑住地面向前推进）。不同种类的蛇擅长不同的移动方式。</div><div class="qa-fact"><strong>拓展：</strong>沙漠里的角响尾蛇会使用"侧行"方式移动，这样在松软的沙子上更有效率。</div></article>
+<article class="qa-card" data-cat="animal" data-title="鸟为什么会在天上飞"><span class="qa-index">#020</span><div class="qa-card-header"><h3 class="qa-title">鸟为什么会在天上飞?</h3><span class="qa-category">鸟类</span></div><div class="qa-answer">鸟能飞是因为它们有特殊的身体结构。首先，鸟的骨骼是中空的，非常轻但很坚固，减轻了体重。其次，鸟有发达的胸肌，用来扇动翅膀。最重要的是，鸟的翅膀形状像飞机的机翼，上面弯下面平，当空气流过翅膀时，上方的空气流速快、压力小，下方的空气流速慢、压力大，就产生了一个向上的"升力"，把鸟托举在空中。</div><div class="qa-fact"><strong>拓展：</strong>蜂鸟每秒可以扇动翅膀80多次，是扇翅最快的鸟类，它可以在空中悬停。</div></article>
+<article class="qa-card" data-cat="animal" data-title="恐龙为什么会灭绝"><span class="qa-index">#021</span><div class="qa-card-header"><h3 class="qa-title">恐龙为什么会灭绝?</h3><span class="qa-category">古生物</span></div><div class="qa-answer">约6600万年前，一颗直径约10公里的小行星撞击了地球，撞击点在今天的墨西哥尤卡坦半岛。这次撞击产生了巨大的爆炸，扬起的灰尘遮天蔽日，地球陷入了长达数年的黑暗和寒冷。植物无法光合作用而大量死亡，导致食物链从底层开始崩溃，植食性恐龙先饿死，肉食性恐龙随后也跟着灭绝。这场灾难被称为"白垩纪-古近纪灭绝事件"。</div><div class="qa-fact"><strong>拓展：</strong>有些小型恐龙幸存了下来，后来演化成了今天我们看到的鸟类。</div></article>
+<article class="qa-card" data-cat="animal" data-title="企鹅为什么不会飞"><span class="qa-index">#022</span><div class="qa-card-header"><h3 class="qa-title">企鹅为什么不会飞?</h3><span class="qa-category">鸟类</span></div><div class="qa-answer">企鹅的祖先其实是会飞的鸟类，但它们生活在南极地区，食物主要在海洋里。经过漫长的进化，企鹅的翅膀逐渐变成了像鱼鳍一样的"鳍状肢"，不再适合飞行，但非常适合游泳。企鹅的身体也变得流线型，骨骼更加结实，皮下有厚厚的脂肪层来保暖。翅膀变成了游泳的"桨"，反而让企鹅成了鸟类中最出色的游泳健将。</div><div class="qa-fact"><strong>拓展：</strong>帝企鹅可以潜到500多米的深海中捕食，屏息时间超过20分钟。</div></article>
+<article class="qa-card" data-cat="animal" data-title="狗为什么喜欢摇尾巴"><span class="qa-index">#023</span><div class="qa-card-header"><h3 class="qa-title">狗为什么喜欢摇尾巴?</h3><span class="qa-category">哺乳动物</span></div><div class="qa-answer">狗摇尾巴是一种表达情绪的方式。不过摇尾巴并不总是代表高兴——狗在不同的情绪下摇尾巴的方式是不同的。当狗高兴或兴奋时，尾巴会左右均匀地摇摆，身体也跟着放松扭动；当狗紧张或不安时，尾巴会夹在两腿之间，或者只是低低地小幅度摆动；当狗警觉时，尾巴会竖起来僵硬地摆动。</div><div class="qa-fact"><strong>拓展：</strong>科学家发现狗摇尾巴偏右侧时更积极开心，偏左侧时可能感到威胁。</div></article>
+<article class="qa-card" data-cat="animal" data-title="变色龙为什么会变色"><span class="qa-index">#024</span><div class="qa-card-header"><h3 class="qa-title">变色龙为什么会变色?</h3><span class="qa-category">爬行动物</span></div><div class="qa-answer">变色龙的皮肤下面有特殊的色素细胞，包括含有黄色、红色、蓝色和黑色色素的细胞。变色龙通过控制这些细胞的收缩和舒张来改变颜色。变色不是因为要融入环境（这个说法不完全准确），主要是为了表达情绪、调节体温和与其他变色龙交流。当它生气时颜色变深，温度低时颜色变深来吸收更多热量。</div><div class="qa-fact"><strong>拓展：</strong>变色龙变色的速度非常快，有些种类可以在几秒钟内完成变色。</div></article>
+<article class="qa-card" data-cat="animal" data-title="蝙蝠为什么倒挂着睡觉"><span class="qa-index">#025</span><div class="qa-card-header"><h3 class="qa-title">蝙蝠为什么倒挂着睡觉?</h3><span class="qa-category">哺乳动物</span></div><div class="qa-answer">蝙蝠倒挂着休息有几个好处。首先，蝙蝠的翅膀虽然很大，但腿和爪子很弱小，不适合在地面行走或起飞。倒挂在高处，遇到危险时只需要松开爪子就能自由落下，展开翅膀就能飞走，这是最快的逃生方式。其次，倒挂可以减少身体与冷面的接触面积，有助于保持体温。</div><div class="qa-fact"><strong>拓展：</strong>蝙蝠是唯一能真正飞行的哺乳动物，其他"飞"的动物如鼯鼠其实只是滑翔。</div></article>
+<article class="qa-card" data-cat="animal" data-title="蚂蚁为什么能搬起比自己重的东西"><span class="qa-index">#026</span><div class="qa-card-header"><h3 class="qa-title">蚂蚁为什么能搬起比自己重的东西?</h3><span class="qa-category">昆虫</span></div><div class="qa-answer">蚂蚁能举起比自身重几十倍的物体，这与"平方-立方定律"有关。当一个物体按比例放大时，它的体积（和重量）按立方增长，但肌肉的力量只按截面积（平方）增长。蚂蚁非常小，它们的体重极轻，但肌肉力量相对于体重来说非常大，所以能搬动比自己重很多的食物。如果一个蚂蚁放大到人的大小，它就搬不动比人重的东西了。</div><div class="qa-fact"><strong>拓展：</strong>一只蚂蚁大约能举起自身重量50倍的物体，相当于一个人举起一辆汽车。</div></article>
+</div>
+</section>
+
+<!-- 植物王国 -->
+<section class="qa-section" data-cat="plant" id="plant">
+<div class="section-header">
+<span class="section-badge">植物王国</span>
+<h2 class="section-title">植物王国</h2>
+<span class="section-count">12个问答</span>
+</div>
+<div class="qa-grid">
+<article class="qa-card" data-cat="plant" data-title="植物为什么是绿色的"><span class="qa-index">#027</span><div class="qa-card-header"><h3 class="qa-title">植物为什么是绿色的?</h3><span class="qa-category">植物学</span></div><div class="qa-answer">植物的叶子里含有一种叫"叶绿素"的物质。叶绿素是植物进行光合作用的关键，它能够吸收太阳光中的红光和蓝光，但会反射绿光。我们看到的绿色，就是被叶绿素反射出来的光。光合作用就是植物利用光能，把二氧化碳和水变成葡萄糖和氧气的过程。</div><div class="qa-fact"><strong>拓展：</strong>秋天树叶变黄变红，是因为叶绿素分解后，其他色素（胡萝卜素、花青素）显现出来了。</div></article>
+<article class="qa-card" data-cat="plant" data-title="向日葵为什么跟着太阳转"><span class="qa-index">#028</span><div class="qa-card-header"><h3 class="qa-title">向日葵为什么跟着太阳转?</h3><span class="qa-category">植物学</span></div><div class="qa-answer">向日葵跟着太阳转的现象叫"向光性"。在向日葵幼嫩茎部的"生长素"（一种植物激素）分布不均匀，茎部背光一侧的生长素比向光一侧多，使得背光一侧生长得更快，茎就向着太阳的方向弯曲了。年轻的向日葵从早到晚会跟随太阳转动，但当花盘完全长大后，茎部变硬，就不再转动了，而是固定朝向东方。</div><div class="qa-fact"><strong>拓展：</strong>成熟向日葵朝向东方可以更快地被阳光晒暖，吸引更多的传粉昆虫。</div></article>
+<article class="qa-card" data-cat="plant" data-title="仙人掌为什么有刺"><span class="qa-index">#029</span><div class="qa-card-header"><h3 class="qa-title">仙人掌为什么有刺?</h3><span class="qa-category">植物学</span></div><div class="qa-answer">仙人掌的刺其实是它的叶子。仙人掌的老家在干旱的沙漠里，那里水非常少。普通的叶子又大又薄，水分会从叶片上大量蒸发。为了减少水分散失，仙人掌的叶子慢慢进化成了又细又尖的刺。同时，刺还能保护仙人掌不被沙漠里的动物吃掉。仙人掌的茎变得又厚又圆，用来储存水分，表面还有一层蜡质防止蒸发。</div><div class="qa-fact"><strong>拓展：</strong>仙人掌的根可以延伸到地下很深的地方寻找水分，有些仙人掌可以存活几十年不浇水。</div></article>
+<article class="qa-card" data-cat="plant" data-title="植物是怎么繁殖的"><span class="qa-index">#030</span><div class="qa-card-header"><h3 class="qa-title">植物是怎么繁殖的?</h3><span class="qa-category">植物学</span></div><div class="qa-answer">植物繁殖方式很多样。有性繁殖是通过开花结果，花粉从雄蕊传到雌蕊上（这个过程叫授粉），受精后结出种子，种子落地发芽长成新植物。授粉可以靠风（如玉米）、靠昆虫（如蜜蜂采蜜传播花粉）、靠鸟类甚至蝙蝠。无性繁殖包括用根、茎、叶的一部分长出新植物，比如红薯用块根繁殖，草莓用匍匐茎繁殖。</div><div class="qa-fact"><strong>拓展：</strong>竹子开花非常罕见，有些竹子可能几十年甚至上百年才开一次花。</div></article>
+<article class="qa-card" data-cat="plant" data-title="大树为什么有年轮"><span class="qa-index">#031</span><div class="qa-card-header"><h3 class="qa-title">大树为什么有年轮?</h3><span class="qa-category">植物学</span></div><div class="qa-answer">树的年轮记录了它的生长历史。在温带地区，春天和初夏气候温暖、雨水充足，树木生长快，形成的木质细胞大、颜色浅，叫"早材"；到秋天，气温下降、雨水减少，树木生长变慢，木质细胞小、颜色深，叫"晚材"。这样一年就形成了一圈浅色加一圈深色的"年轮"。数年轮的圈数就能知道树的年龄。</div><div class="qa-fact"><strong>拓展：</strong>年轮的宽窄还能反映当年的气候，宽轮说明那年的气候条件好，窄轮说明可能遭遇了干旱。</div></article>
+<article class="qa-card" data-cat="plant" data-title="含羞草为什么一碰就合上"><span class="qa-index">#032</span><div class="qa-card-header"><h3 class="qa-title">含羞草为什么一碰就合上?</h3><span class="qa-category">植物学</span></div><div class="qa-answer">含羞草叶片合拢是一种自我保护机制。在含羞草叶柄的基部有一个特殊的"膨压"结构，叫"叶枕"。平时叶枕里充满了水分，叶片就张开。当叶片被触碰时，叶枕中的水分会迅速流到其他部位，叶枕失去膨压就瘪了下来，叶片就合拢下垂了。这可以吓退想要吃它的动物，也能在暴风雨中保护叶片不受损伤。过一会儿，水分重新充满叶枕，叶片又会恢复原状。</div><div class="qa-fact"><strong>拓展：</strong>含羞草这种运动不需要肌肉，是靠水分压力变化实现的，叫做"膨压运动"。</div></article>
+<article class="qa-card" data-cat="plant" data-title="为什么花有不同的颜色"><span class="qa-index">#033</span><div class="qa-card-header"><h3 class="qa-title">为什么花有不同的颜色?</h3><span class="qa-category">植物学</span></div><div class="qa-answer">花的颜色来自花瓣中的"色素"。主要有三类色素：花青素（产生红、紫、蓝色）、类胡萝卜素（产生黄、橙色）和黄酮类色素（产生淡黄色）。不同种类、不同比例的色素组合就产生了千变万化的花色。花之所以要五颜六色，主要是为了吸引昆虫和鸟类来帮忙传粉，不同的颜色吸引不同的传粉者。</div><div class="qa-fact"><strong>拓展：</strong>蜜蜂特别偏爱蓝色和紫色的花，而蝴蝶更喜欢红色和橙色的花。</div></article>
+<article class="qa-card" data-cat="plant" data-title="竹子是树吗"><span class="qa-index">#034</span><div class="qa-card-header"><h3 class="qa-title">竹子是树吗?</h3><span class="qa-category">植物学</span></div><div class="qa-answer">竹子不是树，它是草本植物，和水稻、小麦是同一个大家族——禾本科。虽然竹子长得很高大，有的能长到二三十米，但它的结构和树完全不同。树有形成层，可以年年增粗，树干里有年轮；而竹子一旦长成，就不会再变粗了。竹子是空心的，每隔一段就有一个"节"，这都是禾本科植物的特征。</div><div class="qa-fact"><strong>拓展：</strong>竹子的生长速度非常快，有些竹子一天能长将近1米，是世界上生长最快的植物之一。</div></article>
+<article class="qa-card" data-cat="plant" data-title="植物也睡觉吗"><span class="qa-index">#035</span><div class="qa-card-header"><h3 class="qa-title">植物也睡觉吗?</h3><span class="qa-category">植物学</span></div><div class="qa-answer">很多植物确实有"睡眠"运动，这叫"感夜运动"。比如合欢树的羽状复叶在夜晚会合拢下垂，白天又张开；酢浆草的叶子在夜间会折叠起来。这种运动是由光照变化引起的。白天有光照时，叶枕中的水分分布使叶片张开；夜间没有光照，水分重新分布，叶片就折叠起来。这种运动可以帮助植物减少夜间热量和水分的散失。</div><div class="qa-fact"><strong>拓展：</strong>达尔文是最早系统研究植物睡眠运动的科学家之一，他写过一本《植物的运动本领》。</div></article>
+<article class="qa-card" data-cat="plant" data-title="蘑菇是植物吗"><span class="qa-index">#036</span><div class="qa-card-header"><h3 class="qa-title">蘑菇是植物吗?</h3><span class="qa-category">真菌</span></div><div class="qa-answer">蘑菇不是植物，它属于"真菌"界，和植物、动物是并列的三大类生物。植物能进行光合作用自己制造食物，但蘑菇不能，它通过分解吸收环境中的有机物来获取营养。蘑菇只是真菌的"子实体"（相当于果实），大部分真菌其实隐藏在地下或木头里，是白色的丝状网络，叫做"菌丝"。我们平时看到的蘑菇就是菌丝长到一定阶段后长出来的繁殖器官。</div><div class="qa-fact"><strong>拓展：</strong>世界上最大的生物是一棵蜜环菌，它的地下菌丝网络覆盖了将近10平方公里的面积，已经生长了两千多年。</div></article>
+<article class="qa-card" data-cat="plant" data-title="无花果真的没有花吗"><span class="qa-index">#037</span><div class="qa-card-header"><h3 class="qa-title">无花果真的没有花吗?</h3><span class="qa-category">植物学</span></div><div class="qa-answer">无花果当然有花，只是我们看不见。无花果的花藏在一个膨大的花托里面，从外面只能看到一个"果实"。如果把它切开，就能看到里面有很多小颗粒，每一个小颗粒其实都是一朵花。这种特殊的开花方式叫做"隐头花序"。无花果的花需要一种叫做"榕小蜂"的昆虫来帮忙授粉，榕小蜂会从无花果底部的小孔钻进去传粉。</div><div class="qa-fact"><strong>拓展：</strong>无花果和榕树是同一个属的植物，它们都有这种特殊的隐头花序。</div></article>
+<article class="qa-card" data-cat="plant" data-title="为什么有些植物吃虫子"><span class="qa-index">#038</span><div class="qa-card-header"><h3 class="qa-title">为什么有些植物吃虫子?</h3><span class="qa-category">植物学</span></div><div class="qa-answer">食虫植物生长在土壤贫瘠的地方，特别是缺乏氮元素的环境中。普通植物从土壤中获取养分，但食虫植物生活的环境（如沼泽、酸性湿地）土壤里养分极少。为了补充营养，它们进化出了捕捉和消化昆虫的能力。比如捕蝇草的叶片像张开的书页，昆虫触碰触发机关后叶片迅速合拢；猪笼草有香甜的蜜液引诱昆虫滑入瓶状的捕虫笼。</div><div class="qa-fact"><strong>拓展：</strong>全世界约有600种食虫植物，分布在各大洲，最大的是马来王猪笼草，可以捕获老鼠。</div></article>
+</div>
+</section>
+
+<!-- 人体奥秘 -->
+<section class="qa-section" data-cat="body" id="body">
+<div class="section-header">
+<span class="section-badge">人体奥秘</span>
+<h2 class="section-title">人体奥秘</h2>
+<span class="section-count">13个问答</span>
+</div>
+<div class="qa-grid">
+<article class="qa-card" data-cat="body" data-title="人为什么会做梦"><span class="qa-index">#039</span><div class="qa-card-header"><h3 class="qa-title">人为什么会做梦?</h3><span class="qa-category">大脑</span></div><div class="qa-answer">做梦主要发生在睡眠中的"快速眼动期"（REM阶段）。在这个阶段，大脑非常活跃，几乎和清醒时一样忙碌。科学家认为，做梦是大脑处理白天信息、巩固记忆的过程——大脑在整理和归类白天看到、听到、想到的事情，把重要的存为长期记忆，不重要的丢弃。有时候这些"信息处理"活动的片段就会被我们的意识感知到，就形成了千奇百怪的梦境。</div><div class="qa-fact"><strong>拓展：</strong>人每晚大约会做4-6个梦，但醒来后大部分都会忘记。</div></article>
+<article class="qa-card" data-cat="body" data-title="人为什么会发烧"><span class="qa-index">#040</span><div class="qa-card-header"><h3 class="qa-title">人为什么会发烧?</h3><span class="qa-category">免疫系统</span></div><div class="qa-answer">发烧是身体对抗病菌的一种防御机制。当细菌或病毒入侵身体时，免疫系统的白细胞会释放一些化学物质（如致热源），这些物质会通知大脑中的"体温调节中枢"把体温调高。升高的体温可以抑制细菌和病毒的繁殖（很多病菌在高温下活力下降），同时加速免疫细胞的活动和抗体的产生，帮助身体更快地战胜病原体。</div><div class="qa-fact"><strong>拓展：</strong>体温每升高1°C，免疫细胞的活性大约增加10%-20%。</div></article>
+<article class="qa-card" data-cat="body" data-title="心脏为什么不停地跳动"><span class="qa-index">#041</span><div class="qa-card-header"><h3 class="qa-title">心脏为什么不停地跳动?</h3><span class="qa-category">器官</span></div><div class="qa-answer">心脏有一个特殊的"起搏器"——窦房结，位于右心房上部。窦房结里的细胞能自动产生电信号，这些电信号传导到心脏各处的肌肉细胞，引起心肌有节律地收缩和舒张，推动血液在全身循环。这个电信号的产生不需要大脑指挥，心脏自己就能持续工作。一生中心脏大约会跳动25亿到30亿次，是人体最勤劳的器官。</div><div class="qa-fact"><strong>拓展：</strong>正常人的心跳每分钟约60-100次，运动员因为心脏强壮，心率可能低至每分钟40次。</div></article>
+<article class="qa-card" data-cat="body" data-title="人为什么会长蛀牙"><span class="qa-index">#042</span><div class="qa-card-header"><h3 class="qa-title">人为什么会长蛀牙?</h3><span class="qa-category">牙齿</span></div><div class="qa-answer">蛀牙是由细菌引起的。我们的口腔中有很多细菌，当我们吃了含糖的食物后，某些细菌会把糖分解成酸性物质。这些酸性物质会腐蚀牙齿最外层坚硬的"牙釉质"，逐渐形成小洞。如果不及时修补，蛀洞会越来越深，最终到达牙齿内部的牙神经，引起剧烈的牙痛。所以少吃糖、勤刷牙、使用含氟牙膏可以有效预防蛀牙。</div><div class="qa-fact"><strong>拓展：</strong>牙釉质是人体中最坚硬的组织，但一旦被腐蚀就不会再生。</div></article>
+<article class="qa-card" data-cat="body" data-title="血液为什么是红色的"><span class="qa-index">#043</span><div class="qa-card-header"><h3 class="qa-title">血液为什么是红色的?</h3><span class="qa-category">血液</span></div><div class="qa-answer">血液之所以是红色，是因为红细胞中含有大量的"血红蛋白"。血红蛋白是一种含铁的蛋白质，负责在体内运输氧气。当血红蛋白与氧气结合时，呈鲜红色（动脉血）；当氧气被送到组织后，血红蛋白失去部分氧气，颜色就变成暗红色（静脉血）。血液中铁元素的含量很高，所以呈现红色，就像铁生锈变成红褐色一样。</div><div class="qa-fact"><strong>拓展：</strong>有些动物的血液不是红色的，比如章鱼的血液是蓝色的，因为它们用的是铜基蛋白来运输氧气。</div></article>
+<article class="qa-card" data-cat="body" data-title="人为什么要睡觉"><span class="qa-index">#044</span><div class="qa-card-header"><h3 class="qa-title">人为什么要睡觉?</h3><span class="qa-category">生理</span></div><div class="qa-answer">睡眠对身体和大脑都至关重要。在睡眠中，身体会进行自我修复——受损的细胞得到修复，免疫系统得到加强，生长激素大量分泌帮助儿童长高。大脑在睡眠中会整理白天的记忆、清除代谢废物。长期缺乏睡眠会导致注意力下降、免疫力降低、情绪失控，严重时甚至危及生命。小学生每天需要约10小时的睡眠。</div><div class="qa-fact"><strong>拓展：</strong>世界纪录中，人类不睡觉的最长时间是11天零25分钟，但这是一项极其危险的挑战。</div></article>
+<article class="qa-card" data-cat="body" data-title="人为什么会眨眼睛"><span class="qa-index">#045</span><div class="qa-card-header"><h3 class="qa-title">人为什么会眨眼睛?</h3><span class="qa-category">眼睛</span></div><div class="qa-answer">眨眼是眼睛的自我保护机制。每次眨眼时，眼皮会把泪液均匀地涂抹在眼球表面，保持眼睛湿润，防止角膜干燥。泪液还能冲洗掉眼球表面的灰尘和小异物，其中含有的溶菌酶有杀菌作用，保护眼睛不被细菌感染。正常人每分钟大约眨眼15-20次，但当我们专注看屏幕时，眨眼次数会大幅减少，这就是为什么长时间看电脑眼睛会干涩。</div><div class="qa-fact"><strong>拓展：</strong>人每次眨眼的时间大约只需要0.1-0.4秒，但大脑会自动"补全"画面，所以我们感觉不到视线的中断。</div></article>
+<article class="qa-card" data-cat="body" data-title="指纹为什么是独一无二的"><span class="qa-index">#046</span><div class="qa-card-header"><h3 class="qa-title">指纹为什么是独一无二的?</h3><span class="qa-category">皮肤</span></div><div class="qa-answer">指纹在胎儿时期（大约3-4个月大时）就开始形成，它的形状受遗传基因和胎儿在子宫内的环境共同影响。指纹的形成是一个极其复杂的随机过程——胎儿在子宫内微小的位置变化、羊水的流动、指尖与子宫壁的接触压力等无数细微因素，都会影响指纹的最终形状。这些随机因素的组合几乎不可能完全重复，所以每个人的指纹都是独一无二的。</div><div class="qa-fact"><strong>拓展：</strong>即使是同卵双胞胎，他们的指纹也是不同的。</div></article>
+<article class="qa-card" data-cat="body" data-title="骨头是怎么长出来的"><span class="qa-index">#047</span><div class="qa-card-header"><h3 class="qa-title">骨头是怎么长出来的?</h3><span class="qa-category">骨骼</span></div><div class="qa-answer">人出生时骨骼有300多块，但其中很多会在成长过程中逐渐融合，成年人最终有206块骨头。骨骼的生长主要发生在骨头两端的"生长板"（骨骺板）。生长板里有软骨细胞不断分裂增殖，新的软骨细胞逐渐被钙化变成硬骨，骨头就变长了。大约到18-20岁，生长板完全钙化闭合，人就不长高了。同时，已形成的骨骼也在不断更新——旧的骨组织被"破骨细胞"分解，"成骨细胞"再制造新骨。</div><div class="qa-fact"><strong>拓展：</strong>人体的骨骼大约每10年就会完全更新一遍。</div></article>
+<article class="qa-card" data-cat="body" data-title="胃酸为什么不会把胃消化掉"><span class="qa-index">#048</span><div class="qa-card-header"><h3 class="qa-title">胃酸为什么不会把胃消化掉?</h3><span class="qa-category">消化</span></div><div class="qa-answer">胃确实会产生强酸性液体（胃酸，pH值约1.5-3.5），足以溶解食物甚至某些金属。但胃有强大的自我保护机制：胃壁表面覆盖着一层厚厚的"黏液层"，由特殊的细胞分泌，能防止胃酸直接接触胃壁细胞。此外，胃壁细胞更新速度非常快，每3-5天就会完全更换一次，受损的细胞迅速被新细胞取代。同时，胃还会分泌碱性的碳酸氢盐来中和渗入黏液层的少量胃酸。</div><div class="qa-fact"><strong>拓展：</strong>当胃的保护机制出问题时，胃酸就会侵蚀胃壁，这就是"胃溃疡"的成因。</div></article>
+<article class="qa-card" data-cat="body" data-title="人为什么会打哈欠"><span class="qa-index">#049</span><div class="qa-card-header"><h3 class="qa-title">人为什么会打哈欠?</h3><span class="qa-category">生理</span></div><div class="qa-answer">打哈欠的原因至今还没有完全弄清楚，但有几种主流解释。一种说法是大脑需要降温——打哈欠时吸入大量空气，可以帮助降低大脑温度，保持清醒。另一种说法是打哈欠可以增加血液中的氧气浓度，帮助驱赶困意。还有一种有趣的理论认为打哈欠是一种社交信号，当一个人打哈欠时，周围的人也会跟着打，这可以帮助整个群体保持警觉。</div><div class="qa-fact"><strong>拓展：</strong>打哈欠会"传染"——看到别人打哈欠、读到关于打哈欠的文字，甚至想到打哈欠都可能让你也打一个。</div></article>
+<article class="qa-card" data-cat="body" data-title="耳朵为什么能听到声音"><span class="qa-index">#050</span><div class="qa-card-header"><h3 class="qa-title">耳朵为什么能听到声音?</h3><span class="qa-category">感官</span></div><div class="qa-answer">耳朵听到声音经过了精妙的三个步骤。首先，外耳（耳廓）像卫星天线一样收集声音，声波通过耳道传到鼓膜，引起鼓膜振动。然后，振动通过三块人体最小的骨头（锤骨、砧骨、镫骨）传递到内耳。在内耳中有一个"耳蜗"，里面充满了液体和微小的"毛细胞"，振动引起液体流动，毛细胞随波摆动，把机械振动转换成电信号。最后，电信号通过听觉神经传到大脑，大脑分析这些信号，我们就"听到"了声音。</div><div class="qa-fact"><strong>拓展：</strong>镫骨是人体最小的骨头，只有约3毫米长，但它承受的力量却很大。</div></article>
+<article class="qa-card" data-cat="body" data-title="人为什么会起鸡皮疙瘩"><span class="qa-index">#051</span><div class="qa-card-header"><h3 class="qa-title">人为什么会起鸡皮疙瘩?</h3><span class="qa-category">皮肤</span></div><div class="qa-answer">起鸡皮疙瘩是一种本能反应，与我们的"毛皮反射"有关。每根汗毛的根部都连着一小块叫"立毛肌"的小肌肉。当人感到寒冷或害怕时，交感神经会兴奋，立毛肌收缩，汗毛就会竖起来，皮肤表面出现一个个小疙瘩。在人类进化史上，竖起毛发可以让身体显得更大来吓退敌人，或者增加毛发间的空气层来保暖。现代人毛发稀疏了，这个反应就变成了"鸡皮疙瘩"。</div><div class="qa-fact"><strong>拓展：</strong>猫和狗在受到惊吓时全身毛发竖起，就是同样的毛皮反射，只不过效果比人类明显得多。</div></article>
+</div>
+</section>
+
+<!-- 生活常识 -->
+<section class="qa-section" data-cat="daily" id="daily">
+<div class="section-header">
+<span class="section-badge">生活常识</span>
+<h2 class="section-title">生活常识</h2>
+<span class="section-count">13个问答</span>
+</div>
+<div class="qa-grid">
+<article class="qa-card" data-cat="daily" data-title="水为什么会烧开"><span class="qa-index">#052</span><div class="qa-card-header"><h3 class="qa-title">水为什么会烧开?</h3><span class="qa-category">物理</span></div><div class="qa-answer">在标准大气压下，水被加热到100°C时就会沸腾。水烧开后，水中的分子获得了足够的能量，从液态变成气态（水蒸气），大量气泡从底部升起，这就是我们看到的"翻滚"现象。水蒸气带走热量，所以只要还在加热，水温就会保持在100°C不再升高，直到水全部蒸发。如果气压降低（如在高山上），水在低于100°C时就会沸腾。</div><div class="qa-fact"><strong>拓展：</strong>在珠穆朗玛峰顶，气压很低，水在约70°C就会沸腾，所以高山上煮不熟食物。</div></article>
+<article class="qa-card" data-cat="daily" data-title="铁为什么会生锈"><span class="qa-index">#053</span><div class="qa-card-header"><h3 class="qa-title">铁为什么会生锈?</h3><span class="qa-category">化学</span></div><div class="qa-answer">铁生锈是一种化学反应，叫做"氧化反应"。铁与空气中的氧气和水蒸气接触后，会发生反应生成"氧化铁"，也就是我们看到的红褐色的铁锈。铁锈疏松多孔，无法保护内部的铁，所以铁会一直锈下去，直到全部变成铁锈。防止铁生锈的方法有：涂油漆隔绝空气和水、镀上不易生锈的金属（如锌）、制造不锈钢（加入铬和镍）等。</div><div class="qa-fact"><strong>拓展：</strong>全世界每年因为铁锈造成的损失高达数千亿美元。</div></article>
+<article class="qa-card" data-cat="daily" data-title="镜子为什么能照出人影"><span class="qa-index">#054</span><div class="qa-card-header"><h3 class="qa-title">镜子为什么能照出人影?</h3><span class="qa-category">光学</span></div><div class="qa-answer">镜子的表面非常光滑，镀有一层银或铝的金属反射膜。当光线照到镜面上时，金属层会把光线几乎全部反射回来。根据光的反射定律，入射角等于反射角，所以光线被整齐地反射出去，形成与原物一模一样的像。普通的墙壁虽然也能反射光，但表面粗糙，光线被散射到各个方向，就无法形成清晰的像了。</div><div class="qa-fact"><strong>拓展：</strong>古代人用磨光的铜镜来照脸，现代玻璃镜子是在玻璃背面镀银制成的。</div></article>
+<article class="qa-card" data-cat="daily" data-title="肥皂为什么能洗干净手"><span class="qa-index">#055</span><div class="qa-card-header"><h3 class="qa-title">肥皂为什么能洗干净手?</h3><span class="qa-category">化学</span></div><div class="qa-answer">肥皂的去污秘密在于它特殊的分子结构。肥皂分子一端"亲水"（喜欢水），另一端"亲油"（喜欢油污）。洗手时，肥皂的亲油端会抓住手上的油污和细菌，亲水端则与水结合。这样，油污就被肥皂分子"拉"到了水里，被水冲走。如果没有肥皂，油污和水互不相溶，光用水是冲不掉油污的。</div><div class="qa-fact"><strong>拓展：</strong>肥皂的历史超过4000年，古巴比伦人就已经用油脂和草木灰制作肥皂了。</div></article>
+<article class="qa-card" data-cat="daily" data-title="玻璃为什么是透明的"><span class="qa-index">#056</span><div class="qa-card-header"><h3 class="qa-title">玻璃为什么是透明的?</h3><span class="qa-category">物理</span></div><div class="qa-answer">玻璃透明的关键在于它的原子结构和光线之间的相互作用。玻璃是非晶体结构，内部原子排列不规则，没有明显的晶界和杂质来散射光线。更重要的是，玻璃中的电子需要吸收特定能量的光子才能被激发到高能态，而可见光的光子能量不够，不会被吸收。所以可见光可以直接穿过玻璃而不被阻挡或散射，看起来就是透明的。</div><div class="qa-fact"><strong>拓展：</strong>有些金属氧化物加入玻璃后可以改变其颜色，比如加入钴会变成蓝色玻璃。</div></article>
+<article class="qa-card" data-cat="daily" data-title="鸡蛋煮熟后为什么蛋白变白"><span class="qa-index">#057</span><div class="qa-card-header"><h3 class="qa-title">鸡蛋煮熟后为什么蛋白变白?</h3><span class="qa-category">化学</span></div><div class="qa-answer">生鸡蛋的蛋白是透明的黏稠液体，里面含有大量的蛋白质。蛋白质分子通常卷曲成特定的三维形状（这叫蛋白质的"天然构象"）。当鸡蛋被加热到约60°C以上时，热能破坏了维持蛋白质结构的弱键，蛋白质分子展开并重新排列，形成新的、更紧密有序的结构，同时反射光线的方式也改变了，从透明变成了白色。这个过程叫做"蛋白质变性"，是不可逆的。</div><div class="qa-fact"><strong>拓展：</strong>不只是加热，酸、酒精和紫外线也能让蛋白质变性。</div></article>
+<article class="qa-card" data-cat="daily" data-title="为什么空调能制冷"><span class="qa-index">#058</span><div class="qa-card-header"><h3 class="qa-title">为什么空调能制冷?</h3><span class="qa-category">物理</span></div><div class="qa-answer">空调制冷利用了"液态变气态会吸热"的原理。空调里有一种特殊的物质叫"制冷剂"（如氟利昂的替代品），它在管道中不断循环。制冷剂在室内的"蒸发器"中从液态变成气态，吸收室内的热量，使空气变冷。然后气态制冷剂被压缩到室外的"冷凝器"中，从气态变回液态，释放热量到室外。如此循环，就不断把室内的热量搬运到室外。</div><div class="qa-fact"><strong>拓展：</strong>冰箱的制冷原理和空调完全一样，只是冰箱把热量释放到冰箱外面。</div></article>
+<article class="qa-card" data-cat="daily" data-title="铅笔芯是铅做的吗"><span class="qa-index">#059</span><div class="qa-card-header"><h3 class="qa-title">铅笔芯是铅做的吗?</h3><span class="qa-category">材料</span></div><div class="qa-answer">铅笔芯根本不含铅！它的主要成分是"石墨"和黏土。石墨是一种由碳元素组成的矿物，黑色、柔软，能在纸上留下痕迹。铅笔芯的硬度和颜色深浅取决于石墨和黏土的比例——石墨多、黏土少，笔芯就软、颜色深（如2B铅笔）；石墨少、黏土多，笔芯就硬、颜色浅（如2H铅笔）。铅笔叫"铅"笔是因为古人曾用铅条写字，后来改用石墨后名字没改过来。</div><div class="qa-fact"><strong>拓展：</strong>石墨和钻石都是由碳元素组成的，但因为原子排列方式不同，一个是黑色柔软的，一个是透明坚硬的。</div></article>
+<article class="qa-card" data-cat="daily" data-title="盐为什么要少吃"><span class="qa-index">#060</span><div class="qa-card-header"><h3 class="qa-title">盐为什么要少吃?</h3><span class="qa-category">健康</span></div><div class="qa-answer">盐的主要成分是氯化钠，钠离子是维持人体正常功能所必需的。但摄入过多的钠会带来健康问题：过多的钠会使血液中的水分增加，加重心脏和血管的负担，导致血压升高。长期高血压会增加心脏病和中风的风险。此外，高盐饮食还与胃癌、骨质疏松等疾病有关。世界卫生组织建议每人每天食盐摄入量不超过5克，大约是一个啤酒瓶盖的量。</div><div class="qa-fact"><strong>拓展：</strong>很多加工食品（如方便面、火腿肠、酱油）中都含有大量"隐形盐"。</div></article>
+<article class="qa-card" data-cat="daily" data-title="食物为什么会变质"><span class="qa-index">#061</span><div class="qa-card-header"><h3 class="qa-title">食物为什么会变质?</h3><span class="qa-category">生物</span></div><div class="qa-answer">食物变质主要是微生物在捣鬼。空气中和食物表面到处都是细菌和真菌（霉菌），当温度、湿度适宜时，这些微生物会大量繁殖，分解食物中的营养物质作为食物。细菌分解蛋白质会产生恶臭物质，霉菌会产生毒素，氧化反应则会让食物中的油脂变"哈喇味"。所以保存食物的方法就是让微生物"不舒服"——冷藏降低微生物活性、加热杀死微生物、脱水让微生物无法生存。</div><div class="qa-fact"><strong>拓展：</strong>有些变质的食物即使表面看起来没坏，也可能已经产生了有害毒素，最好不要食用。</div></article>
+<article class="qa-card" data-cat="daily" data-title="为什么用吸管能喝到饮料"><span class="qa-index">#062</span><div class="qa-card-header"><h3 class="qa-title">为什么用吸管能喝到饮料?</h3><span class="qa-category">物理</span></div><div class="qa-answer">用吸管喝饮料利用的是"大气压"。当你用嘴吸吸管时，吸管内的空气被吸走，管内气压降低。而杯中液面受到外部大气压的压力，这个压力大于吸管内的气压，就把液体"压"进了吸管，上升到你的嘴里。这就像你在大气压的帮助下把液体"提"上来。吸管越长，需要克服的液柱重量越大，理论上用普通吸管最多能把水吸到约10米高。</div><div class="qa-fact"><strong>拓展：</strong>如果在太空（没有大气压的环境中），用吸管是吸不上来饮料的。</div></article>
+<article class="qa-card" data-cat="daily" data-title="纸是怎么造出来的"><span class="qa-index">#063</span><div class="qa-card-header"><h3 class="qa-title">纸是怎么造出来的?</h3><span class="qa-category">材料</span></div><div class="qa-answer">造纸的基本原理是：把植物纤维分离出来，重新排列压制成薄片。传统造纸用木材、竹子或废纸做原料。先把原料打碎成纸浆（用化学方法或机械方法把纤维分离），纸浆是纤维和水混合的糊状物。然后把纸浆均匀地铺在滤网上，水被滤掉，纤维留在网上交织成一层薄薄的纤维层。经过压榨和烘干，就变成了纸。在纸浆中还可以加入漂白剂、填料和胶料来改善纸的白度、光滑度和耐水性。</div><div class="qa-fact"><strong>拓展：</strong>造纸术是中国古代四大发明之一，蔡伦在东汉时期改进了造纸术，用树皮、破布等廉价材料造纸。</div></article>
+<article class="qa-card" data-cat="daily" data-title="为什么水果切开后会变黑"><span class="qa-index">#064</span><div class="qa-card-header"><h3 class="qa-title">为什么水果切开后会变黑?</h3><span class="qa-category">化学</span></div><div class="qa-answer">水果切开后变黑是因为"氧化反应"。水果中含有一种叫"多酚"的物质和"多酚氧化酶"。完整的水果中，这两种物质被细胞膜隔开，互不接触。但切开或咬开后，细胞被破坏，多酚和多酚氧化酶混合在一起，在氧气的作用下，多酚被氧化成"醌"类物质，醌类物质聚合成褐色素，表面就变黑了。苹果、梨、香蕉、茄子等都会发生这种现象。滴柠檬汁可以防止变黑，因为柠檬汁中的维生素C有抗氧化作用。</div><div class="qa-fact"><strong>拓展：</strong>超市里卖的切好的水果之所以不变色，往往是因为涂了一层薄薄的维生素C溶液或抗氧化剂。</div></article>
+</div>
+</section>
+
+<!-- 科技发明 -->
+<section class="qa-section" data-cat="tech" id="tech">
+<div class="section-header">
+<span class="section-badge">科技发明</span>
+<h2 class="section-title">科技发明</h2>
+<span class="section-count">12个问答</span>
+</div>
+<div class="qa-grid">
+<article class="qa-card" data-cat="tech" data-title="电话是怎么工作的"><span class="qa-index">#065</span><div class="qa-card-header"><h3 class="qa-title">电话是怎么工作的?</h3><span class="qa-category">通信</span></div><div class="qa-answer">当你对着电话说话时，话筒（麦克风）会把你的声音转换成电信号。声音是空气的振动，麦克风里有一层薄膜，声音让薄膜振动，薄膜带动一个小磁铁或电容板变化，产生与声音对应的电信号。这个电信号通过电话线或无线电波传到对方的电话，对方的听筒（扬声器）再把电信号转换回振动，推动空气发出声音，对方就听到了你的声音。整个过程几乎是实时的，所以打电话就像面对面聊天。</div><div class="qa-fact"><strong>拓展：</strong>1876年，亚历山大·贝尔发明了第一部电话，当时他说的第一句话是"沃森先生，请过来，我要见你"。</div></article>
+<article class="qa-card" data-cat="tech" data-title="互联网是怎么工作的"><span class="qa-index">#066</span><div class="qa-card-header"><h3 class="qa-title">互联网是怎么工作的?</h3><span class="qa-category">计算机</span></div><div class="qa-answer">互联网就像一个巨大的邮政系统。当你想访问一个网站时，你的电脑会把请求分成很多小"数据包"，每个数据包上写着目标地址（IP地址）。这些数据包通过光缆、卫星等各种线路传输，经过沿途很多"路由器"的接力转发，最终到达目标服务器。服务器处理后，再把回复的数据包按原路或更优路径传回你的电脑。所有数据包到达后按编号重新组合，就变成了你看到的网页。</div><div class="qa-fact"><strong>拓展：</strong>互联网的前身是美国国防部的ARPANET项目，1969年首次连接了4台计算机。</div></article>
+<article class="qa-card" data-cat="tech" data-title="飞机为什么能飞上天"><span class="qa-index">#067</span><div class="qa-card-header"><h3 class="qa-title">飞机为什么能飞上天?</h3><span class="qa-category">航空</span></div><div class="qa-answer">飞机能飞上天主要靠两个原理：升力和推力。飞机的机翼截面是上面弯、下面平的形状，当飞机向前移动时，空气流过机翼上方速度比下方快，上方气压低于下方，这个压力差就产生了一个向上的"升力"。同时，发动机产生向前的"推力"，克服空气阻力推动飞机前进。当升力大于飞机的重量时，飞机就飞起来了。控制飞机方向和高度靠的是机翼和尾翼上的活动翼面。</div><div class="qa-fact"><strong>拓展：</strong>1903年，莱特兄弟制造了世界上第一架成功飞行的飞机，首次飞行只持续了12秒。</div></article>
+<article class="qa-card" data-cat="tech" data-title="电灯是谁发明的"><span class="qa-index">#068</span><div class="qa-card-header"><h3 class="qa-title">电灯是谁发明的?</h3><span class="qa-category">发明</span></div><div class="qa-answer">1879年，美国发明家托马斯·爱迪生发明了实用的白炽灯泡。爱迪生试验了上千种材料做灯丝，最终发现碳化竹丝在通电后能发光长达1200小时以上。电灯的工作原理是：电流通过灯丝（一种电阻很大的导体）时，灯丝被加热到极高的温度而发光。现代的白炽灯用钨丝做灯丝，钨的熔点高达3422°C，可以承受高温而不熔化。</div><div class="qa-fact"><strong>拓展：</strong>现在广泛使用的LED灯比白炽灯节能约75%，寿命也更长。</div></article>
+<article class="qa-card" data-cat="tech" data-title="汽车是怎么跑起来的"><span class="qa-index">#069</span><div class="qa-card-header"><h3 class="qa-title">汽车是怎么跑起来的?</h3><span class="qa-category">机械</span></div><div class="qa-answer">汽车靠发动机提供动力。汽油发动机通过"内燃"产生动力：汽油和空气在气缸内混合，火花塞点燃混合气体，爆炸产生的膨胀气体推动活塞向下运动。活塞通过连杆带动曲轴旋转，旋转的力经过变速箱调节速度和扭矩后传到车轮，车轮转动，汽车就跑起来了。电动车则用电池供电给电动机，电动机直接转动车轮，没有内燃过程，所以更安静也更环保。</div><div class="qa-fact"><strong>拓展：</strong>1886年，德国人卡尔·本茨制造了世界上第一辆汽车。</div></article>
+<article class="qa-card" data-cat="tech" data-title="照相机是怎么拍照的"><span class="qa-index">#070</span><div class="qa-card-header"><h3 class="qa-title">照相机是怎么拍照的?</h3><span class="qa-category">光学</span></div><div class="qa-answer">照相机的工作原理和人的眼睛很像。镜头就像晶状体，把光线聚焦到后面的"感光元件"上。传统相机用胶片，胶片上有对光敏感的化学物质，曝光后发生化学变化形成潜影，经过显影液冲洗后就显现出图像。数码相机用电子感光元件（如CMOS或CCD），把光信号转换成数字信号，存储在存储卡上。按下快门时，光圈打开一瞬间让光线进来，完成曝光。</div><div class="qa-fact"><strong>拓展：</strong>世界上第一张照片是1826年由法国人尼埃普斯拍摄的，曝光时间长达8小时。</div></article>
+<article class="qa-card" data-cat="tech" data-title="疫苗是怎么起作用的"><span class="qa-index">#071</span><div class="qa-card-header"><h3 class="qa-title">疫苗是怎么起作用的?</h3><span class="qa-category">医学</span></div><div class="qa-answer">疫苗就像给免疫系统做"军事演习"。疫苗中含有经过处理（减毒或灭活）的病原体，或者病原体的一部分。这些成分不会让人得病，但足以刺激免疫系统产生"抗体"和"记忆细胞"。当真正的病原体入侵时，免疫系统已经"认识"它了，能迅速调动大量抗体来消灭病原体，人就不会生病或症状很轻。</div><div class="qa-fact"><strong>拓展：</strong>1796年，英国医生爱德华·詹纳发明了世界上第一支疫苗——牛痘疫苗，用于预防天花。</div></article>
+<article class="qa-card" data-cat="tech" data-title="塑料是怎么发明出来的"><span class="qa-index">#072</span><div class="qa-card-header"><h3 class="qa-title">塑料是怎么发明出来的?</h3><span class="qa-category">材料</span></div><div class="qa-answer">最早的塑料是1907年比利时裔美国化学家贝克兰发明的"酚醛树脂"（电木）。塑料的本质是"高分子聚合物"——由很多小分子（单体）像串珠子一样串在一起形成的大分子链。石油是制造塑料的主要原料，石油中的碳氢化合物经过化学反应可以制成各种塑料。不同的单体和反应条件能制造出不同性质的塑料，有的硬如钢铁，有的软如丝绸，有的透明如玻璃。</div><div class="qa-fact"><strong>拓展：</strong>塑料很难自然降解，全球每年产生约3亿吨塑料垃圾，塑料污染已成为严重的环境问题。</div></article>
+<article class="qa-card" data-cat="tech" data-title="磁铁为什么能吸铁"><span class="qa-index">#073</span><div class="qa-card-header"><h3 class="qa-title">磁铁为什么能吸铁?</h3><span class="qa-category">物理</span></div><div class="qa-answer">磁铁能吸铁与物质内部的"电子自旋"有关。在铁、钴、镍等铁磁性材料中，原子内的电子自旋方向趋向一致，形成了一个个微小的"磁畴"。平时这些磁畴方向各不相同，磁性互相抵消。但靠近磁铁时，磁铁的磁场会把磁畴"整理"成同一方向，整个铁块就暂时变成了一个磁铁，被磁铁吸引。这个原理叫做"磁化"。铜、铝、木头等材料中的电子自旋无法被整理，所以不会被磁铁吸引。</div><div class="qa-fact"><strong>拓展：</strong>地球本身就是一个巨大的磁铁，地磁北极其实在地理南极附近。</div></article>
+<article class="qa-card" data-cat="tech" data-title="电视是怎么显示图像的"><span class="qa-index">#074</span><div class="qa-card-header"><h3 class="qa-title">电视是怎么显示图像的?</h3><span class="qa-category">电子</span></div><div class="qa-answer">现代电视（LED/LCD电视）的屏幕由数百万个微小的"像素"组成，每个像素又由红、绿、蓝三个更小的子像素组成。通过控制每个子像素的亮度，可以混合出几乎任何颜色。电视机接收到电视信号后，会以极快的速度（每秒60次或更多）控制每个像素的亮度，因为变化太快，人眼看到的就是连续的动态画面。这就是利用了人眼的"视觉暂留"现象——看到的图像会在视网膜上保留约0.1秒。</div><div class="qa-fact"><strong>拓展：</strong>一台4K电视的屏幕约有830万个像素，每个像素都在独立工作。</div></article>
+<article class="qa-card" data-cat="tech" data-title="机器人会取代人类吗"><span class="qa-index">#075</span><div class="qa-card-header"><h3 class="qa-title">机器人会取代人类吗?</h3><span class="qa-category">人工智能</span></div><div class="qa-answer">机器人在某些方面确实比人类更强——它们不会疲劳、计算速度极快、能在危险环境中工作。目前的机器人在重复性工作和海量数据处理方面已经超越了人类。但人类有很多机器人无法替代的能力：创造力、情感理解、灵活应变、道德判断等。更可能的未来是"人机协作"——机器人做重复性和危险的工作，人类专注于创造性和需要情感交流的工作。</div><div class="qa-fact"><strong>拓展：</strong>"机器人"这个词来自捷克语"robota"，意思是"苦工"，1920年首次出现在一部戏剧中。</div></article>
+<article class="qa-card" data-cat="tech" data-title="GPS是怎么知道你在哪里的"><span class="qa-index">#076</span><div class="qa-card-header"><h3 class="qa-title">GPS是怎么知道你在哪里的?</h3><span class="qa-category">导航</span></div><div class="qa-answer">GPS（全球定位系统）依靠天上的一组卫星工作。太空中约有30颗GPS卫星在不停运转，每颗卫星不断向地面发送包含其位置和时间的无线电信号。你的手机接收来自至少4颗卫星的信号，通过计算信号从卫星传到手机所需的时间，就能算出手机到每颗卫星的距离。以4颗卫星为圆心、距离为半径画球面，4个球面的交点就是你的位置。整个过程只需不到一秒。</div><div class="qa-fact"><strong>拓展：</strong>GPS的定位精度可以达到几米以内，军用GPS精度更高，可达厘米级。</div></article>
+</div>
+</section>
+
+<!-- 地球奥秘 -->
+<section class="qa-section" data-cat="earth" id="earth">
+<div class="section-header">
+<span class="section-badge">地球奥秘</span>
+<h2 class="section-title">地球奥秘</h2>
+<span class="section-count">12个问答</span>
+</div>
+<div class="qa-grid">
+<article class="qa-card" data-cat="earth" data-title="地球有多大"><span class="qa-index">#077</span><div class="qa-card-header"><h3 class="qa-title">地球有多大?</h3><span class="qa-category">地理</span></div><div class="qa-answer">地球的赤道直径约12756千米，从地心到地表的平均半径约6371千米。地球的表面积约5.1亿平方千米，其中约71%是海洋，29%是陆地。如果坐飞机沿赤道飞一圈，大约需要40多个小时。地球的质量约5.97×10²⁴千克，也就是接近60万亿亿吨。虽然地球看起来很大，但在太阳系中只是一个小星球——太阳的直径是地球的109倍。</div><div class="qa-fact"><strong>拓展：</strong>地球并不是一个完美的圆球，而是一个赤道鼓、两极扁的"椭球体"。</div></article>
+<article class="qa-card" data-cat="earth" data-title="地球为什么会地震"><span class="qa-index">#078</span><div class="qa-card-header"><h3 class="qa-title">地球为什么会地震?</h3><span class="qa-category">地质</span></div><div class="qa-answer">地球的表面不是一块完整的硬壳，而是由许多巨大的"板块"拼接而成的，叫做"构造板块"。这些板块漂浮在地球内部滚烫的"地幔"上，在不断缓慢移动。当两个板块互相碰撞、挤压或分离时，交界处会产生巨大的压力。当压力积累到岩石承受不住时，岩石会突然断裂或滑动，释放出巨大的能量，以波的形式向四周传播，这就是地震。板块交界的地方（如环太平洋地震带）最容易发生地震。</div><div class="qa-fact"><strong>拓展：</strong>地球上每年大约发生500万次地震，但绝大多数太小感觉不到，能造成破坏的大地震每年约10-20次。</div></article>
+<article class="qa-card" data-cat="earth" data-title="火山为什么会喷发"><span class="qa-index">#079</span><div class="qa-card-header"><h3 class="qa-title">火山为什么会喷发?</h3><span class="qa-category">地质</span></div><div class="qa-answer">地球内部温度很高，岩石被高温熔化成"岩浆"。岩浆比周围的固体岩石轻，会向地表上升。在地壳较薄或有裂缝的地方，岩浆会聚集形成"岩浆房"。岩浆中溶解了大量气体（水蒸气、二氧化碳等），当岩浆上升到地表附近时，压力减小，气体迅速膨胀，就像摇晃过的可乐瓶打开一样，气体带着岩浆猛烈喷出地表，这就是火山喷发。喷出的岩浆叫"熔岩"。</div><div class="qa-fact"><strong>拓展：</strong>1815年印尼坦博拉火山大爆发，喷出的火山灰遮蔽了阳光，导致1816年成为"无夏之年"。</div></article>
+<article class="qa-card" data-cat="earth" data-title="海水为什么是咸的"><span class="qa-index">#080</span><div class="qa-card-header"><h3 class="qa-title">海水为什么是咸的?</h3><span class="qa-category">海洋</span></div><div class="qa-answer">海水之所以咸，是因为含有大量的"氯化钠"（食盐）。在几十亿年中，雨水降落在陆地上，溶解了岩石中的矿物质，这些溶解了盐分的水通过河流流入海洋。海水蒸发时，水变成水蒸气升上天，盐分被留在了海里。经过几十亿年的积累，海洋中的盐分越来越多。目前海水的平均盐度约为3.5%，也就是说每1000克海水中含有约35克盐。</div><div class="qa-fact"><strong>拓展：</strong>如果把海洋中所有的盐取出来铺在地球表面，可以形成一层约150米厚的盐层。</div></article>
+<article class="qa-card" data-cat="earth" data-title="化石是怎么形成的"><span class="qa-index">#081</span><div class="qa-card-header"><h3 class="qa-title">化石是怎么形成的?</h3><span class="qa-category">古生物</span></div><div class="qa-answer">化石的形成需要经历漫长而罕见的过程。当动物或植物死亡后，它的遗体需要被泥沙迅速掩埋，隔绝空气防止腐烂。在地下深处，矿物质慢慢渗入遗体的孔隙中，替代了原来的有机物，把遗体的形状和结构保存下来，这个过程叫"石化"。经过数百万甚至数亿年，地层被抬升到地表，经过风化侵蚀，化石就暴露出来被我们发现。大多数生物死后都会腐烂消失，只有极少数能变成化石。</div><div class="qa-fact"><strong>拓展：</strong>化石最多的地方通常是曾经是海底或湖泊的地方，因为沉积环境最有利于化石保存。</div></article>
+<article class="qa-card" data-cat="earth" data-title="地球有多少岁了"><span class="qa-index">#082</span><div class="qa-card-header"><h3 class="qa-title">地球有多少岁了?</h3><span class="qa-category">地质</span></div><div class="qa-answer">科学家通过测定岩石中放射性元素（如铀-铅法）来确定地球的年龄。放射性元素会以固定的速率衰变，通过测量岩石中剩余的放射性元素和衰变产物的比例，就可以精确计算出岩石的年龄。经过大量测定，科学家确定地球的年龄约为45.4亿年。太阳系的年龄也差不多，地球是在太阳系形成后不久诞生的。</div><div class="qa-fact"><strong>拓展：</strong>如果把地球45亿年的历史压缩成一天（24小时），人类文明只出现在最后不到1秒钟。</div></article>
+<article class="qa-card" data-cat="earth" data-title="沙漠是怎么形成的"><span class="qa-index">#083</span><div class="qa-card-header"><h3 class="qa-title">沙漠是怎么形成的?</h3><span class="qa-category">地理</span></div><div class="qa-answer">沙漠的形成主要有几个原因。一是地理位置——地球上有些地区常年受高压控制，空气下沉增温，水汽难以凝结降雨，形成了"热带沙漠"，如撒哈拉沙漠。二是远离海洋——大陆内部的水汽很难到达，如中亚沙漠。三是山脉阻挡——高山挡住了携带水汽的风，山的背风面就变得干燥，如中国西北的沙漠。过度放牧和砍伐森林也会导致土地沙漠化。</div><div class="qa-fact"><strong>拓展：</strong>撒哈拉沙漠面积约906万平方千米，几乎和中国国土面积一样大。</div></article>
+<article class="qa-card" data-cat="earth" data-title="地球内部是什么样的"><span class="qa-index">#084</span><div class="qa-card-header"><h3 class="qa-title">地球内部是什么样的?</h3><span class="qa-category">地质</span></div><div class="qa-answer">地球内部像一颗"洋葱"，分为几层。最外面是薄薄的"地壳"，厚约5-70千米，我们生活在地壳上。地壳下面是"地幔"，厚约2900千米，由半固态的岩石组成，温度从1000°C到3700°C。地幔之下是"外核"，由液态的铁和镍组成，厚约2200千米。最中心是"内核"，由固态的铁和镍组成，温度高达约5400°C，和太阳表面差不多热。地球的磁场就是由外核中液态金属的流动产生的。</div><div class="qa-fact"><strong>拓展：</strong>人类挖过的最深的洞是前苏联的科拉超深钻孔，深达12262米，但只钻穿了地壳的约三分之一。</div></article>
+<article class="qa-card" data-cat="earth" data-title="河流为什么会弯曲"><span class="qa-index">#085</span><div class="qa-card-header"><h3 class="qa-title">河流为什么会弯曲?</h3><span class="qa-category">地理</span></div><div class="qa-answer">河流弯曲的过程叫做"河流的侧蚀"。水流在河道中并不是均匀流动的，遇到微小的弯曲时，外侧（凹岸）的水流速度更快，冲刷力更强，会不断侵蚀河岸。侵蚀下来的泥沙被水流带到内侧（凸岸），因为内侧水流较慢，泥沙就沉积下来。这样，弯曲会越来越大，河流就变得越来越弯。经过很长时间，河流的弯曲部分可能会被截断，形成"牛轭湖"。</div><div class="qa-fact"><strong>拓展：</strong>从太空俯瞰，很多河流的弯曲形态和数学中的"正弦曲线"非常相似。</div></article>
+<article class="qa-card" data-cat="earth" data-title="为什么会有潮汐"><span class="qa-index">#086</span><div class="qa-card-header"><h3 class="qa-title">为什么会有潮汐?</h3><span class="qa-category">海洋</span></div><div class="qa-answer">潮汐主要是月球和太阳的引力引起的。月球的引力最强，它会把面向月球一侧的海水"拉"向自己，形成涨潮。同时，由于地球被月球吸引而在另一侧产生"离心力"，背对月球一侧的海水也会向外鼓起，形成另一次涨潮。地球自转一圈，大部分海岸每天会经历两次涨潮和两次退潮。太阳的引力也有影响，当太阳、月球和地球排成一线时（新月和满月），潮汐最大，叫"大潮"。</div><div class="qa-fact"><strong>拓展：</strong>钱塘江大潮是中国最壮观的潮汐现象，潮头高度可达3.5米。</div></article>
+<article class="qa-card" data-cat="earth" data-title="石油是怎么形成的"><span class="qa-index">#087</span><div class="qa-card-header"><h3 class="qa-title">石油是怎么形成的?</h3><span class="qa-category">地质</span></div><div class="qa-answer">石油的形成需要数千万到数亿年的时间。远古时期的海洋和湖泊中有大量的浮游生物和藻类，它们死亡后遗体沉入水底，在缺氧的环境中没有被完全分解，与泥沙混合形成了"有机淤泥"。随着时间推移，越来越多的沉积物覆盖在上面，这些有机物在高温高压下慢慢发生了化学反应，逐渐变成了"干酪根"，再进一步转化成石油和天然气。</div><div class="qa-fact"><strong>拓展：</strong>石油被称为"工业的血液"，但它是不可再生资源，全球已探明的储量按目前消耗速度大约还能用50年左右。</div></article>
+<article class="qa-card" data-cat="earth" data-title="彩虹是怎么形成的"><span class="qa-index">#088</span><div class="qa-card-header"><h3 class="qa-title">彩虹是怎么形成的?</h3><span class="qa-category">光学</span></div><div class="qa-answer">彩虹是阳光被空气中的水滴折射和反射形成的。当阳光穿过空气中的小水滴时，光线在水滴中发生折射（弯折）、反射和再次折射。不同颜色的光折射角度不同——红光弯折最小，紫光弯折最大——白光就被"分解"成了七种颜色的光谱。这七种颜色按照一定角度排列，就形成了我们看到的彩虹。彩虹总是出现在太阳的对面，所以想看到彩虹，需要背对太阳面向水雾。</div><div class="qa-fact"><strong>拓展：</strong>有时候还能看到"双彩虹"——外圈较暗的叫"霓"，是光线在水滴中经过两次反射形成的。</div></article>
+</div>
+</section>
+
+<!-- 自然现象 -->
+<section class="qa-section" data-cat="nature" id="nature">
+<div class="section-header">
+<span class="section-badge">自然现象</span>
+<h2 class="section-title">自然现象</h2>
+<span class="section-count">12个问答</span>
+</div>
+<div class="qa-grid">
+<article class="qa-card" data-cat="nature" data-title="闪电是怎么产生的"><span class="qa-index">#089</span><div class="qa-card-header"><h3 class="qa-title">闪电是怎么产生的?</h3><span class="qa-category">气象</span></div><div class="qa-answer">闪电是云层中的静电放电现象。在雷雨云中，强烈的上升和下降气流使云中的水滴和冰晶不断碰撞摩擦，产生静电。较轻的冰晶带正电被带到云的顶部，较重的水滴带负电聚集在云的底部。当正负电荷积累到一定程度，电荷之间的电压非常高时，就会击穿空气的绝缘性，产生强大的电流，这就是闪电。闪电的温度可达3万摄氏度，比太阳表面还要热5倍。</div><div class="qa-fact"><strong>拓展：</strong>地球上每秒大约发生100次闪电，平均每天约有800万次闪电。</div></article>
+<article class="qa-card" data-cat="nature" data-title="龙卷风是怎么形成的"><span class="qa-index">#090</span><div class="qa-card-header"><h3 class="qa-title">龙卷风是怎么形成的?</h3><span class="qa-category">气象</span></div><div class="qa-answer">龙卷风是强烈旋转的气柱，从雷雨云底部延伸到地面。当暖湿空气和冷干空气在特定条件下相遇时，会产生强烈的"上升气流"。如果同时存在"风切变"（不同高度的风向和风速不同），上升气流就开始旋转，形成旋转的气柱。这个气柱越转越快、越伸越长，当它接触到地面时，就成了龙卷风。龙卷风中心的风速可以超过每小时300千米，破坏力极大。</div><div class="qa-fact"><strong>拓展：</strong>美国是世界上龙卷风最多的国家，平均每年约发生1200次。</div></article>
+<article class="qa-card" data-cat="nature" data-title="雪花的形状为什么各不相同"><span class="qa-index">#091</span><div class="qa-card-header"><h3 class="qa-title">雪花的形状为什么各不相同?</h3><span class="qa-category">气象</span></div><div class="qa-answer">雪花是由水蒸气直接凝华而成的冰晶。水分子在结冰时会按照六角形的晶格排列，所以所有雪花的基本形状都是六角形的。但每一片雪花在从云层飘落到地面的过程中，经历的温度和湿度条件各不相同，这些微小的差异会影响雪花各个面的生长速度和形态。所以即使基本结构相同，每一片雪花的细节图案都是独一无二的——世界上没有两片完全相同的雪花。</div><div class="qa-fact"><strong>拓展：</strong>雪花的大小取决于空气中的温度和湿度，温度接近-2°C时形成的雪花最大。</div></article>
+<article class="qa-card" data-cat="nature" data-title="为什么会打雷"><span class="qa-index">#092</span><div class="qa-card-header"><h3 class="qa-title">为什么会打雷?</h3><span class="qa-category">气象</span></div><div class="qa-answer">打雷是闪电加热空气产生的结果。闪电通过时，周围的空气被瞬间加热到约3万摄氏度，急剧膨胀产生冲击波，这个冲击波传播出去就是我们听到的雷声。因为光速（约30万千米/秒）远快于声速（约340米/秒），所以我们总是先看到闪电，再听到雷声。计算闪电和雷声之间的时间差，除以3，大致就是闪电离我们的距离（千米）。</div><div class="qa-fact"><strong>拓展：</strong>如果看到闪电和听到雷声几乎同时发生，说明闪电就在你附近，非常危险。</div></article>
+<article class="qa-card" data-cat="nature" data-title="为什么会有四季变化"><span class="qa-index">#093</span><div class="qa-card-header"><h3 class="qa-title">为什么会有四季变化?</h3><span class="qa-category">天文</span></div><div class="qa-answer">四季变化是因为地球是"倾斜着"绕太阳转的。地球的自转轴与公转轨道面有约23.5度的倾斜角，这个倾斜角在地球绕太阳公转的过程中方向保持不变。当北半球倾向太阳时（夏季），阳光更直射、日照时间更长，天气就热；当北半球背离太阳时（冬季），阳光斜射、日照时间短，天气就冷。春秋两季是过渡期。南半球的季节与北半球正好相反。</div><div class="qa-fact"><strong>拓展：</strong>赤道附近一年到头阳光都接近直射，所以没有明显的四季变化。</div></article>
+<article class="qa-card" data-cat="nature" data-title="云是怎么形成的"><span class="qa-index">#094</span><div class="qa-card-header"><h3 class="qa-title">云是怎么形成的?</h3><span class="qa-category">气象</span></div><div class="qa-answer">云是空气中的水蒸气凝结而成的。太阳加热地面，地面上的水蒸发成看不见的水蒸气，随暖空气上升。到了高空，气温降低，水蒸气遇到空气中的微小颗粒（如灰尘、花粉、海盐，叫做"凝结核"）就会凝结成极小的水滴或冰晶。无数这样的小水滴或冰晶聚集在一起，就成了我们在地面看到的云。不同高度的云有不同的名字：低云叫层云，高云叫卷云，一团团像棉花的是积云。</div><div class="qa-fact"><strong>拓展：</strong>一朵普通的积云重量约为50万公斤——相当于100头大象的重量，但它为什么不会掉下来？因为水滴太小，上升气流能托住它们。</div></article>
+<article class="qa-card" data-cat="nature" data-title="雾是怎么形成的"><span class="qa-index">#095</span><div class="qa-card-header"><h3 class="qa-title">雾是怎么形成的?</h3><span class="qa-category">气象</span></div><div class="qa-answer">雾和云在本质上是同一种东西——都是空气中水蒸气凝结成的微小水滴。区别在于：云在高空，雾在地面附近。雾的形成通常是在夜间或清晨，地面散热冷却，使靠近地面的空气温度降低。当气温降到"露点"以下时，空气中的水蒸气凝结成小水滴，悬浮在空气中，就形成了雾。太阳出来后，气温升高，小水滴蒸发，雾就散了。</div><div class="qa-fact"><strong>拓展：</strong>伦敦曾因燃煤产生的烟雾与雾混合，形成危害极大的"烟雾事件"，1952年的伦敦烟雾事件导致约1.2万人死亡。</div></article>
+<article class="qa-card" data-cat="nature" data-title="海浪是怎么产生的"><span class="qa-index">#096</span><div class="qa-card-header"><h3 class="qa-title">海浪是怎么产生的?</h3><span class="qa-category">海洋</span></div><div class="qa-answer">大多数海浪是由风引起的。风吹过海面时，摩擦力使水面产生波动。风速越大、吹的时间越长、吹过海面的距离（风区）越大，产生的波浪就越大。在海洋深处，波浪看起来是向前移动的，但实际上水分子主要是在做圆周运动——水面上的水分子画大圈，深处的水分子画小圈。这就是为什么漂浮在海面上的东西会随波浪上下起伏，但不会跟着波浪一起漂走。</div><div class="qa-fact"><strong>拓展：</strong>海啸不是风浪，而是由海底地震、火山爆发或滑坡产生的巨浪，速度可达每小时800千米。</div></article>
+<article class="qa-card" data-cat="nature" data-title="为什么天空有时会下冰雹"><span class="qa-index">#097</span><div class="qa-card-header"><h3 class="qa-title">为什么天空有时会下冰雹?</h3><span class="qa-category">气象</span></div><div class="qa-answer">冰雹形成于强烈发展的雷雨云（积雨云）中。积雨云中有强烈的上升气流，水滴被带到很冷的高空（温度低于0°C）结成小冰粒。小冰粒下落时遇到上升气流又被吹上去，再沾上水、再结冰，这样上下反复多次，冰粒越滚越大，当它大到上升气流再也托不住时，就掉落到地面，这就是冰雹。冰雹越大说明它在云中上下翻滚的次数越多。</div><div class="qa-fact"><strong>拓展：</strong>目前世界上记录到的最大冰雹直径超过20厘米，比一个排球还大。</div></article>
+<article class="qa-card" data-cat="nature" data-title="为什么早晚的太阳看起来大"><span class="qa-index">#098</span><div class="qa-card-header"><h3 class="qa-title">为什么早晚的太阳看起来大?</h3><span class="qa-category">光学</span></div><div class="qa-answer">这是一个著名的视觉错觉，叫做"太阳/月亮错觉"。实际上，早晚和中午的太阳与我们的距离差别非常小（不到地球直径的1%），大小几乎没有变化。但在早晚，太阳靠近地平线，旁边有山、树、建筑等参照物，我们的大脑会不自觉地把太阳与这些参照物对比，觉得太阳"很大"。而中午太阳高悬在空旷的天空中，没有参照物，就显得"小"了。</div><div class="qa-fact"><strong>拓展：</strong>你可以用一个硬币在伸直手臂处遮挡太阳，会发现早晚和中午太阳被遮住的面积完全一样。</div></article>
+<article class="qa-card" data-cat="nature" data-title="极光是怎么产生的"><span class="qa-index">#099</span><div class="qa-card-header"><h3 class="qa-title">极光是怎么产生的?</h3><span class="qa-category">天文</span></div><div class="qa-answer">极光是太阳风与地球大气相互作用的壮丽景象。太阳不断向太空喷射出高速带电粒子流（太阳风）。当这些粒子到达地球附近时，大部分被地球的磁场偏转了，但有一些沿着磁力线进入了两极附近的大气层。带电粒子撞击大气中的氧气和氮气分子，使它们被"激发"到高能态。当这些分子回到正常状态时，就释放出光——氧气被激发发绿光和红光，氮气发蓝光和紫光，这就是极光。</div><div class="qa-fact"><strong>拓展：</strong>极光通常出现在南北纬65-72度之间的环形区域，叫做"极光带"。</div></article>
+<article class="qa-card" data-cat="nature" data-title="为什么会有回声"><span class="qa-index">#100</span><div class="qa-card-header"><h3 class="qa-title">为什么会有回声?</h3><span class="qa-category">物理</span></div><div class="qa-answer">回声是声音遇到障碍物反射回来的现象。声音以波的形式在空气中传播，当声波遇到墙壁、悬崖、山谷等大型坚硬表面时，会被反射回来。如果反射回来的声音与你发出的声音间隔超过约0.1秒（也就是障碍物距离你至少约17米），人耳就能分辨出原来的声音和回声。如果距离太近，回声和原声几乎同时到达，听起来就像是声音变大了，这叫"混响"。</div><div class="qa-fact"><strong>拓展：</strong>北京天坛的"回音壁"利用圆形墙壁的声学反射原理，两个人在墙的两端小声说话，对方也能听清楚。</div></article>
+</div>
+</section>
+</main>
+<div class="no-results" id="noResults" style="display:none"><div class="no-results-icon">🔬</div><div class="no-results-text">没有找到匹配的问题</div><div class="no-results-hint">试试其他关键词或切换分类</div></div>
+<button class="back-top" id="backTop" aria-label="返回顶部"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></button>
+<footer><p>十万个为什么 · 少儿科学启蒙Top100 · 每日一问，探索世界</p></footer>
+<script>
+(function(){
+const body=document.body,themeBtn=document.querySelector('.theme-toggle');
+if(themeBtn){themeBtn.addEventListener('click',()=>{const t=body.getAttribute('data-theme');body.setAttribute('data-theme',t==='dark'?'light':'dark')})}
+const saved=localStorage.getItem('theme-swsw');if(saved)body.setAttribute('data-theme',saved);
+body.addEventListener('theme-changed',()=>{localStorage.setItem('theme-swsw',body.getAttribute('data-theme'))});
+const filterBtns=document.querySelectorAll('.filter-btn');
+const sections=document.querySelectorAll('.qa-section');
+const cards=document.querySelectorAll('.qa-card');
+const noResults=document.getElementById('noResults');
+const searchInput=document.getElementById('searchInput');
+let currentFilter='all',searchTerm='';
+function applyFilters(){
+let visible=0;
+cards.forEach(c=>{const cat=c.getAttribute('data-cat'),title=c.getAttribute('data-title')||'',answer=c.querySelector('.qa-answer')?c.querySelector('.qa-answer').textContent:'';
+const matchFilter=currentFilter==='all'||cat===currentFilter;
+const matchSearch=!searchTerm||title.includes(searchTerm)||answer.includes(searchTerm);
+if(matchFilter&&matchSearch){c.style.display='';visible++}else{c.style.display='none'}});
+sections.forEach(s=>{const vis=s.querySelectorAll('.qa-card:not([style*="display:none"])');s.style.display=vis.length?'':'none'});
+if(noResults)noResults.style.display=visible?'none':'block'}
+filterBtns.forEach(b=>b.addEventListener('click',()=>{filterBtns.forEach(x=>x.classList.remove('active'));b.classList.add('active');currentFilter=b.getAttribute('data-filter');applyFilters()}));
+let timer;
+if(searchInput){searchInput.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(()=>{searchTerm=searchInput.value.trim();applyFilters()},200)})}
+const backTop=document.getElementById('backTop');
+if(backTop){window.addEventListener('scroll',()=>{backTop.classList.toggle('visible',window.scrollY>600)},{passive:true});backTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>少儿童话100 - 童话故事启蒙</title>
+<meta name="description" content="精选100个适合少儿阅读的经典童话、神话与民间故事，按动物王国、魔法冒险、经典寓言、中国神话、智慧品格、温暖成长六大类分类，图文并茂，开启孩子想象力之旅。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FDF8F4;--bg-alt:#F7EDE5;--surface:#FFF;--surface-h:#FFF9F5;--ink:#2C2420;--ink-l:#5C524A;--ink-m:#8A7F75;--bdr:#E5DDD3;--bdr-l:#EDE8E1;--accent:#E8843C;--accent-d:#C46A25;--gold:#C9A96E;--gold-l:#E8D5A8;--rose:#E8637A;--sky:#5BA5C9;--green:#5BAF7B;--purple:#9B7CB8;--font-d:'Noto Serif SC',serif;--font-h:'Noto Serif SC',serif;--font-b:'Noto Sans SC',sans-serif;--r-sm:6px;--r-md:12px;--r-lg:20px;--sh-s:0 1px 3px rgba(44,36,32,.06);--sh-m:0 4px 16px rgba(44,36,32,.08);--sh-l:0 8px 32px rgba(44,36,32,.10);--tr:200ms ease}
+[data-theme="dark"]{--bg:#1A1714;--bg-alt:#23201B;--surface:#2A2621;--surface-h:#342F29;--ink:#E8E0D6;--ink-l:#BFB5A8;--ink-m:#8A7F72;--bdr:#3A352E;--bdr-l:#302B25;--accent:#F0A060;--accent-d:#E8843C;--gold:#E0C888;--gold-l:#A08040;--rose:#F08090;--sky:#7CC0E0;--green:#70D090;--purple:#B898D0;--sh-s:0 1px 3px rgba(0,0,0,.2);--sh-m:0 4px 16px rgba(0,0,0,.3);--sh-l:0 8px 32px rgba(0,0,0,.35)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-b);background:var(--bg);color:var(--ink);line-height:1.7;min-height:100vh;transition:background var(--tr),color var(--tr)}
+.skip-link{position:absolute;top:-100%;left:16px;padding:8px 16px;background:var(--accent);color:#fff;border-radius:var(--r-sm);z-index:10000;font-size:14px;text-decoration:none}
+.skip-link:focus{top:16px}
+a{color:var(--accent-d);text-decoration:none}
+.top-nav{position:sticky;top:0;z-index:1001;background:var(--surface);border-bottom:1px solid var(--bdr-l);padding:0 24px;transition:background var(--tr)}
+.top-nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;height:44px;gap:4px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+.top-nav-inner::-webkit-scrollbar{display:none}
+.top-nav-link{font-family:var(--font-b);font-size:.84rem;color:var(--ink-l);text-decoration:none;padding:6px 14px;border-radius:100px;border:1px solid transparent;transition:all var(--tr);white-space:nowrap;flex-shrink:0}
+.top-nav-link:hover{background:var(--bg-alt);border-color:var(--bdr)}
+.top-nav-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.top-nav-link.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.top-nav-sep{width:1px;height:16px;background:var(--bdr-l);margin:0 4px;flex-shrink:0}
+.theme-toggle{position:fixed;top:52px;right:20px;z-index:1000;width:44px;height:44px;border:1px solid var(--bdr);border-radius:50%;background:var(--surface);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-m);transition:all var(--tr)}
+.theme-toggle:hover{transform:scale(1.08);box-shadow:var(--sh-l)}
+.theme-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.theme-toggle svg{width:20px;height:20px;color:var(--ink)}
+[data-theme="dark"] .theme-toggle .icon-moon{display:none}
+[data-theme="light"] .theme-toggle .icon-sun{display:none}
+.hero{position:relative;min-height:42vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:72px 24px 48px;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 600px 400px at 25% 35%,rgba(232,132,60,.10),transparent),radial-gradient(ellipse 500px 350px at 75% 65%,rgba(155,124,184,.08),transparent),radial-gradient(ellipse 400px 300px at 50% 50%,rgba(201,169,110,.06),transparent);pointer-events:none}
+.hero-deco{font-size:2rem;margin-bottom:12px;letter-spacing:.4em;filter:grayscale(.1)}
+.hero-ornament{width:80px;height:2px;background:linear-gradient(90deg,transparent,var(--accent),var(--gold),var(--rose),transparent);margin-bottom:20px}
+.hero h1{font-family:var(--font-d);font-size:clamp(2.6rem,7vw,5rem);font-weight:400;color:var(--ink);letter-spacing:.06em;line-height:1.2}
+.hero-sub{font-family:var(--font-h);font-size:clamp(.92rem,2.2vw,1.12rem);color:var(--ink-m);font-weight:400;letter-spacing:.15em;margin-top:8px}
+.hero-desc{font-size:.92rem;color:var(--ink-m);max-width:560px;margin-top:16px}
+.hero-stats{display:flex;gap:32px;margin-top:28px;flex-wrap:wrap;justify-content:center}
+.hero-stat{text-align:center}
+.hero-stat-num{font-family:var(--font-h);font-size:2rem;font-weight:700;color:var(--accent);display:block}
+.hero-stat-label{font-size:.78rem;color:var(--ink-m);letter-spacing:.08em}
+main{max-width:1280px;margin:0 auto;padding:0 24px 80px}
+.filter-bar{position:sticky;top:44px;z-index:100;background:var(--bg);border-bottom:1px solid var(--bdr-l);padding:16px 0;margin-bottom:40px;transition:background var(--tr)}
+.filter-bar-inner{display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.filter-bar-inner::-webkit-scrollbar{display:none}
+.filter-btn{flex-shrink:0;padding:8px 18px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink-l);font-family:var(--font-b);font-size:.84rem;cursor:pointer;transition:all var(--tr);white-space:nowrap;user-select:none}
+.filter-btn:hover{background:var(--surface-h);border-color:var(--ink-m)}
+.filter-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.filter-btn .count{display:inline-block;margin-left:3px;font-size:.72rem;opacity:.7}
+.search-wrap{position:relative;flex-shrink:0}
+.search-input{padding:8px 16px 8px 36px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink);font-family:var(--font-b);font-size:.84rem;width:200px;transition:all var(--tr)}
+.search-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(46,139,110,.12);width:260px}
+.search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--ink-m);pointer-events:none}
+.story-section{margin-bottom:48px}
+.section-header{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--bdr-l)}
+.section-badge{font-family:var(--font-h);font-size:.75rem;font-weight:500;padding:3px 10px;border-radius:100px;color:#fff;letter-spacing:.06em}
+.section-title{font-family:var(--font-h);font-size:1.35rem;font-weight:600;color:var(--ink)}
+.section-count{font-size:.82rem;color:var(--ink-m);margin-left:auto}
+[data-cat="animal"] .section-badge{background:var(--accent)}
+[data-cat="magic"] .section-badge{background:var(--purple)}
+[data-cat="fable"] .section-badge{background:var(--sky)}
+[data-cat="myth"] .section-badge{background:var(--rose)}
+[data-cat="wisdom"] .section-badge{background:var(--green)}
+[data-cat="growth"] .section-badge{background:var(--gold)}
+.story-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
+.story-card{background:var(--surface);border:1px solid var(--bdr-l);border-radius:var(--r-md);padding:22px;transition:all 250ms ease;cursor:default;position:relative;overflow:hidden}
+.story-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;border-radius:3px 0 0 3px;opacity:0;transition:opacity var(--tr)}
+[data-cat="animal"] .story-card::before{background:var(--accent)}
+[data-cat="magic"] .story-card::before{background:var(--purple)}
+[data-cat="fable"] .story-card::before{background:var(--sky)}
+[data-cat="myth"] .story-card::before{background:var(--rose)}
+[data-cat="wisdom"] .story-card::before{background:var(--green)}
+[data-cat="growth"] .story-card::before{background:var(--gold)}
+.story-card:hover{box-shadow:var(--sh-m);transform:translateY(-2px);border-color:var(--bdr)}
+.story-card:hover::before{opacity:1}
+.story-card-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px}
+.story-title{font-family:var(--font-h);font-size:1.12rem;font-weight:600;color:var(--ink);line-height:1.4}
+.story-origin{flex-shrink:0;padding:2px 8px;border-radius:100px;font-size:.65rem;font-weight:500;letter-spacing:.04em;background:var(--bg-alt);color:var(--ink-m);margin-left:10px;align-self:flex-start;margin-top:2px;white-space:nowrap}
+.story-meta{font-size:.82rem;color:var(--ink-m);margin-bottom:10px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.story-tag{display:inline-block;padding:1px 7px;background:rgba(232,132,60,.08);color:var(--accent-d);border-radius:100px;font-size:.68rem}
+[data-theme="dark"] .story-tag{background:rgba(240,160,96,.12)}
+.story-content{font-family:var(--font-b);font-size:.88rem;line-height:1.85;color:var(--ink-l);letter-spacing:.02em}
+.story-moral{margin-top:12px;padding:10px 14px;background:var(--bg-alt);border-radius:var(--r-sm);font-size:.82rem;color:var(--ink-m);border-left:3px solid var(--gold)}
+.story-moral strong{color:var(--accent-d);font-weight:500}
+.story-index{position:absolute;top:10px;right:14px;font-family:var(--font-h);font-size:.72rem;color:var(--ink-m);opacity:.3}
+.no-results{text-align:center;padding:60px 24px;color:var(--ink-m)}
+.no-results-icon{font-size:3rem;margin-bottom:16px;opacity:.5}
+.no-results-text{font-size:1rem;margin-bottom:8px}
+.no-results-hint{font-size:.84rem;opacity:.7}
+.back-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-m);transition:all var(--tr);opacity:0;pointer-events:none;z-index:999}
+.back-top.visible{opacity:1;pointer-events:auto}
+.back-top:hover{transform:translateY(-2px);box-shadow:var(--sh-l)}
+.back-top:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.back-top svg{width:20px;height:20px}
+footer{text-align:center;padding:40px 24px;color:var(--ink-m);font-size:.82rem;border-top:1px solid var(--bdr-l)}
+@media(max-width:768px){
+.hero{min-height:32vh;padding:56px 20px 36px}
+.hero h1{letter-spacing:.04em}
+.hero-stats{gap:20px}
+main{padding:0 16px 60px}
+.filter-bar{position:sticky;top:44px;z-index:100;background:var(--bg);border-bottom:1px solid var(--bdr-l);padding:16px 0;margin-bottom:40px;transition:background var(--tr)}
+.search-wrap{position:relative;flex-shrink:0}
+.search-input{padding:8px 16px 8px 36px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink);font-family:var(--font-b);font-size:.84rem;width:150px;transition:all var(--tr)}
+.search-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(46,139,110,.12);width:200px}
+.story-grid{grid-template-columns:1fr}
+.top-nav{padding:0 16px}
+}
+@media(max-width:400px){
+.hero h1{font-size:2.2rem}
+.hero-sub{font-size:.85rem}
+}
+@media(prefers-reduced-motion:reduce){*{transition-duration:0s!important;animation-duration:0s!important}}
+</style>
+</head>
+<body data-theme="light">
+<a href="#main" class="skip-link">跳到正文</a>
+<nav class="top-nav" aria-label="站点导航">
+<div class="top-nav-inner">
+<a href="jingdian-tongyao.html" class="top-nav-link">经典童谣</a>
+<span class="top-nav-sep"></span>
+<a href="shenglv-qimeng.html" class="top-nav-link">声律启蒙</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-tonghua.html" class="top-nav-link active">少儿童话</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-qimeng-shici.html" class="top-nav-link">启蒙诗词</a>
+<span class="top-nav-sep"></span>
+<a href="hanzi-gushi.html" class="top-nav-link">汉字故事</a>
+<span class="top-nav-sep"></span>
+<a href="baihua-shici.html" class="top-nav-link">百花诗词</a>
+<span class="top-nav-sep"></span>
+<a href="shi-wan-ge-weishenme.html" class="top-nav-link">十万个为什么</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-chengyu.html" class="top-nav-link">少儿成语</a>
+<span class="top-nav-sep"></span>
+<a href="shangxia-wuqiannian.html" class="top-nav-link">上下五千年</a>
+<span class="top-nav-sep"></span>
+<a href="sanshiliuji.html" class="top-nav-link">三十六计</a>
+<span class="top-nav-sep"></span>
+<a href="song-ci-jingxuan.html" class="top-nav-link">宋词精选</a>
+<span class="top-nav-sep"></span>
+<a href="maozedong-shici.html" class="top-nav-link">毛主席诗词</a>
+</div>
+</nav>
+<button class="theme-toggle" aria-label="切换深色模式" title="切换深色模式">
+<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
+<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+<header class="hero">
+<div class="hero-deco" aria-hidden="true">&#x1F30D; &#x1F31F; &#x1F981; &#x2728;</div>
+<div class="hero-ornament" aria-hidden="true"></div>
+<h1>少儿童话100</h1>
+<p class="hero-sub">童话故事 &#xB7; 神话传说 &#xB7; 寓言智慧</p>
+<p class="hero-desc">精选100个适合少儿阅读的经典故事，涵盖动物王国、魔法冒险、经典寓言、中国神话、智慧品格与温暖成长六大主题，陪伴孩子快乐阅读。</p>
+<div class="hero-stats">
+<div class="hero-stat"><span class="hero-stat-num">100</span><span class="hero-stat-label">精选故事</span></div>
+<div class="hero-stat"><span class="hero-stat-num">6</span><span class="hero-stat-label">主题分类</span></div>
+<div class="hero-stat"><span class="hero-stat-num">4+</span><span class="hero-stat-label">适读年龄</span></div>
+</div>
+</header>
+<main id="main">
+<div class="filter-bar" role="toolbar" aria-label="故事筛选">
+<div class="filter-bar-inner">
+<div class="search-wrap"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="text" class="search-input" placeholder="搜索故事..." id="searchInput" aria-label="搜索故事"></div>
+<button class="filter-btn active" data-filter="all">全部<span class="count">(100)</span></button>
+<button class="filter-btn" data-filter="animal">动物王国<span class="count">(18)</span></button>
+<button class="filter-btn" data-filter="magic">魔法冒险<span class="count">(18)</span></button>
+<button class="filter-btn" data-filter="fable">经典寓言<span class="count">(16)</span></button>
+<button class="filter-btn" data-filter="myth">中国神话<span class="count">(16)</span></button>
+<button class="filter-btn" data-filter="wisdom">智慧品格<span class="count">(16)</span></button>
+<button class="filter-btn" data-filter="growth">温暖成长<span class="count">(16)</span></button>
+</div>
+</div>
+
+<!-- 动物王国 -->
+<section class="story-section" data-cat="animal" id="animal">
+<div class="section-header">
+<span class="section-badge">动物王国</span>
+<h2 class="section-title">动物王国</h2>
+<span class="section-count">18个故事</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="animal" data-title="龟兔赛跑"><span class="story-index">#001</span><div class="story-card-header"><h3 class="story-title">龟兔赛跑</h3><span class="story-origin">伊索寓言</span></div><div class="story-meta"><span class="story-tag">坚持</span><span class="story-tag">谦虚</span></div><div class="story-content">兔子嘲笑乌龟走得慢，乌龟不服气，提出比赛。比赛开始，兔子跑得飞快，一会儿就把乌龟远远甩在后面。兔子心想："乌龟那么慢，我睡一觉再跑也来得及。"于是它靠在一棵大树下睡着了。乌龟虽然走得慢，但一步不停地向前爬。当兔子醒来时，发现乌龟已经到了终点。兔子后悔极了，它终于明白：骄傲使人落后，坚持才能胜利。</div><div class="story-moral"><strong>寓意：</strong>骄傲自满会让人失败，脚踏实地、坚持不懈才能到达终点。不要轻视任何人，每个人都有自己的长处。</div></article>
+<article class="story-card" data-cat="animal" data-title="乌鸦喝水"><span class="story-index">#002</span><div class="story-card-header"><h3 class="story-title">乌鸦喝水</h3><span class="story-origin">伊索寓言</span></div><div class="story-meta"><span class="story-tag">智慧</span><span class="story-tag">动脑筋</span></div><div class="story-content">一只口渴的乌鸦到处找水喝，终于发现一个水罐里有水。可是水罐很高，罐口很小，里面的水也不多，乌鸦够不着水。它想了很多办法，都没有成功。突然，乌鸦看到路边有一些小石子，灵机一动，叼起石子一颗一颗地放进水罐里。石子越积越多，水面慢慢升高，终于到了罐口。乌鸦高兴地喝到了清凉的水。</div><div class="story-moral"><strong>寓意：</strong>遇到困难不要放弃，开动脑筋想办法，就一定能找到解决问题的办法。智慧比力量更重要。</div></article>
+<article class="story-card" data-cat="animal" data-title="狐狸和葡萄"><span class="story-index">#003</span><div class="story-card-header"><h3 class="story-title">狐狸和葡萄</h3><span class="story-origin">伊索寓言</span></div><div class="story-meta"><span class="story-tag">自我认知</span><span class="story-tag">诚实</span></div><div class="story-content">一只饥饿的狐狸在葡萄园里看到了一串串紫红色的葡萄，晶莹剔透，令人垂涎欲滴。狐狸跳了好几次，可怎么也够不着葡萄。最后，狐狸筋疲力尽，只好放弃。它看了看葡萄，酸溜溜地说："这些葡萄肯定是酸的，不好吃！"说完，摇着尾巴走了。其实那些葡萄又甜又好吃，只是狐狸够不到，才这样说来安慰自己。</div><div class="story-moral"><strong>寓意：</strong>有些人得不到自己想要的东西，就说那东西不好，这是自欺欺人。要勇敢承认自己的不足，而不是找借口。</div></article>
+<article class="story-card" data-cat="animal" data-title="狼来了"><span class="story-index">#004</span><div class="story-card-header"><h3 class="story-title">狼来了</h3><span class="story-origin">伊索寓言</span></div><div class="story-meta"><span class="story-tag">诚实</span><span class="story-tag">信任</span></div><div class="story-content">有个放羊的孩子觉得无聊，就对着山下的村庄大喊："狼来了！狼来了！"村民们听到后赶紧跑上山来帮忙，却发现根本没有狼。孩子哈哈大笑。第二天他又这样骗人，村民们很生气。第三天，狼真的来了，孩子拼命喊："狼来了！"可是这次没有人相信他，大家都以为他又在撒谎。最后，狼把羊都吃掉了。</div><div class="story-moral"><strong>寓意：</strong>经常撒谎的人，即使说了真话，别人也不会相信。诚实是最宝贵的品质，一旦失去信任，就很难再找回来。</div></article>
+<article class="story-card" data-cat="animal" data-title="三只小猪"><span class="story-index">#005</span><div class="story-card-header"><h3 class="story-title">三只小猪</h3><span class="story-origin">英国童话</span></div><div class="story-meta"><span class="story-tag">勤劳</span><span class="story-tag">踏实</span></div><div class="story-content">三只小猪长大后各自盖房子。老大用稻草盖了一间草屋，老二用木头盖了一间木屋，老三用砖头认认真真地盖了一间砖屋。大灰狼来了，一口就吹倒了草屋，又推倒了木屋。老大和老二跑到老三的砖屋里躲起来。大灰狼使出浑身力气也吹不倒砖屋，最后只好灰溜溜地走了。三只小猪从此知道了，只有勤劳踏实才能获得真正的安全。</div><div class="story-moral"><strong>寓意：</strong>做事不能偷懒马虎，只有脚踏实地、认真努力，才能建造出坚固的"房子"，抵御生活中的"大灰狼"。</div></article>
+<article class="story-card" data-cat="animal" data-title="丑小鸭"><span class="story-index">#006</span><div class="story-card-header"><h3 class="story-title">丑小鸭</h3><span class="story-origin">安徒生童话</span></div><div class="story-meta"><span class="story-tag">自信</span><span class="story-tag">成长</span></div><div class="story-content">鸭妈妈孵出了一群小鸭，其中有一只又大又灰，大家都叫它"丑小鸭"。丑小鸭处处被嘲笑、被排挤，只好离开家独自流浪。冬天来了，丑小鸭在冰天雪地里受尽了苦。春天终于到了，丑小鸭看到湖里有几只美丽的白天鹅，它低头一看，水中映出的竟然也是一只美丽的白天鹅！原来它本来就是天鹅的孩子，只是小时候长得和别人不一样。</div><div class="story-moral"><strong>寓意：</strong>不要因为外表和别人不同就自卑，每个人都有自己独特的价值。经历困难后，你会发现自己真正的美丽。</div></article>
+<article class="story-card" data-cat="animal" data-title="蚂蚁和蝈蝈"><span class="story-index">#007</span><div class="story-card-header"><h3 class="story-title">蚂蚁和蝈蝈</h3><span class="story-origin">伊索寓言</span></div><div class="story-meta"><span class="story-tag">勤劳</span><span class="story-tag">远见</span></div><div class="story-content">夏天，蚂蚁们忙着搬运粮食，为冬天做准备。蝈蝈却躺在树叶上唱歌，嘲笑蚂蚁不懂得享受生活。蚂蚁说："冬天快到了，我们应该准备粮食。"蝈蝈不以为然。冬天来了，大雪纷飞，蚂蚁们在温暖的窝里吃着储备的粮食，而蝈蝈又冷又饿，后悔莫及。最后蚂蚁们分了一些粮食给蝈蝈，蝈蝈惭愧地低下了头。</div><div class="story-moral"><strong>寓意：</strong>未雨绸缪是一种重要的品质。要学会为将来做打算，不能只顾眼前享乐，辛勤的劳动终会有回报。</div></article>
+<article class="story-card" data-cat="animal" data-title="青蛙王子"><span class="story-index">#008</span><div class="story-card-header"><h3 class="story-title">青蛙王子</h3><span class="story-origin">格林童话</span></div><div class="story-meta"><span class="story-tag">承诺</span><span class="story-tag">善良</span></div><div class="story-content">小公主的金球掉进了深井里，一只青蛙答应帮她捞上来，条件是公主要和它做朋友。公主答应了，但拿到金球后就跑了。后来国王知道了这件事，教育公主要信守承诺。公主只好去找青蛙，青蛙跟她回家，吃饭要和公主用同一个盘子，还要睡在公主的枕边。公主很不愿意，但国王坚持要她遵守诺言。当公主忍着不快拥抱了青蛙时，青蛙变成了一位英俊的王子——原来他被施了魔法，只有真心相待才能解除。</div><div class="story-moral"><strong>寓意：</strong>答应别人的事情一定要做到，信守承诺是做人的基本品质。外表不重要，善良的心才是最珍贵的。</div></article>
+<article class="story-card" data-cat="animal" data-title="小蝌蚪找妈妈"><span class="story-index">#009</span><div class="story-card-header"><h3 class="story-title">小蝌蚪找妈妈</h3><span class="story-origin">中国童话</span></div><div class="story-meta"><span class="story-tag">亲情</span><span class="story-tag">认知</span></div><div class="story-content">春天来了，池塘里的蝌蚪们出生了。它们长着大大的脑袋、长长的尾巴，不知道自己的妈妈长什么样。小蝌蚪们开始找妈妈，它们先后遇到了金鱼、螃蟹、乌龟和鲶鱼，可这些都不是它们的妈妈。在寻找的过程中，小蝌蚪们慢慢长大，长出了后腿，又长出了前腿，尾巴也变短了。终于，它们遇到了一只大青蛙，大青蛙高兴地说："孩子们，我就是你们的妈妈呀！"</div><div class="story-moral"><strong>寓意：</strong>成长是一个不断变化的过程。在寻找的过程中，我们会慢慢认识自己，也认识这个世界。</div></article>
+<article class="story-card" data-cat="animal" data-title="小马过河"><span class="story-index">#010</span><div class="story-card-header"><h3 class="story-title">小马过河</h3><span class="story-origin">中国童话</span></div><div class="story-meta"><span class="story-tag">独立思考</span><span class="story-tag">勇敢</span></div><div class="story-content">小马要帮妈妈把麦子送到磨坊去，路上遇到了一条小河。小马不知道河水有多深，就去问老牛。老牛说："水很浅，刚过小腿。"小马刚要过河，小松鼠急忙喊道："别过河！河水很深，会淹死你的！"小马不知道该听谁的，只好回家问妈妈。妈妈说："孩子，别人说的不一定适合你，你自己去试试就知道了。"小马重新来到河边，小心地下了水，发现河水既没有老牛说的那么浅，也没有小松鼠说的那么深。</div><div class="story-moral"><strong>寓意：</strong>遇到问题要自己动脑筋，不能只听别人的话。别人的经验不一定适合自己，勇敢尝试才能找到答案。</div></article>
+<article class="story-card" data-cat="animal" data-title="狮子和老鼠"><span class="story-index">#011</span><div class="story-card-header"><h3 class="story-title">狮子和老鼠</h3><span class="story-origin">伊索寓言</span></div><div class="story-meta"><span class="story-tag">感恩</span><span class="story-tag">友善</span></div><div class="story-content">一只小老鼠不小心吵醒了正在睡觉的狮子。狮子抓住了小老鼠，准备吃掉它。小老鼠哀求道："大王，请放了我吧！说不定有一天我能帮到您呢！"狮子觉得好笑，但还是放了它。后来，狮子被猎人的网罩住了，怎么也挣脱不了。小老鼠听到了狮子的吼叫，跑来用牙齿咬断了绳子，救出了狮子。狮子感慨地说："谢谢你，小家伙，我没想到你真的能帮到我。"</div><div class="story-moral"><strong>寓意：</strong>不要小看任何人，每个人都有自己的价值和力量。善良会得到回报，善待他人就是善待自己。</div></article>
+<article class="story-card" data-cat="animal" data-title="渔夫和金鱼的故事"><span class="story-index">#012</span><div class="story-card-header"><h3 class="story-title">渔夫和金鱼的故事</h3><span class="story-origin">普希金童话</span></div><div class="story-meta"><span class="story-tag">贪婪</span><span class="story-tag">知足</span></div><div class="story-content">老渔夫捕到了一条会说话的金鱼，金鱼求他放了自己，答应满足他的愿望。渔夫什么也没要就放了金鱼。回家后，老太婆知道了，骂他笨，让他去向金鱼要一个新木盆。得到木盆后，老太婆又要一座木房子，接着又要做贵妇人，然后做女皇。金鱼都满足了。最后老太婆要做海上的霸王，还要金鱼亲自侍候她。金鱼一怒之下，收回了所有的东西，老太婆又回到了破泥屋，面前还是那个破木盆。</div><div class="story-moral"><strong>寓意：</strong>贪心不足的人，最终会失去一切。要学会知足常乐，珍惜已经拥有的东西。</div></article>
+<article class="story-card" data-cat="animal" data-title="猫和老鼠做朋友"><span class="story-index">#013</span><div class="story-card-header"><h3 class="story-title">猫和老鼠做朋友</h3><span class="story-origin">格林童话</span></div><div class="story-meta"><span class="story-tag">警惕</span><span class="story-tag">选择朋友</span></div><div class="story-content">一只猫说自己再也不想吃老鼠了，想和老鼠做朋友。老鼠相信了猫，它们住在一起，还一起买了一罐猪油过冬。猫总是找借口出去，其实是偷偷去吃猪油。老鼠问猫去了哪里，猫总是撒谎说去参加亲戚的命名典礼。到了冬天，老鼠想去看猪油，却发现罐子已经空了。这时它才明白猫一直在骗它。猫见事情败露，一口就把老鼠吃掉了。</div><div class="story-moral"><strong>寓意：</strong>选择朋友要慎重，不能只听表面的话。本性难移，要警惕那些心怀叵测的"朋友"。</div></article>
+<article class="story-card" data-cat="animal" data-title="猴子捞月"><span class="story-index">#014</span><div class="story-card-header"><h3 class="story-title">猴子捞月</h3><span class="story-origin">中国寓言</span></div><div class="story-meta"><span class="story-tag">观察</span><span class="story-tag">思考</span></div><div class="story-content">一个月光皎洁的夜晚，一群猴子在井边玩耍。一只小猴子往井里一看，惊叫起来："不好了！月亮掉进井里了！"老猴子跑过来一看，果然，圆圆的月亮在井水里。猴子们商量着要把月亮捞上来。它们一个接一个倒挂着，从树上一直挂到井里。最下面的猴子伸手去捞月亮，可手刚碰到水面，月亮就碎了。老猴子抬头一看，月亮还好好的挂在天上。原来井里的只是月亮的影子。</div><div class="story-moral"><strong>寓意：</strong>遇到事情要先观察清楚，不要盲目行动。要学会分辨真假，不要被事物的表面现象所迷惑。</div></article>
+<article class="story-card" data-cat="animal" data-title="农夫与蛇"><span class="story-index">#015</span><div class="story-card-header"><h3 class="story-title">农夫与蛇</h3><span class="story-origin">伊索寓言</span></div><div class="story-meta"><span class="story-tag">善良</span><span class="story-tag">辨别</span></div><div class="story-content">一个寒冷的冬天，农夫在路边发现了一条冻僵的蛇。农夫心生怜悯，把蛇捡起来放在怀里取暖。蛇渐渐苏醒过来，恢复了本性，狠狠地咬了农夫一口。农夫中毒倒地，临死前懊悔地说："我可怜恶毒的东西，应该受到惩罚。"蛇冷冷地游走了。农夫的善良没有换来感激，反而失去了自己的生命。</div><div class="story-moral"><strong>寓意：</strong>善良是一种美德，但也要学会辨别对象。对坏人的善良，可能反而会害了自己。帮助别人之前要认清对方。</div></article>
+<article class="story-card" data-cat="animal" data-title="狐狸分奶酪"><span class="story-index">#016</span><div class="story-card-header"><h3 class="story-title">狐狸分奶酪</h3><span class="story-origin">伊索寓言</span></div><div class="story-meta"><span class="story-tag">公平</span><span class="story-tag">团结</span></div><div class="story-content">两只小熊找到了一块奶酪，为怎么分争吵起来。一只狐狸路过，说可以帮它们分。狐狸把奶酪掰成两半，故意分得一大一小。小熊们叫起来："不公平！"狐狸说："别急，我来调整。"说着咬了一大口大的那半，结果又变成了小的那半大。狐狸就这样一口一口地"调整"，最后把奶酪全吃完了，两只小熊什么也没得到。</div><div class="story-moral"><strong>寓意：</strong>遇到问题要自己协商解决，不要轻信第三方的"帮忙"。不怀好意的人会利用别人的矛盾来为自己谋利。</div></article>
+<article class="story-card" data-cat="animal" data-title="井底之蛙"><span class="story-index">#017</span><div class="story-card-header"><h3 class="story-title">井底之蛙</h3><span class="story-origin">庄子寓言</span></div><div class="story-meta"><span class="story-tag">眼界</span><span class="story-tag">谦虚</span></div><div class="story-content">一只青蛙住在一口浅井里，它觉得这口井就是整个世界，自己是世界上最幸福的青蛙。一天，一只海龟路过，青蛙得意地说："你看我住的地方多好！想跳就跳，想休息就休息。"海龟告诉青蛙，大海无边无际，深不可测，和井比起来，不知道大多少倍。青蛙听了目瞪口呆，才知道自己的世界有多么渺小。</div><div class="story-moral"><strong>寓意：</strong>不要把自己局限在小小的世界里，外面的世界很大很精彩。要保持谦虚的心态，不断学习和探索。</div></article>
+<article class="story-card" data-cat="animal" data-title="小猫钓鱼"><span class="story-index">#018</span><div class="story-card-header"><h3 class="story-title">小猫钓鱼</h3><span class="story-origin">中国童话</span></div><div class="story-meta"><span class="story-tag">专注</span><span class="story-tag">耐心</span></div><div class="story-content">猫妈妈带小猫去河边钓鱼。小猫刚坐下，一只蜻蜓飞来，小猫放下鱼竿去捉蜻蜓，蜻蜓飞走了，小猫空着手回来。小猫又坐下来钓鱼，一只蝴蝶飞来，小猫又去追蝴蝶。就这样，小猫追来追去，一条鱼也没钓到。猫妈妈已经钓了好几条大鱼。小猫问妈妈为什么自己钓不到鱼，猫妈妈说："钓鱼要专心，不能三心二意。"小猫听了，专心致志地钓起鱼来，不一会儿就钓到了一条大鱼。</div><div class="story-moral"><strong>寓意：</strong>做事情要专心致志，不能三心二意。只有集中注意力，才能把事情做好。</div></article>
+</div>
+</section>
+
+<!-- 魔法冒险 -->
+<section class="story-section" data-cat="magic" id="magic">
+<div class="section-header">
+<span class="section-badge">魔法冒险</span>
+<h2 class="section-title">魔法冒险</h2>
+<span class="section-count">18个故事</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="magic" data-title="白雪公主"><span class="story-index">#019</span><div class="story-card-header"><h3 class="story-title">白雪公主</h3><span class="story-origin">格林童话</span></div><div class="story-meta"><span class="story-tag">善良</span><span class="story-tag">正义</span></div><div class="story-content">白雪公主美丽善良，继母嫉妒她的美貌，派猎人去杀害她。猎人放走了白雪公主，她逃到森林里，和七个小矮人住在一起。恶毒的王后变成老太婆，用毒苹果毒倒了白雪公主。一位王子经过，被白雪公主的美丽打动，亲吻了她。白雪公主奇迹般地苏醒了，恶毒的王后受到了惩罚，白雪公主和王子从此过上了幸福的生活。</div><div class="story-moral"><strong>寓意：</strong>善良的人终会得到幸福，恶人终会受到惩罚。美丽的心灵比美丽的外表更加珍贵。</div></article>
+<article class="story-card" data-cat="magic" data-title="灰姑娘"><span class="story-index">#020</span><div class="story-card-header"><h3 class="story-title">灰姑娘</h3><span class="story-origin">格林童话</span></div><div class="story-meta"><span class="story-tag">坚强</span><span class="story-tag">希望</span></div><div class="story-content">灰姑娘被继母和两个姐姐欺负，每天要做很多家务。王宫举办舞会，继母不让灰姑娘去。仙女教母出现了，把南瓜变成马车，把老鼠变成白马，给灰姑娘穿上了美丽的裙子和水晶鞋。灰姑娘在舞会上和王子跳舞，但十二点的钟声一响，她匆匆离去，只留下了一只水晶鞋。王子派人拿着水晶鞋找遍了全国，终于找到了灰姑娘。他们从此幸福地生活在一起。</div><div class="story-moral"><strong>寓意：</strong>无论遇到多大的困难，都不要放弃希望。善良和坚强终会得到命运的回报。</div></article>
+<article class="story-card" data-cat="magic" data-title="阿里巴巴和四十大盗"><span class="story-index">#021</span><div class="story-card-header"><h3 class="story-title">阿里巴巴和四十大盗</h3><span class="story-origin">天方夜谭</span></div><div class="story-meta"><span class="story-tag">智慧</span><span class="story-tag">勇敢</span></div><div class="story-content">贫穷的阿里巴巴偶然发现了强盗藏宝的山洞，只要说"芝麻开门"就能打开。他取了一些金币回家，过上了好日子。哥哥戈西姆也想去山洞，却忘了出口的咒语，被强盗们发现了。强盗们要杀死阿里巴巴，在他的家门口做记号。聪明的女仆马尔基娜发现了强盗的阴谋，用滚油烫死了藏在罐子里的强盗，最终救了阿里巴巴一家。</div><div class="story-moral"><strong>寓意：</strong>智慧比财富更重要。面对危险时要冷静思考，用勇气和智慧来保护自己。</div></article>
+<article class="story-card" data-cat="magic" data-title="阿拉丁神灯"><span class="story-index">#022</span><div class="story-card-header"><h3 class="story-title">阿拉丁神灯</h3><span class="story-origin">天方夜谭</span></div><div class="story-meta"><span class="story-tag">诚实</span><span class="story-tag">智慧</span></div><div class="story-content">阿拉丁是一个穷孩子，一个魔法师利用他去取一盏神灯。阿拉丁发现了神灯的秘密——擦一擦灯，灯神就会出现，满足你的愿望。魔法师想抢走神灯，阿拉丁用智慧保住了神灯。他用神灯的力量建了宫殿，娶了公主。后来魔法师又来捣乱，阿拉丁凭着自己的机智和勇气，最终战胜了邪恶的魔法师。</div><div class="story-moral"><strong>寓意：</strong>真正的力量不是来自魔法，而是来自智慧和勇气。面对邪恶不能退缩，要勇敢地与之斗争。</div></article>
+<article class="story-card" data-cat="magic" data-title="海的女儿"><span class="story-index">#023</span><div class="story-card-header"><h3 class="story-title">海的女儿</h3><span class="story-origin">安徒生童话</span></div><div class="story-meta"><span class="story-tag">无私</span><span class="story-tag">爱</span></div><div class="story-content">小美人鱼救了一位遇难的王子，并深深地爱上了他。为了见到王子，她用自己美妙的声音向海巫婆换来了一双人类的腿。可是王子不知道救他的人是小美人鱼，和别的公主结了婚。小美人鱼伤心极了，但她没有伤害王子来恢复鱼尾，而是选择了化为泡沫。她的无私感动了上天，她变成了天空的女儿，获得了不灭的灵魂。</div><div class="story-moral"><strong>寓意：</strong>真正的爱是无私的付出，不求回报。善良和牺牲精神会得到命运的尊重。</div></article>
+<article class="story-card" data-cat="magic" data-title="睡美人"><span class="story-index">#024</span><div class="story-card-header"><h3 class="story-title">睡美人</h3><span class="story-origin">格林童话</span></div><div class="story-meta"><span class="story-tag">希望</span><span class="story-tag">勇气</span></div><div class="story-content">国王和王后终于有了一个美丽的公主。在公主的命名宴会上，一个没有被邀请的女巫发怒了，诅咒公主十五岁时会被纺锤刺伤而死。好心的仙女把死亡改成了沉睡一百年。公主十五岁时果然被纺锤刺伤，整个王宫都陷入了沉睡。一百年后，一位勇敢的王子来到这里，穿过荆棘丛，吻醒了公主。整个王宫苏醒了，公主和王子举行了盛大的婚礼。</div><div class="story-moral"><strong>寓意：</strong>黑暗总会过去，光明终会到来。只要心怀希望，勇敢前行，美好的事情就会发生。</div></article>
+<article class="story-card" data-cat="magic" data-title="爱丽丝梦游仙境"><span class="story-index">#025</span><div class="story-card-header"><h3 class="story-title">爱丽丝梦游仙境</h3><span class="story-origin">刘易斯·卡罗尔</span></div><div class="story-meta"><span class="story-tag">好奇心</span><span class="story-tag">勇气</span></div><div class="story-content">爱丽丝跟着一只白兔掉进了一个兔子洞，来到了一个奇妙的世界。在这里，她遇到了会笑的柴郡猫、疯帽匠、红心王后。她一会儿变大一会儿变小，参加了疯狂的茶会，还打了一场槌球。在红心王后的审判中，爱丽丝勇敢地说："你们不过是一副纸牌！"说完她就醒了过来，原来这一切都是一场梦。</div><div class="story-moral"><strong>寓意：</strong>保持好奇心和想象力，世界就会变得充满乐趣。面对荒诞和困难，要保持清醒和勇气。</div></article>
+<article class="story-card" data-cat="magic" data-title="彼得·潘"><span class="story-index">#026</span><div class="story-card-header"><h3 class="story-title">彼得·潘</h3><span class="story-origin">詹姆斯·巴里</span></div><div class="story-meta"><span class="story-tag">童真</span><span class="story-tag">勇气</span></div><div class="story-content">彼得·潘是一个永远长不大的男孩，他住在梦幻岛，和小仙女叮当一起冒险。一天夜里，他飞到温蒂的家，带她和弟弟们一起飞到了梦幻岛。在那里，他们遇到了迷失的男孩们，和海盗虎克船长展开了激烈的战斗。彼得·潘勇敢地战胜了虎克船长。最后，温蒂和弟弟们回到了家，而彼得·潘继续在梦幻岛快乐地生活。</div><div class="story-moral"><strong>寓意：</strong>童年是最宝贵的时光，要保持一颗童心。同时，勇敢和正义能帮我们战胜一切困难。</div></article>
+<article class="story-card" data-cat="magic" data-title="绿野仙踪"><span class="story-index">#027</span><div class="story-card-header"><h3 class="story-title">绿野仙踪</h3><span class="story-origin">莱曼·鲍姆</span></div><div class="story-meta"><span class="story-tag">友谊</span><span class="story-tag">勇气</span></div><div class="story-content">小女孩多萝茜被龙卷风吹到了奥兹国，她想回家。在路上，她遇到了想要脑子的稻草人、想要心的铁皮人和想要勇气的狮子。他们一起去找大魔法师奥兹帮忙。经过许多冒险，他们发现奥兹只是一个普通人。但他们在这段旅程中已经找到了各自想要的东西——稻草人变得聪明了，铁皮人有了感情，狮子变得勇敢了。好仙女告诉多萝茜，她脚上的银鞋可以带她回家。</div><div class="story-moral"><strong>寓意：</strong>我们要寻找的东西其实就在自己身上。友谊和经历会让我们变得更加勇敢、聪明和善良。</div></article>
+<article class="story-card" data-cat="magic" data-title="拇指姑娘"><span class="story-index">#028</span><div class="story-card-header"><h3 class="story-title">拇指姑娘</h3><span class="story-origin">安徒生童话</span></div><div class="story-meta"><span class="story-tag">坚强</span><span class="story-tag">善良</span></div><div class="story-content">一位老婆婆希望有一个孩子，仙女给了她一粒种子，花中诞生了一个只有拇指大的小姑娘。拇指姑娘先后被癞蛤蟆、甲虫和鼹鼠掳走，但她从不放弃希望。她救了一只冻僵的燕子，燕子在春天来时带她飞到了温暖的南方。在那里，拇指姑娘遇到了花王子，他们相爱了。拇指姑娘长出了翅膀，成了花仙子，从此过上了幸福的生活。</div><div class="story-moral"><strong>寓意：</strong>即使身处逆境，也不要放弃希望。善良的心和坚强的意志会带来好运。</div></article>
+<article class="story-card" data-cat="magic" data-title="美女与野兽"><span class="story-index">#029</span><div class="story-card-header"><h3 class="story-title">美女与野兽</h3><span class="story-origin">法国童话</span></div><div class="story-meta"><span class="story-tag">内在美</span><span class="story-tag">爱</span></div><div class="story-content">一位商人迷路在一座城堡里，为女儿摘了一朵玫瑰，惹怒了城堡的主人——一只野兽。商人的女儿贝尔代替父亲来到城堡。野兽虽然外表可怕，但对贝尔非常温柔。渐渐地，贝尔发现野兽有一颗善良的心。当贝尔真心地说"我爱你"时，魔法被解除了，野兽变成了英俊的王子。原来他曾经因为骄傲被施了魔法，只有真爱才能解救他。</div><div class="story-moral"><strong>寓意：</strong>不要以貌取人，真正的美在内心。用爱和理解去对待别人，会发现每个人都有美好的一面。</div></article>
+<article class="story-card" data-cat="magic" data-title="长发姑娘"><span class="story-index">#030</span><div class="story-card-header"><h3 class="story-title">长发姑娘</h3><span class="story-origin">格林童话</span></div><div class="story-meta"><span class="story-tag">希望</span><span class="story-tag">勇敢</span></div><div class="story-content">一个女巫偷走了一个小公主，把她关在一座高塔里。公主长出了一头长长的金发，女巫每次来看她，就让公主放下头发当梯子。一位王子听到了公主美妙的歌声，学会了攀着头发上塔。他们相爱了。女巫发现后，剪掉了公主的头发，把王子推下了塔。王子虽然双目失明，但一直在寻找公主。终于，他们重逢了，公主的眼泪治好了王子的眼睛，他们幸福地生活在一起。</div><div class="story-moral"><strong>寓意：</strong>真爱能够克服一切困难。即使在最黑暗的时候，也不要放弃希望和信念。</div></article>
+<article class="story-card" data-cat="magic" data-title="穿靴子的猫"><span class="story-index">#031</span><div class="story-card-header"><h3 class="story-title">穿靴子的猫</h3><span class="story-origin">夏尔·佩罗</span></div><div class="story-meta"><span class="story-tag">智慧</span><span class="story-tag">勇气</span></div><div class="story-content">磨坊主去世后，小儿子只分到了一只猫。这只猫穿上了一双靴子，请求主人给它一个口袋和一双靴子。聪明的猫用计谋骗过了国王，说自己的主人是"卡拉巴斯侯爵"。它还用智慧打败了食人魔，为"侯爵"赢得了一座城堡和大片土地。国王非常欣赏"侯爵"的财富，把公主嫁给了他。穿靴子的猫从此成了大贵族。</div><div class="story-moral"><strong>寓意：</strong>智慧和勇气比财富更重要。善用自己的聪明才智，就能创造出奇迹。</div></article>
+<article class="story-card" data-cat="magic" data-title="杰克与魔豆"><span class="story-index">#032</span><div class="story-card-header"><h3 class="story-title">杰克与魔豆</h3><span class="story-origin">英国童话</span></div><div class="story-meta"><span class="story-tag">勇敢</span><span class="story-tag">机智</span></div><div class="story-content">杰克和妈妈很穷，他用家里唯一的牛换了几粒魔豆。妈妈很生气，把魔豆扔到窗外。第二天，魔豆长成了一棵通天的豆茎。杰克爬上豆茎，来到了一个巨人住的地方。他偷走了巨人的金币、会下金蛋的鹅和一把竖琴。巨人发现了，追着杰克爬下豆茎。杰克赶紧砍断了豆茎，巨人摔了下去。杰克和妈妈从此过上了富裕的生活。</div><div class="story-moral"><strong>寓意：</strong>面对比自己强大的敌人，要用智慧和勇气来保护自己。但也要记住，不能贪心拿不属于自己的东西。</div></article>
+<article class="story-card" data-cat="magic" data-title="木偶奇遇记"><span class="story-index">#033</span><div class="story-card-header"><h3 class="story-title">木偶奇遇记</h3><span class="story-origin">卡洛·科洛迪</span></div><div class="story-meta"><span class="story-tag">诚实</span><span class="story-tag">责任</span></div><div class="story-content">老木匠杰佩托做了一个木偶，取名叫匹诺曹。蓝仙女让木偶活了过来，告诉他只要做一个诚实、善良、勤劳的好孩子，就能变成真正的人。可是匹诺曹贪玩、爱撒谎，每次撒谎鼻子就会变长。他经历了许多奇遇：被狐狸和猫骗走金币、变成了驴子、被吞进大鱼的肚子。最终，匹诺曹改掉了坏毛病，救出了杰佩托，变成了一个真正的男孩。</div><div class="story-moral"><strong>寓意：</strong>说谎是不好的习惯，要做一个诚实、善良、有责任感的人。犯了错误不要紧，知错能改就是好孩子。</div></article>
+<article class="story-card" data-cat="magic" data-title="皇帝的新装"><span class="story-index">#034</span><div class="story-card-header"><h3 class="story-title">皇帝的新装</h3><span class="story-origin">安徒生童话</span></div><div class="story-meta"><span class="story-tag">诚实</span><span class="story-tag">独立思考</span></div><div class="story-content">有一个皇帝特别喜欢穿新衣服。两个骗子说能织出最美丽的布料，但愚蠢和不称职的人看不见。皇帝给了他们很多钱，他们假装在织布，实际上什么也没做。大臣们谁也不敢说自己看不见，都夸布料漂亮。皇帝"穿"上了新衣服，光着身子走上了大街。人们都夸新衣服好看，只有一个小孩子大声说："可是他什么也没穿呀！"人们这才醒悟过来。</div><div class="story-moral"><strong>寓意：</strong>要敢于说出真话，不要随波逐流。有时候，小孩子的一句话就能揭穿大人们的虚伪。</div></article>
+<article class="story-card" data-cat="magic" data-title="宝莲灯"><span class="story-index">#035</span><div class="story-card-header"><h3 class="story-title">宝莲灯</h3><span class="story-origin">中国神话</span></div><div class="story-meta"><span class="story-tag">孝道</span><span class="story-tag">勇气</span></div><div class="story-content">三圣母因爱上凡人书生刘彦昌，被哥哥二郎神压在华山下。她的儿子沉香长大后，知道了自己的身世，决定去救母亲。沉香拜霹雳大仙为师，学会了高强的武艺，得到了法宝宝莲灯。他来到华山，与二郎神展开了激烈的战斗。最终，沉香用宝莲灯打败了二郎神，劈开华山，救出了母亲，一家终于团聚。</div><div class="story-moral"><strong>寓意：</strong>孝敬父母是中华民族的传统美德。为了亲人，我们要有勇气面对一切困难。</div></article>
+<article class="story-card" data-cat="magic" data-title="哪吒闹海"><span class="story-index">#036</span><div class="story-card-header"><h3 class="story-title">哪吒闹海</h3><span class="story-origin">中国神话</span></div><div class="story-meta"><span class="story-tag">正义</span><span class="story-tag">勇敢</span></div><div class="story-content">哪吒是陈塘关总兵李靖的儿子，生下来就带着乾坤圈和混天绫。一天，哪吒在海边玩耍，东海龙王的三太子出来欺负百姓，哪吒大怒，打死了三太子。龙王发怒，要水淹陈塘关。为了不连累父母和百姓，哪吒削肉还母、剔骨还父。太乙真人用莲花和荷叶为哪吒重塑了身体，哪吒变得更加强大，最终打败了龙王，保护了百姓。</div><div class="story-moral"><strong>寓意：</strong>面对恶势力要勇敢斗争，保护弱小。哪吒的精神告诉我们，正义终将战胜邪恶。</div></article>
+</div>
+</section>
+
+<!-- 经典寓言 -->
+<section class="story-section" data-cat="fable" id="fable">
+<div class="section-header">
+<span class="section-badge">经典寓言</span>
+<h2 class="section-title">经典寓言</h2>
+<span class="section-count">16个故事</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="fable" data-title="拔苗助长"><span class="story-index">#037</span><div class="story-card-header"><h3 class="story-title">拔苗助长</h3><span class="story-origin">孟子寓言</span></div><div class="story-meta"><span class="story-tag">耐心</span><span class="story-tag">规律</span></div><div class="story-content">宋国有个农夫，他种了一大片禾苗。每天他都要去看看禾苗长高了没有，可总觉得禾苗长得太慢。有一天，他想出了一个"好办法"：把禾苗一棵一棵地往上拔高了一截。农夫累得满头大汗，回家高兴地说："今天可把我累坏了，不过禾苗都长高了不少！"儿子跑到田里一看，禾苗全枯死了。</div><div class="story-moral"><strong>寓意：</strong>做事要遵循事物的规律，不能急于求成。想要一步登天，反而会适得其反。</div></article>
+<article class="story-card" data-cat="fable" data-title="刻舟求剑"><span class="story-index">#038</span><div class="story-card-header"><h3 class="story-title">刻舟求剑</h3><span class="story-origin">吕氏春秋</span></div><div class="story-meta"><span class="story-tag">变通</span><span class="story-tag">灵活</span></div><div class="story-content">楚国有个人坐船过江，一不小心，他的宝剑掉进了水里。他不慌不忙地在船舷上刻了一个记号，说："这就是我的剑掉下去的地方。"等船靠了岸，他从刻记号的地方跳下水去找剑，当然什么也找不到。船已经走了很远，而剑还在原来的地方。他不明白事物是变化的，用固定的方法去解决变化的问题，怎么可能成功呢？</div><div class="story-moral"><strong>寓意：</strong>世界在变化，我们也要跟着变化。不能用固定的方法去解决变化的问题，要学会灵活变通。</div></article>
+<article class="story-card" data-cat="fable" data-title="守株待兔"><span class="story-index">#039</span><div class="story-card-header"><h3 class="story-title">守株待兔</h3><span class="story-origin">韩非子</span></div><div class="story-meta"><span class="story-tag">勤劳</span><span class="story-tag">侥幸</span></div><div class="story-content">宋国有个农夫，一天在田里干活，一只兔子跑得太快，撞在树桩上死了。农夫白捡了一只兔子，高兴极了。从此，他每天什么都不干，就坐在树桩旁边等兔子来撞。等了一天又一天，田地荒芜了，庄稼枯死了，却再也没有兔子来撞树桩。农夫成了全国人的笑柄。</div><div class="story-moral"><strong>寓意：</strong>不能把偶然的运气当作必然的规律。只有靠自己的辛勤劳动，才能获得真正的收获。</div></article>
+<article class="story-card" data-cat="fable" data-title="掩耳盗铃"><span class="story-index">#040</span><div class="story-card-header"><h3 class="story-title">掩耳盗铃</h3><span class="story-origin">吕氏春秋</span></div><div class="story-meta"><span class="story-tag">自欺</span><span class="story-tag">诚实</span></div><div class="story-content">有个人想偷别人家门口的大铃铛。铃铛很大，搬不动，他就想用锤子砸碎再拿走。可是一砸铃铛就会发出很大的声音，别人会听到。他灵机一动，想出了一个"好办法"：把自己的耳朵捂住，这样就听不到声音了。他觉得既然自己听不到，别人也一定听不到。于是他捂着耳朵去砸铃铛，结果立刻就被抓住了。</div><div class="story-moral"><strong>寓意：</strong>自己骗自己是最愚蠢的行为。问题不会因为你假装看不见就不存在。</div></article>
+<article class="story-card" data-cat="fable" data-title="盲人摸象"><span class="story-index">#041</span><div class="story-card-header"><h3 class="story-title">盲人摸象</h3><span class="story-origin">佛经寓言</span></div><div class="story-meta"><span class="story-tag">全面</span><span class="story-tag">客观</span></div><div class="story-content">有四个盲人从来没有见过大象，他们决定去摸一摸。第一个盲人摸到了大象的身子，说："大象像一堵墙。"第二个摸到了象牙，说："大象像一根棍子。"第三个摸到了大象的腿，说："大象像一根柱子。"第四个摸到了大象的尾巴，说："大象像一根绳子。"四个人争论不休，谁也不服谁。其实他们说的都不对，因为他们只摸到了大象的一部分。</div><div class="story-moral"><strong>寓意：</strong>看问题要全面，不能只看一部分就下结论。要综合考虑各个方面，才能了解事物的全貌。</div></article>
+<article class="story-card" data-cat="fable" data-title="画蛇添足"><span class="story-index">#042</span><div class="story-card-header"><h3 class="story-title">画蛇添足</h3><span class="story-origin">战国策</span></div><div class="story-meta"><span class="story-tag">适可而止</span><span class="story-tag">谦虚</span></div><div class="story-content">楚国有个祭祀的人，赏给门客们一壶酒。酒不够大家分，有人提议："我们在地上画蛇，谁先画完谁喝酒。"一个人很快画完了，他拿起酒壶准备喝，看到别人还没画完，就得意地给蛇添上了几只脚，说："我还能给蛇画上脚呢！"结果另一个人画完了，夺过酒壶说："蛇本来就没有脚，你画的根本不是蛇！"说完就把酒喝了。</div><div class="story-moral"><strong>寓意：</strong>做事情要恰到好处，做过了头反而会坏事。自以为是地多此一举，只会把事情搞砸。</div></article>
+<article class="story-card" data-cat="fable" data-title="狐假虎威"><span class="story-index">#043</span><div class="story-card-header"><h3 class="story-title">狐假虎威</h3><span class="story-origin">战国策</span></div><div class="story-meta"><span class="story-tag">借势</span><span class="story-tag">辨别</span></div><div class="story-content">一只老虎抓住了一只狐狸，狐狸眼珠一转，大声说："你不能吃我！我是天帝派来做百兽之王的，不信你跟在我后面，看看百兽是不是都害怕地逃走。"老虎半信半疑，就跟在狐狸后面走。果然，森林里的动物们看到老虎来了，都吓得四散奔逃。老虎以为它们是害怕狐狸，就把狐狸放了。其实动物们害怕的是老虎，不是狐狸。</div><div class="story-moral"><strong>寓意：</strong>有些人借着别人的势力来吓唬人，实际上自己并没有真本事。要学会分辨真假，不要被表面的现象所欺骗。</div></article>
+<article class="story-card" data-cat="fable" data-title="愚公移山"><span class="story-index">#044</span><div class="story-card-header"><h3 class="story-title">愚公移山</h3><span class="story-origin">列子</span></div><div class="story-meta"><span class="story-tag">坚持</span><span class="story-tag">毅力</span></div><div class="story-content">愚公家门前有两座大山，出门很不方便。他下定决心，要带领子孙把山移走。有个叫智叟的老头笑话他："你都这么老了，怎么可能移走大山？"愚公说："我死了有儿子，儿子死了有孙子，子子孙孙无穷尽，而山不会增高，怎么会移不走呢？"天帝被愚公的精神感动了，派了两个大力神把山搬走了。</div><div class="story-moral"><strong>寓意：</strong>只要有坚定的信念和不懈的努力，再大的困难也能克服。不要被别人的嘲笑所动摇。</div></article>
+<article class="story-card" data-cat="fable" data-title="亡羊补牢"><span class="story-index">#045</span><div class="story-card-header"><h3 class="story-title">亡羊补牢</h3><span class="story-origin">战国策</span></div><div class="story-meta"><span class="story-tag">及时改正</span><span class="story-tag">行动</span></div><div class="story-content">有一个牧羊人，发现羊圈的栅栏破了一个洞，少了一只羊。邻居劝他赶快把洞补上，他说："羊已经丢了，还补什么？"第二天，又少了一只羊。牧羊人后悔了，赶紧把洞补好。从此，他的羊再也没有丢过。有人说："丢了羊再补羊圈，还不算晚。"</div><div class="story-moral"><strong>寓意：</strong>犯了错误要及时改正，什么时候都不算晚。关键是要吸取教训，采取行动。</div></article>
+<article class="story-card" data-cat="fable" data-title="坐井观天"><span class="story-index">#046</span><div class="story-card-header"><h3 class="story-title">坐井观天</h3><span class="story-origin">庄子</span></div><div class="story-meta"><span class="story-tag">眼界</span><span class="story-tag">谦虚</span></div><div class="story-content">一只青蛙住在井里，它对一只海龟说："你看我多快乐！这口井就是我的天下。"海龟告诉它，大海无边无际，深不可测。青蛙不信，说："天不过井口那么大。"海龟笑了："你只看到了井口大的天，怎么能说天就那么大呢？你应该出去看看外面的世界。"青蛙跳不出井口，只好叹了口气。</div><div class="story-moral"><strong>寓意：</strong>不要局限于自己狭小的世界，要多读书、多见识，才能了解世界的广阔。</div></article>
+<article class="story-card" data-cat="fable" data-title="对牛弹琴"><span class="story-index">#047</span><div class="story-card-header"><h3 class="story-title">对牛弹琴</h3><span class="story-origin">牟融理惑论</span></div><div class="story-meta"><span class="story-tag">对象</span><span class="story-tag">方法</span></div><div class="story-content">有个叫公明仪的人，对着牛弹奏美妙的琴曲。牛低着头吃草，根本不理他。公明仪变换了曲调，用琴声模仿蚊子嗡嗡叫、小牛哞哞叫。牛立刻竖起耳朵，甩着尾巴，认真地听起来。公明仪明白了：不是牛听不懂音乐，而是曲子不对牛的口味。对不懂音乐的人讲音乐，和对牛弹琴有什么区别呢？</div><div class="story-moral"><strong>寓意：</strong>说话做事要看对象。对不同的人要用不同的方式，否则就是对牛弹琴。</div></article>
+<article class="story-card" data-cat="fable" data-title="塞翁失马"><span class="story-index">#048</span><div class="story-card-header"><h3 class="story-title">塞翁失马</h3><span class="story-origin">淮南子</span></div><div class="story-meta"><span class="story-tag">心态</span><span class="story-tag">乐观</span></div><div class="story-content">边塞有位老翁，他的马跑到了胡人的地方。邻居们来安慰他，他说："说不定这是好事呢。"过了几个月，那匹马带着胡人的骏马回来了。邻居们来祝贺，他说："说不定这是坏事呢。"后来他的儿子骑骏马摔断了腿。邻居们来安慰，他说："说不定这是好事呢。"一年后，战争爆发，健全的年轻人都战死了，他的儿子因为腿瘸而活了下来。</div><div class="story-moral"><strong>寓意：</strong>好事和坏事是可以互相转化的，不要因为一时的得失而过于高兴或悲伤。保持平常心最重要。</div></article>
+<article class="story-card" data-cat="fable" data-title="鹬蚌相争"><span class="story-index">#049</span><div class="story-card-header"><h3 class="story-title">鹬蚌相争</h3><span class="story-origin">战国策</span></div><div class="story-meta"><span class="story-tag">团结</span><span class="story-tag">让步</span></div><div class="story-content">一只河蚌张开壳在晒太阳，一只鹬飞过来啄蚌的肉。蚌赶紧合上壳，夹住了鹬的嘴。鹬说："今天不下雨，明天不下雨，你就会干死。"蚌说："今天不放你，明天不放你，你就会饿死。"它们互不相让，一个渔夫走来，毫不费力地把它们两个一起抓走了。</div><div class="story-moral"><strong>寓意：</strong>内部争斗只会让第三方得利。遇到矛盾要学会让步和协商，团结才能共赢。</div></article>
+<article class="story-card" data-cat="fable" data-title="滥竽充数"><span class="story-index">#050</span><div class="story-card-header"><h3 class="story-title">滥竽充数</h3><span class="story-origin">韩非子</span></div><div class="story-meta"><span class="story-tag">真才实学</span><span class="story-tag">诚实</span></div><div class="story-content">齐宣王喜欢听吹竽，而且喜欢三百人一起吹。南郭先生根本不会吹竽，但他混在乐队里，每次都鼓着腮帮子装模作样，谁也看不出来，他还拿了很多工钱。后来齐湣王即位，他喜欢听一个一个地吹。南郭先生再也混不下去了，只好偷偷溜走了。</div><div class="story-moral"><strong>寓意：</strong>没有真才实学，靠蒙混过日子是长不了的。要认真学习，掌握真正的本领。</div></article>
+<article class="story-card" data-cat="fable" data-title="自相矛盾"><span class="story-index">#051</span><div class="story-card-header"><h3 class="story-title">自相矛盾</h3><span class="story-origin">韩非子</span></div><div class="story-meta"><span class="story-tag">逻辑</span><span class="story-tag">诚实</span></div><div class="story-content">楚国有个卖兵器的人，他先夸自己的盾："我的盾是世界上最坚固的，什么东西都刺不穿！"接着又夸自己的矛："我的矛是世界上最锋利的，什么东西都能刺穿！"旁边有人问他："用你的矛刺你的盾，会怎么样呢？"那个人张口结舌，回答不上来了。</div><div class="story-moral"><strong>寓意：</strong>说话做事要前后一致，不能自己打自己的嘴巴。要学会用逻辑思考问题。</div></article>
+<article class="story-card" data-cat="fable" data-title="铁杵磨针"><span class="story-index">#052</span><div class="story-card-header"><h3 class="story-title">铁杵磨针</h3><span class="story-origin">中国传说</span></div><div class="story-meta"><span class="story-tag">坚持</span><span class="story-tag">毅力</span></div><div class="story-content">李白小时候读书不用功，经常逃学。一天，他跑到河边，看到一位老婆婆正在磨一根铁杵。李白好奇地问："您在做什么？"老婆婆说："我要把它磨成一根绣花针。"李白惊讶地说："这么粗的铁杵，什么时候才能磨成针呢？"老婆婆笑着说："只要功夫深，铁杵磨成针。"李白深受感动，从此发奋读书，终于成了伟大的诗人。</div><div class="story-moral"><strong>寓意：</strong>只要有恒心有毅力，再难的事情也能做成。学习也是如此，贵在坚持。</div></article>
+</div>
+</section>
+
+<!-- 中国神话 -->
+<section class="story-section" data-cat="myth" id="myth">
+<div class="section-header">
+<span class="section-badge">中国神话</span>
+<h2 class="section-title">中国神话</h2>
+<span class="section-count">16个故事</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="myth" data-title="女娲补天"><span class="story-index">#053</span><div class="story-card-header"><h3 class="story-title">女娲补天</h3><span class="story-origin">上古神话</span></div><div class="story-meta"><span class="story-tag">奉献</span><span class="story-tag">勇气</span></div><div class="story-content">远古时代，天塌了一角，地上出现了一个大洞，洪水泛滥，猛兽横行，人们苦不堪言。女娲看到百姓受苦，心如刀割。她炼了五色石子，修补了天空的缺口，又斩下一只大龟的四条腿支撑住天空。她还杀死了兴风作浪的黑龙，赶走了各种猛兽。终于，天地恢复了平静，人们又过上了安宁的生活。女娲用自己伟大的力量拯救了世界。</div><div class="story-moral"><strong>寓意：</strong>面对灾难，要勇敢地站出来。无私的奉献和担当精神是最伟大的力量。</div></article>
+<article class="story-card" data-cat="myth" data-title="后羿射日"><span class="story-index">#054</span><div class="story-card-header"><h3 class="story-title">后羿射日</h3><span class="story-origin">上古神话</span></div><div class="story-meta"><span class="story-tag">勇气</span><span class="story-tag">担当</span></div><div class="story-content">远古时候，天上出现了十个太阳，大地被烤得寸草不生，河流干涸，人们无法生存。英雄后羿决心拯救百姓。他登上高山，拉满神弓，一口气射下了九个太阳，只留下一个给大地带来光明和温暖。后羿还射死了许多害人的猛兽，让人们过上了太平的日子。人们感激后羿，尊他为英雄。</div><div class="story-moral"><strong>寓意：</strong>在危难时刻，英雄会挺身而出。要学习后羿的勇气和担当精神，为他人做出贡献。</div></article>
+<article class="story-card" data-cat="myth" data-title="嫦娥奔月"><span class="story-index">#055</span><div class="story-card-header"><h3 class="story-title">嫦娥奔月</h3><span class="story-origin">中国神话</span></div><div class="story-meta"><span class="story-tag">牺牲</span><span class="story-tag">思念</span></div><div class="story-content">后羿射日后，向西王母求得不死药。后羿舍不得离开嫦娥，就把不死药交给她保管。后羿的徒弟蓬蒙知道了，趁后羿外出打猎，逼嫦娥交出不死药。嫦娥为了不让坏人得到仙药，自己吞了下去，身体变得轻飘飘的，飞到了月亮上。后羿回来后非常伤心，每年八月十五，他都会摆上嫦娥爱吃的食物，仰望明月思念妻子。</div><div class="story-moral"><strong>寓意：</strong>为了保护更重要的东西，有时需要做出牺牲。这个故事也寄托了人们对亲人的思念之情。</div></article>
+<article class="story-card" data-cat="myth" data-title="精卫填海"><span class="story-index">#056</span><div class="story-card-header"><h3 class="story-title">精卫填海</h3><span class="story-origin">山海经</span></div><div class="story-meta"><span class="story-tag">坚持</span><span class="story-tag">不屈</span></div><div class="story-content">炎帝的小女儿女娃去东海游玩，被大海吞没了。她的灵魂变成了一只小鸟，名叫精卫。精卫长着花脑袋、白色嘴、红色爪子，住在发鸠山上。她每天衔着石子和树枝，飞到东海上去投。大海嘲笑她："小鸟，你永远也填不平我！"精卫不气馁，日复一日、年复一年地坚持着。她发誓一定要把大海填平。</div><div class="story-moral"><strong>寓意：</strong>即使面对不可能完成的任务，也要有坚持到底的精神。不屈不挠的意志力量是无穷的。</div></article>
+<article class="story-card" data-cat="myth" data-title="大禹治水"><span class="story-index">#057</span><div class="story-card-header"><h3 class="story-title">大禹治水</h3><span class="story-origin">上古神话</span></div><div class="story-meta"><span class="story-tag">奉献</span><span class="story-tag">智慧</span></div><div class="story-content">洪水泛滥，百姓流离失所。禹的父亲鲧用堵的方法治水，失败了。禹吸取教训，改用疏导的方法，带领百姓开凿河道、疏通水路。他治水十三年，三次经过自己的家门都没有进去。他的脚上磨出了厚厚的茧子，皮肤晒得黝黑。最终，大禹成功治理了洪水，让百姓安居乐业。舜帝把帝位传给了禹，禹建立了夏朝。</div><div class="story-moral"><strong>寓意：</strong>大禹三过家门而不入的精神令人敬佩。做大事要有牺牲小家的奉献精神，也要善于总结经验。</div></article>
+<article class="story-card" data-cat="myth" data-title="夸父追日"><span class="story-index">#058</span><div class="story-card-header"><h3 class="story-title">夸父追日</h3><span class="story-origin">山海经</span></div><div class="story-meta"><span class="story-tag">追求</span><span class="story-tag">勇气</span></div><div class="story-content">夸父是一个巨人，他看到太阳每天从东方升起，在西方落下，就想要追上太阳。他迈开大步，日夜不停地追赶。追了很远很远，终于快要追上太阳了，可是他口渴极了，把黄河和渭水都喝干了还是不解渴。他向北方跑去找水喝，半路上渴倒了。他的手杖落在了地上，化作了一片桃林，为后来追日的人遮阳解渴。</div><div class="story-moral"><strong>寓意：</strong>要有追求目标的勇气和决心。即使没有达到目标，努力的过程本身也是有意义的。</div></article>
+<article class="story-card" data-cat="myth" data-title="牛郎织女"><span class="story-index">#059</span><div class="story-card-header"><h3 class="story-title">牛郎织女</h3><span class="story-origin">中国传说</span></div><div class="story-meta"><span class="story-tag">爱情</span><span class="story-tag">忠贞</span></div><div class="story-content">牛郎是一个勤劳善良的小伙子，他和一头老黄牛相依为命。在老黄牛的帮助下，牛郎认识了天上的织女，两人相爱成婚，生了一对儿女。可是王母娘娘不允许仙人和凡人在一起，她把织女抓回了天庭。牛郎带着孩子追赶，王母娘娘用银河挡住了去路。他们的爱情感动了喜鹊，千万只喜鹊搭成一座鹊桥，让他们每年七夕在桥上相会。</div><div class="story-moral"><strong>寓意：</strong>真挚的感情能够跨越一切障碍。善良和真心会得到上天的眷顾。</div></article>
+<article class="story-card" data-cat="myth" data-title="盘古开天"><span class="story-index">#060</span><div class="story-card-header"><h3 class="story-title">盘古开天</h3><span class="story-origin">上古神话</span></div><div class="story-meta"><span class="story-tag">创造</span><span class="story-tag">奉献</span></div><div class="story-content">很久很久以前，天地混沌一片，像一个巨大的鸡蛋。盘古在这片混沌中孕育了一万八千年。一天，他醒了过来，拿起巨斧劈开了混沌。轻而清的东西上升变成了天，重而浊的东西下降变成了地。盘古头顶天，脚踩地，天地每天长高一丈、加厚一丈，盘古也跟着长高。又过了一万八千年，天地终于稳固了，盘古也累倒了。他的身体化作了日月星辰、山川河流。</div><div class="story-moral"><strong>寓意：</strong>中华民族有着伟大的创造精神和无私奉献精神。盘古用自己的生命开创了世界。</div></article>
+<article class="story-card" data-cat="myth" data-title="神农尝百草"><span class="story-index">#061</span><div class="story-card-header"><h3 class="story-title">神农尝百草</h3><span class="story-origin">上古神话</span></div><div class="story-meta"><span class="story-tag">奉献</span><span class="story-tag">探索</span></div><div class="story-content">远古时候，人们生病了不知道该怎么办。神农氏决心找到能治病的草药。他走遍千山万水，亲自品尝各种植物。有时吃到毒草，中毒晕倒，醒来后继续尝。他的肚子是透明的，能看到药草在肚子里的变化。神农尝了上百种草药，有的能治病，有的有毒。他把这些知识教给人们，让人们懂得了用草药治病。据说神农最后尝到了断肠草，不幸去世了。</div><div class="story-moral"><strong>寓意：</strong>为了造福人类，要有不怕牺牲的精神。勇于探索和实践，才能发现新知识。</div></article>
+<article class="story-card" data-cat="myth" data-title="八仙过海"><span class="story-index">#062</span><div class="story-card-header"><h3 class="story-title">八仙过海</h3><span class="story-origin">中国神话</span></div><div class="story-meta"><span class="story-tag">本领</span><span class="story-tag">各有所长</span></div><div class="story-content">八位仙人去参加王母娘娘的蟠桃会，来到了东海边。吕洞宾提议："我们各自想办法过海，不能坐船。"铁拐李把葫芦放在水面上，坐在上面飘了过去。汉钟离把扇子往水面一铺，站在上面过了海。其他仙人有的踩着宝剑，有的骑着花篮，有的踩着笛子，各显神通。龙王太子想试试仙人们的本领，结果被蓝采和打败了。八仙最终都过了海，赴了蟠桃会。</div><div class="story-moral"><strong>寓意：</strong>每个人都有自己的特长和本领，解决问题的方法不止一种。要发挥自己的优势。</div></article>
+<article class="story-card" data-cat="myth" data-title="年兽的传说"><span class="story-index">#063</span><div class="story-card-header"><h3 class="story-title">年兽的传说</h3><span class="story-origin">中国民间传说</span></div><div class="story-meta"><span class="story-tag">勇气</span><span class="story-tag">智慧</span></div><div class="story-content">传说在远古时候，每到除夕夜，一只叫"年"的怪兽就会出来伤害人畜。人们非常害怕，每年这天都躲到山里去。有一年，村里来了一位白发老人，他说自己能赶走年兽。当晚，老人在门上贴了红纸，点亮了蜡烛，穿了红衣服。年兽来了，看到红色和亮光，吓得浑身发抖。这时又传来"噼噼啪啪"的爆竹声，年兽吓得逃跑了。原来年兽最怕红色、火光和响声。从此，人们过年都要贴春联、放鞭炮、穿新衣。</div><div class="story-moral"><strong>寓意：</strong>面对恐惧，要勇敢地去了解它、战胜它。用智慧找到解决问题的方法。</div></article>
+<article class="story-card" data-cat="myth" data-title="鲤鱼跳龙门"><span class="story-index">#064</span><div class="story-card-header"><h3 class="story-title">鲤鱼跳龙门</h3><span class="story-origin">中国传说</span></div><div class="story-meta"><span class="story-tag">奋斗</span><span class="story-tag">勇气</span></div><div class="story-content">传说黄河的龙门非常高，每年春天都有成千上万条鲤鱼逆流而上，想要跳过龙门。可是龙门太高了，绝大多数鲤鱼都失败了。有一条金色的小鲤鱼，不怕失败，一次又一次地跳跃。它跳了九十九次都失败了，但它没有放弃。第一百次，它使出全身的力气，终于跳过了龙门！它化作了一条金色的巨龙，腾空而起。从此，跳过龙门的鲤鱼就能变成龙。</div><div class="story-moral"><strong>寓意：</strong>成功需要不断地努力和尝试。不怕失败，坚持到底，终会实现梦想。</div></article>
+<article class="story-card" data-cat="myth" data-title="龙王的女儿"><span class="story-index">#065</span><div class="story-card-header"><h3 class="story-title">龙王的女儿</h3><span class="story-origin">中国传说</span></div><div class="story-meta"><span class="story-tag">善良</span><span class="story-tag">感恩</span></div><div class="story-content">东海龙王的小女儿生病了，谁也治不好。一位善良的渔夫在海边救了一只受伤的海龟，海龟为了报恩，告诉渔夫治病的秘方。渔夫按照秘方采来了草药，治好了龙王的女儿。龙王非常感激，送给渔夫一颗能听懂鱼语的珍珠。从此渔夫每次出海都能满载而归，但他从不贪心，总是把多余的鱼放回大海。</div><div class="story-moral"><strong>寓意：</strong>善良会得到回报，帮助别人就是帮助自己。得到恩惠要懂得感恩，但也不能贪心。</div></article>
+<article class="story-card" data-cat="myth" data-title="百鸟朝凤"><span class="story-index">#066</span><div class="story-card-header"><h3 class="story-title">百鸟朝凤</h3><span class="story-origin">中国传说</span></div><div class="story-meta"><span class="story-tag">德行</span><span class="story-tag">尊敬</span></div><div class="story-content">凤凰是百鸟之王，它不仅美丽，而且品德高尚。凤凰从不吃活虫，只吃竹子上的果实；它从不抢占别的鸟的巢穴，总是自己搭窝。凤凰看到别的鸟有困难，总是热心帮助。久而久之，百鸟都非常敬佩凤凰。每年凤凰生日那天，百鸟都从四面八方飞来，为凤凰献上最美的歌声和舞蹈。这就是"百鸟朝凤"的由来。</div><div class="story-moral"><strong>寓意：</strong>真正的领导力不是靠力量，而是靠品德。品行端正、乐于助人的人，自然会得到大家的尊敬。</div></article>
+<article class="story-card" data-cat="myth" data-title="孟姜女哭长城"><span class="story-index">#067</span><div class="story-card-header"><h3 class="story-title">孟姜女哭长城</h3><span class="story-origin">中国民间传说</span></div><div class="story-meta"><span class="story-tag">忠贞</span><span class="story-tag">真情</span></div><div class="story-content">孟姜女和范喜良新婚不久，范喜良就被抓去修长城了。冬天到了，孟姜女千里迢迢给丈夫送寒衣，到了长城才知道丈夫已经累死了。孟姜女悲痛欲绝，在长城脚下哭了三天三夜。忽然"轰隆"一声，长城崩塌了八百里，露出了范喜良的遗骨。孟姜女抱着丈夫的遗骨，哭得昏了过去。这个故事反映了古代劳动人民的苦难，也歌颂了忠贞不渝的爱情。</div><div class="story-moral"><strong>寓意：</strong>真挚的爱情和感情能够感动天地。我们要珍惜身边的人，善待彼此。</div></article>
+<article class="story-card" data-cat="myth" data-title="田螺姑娘"><span class="story-index">#068</span><div class="story-card-header"><h3 class="story-title">田螺姑娘</h3><span class="story-origin">中国民间传说</span></div><div class="story-meta"><span class="story-tag">善良</span><span class="story-tag">感恩</span></div><div class="story-content">有个叫谢端的年轻人，勤劳善良，但孤苦无依。他在田里捡到一只大田螺，带回家养在水缸里。从此，每天他干完活回家，桌上都有热腾腾的饭菜。谢端很奇怪，决定查个究竟。一天他提前回家，偷偷一看，发现一个美丽的姑娘从水缸里出来，正在做饭。原来她是田螺仙子，被谢端的善良感动，来帮他操持家务。谢端走进去，田螺姑娘只好说明了身份。两人最终结为夫妻，过上了幸福的生活。</div><div class="story-moral"><strong>寓意：</strong>善良的人总会得到好报。勤劳和善良是最宝贵的品质，会引来幸福的降临。</div></article>
+</div>
+</section>
+
+<!-- 智慧品格 -->
+<section class="story-section" data-cat="wisdom" id="wisdom">
+<div class="section-header">
+<span class="section-badge">智慧品格</span>
+<h2 class="section-title">智慧品格</h2>
+<span class="section-count">16个故事</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="wisdom" data-title="曹冲称象"><span class="story-index">#069</span><div class="story-card-header"><h3 class="story-title">曹冲称象</h3><span class="story-origin">中国历史故事</span></div><div class="story-meta"><span class="story-tag">智慧</span><span class="story-tag">创新</span></div><div class="story-content">有人送给曹操一头大象，曹操想知道这头大象有多重。可是没有那么大的秤来称。大人们都束手无策，曹操的儿子曹冲才七岁，他想出了一个办法：把大象赶到船上，在船身齐水面的地方刻一条线。然后把大象牵上岸，往船上装石头，直到水面和刻的线齐平。最后称一称石头的重量，就知道大象有多重了。众人纷纷赞叹小曹冲的聪明才智。</div><div class="story-moral"><strong>寓意：</strong>遇到难题不要被常规思维限制，换个角度思考，就能找到创新的解决方法。</div></article>
+<article class="story-card" data-cat="wisdom" data-title="司马光砸缸"><span class="story-index">#070</span><div class="story-card-header"><h3 class="story-title">司马光砸缸</h3><span class="story-origin">中国历史故事</span></div><div class="story-meta"><span class="story-tag">冷静</span><span class="story-tag">机智</span></div><div class="story-content">司马光小时候和小朋友们一起玩，院子里有一口大水缸。一个小朋友爬到缸沿上玩，一不小心掉进了水缸里。水缸又深又大，小朋友们吓得哭的哭、喊的喊。司马光没有慌张，他搬起一块大石头，用力砸向水缸。水缸被砸破了，水流了出来，落水的小朋友得救了。大家都佩服司马光的冷静和机智。</div><div class="story-moral"><strong>寓意：</strong>遇到紧急情况不要慌张，冷静思考才能找到最好的解决办法。</div></article>
+<article class="story-card" data-cat="wisdom" data-title="孔融让梨"><span class="story-index">#071</span><div class="story-card-header"><h3 class="story-title">孔融让梨</h3><span class="story-origin">中国历史故事</span></div><div class="story-meta"><span class="story-tag">谦让</span><span class="story-tag">尊重</span></div><div class="story-content">孔融四岁的时候，有一天家里吃梨。长辈让他先挑，他不挑大的，反而拿了一个最小的。父亲问他："你为什么不拿大的呢？"孔融说："我年纪小，应该吃小的，大的应该给哥哥吃。"父亲又问："你还有个弟弟呢，他不是比你更小吗？"孔融说："我是哥哥，应该让着弟弟。"父亲听了非常高兴，夸赞孔融是个懂事的好孩子。</div><div class="story-moral"><strong>寓意：</strong>尊敬长辈、友爱兄弟是中华民族的传统美德。谦让是一种美好的品格。</div></article>
+<article class="story-card" data-cat="wisdom" data-title="凿壁借光"><span class="story-index">#072</span><div class="story-card-header"><h3 class="story-title">凿壁借光</h3><span class="story-origin">中国历史故事</span></div><div class="story-meta"><span class="story-tag">勤奋</span><span class="story-tag">学习</span></div><div class="story-content">西汉有个叫匡衡的人，他小时候很想读书，可是家里很穷，买不起蜡烛。邻居家有蜡烛，但光照不到他家。匡衡想了一个办法：他在墙上凿了一个小洞，让邻居家的灯光透过来。每天晚上，他就借着这道微弱的光读书。后来，匡衡还到一个大户人家去当帮工，不要工钱，只求借书看。他勤奋好学，最终成为了一名大学问家。</div><div class="story-moral"><strong>寓意：</strong>学习条件不好不是借口，只要有强烈的求知欲和刻苦精神，就能克服困难，取得成就。</div></article>
+<article class="story-card" data-cat="wisdom" data-title="卧薪尝胆"><span class="story-index">#073</span><div class="story-card-header"><h3 class="story-title">卧薪尝胆</h3><span class="story-origin">中国历史故事</span></div><div class="story-meta"><span class="story-tag">隐忍</span><span class="story-tag">发奋</span></div><div class="story-content">越王勾践被吴王夫差打败后，做了三年的俘虏。为了不忘亡国之耻，勾践回到越国后，每天睡在柴草上，在房梁上挂了一个苦胆，每天吃饭前都要舔一舔。经过二十年的发奋图强，越国终于强大起来，最终打败了吴国。勾践忍辱负重、发奋图强的精神，成为后人学习的榜样。</div><div class="story-moral"><strong>寓意：</strong>失败并不可怕，可怕的是失去斗志。忍辱负重、发奋图强，终能雪耻成功。</div></article>
+<article class="story-card" data-cat="wisdom" data-title="闻鸡起舞"><span class="story-index">#074</span><div class="story-card-header"><h3 class="story-title">闻鸡起舞</h3><span class="story-origin">中国历史故事</span></div><div class="story-meta"><span class="story-tag">勤奋</span><span class="story-tag">自律</span></div><div class="story-content">晋代有两个好朋友，祖逖和刘琨。他们都有远大的抱负，希望为国家做贡献。为了练好本领，他们约定每天听到鸡叫就起床练剑。无论寒暑，从不间断。别人笑话他们太辛苦，他们却说："我们是为了将来能报效国家。"后来，两人都成了出色的将领，为收复失地做出了贡献。</div><div class="story-moral"><strong>寓意：</strong>有志之人立长志，无志之人常立志。要实现理想，就要从每天做起，坚持不懈。</div></article>
+<article class="story-card" data-cat="wisdom" data-title="田忌赛马"><span class="story-index">#075</span><div class="story-card-header"><h3 class="story-title">田忌赛马</h3><span class="story-origin">中国历史故事</span></div><div class="story-meta"><span class="story-tag">策略</span><span class="story-tag">智慧</span></div><div class="story-content">齐国将军田忌和齐王赛马，每个等级的马都比齐王的差一点，所以总是输。孙膑给他出了个主意：用自己的下等马对齐王的上等马，先输一局；然后用上等马对齐王的中等马，中等马对齐王的下等马，赢两局。结果三局两胜，田忌赢了。齐王很惊讶，问田忌用什么方法赢了。田忌说是孙膑的计策，齐王立刻召见孙膑，拜他为军师。</div><div class="story-moral"><strong>寓意：</strong>合理安排策略，用智慧弥补不足。整体劣势也可以通过巧妙的安排变成胜利。</div></article>
+<article class="story-card" data-cat="wisdom" data-title="晏子使楚"><span class="story-index">#076</span><div class="story-card-header"><h3 class="story-title">晏子使楚</h3><span class="story-origin">中国历史故事</span></div><div class="story-meta"><span class="story-tag">智慧</span><span class="story-tag">尊严</span></div><div class="story-content">齐国派晏子出使楚国。楚王知道晏子身材矮小，故意在城门旁开了一个小洞让他进来。晏子说："出使狗国才从狗洞进，出使楚国应该从城门进。"楚王只好打开城门。楚王又故意带来一个犯人，说是齐国人，嘲笑齐国人爱偷东西。晏子说："橘生淮南为橘，生于淮北为枳。齐国人在齐国安分守己，到了楚国就偷东西，是因为楚国的水土使人变坏。"楚王被说得哑口无言。</div><div class="story-moral"><strong>寓意：</strong>面对侮辱和挑衅，要用智慧来回击，维护自己的尊严。不卑不亢才是真正的强大。</div></article>
+<article class="story-card" data-cat="wisdom" data-title="三顾茅庐"><span class="story-index">#077</span><div class="story-card-header"><h3 class="story-title">三顾茅庐</h3><span class="story-origin">三国故事</span></div><div class="story-meta"><span class="story-tag">诚意</span><span class="story-tag">尊重人才</span></div><div class="story-content">刘备听说诸葛亮非常有才华，就带着关羽和张飞去请他出山。第一次去，诸葛亮不在家。第二次去，诸葛亮又不在。第三次去的时候，天下着大雪，张飞很不耐烦，但刘备坚持要去。这次诸葛亮在家，但正在睡觉。刘备在门外等了很久，诸葛亮醒来后非常感动。诸葛亮被刘备的诚意打动，答应出山帮助他，提出了著名的"隆中对"，为刘备制定了三分天下的战略。</div><div class="story-moral"><strong>寓意：</strong>真正的诚意能打动人心。尊重人才、虚心求教，才能得到别人的帮助。</div></article>
+<article class="story-card" data-cat="wisdom" data-title="草船借箭"><span class="story-index">#078</span><div class="story-card-header"><h3 class="story-title">草船借箭</h3><span class="story-origin">三国故事</span></div><div class="story-meta"><span class="story-tag">智慧</span><span class="story-tag">谋略</span></div><div class="story-content">周瑜嫉妒诸葛亮的才能，故意为难他，让他三天内造十万支箭。诸葛亮答应了，并立下军令状。他向鲁肃借了二十条船和许多草把子。第三天夜里，江上大雾弥漫，诸葛亮把船开到曹营附近，擂鼓呐喊。曹操看不清虚实，不敢出战，命令射箭。箭像雨点一样射到草把子上。天亮后，诸葛亮满载着十万多支箭回去了。周瑜自叹不如。</div><div class="story-moral"><strong>寓意：</strong>真正的智慧是善于利用客观条件。了解对手、善用天时，就能以巧取胜。</div></article>
+<article class="story-card" data-cat="wisdom" data-title="文彦博树洞取球"><span class="story-index">#079</span><div class="story-card-header"><h3 class="story-title">文彦博树洞取球</h3><span class="story-origin">中国历史故事</span></div><div class="story-meta"><span class="story-tag">智慧</span><span class="story-tag">思考</span></div><div class="story-content">文彦博小时候和小朋友们踢球，一个小朋友用力过猛，球滚进了一棵大树的树洞里。树洞很深，手够不着，用棍子也够不到。小朋友们急得团团转。文彦博想了一会儿，说："我有办法！"他提来一桶水，把水倒进树洞里。水慢慢升高，球也跟着浮了上来。小朋友们高兴地拿回了球，都夸文彦博聪明。</div><div class="story-moral"><strong>寓意：</strong>遇到问题要善于观察和思考。很多看似困难的问题，换个角度就能轻松解决。</div></article>
+<article class="story-card" data-cat="wisdom" data-title="王戎识苦李"><span class="story-index">#080</span><div class="story-card-header"><h3 class="story-title">王戎识苦李</h3><span class="story-origin">中国历史故事</span></div><div class="story-meta"><span class="story-tag">观察</span><span class="story-tag">推理</span></div><div class="story-content">王戎七岁的时候，和小朋友们一起玩耍。路边有一棵李子树，树上结满了李子，把树枝都压弯了。小朋友们争先恐后地去摘李子，只有王戎站在一旁不动。有人问他为什么不去摘，他说："这棵树长在路边，结了这么多李子却没人摘，说明李子一定是苦的。"小朋友们尝了一口，果然是苦的。</div><div class="story-moral"><strong>寓意：</strong>善于观察和思考，就能透过现象看到本质。不要盲目跟风，要学会独立判断。</div></article>
+<article class="story-card" data-cat="wisdom" data-title="包公断案"><span class="story-index">#081</span><div class="story-card-header"><h3 class="story-title">包公断案</h3><span class="story-origin">中国历史故事</span></div><div class="story-meta"><span class="story-tag">公正</span><span class="story-tag">智慧</span></div><div class="story-content">包公是宋朝著名的清官，他断案如神。有两个人为了一头牛争执不休，都说牛是自己的。包公想了想，把牛牵到院子里，放开绳子。牛径直走向其中一个人，蹭着他的腿"哞哞"叫。包公断定牛属于这个人，因为动物总是认得自己的主人。另一个人羞愧地低下了头。包公正直无私、明察秋毫，人们都叫他"包青天"。</div><div class="story-moral"><strong>寓意：</strong>做人要公正无私，做事要明察秋毫。真相只有一个，只要用心去寻找，就一定能找到。</div></article>
+<article class="story-card" data-cat="wisdom" data-title="鲁班学艺"><span class="story-index">#082</span><div class="story-card-header"><h3 class="story-title">鲁班学艺</h3><span class="story-origin">中国传说</span></div><div class="story-meta"><span class="story-tag">勤奋</span><span class="story-tag">精益求精</span></div><div class="story-content">鲁班年轻的时候，到终南山去拜师学木匠。师傅让他先用斧子砍树，砍了三年；又让他刨木板，刨了三年；再让他凿孔，凿了三年。鲁班没有一句怨言，认认真真地学了九年。师傅把所有的手艺都教给了他。鲁班不仅学会了师傅的全部技艺，还发明了锯子、墨斗等工具，成为了中国历史上最伟大的工匠。</div><div class="story-moral"><strong>寓意：</strong>要想学好本领，就要不怕吃苦、打好基础。只有精益求精，才能成为真正的高手。</div></article>
+<article class="story-card" data-cat="wisdom" data-title="程门立雪"><span class="story-index">#083</span><div class="story-card-header"><h3 class="story-title">程门立雪</h3><span class="story-origin">中国历史故事</span></div><div class="story-meta"><span class="story-tag">尊师</span><span class="story-tag">诚心</span></div><div class="story-content">宋代有两个学生，杨时和游酢，他们去拜访老师程颐请教问题。到了程家，发现老师正在午睡。两人不忍心打扰老师，就站在门外等候。天下起了大雪，雪越下越大，在他们身上积了厚厚的一层。等程颐醒来时，发现门外雪人似的两个学生，非常感动。从此，"程门立雪"就成了尊师重道的典范。</div><div class="story-moral"><strong>寓意：</strong>尊重老师是中华民族的传统美德。求学要有诚心，不怕吃苦，才能真正学到知识。</div></article>
+<article class="story-card" data-cat="wisdom" data-title="悬梁刺股"><span class="story-index">#084</span><div class="story-card-header"><h3 class="story-title">悬梁刺股</h3><span class="story-origin">中国历史故事</span></div><div class="story-meta"><span class="story-tag">刻苦</span><span class="story-tag">自律</span></div><div class="story-content">东汉的孙敬为了读书时不打瞌睡，用绳子把头发系在房梁上，一低头就会被拉痛，这样就打不了瞌睡了。战国时的苏秦读书困了，就用锥子刺自己的大腿，用疼痛来保持清醒。他们靠着这种刻苦精神，最终都取得了很大的成就。"悬梁刺股"这个成语，后来就成了形容人刻苦学习的代名词。</div><div class="story-moral"><strong>寓意：</strong>学习需要付出艰苦的努力。虽然我们不必用极端的方法，但刻苦学习的精神值得学习。</div></article>
+</div>
+</section>
+
+<!-- 温暖成长 -->
+<section class="story-section" data-cat="growth" id="growth">
+<div class="section-header">
+<span class="section-badge">温暖成长</span>
+<h2 class="section-title">温暖成长</h2>
+<span class="section-count">16个故事</span>
+</div>
+<div class="story-grid">
+<article class="story-card" data-cat="growth" data-title="卖火柴的小女孩"><span class="story-index">#085</span><div class="story-card-header"><h3 class="story-title">卖火柴的小女孩</h3><span class="story-origin">安徒生童话</span></div><div class="story-meta"><span class="story-tag">同情</span><span class="story-tag">温暖</span></div><div class="story-content">大年夜，一个衣衫褴褛的小女孩在街上卖火柴。她又冷又饿，可是没有人买她的火柴。她蜷缩在墙角，擦燃了一根火柴。在火光中，她看到了温暖的火炉、美味的烤鹅、美丽的圣诞树，还有慈祥的奶奶。她一根接一根地擦着火柴，想把奶奶留住。最后，她和奶奶一起飞向了天堂，那里没有寒冷，没有饥饿，只有温暖和快乐。</div><div class="story-moral"><strong>寓意：</strong>要关心和帮助身边需要帮助的人。每个人都渴望温暖和爱，让世界多一些善意和关怀。</div></article>
+<article class="story-card" data-cat="growth" data-title="小王子"><span class="story-index">#086</span><div class="story-card-header"><h3 class="story-title">小王子</h3><span class="story-origin">圣-埃克苏佩里</span></div><div class="story-meta"><span class="story-tag">友情</span><span class="story-tag">纯真</span></div><div class="story-content">小王子住在一颗很小的星球上，他有一朵心爱的玫瑰花。因为和玫瑰花闹了别扭，小王子开始了星际旅行。他遇到了爱虚荣的人、酒鬼、商人、点灯人和地理学家，觉得大人们都很奇怪。最后他来到了地球，遇到了一只狐狸。狐狸教会了他什么是"驯养"——用心去建立联系。小王子明白了，他的那朵玫瑰花之所以特别，是因为他为她付出了时间和心血。</div><div class="story-moral"><strong>寓意：</strong>真正重要的东西，用眼睛是看不见的，要用心去感受。要珍惜那些我们用心经营的友情和爱。</div></article>
+<article class="story-card" data-cat="growth" data-title="夜莺"><span class="story-index">#087</span><div class="story-card-header"><h3 class="story-title">夜莺</h3><span class="story-origin">安徒生童话</span></div><div class="story-meta"><span class="story-tag">真诚</span><span class="story-tag">自然</span></div><div class="story-content">中国皇帝听说夜莺的歌声最美，就把夜莺请到宫里。夜莺的歌声让所有人都感动了。后来皇帝得到了一只镶满宝石的机械鸟，大家都去听机械鸟唱歌，把夜莺忘了。不久，机械鸟坏了，皇帝也病倒了。夜莺听说后，飞回来为皇帝唱歌。皇帝的病渐渐好了，他明白了真正的音乐来自自然和真诚的心，不是来自宝石和机械。</div><div class="story-moral"><strong>寓意：</strong>真正的美来自自然和真诚。人造的华丽比不上天然的质朴，真诚的付出比物质的炫耀更珍贵。</div></article>
+<article class="story-card" data-cat="growth" data-title="野天鹅"><span class="story-index">#088</span><div class="story-card-header"><h3 class="story-title">野天鹅</h3><span class="story-origin">安徒生童话</span></div><div class="story-meta"><span class="story-tag">坚持</span><span class="story-tag">勇气</span></div><div class="story-content">艾丽莎的十一个哥哥被恶毒的王后变成了野天鹅。艾丽莎为了救哥哥们，历尽千辛万苦。仙女告诉她，用教堂墓地里的荨麻织成披甲，让哥哥们穿上就能恢复人形。但在此期间她不能说话，否则哥哥们就会死。艾丽莎忍着被荨麻刺伤的痛苦，日夜不停地编织。人们误会她是女巫，要把她烧死。在最危险的时刻，她织完了最后一件披甲，哥哥们恢复了人形，真相大白。</div><div class="story-moral"><strong>寓意：</strong>为了爱的人，再大的痛苦也能承受。坚持下去，黎明前的黑暗终会过去。</div></article>
+<article class="story-card" data-cat="growth" data-title="快乐王子"><span class="story-index">#089</span><div class="story-card-header"><h3 class="story-title">快乐王子</h3><span class="story-origin">王尔德童话</span></div><div class="story-meta"><span class="story-tag">善良</span><span class="story-tag">奉献</span></div><div class="story-content">城市上空矗立着一尊快乐王子的雕像，他浑身镶满了宝石和金片。一只小燕子成了他的信使。快乐王子看到了城市中的苦难，让小燕子把他身上的宝石和金片一片一片地衔给穷人。冬天来了，小燕子冻死了，快乐王子也变得灰暗破旧。市长下令拆掉了丑陋的雕像。但在天堂里，上帝让天使把城市中最珍贵的两样东西带回来——那就是快乐王子的铅心和死去的小燕子。</div><div class="story-moral"><strong>寓意：</strong>真正的财富不是金银珠宝，而是一颗善良的心。无私的奉献会得到永恒的回报。</div></article>
+<article class="story-card" data-cat="growth" data-title="星星币"><span class="story-index">#090</span><div class="story-card-header"><h3 class="story-title">星星币</h3><span class="story-origin">格林童话</span></div><div class="story-meta"><span class="story-tag">善良</span><span class="story-tag">感恩</span></div><div class="story-content">一个贫穷的孤儿女孩，只有一身衣服和一块面包。她在路上遇到一个穷人，就把面包给了他。又遇到一个冷得发抖的孩子，就把帽子给了他。又遇到几个挨冻的孩子，就把衣服分给了他们。最后她走进一片森林，天黑了，又遇到几个请求帮助的孩子，她把衬衣也给了他们。正当她站在黑暗中一无所有时，天上的星星纷纷落下来，变成了银币。她穿上了新做的亚麻衬衣，从此过上了幸福的生活。</div><div class="story-moral"><strong>寓意：</strong>善良的人总会得到好报。虽然付出了很多，但收获的温暖和幸福是无价的。</div></article>
+<article class="story-card" data-cat="growth" data-title="小意达的花"><span class="story-index">#091</span><div class="story-card-header"><h3 class="story-title">小意达的花</h3><span class="story-origin">安徒生童话</span></div><div class="story-meta"><span class="story-tag">想象力</span><span class="story-tag">美</span></div><div class="story-content">小意达的花枯萎了，她很伤心。大学生告诉她，花是在跳舞跳累了才枯萎的。晚上，小意达把花放在她的玩具桌上。夜里，她偷偷去看，发现所有的花都在跳舞！瓷娃娃也从玩具柜里出来参加舞会。花们跳了一整夜的舞，天亮时才回到原来的位置。小意达高兴极了，她把花埋在了花园里，希望它们明年春天会开得更美。</div><div class="story-moral"><strong>寓意：</strong>想象力是最珍贵的天赋。用充满诗意和想象力的眼睛看世界，生活处处都是美好。</div></article>
+<article class="story-card" data-cat="growth" data-title="踩面包的姑娘"><span class="story-index">#092</span><div class="story-card-header"><h3 class="story-title">踩面包的姑娘</h3><span class="story-origin">安徒生童话</span></div><div class="story-meta"><span class="story-tag">珍惜</span><span class="story-tag">改正错误</span></div><div class="story-content">英格儿是一个漂亮但虚荣的女孩。她穿着最好的衣服去当佣人，路过一片泥地时，怕弄脏新衣服，就把面包扔在泥地上踩过去。这个罪过让她沉入了沼泽。在黑暗的沼泽中，英格儿慢慢认识到了自己的错误。她感到深深的悔恨，哭出了真诚的眼泪。她的悔过感动了上天，她变成了一只小鸟，飞向了光明。这只小鸟就是现在的燕子。</div><div class="story-moral"><strong>寓意：</strong>要珍惜粮食，不要虚荣浪费。犯了错误只要真心悔改，就还有机会重新开始。</div></article>
+<article class="story-card" data-cat="growth" data-title="坚定的锡兵"><span class="story-index">#093</span><div class="story-card-header"><h3 class="story-title">坚定的锡兵</h3><span class="story-origin">安徒生童话</span></div><div class="story-meta"><span class="story-tag">坚定</span><span class="story-tag">勇气</span></div><div class="story-content">一个锡兵只有一条腿，但他始终坚定地站着。他爱上了一个纸做的舞蹈家，觉得她也只有一条腿。锡兵被风吹出了窗外，经历了很多冒险：被放进纸船漂在水沟里、被吞进鱼的肚子。但他始终紧紧握着自己的枪，从不放弃。最后，他被鱼捕上来，又回到了原来的家。虽然最后被扔进了火炉，融化成了一颗锡心，但他的坚定和勇气感动了所有人。</div><div class="story-moral"><strong>寓意：</strong>无论面对多大的困难，都要保持坚定和勇敢。有一颗坚强的心，就能面对一切。</div></article>
+<article class="story-card" data-cat="growth" data-title="豌豆上的公主"><span class="story-index">#094</span><div class="story-card-header"><h3 class="story-title">豌豆上的公主</h3><span class="story-origin">安徒生童话</span></div><div class="story-meta"><span class="story-tag">真实</span><span class="story-tag">感受</span></div><div class="story-content">王子想找一位真正的公主结婚，可是他走遍了世界也没找到。每个公主都有缺点，他总觉得她们不是真正的公主。一个暴风雨的夜晚，城堡来了一位公主，她全身湿透，看起来很狼狈。老王后在她的床铺上放了一粒豌豆，上面铺了二十床垫子和二十床被子。第二天早上，公主说她睡得非常不舒服，好像床上有东西硌着她。只有真正的公主才会有这么敏感的感觉。王子终于找到了真正的公主。</div><div class="story-moral"><strong>寓意：</strong>真正的品质是无法伪装的。表面的华丽不重要，真实和敏感的心灵才是珍贵的。</div></article>
+<article class="story-card" data-cat="growth" data-title="红鞋"><span class="story-index">#095</span><div class="story-card-header"><h3 class="story-title">红鞋</h3><span class="story-origin">安徒生童话</span></div><div class="story-meta"><span class="story-tag">谦虚</span><span class="story-tag">反省</span></div><div class="story-content">嘉伦是一个可爱但爱慕虚荣的女孩。她得到了一双漂亮的红鞋，去教堂时也穿着，不顾养母的劝阻。红鞋被施了魔法，嘉伦开始不停地跳舞，停不下来。她跳过田野、跳过街道，日夜不停。她后悔极了，请求原谅，让人砍掉了自己的双脚。换上了木脚后，她到教堂里真诚地忏悔。她的心变得谦卑了，红鞋的魔法也解除了。嘉伦从此变成了一个善良谦卑的人。</div><div class="story-moral"><strong>寓意：</strong>爱慕虚荣会带来不幸。要学会谦虚，犯了错误要勇于认错和改正。</div></article>
+<article class="story-card" data-cat="growth" data-title="打火匣"><span class="story-index">#096</span><div class="story-card-header"><h3 class="story-title">打火匣</h3><span class="story-origin">安徒生童话</span></div><div class="story-meta"><span class="story-tag">因果</span><span class="story-tag">选择</span></div><div class="story-content">一个士兵帮老巫婆取回了一个打火匣，却用打火匣召唤出三只狗，帮他得到了金币，还让狗把公主背到了自己家。国王发现了，把士兵关进了牢房。临刑前，士兵让人帮他取来了打火匣。他召唤出三只狗，打败了国王的士兵，救出了自己。士兵成了国王，和公主结了婚。这个故事告诉我们，得到力量后要用好它，不能因为有了力量就为所欲为。</div><div class="story-moral"><strong>寓意：</strong>力量和财富本身没有好坏，关键在于如何使用。善用力量做正确的事，才能真正幸福。</div></article>
+<article class="story-card" data-cat="growth" data-title="雪人"><span class="story-index">#097</span><div class="story-card-header"><h3 class="story-title">雪人</h3><span class="story-origin">安徒生童话</span></div><div class="story-meta"><span class="story-tag">生命</span><span class="story-tag">珍惜当下</span></div><div class="story-content">孩子们堆了一个大雪人，雪人站在院子里，望着窗子里温暖的火炉。他最向往的就是能靠近火炉，但他知道雪人和火炉是不能在一起的。春天来了，天气一天天变暖，雪人开始融化。他望着火炉，流下了眼泪（或者说融化的雪水）。最后，雪人完全融化成了一滩水。第二年冬天，孩子们又堆了一个新雪人，但那个向往火炉的雪人已经不在了。</div><div class="story-moral"><strong>寓意：</strong>每个生命都有自己的向往和局限。要学会珍惜当下，珍惜我们拥有的一切。</div></article>
+<article class="story-card" data-cat="growth" data-title="老头子做事总不会错"><span class="story-index">#098</span><div class="story-card-header"><h3 class="story-title">老头子做事总不会错</h3><span class="story-origin">安徒生童话</span></div><div class="story-meta"><span class="story-tag">乐观</span><span class="story-tag">知足</span></div><div class="story-content">一个老头子用一匹马换了一头牛，又用牛换了一只羊，用羊换了一只鹅，用鹅换了一只鸡，最后用鸡换了一袋子烂苹果。两个英国人听了，说他一定会被老婆骂。老头子说不会的。他们打了一个金币的赌。回到家，老头子把每次交换的故事讲给老婆听，老婆每听一次就拍手说好。最后听到烂苹果时，她说："太好了，我正好可以给邻居换一粒种子。"英国人输了一袋金币。</div><div class="story-moral"><strong>寓意：</strong>只要两个人心意相通，做什么都是对的。乐观和信任是幸福婚姻的秘诀。</div></article>
+<article class="story-card" data-cat="growth" data-title="蜗牛和玫瑰树"><span class="story-index">#099</span><div class="story-card-header"><h3 class="story-title">蜗牛和玫瑰树</h3><span class="story-origin">安徒生童话</span></div><div class="story-meta"><span class="story-tag">价值</span><span class="story-tag">存在</span></div><div class="story-content">一棵玫瑰树下住着一只蜗牛。蜗牛对玫瑰树说："你开花有什么用？过几天就谢了。我有什么用？什么也做不了。"玫瑰树说："我开出美丽的花朵，给世界增添色彩，这就是我的价值。"蜗牛不以为然。年复一年，玫瑰树继续开花，给人们带来欢乐。蜗牛始终缩在壳里，什么也没做。世界在进步，玫瑰树的故事被传颂，而蜗牛什么也没留下。</div><div class="story-moral"><strong>寓意：</strong>每个人都有自己的价值，不要因为自己做的事情看起来很小就否定自己。做了就有意义。</div></article>
+<article class="story-card" data-cat="growth" data-title="冰姑娘"><span class="story-index">#100</span><div class="story-card-header"><h3 class="story-title">冰姑娘</h3><span class="story-origin">安徒生童话</span></div><div class="story-meta"><span class="story-tag">勇气</span><span class="story-tag">爱</span></div><div class="story-content">洛迪是一个勇敢的年轻人，他深爱着小英格丽。冰姑娘是冰川的精灵，她冷酷无情，嫉妒人间温暖的爱。洛迪在冰川上救出了小英格丽，却被冰姑娘拖入了冰缝中。小英格丽悲痛欲绝，但她没有放弃。她来到冰川边，用温暖的泪水融化了冰层。她的真诚和爱战胜了冰姑娘的寒冷，洛迪被救了出来。从此，他们过上了幸福的生活，冰川也不再那么可怕了。</div><div class="story-moral"><strong>寓意：</strong>爱和温暖能够融化最寒冷的心。只要有爱，就有勇气面对一切困难和危险。</div></article>
+</div>
+</section>
+
+<div class="no-results" id="noResults" style="display:none">
+<div class="no-results-icon" aria-hidden="true">&#x1F50D;</div>
+<p class="no-results-text">没有找到匹配的故事</p>
+<p class="no-results-hint">试试其他关键词或切换分类</p>
+</div>
+</main>
+<button class="back-top" id="backTop" aria-label="回到顶部" title="回到顶部">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+<footer>
+<p>少儿童话100 &mdash; 精选经典故事，陪伴孩子快乐成长</p>
+</footer>
+<script>
+(function(){
+var themeBtn=document.querySelector('.theme-toggle');
+var body=document.body;
+var saved=localStorage.getItem('tonghua-theme');
+if(!saved&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches){saved='dark'}
+if(saved){body.setAttribute('data-theme',saved)}
+themeBtn.addEventListener('click',function(){
+var cur=body.getAttribute('data-theme');
+var next=cur==='dark'?'light':'dark';
+body.setAttribute('data-theme',next);
+localStorage.setItem('tonghua-theme',next);
+});
+var filterBtns=document.querySelectorAll('.filter-btn');
+var cards=document.querySelectorAll('.story-card');
+var sections=document.querySelectorAll('.story-section');
+var searchInput=document.querySelector('.search-input');
+var noResults=document.getElementById('noResults');
+function filterCards(cat,query){
+var q=query?q.trim().toLowerCase():'';
+var visibleCount=0;
+cards.forEach(function(c){
+var show=true;
+if(cat!=='all'&&c.getAttribute('data-cat')!==cat)show=false;
+if(q){
+var title=(c.getAttribute('data-title')||'').toLowerCase();
+var text=(c.textContent||'').toLowerCase();
+if(title.indexOf(q)===-1&&text.indexOf(q)===-1)show=false;
+}
+c.style.display=show?'':'none';
+if(show)visibleCount++;
+});
+sections.forEach(function(s){
+var cat2=s.getAttribute('data-cat');
+if(cat!=='all'&&cat2!==cat){s.style.display='none';return}
+s.style.display='';
+var vis=0;
+s.querySelectorAll('.story-card').forEach(function(c){if(c.style.display!=='none')vis++});
+s.style.display=vis?'':'none';
+});
+noResults.style.display=visibleCount?'none':'';
+}
+filterBtns.forEach(function(btn){
+btn.addEventListener('click',function(){
+filterBtns.forEach(function(b){b.classList.remove('active')});
+btn.classList.add('active');
+filterCards(btn.getAttribute('data-filter'),searchInput.value);
+});
+});
+var debounceTimer;
+searchInput.addEventListener('input',function(){
+clearTimeout(debounceTimer);
+debounceTimer=setTimeout(function(){
+var activeFilter=document.querySelector('.filter-btn.active');
+filterCards(activeFilter?activeFilter.getAttribute('data-filter'):'all',searchInput.value);
+},200);
+});
+var backTop=document.getElementById('backTop');
+window.addEventListener('scroll',function(){
+backTop.classList.toggle('visible',window.scrollY>400);
+},{passive:true});
+backTop.addEventListener('click',function(){
+window.scrollTo({top:0,behavior:'smooth'});
+});
+})();
+</script>
+</body>
+</html>

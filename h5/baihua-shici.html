@@ -1,0 +1,2248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>百花诗词 - 古诗词百花吟诵Top100</title>
+<meta name="description" content="精选古诗词中吟诵百花的经典诗词Top100，涵盖梅花、牡丹、荷花、菊花、桃花、兰花等百花名篇。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ========== Design Tokens ========== */
+:root {
+  --color-bg: #FAF7F2;
+  --color-bg-alt: #F3EDE4;
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #FFF9F5;
+  --color-ink: #2C2420;
+  --color-ink-light: #5C524A;
+  --color-ink-muted: #8A7F75;
+  --color-border: #E5DDD3;
+  --color-border-light: #EDE8E1;
+  --color-accent: #C04851;
+  --color-accent-light: #E8A0A5;
+  --color-gold: #C9A96E;
+  --color-gold-light: #E8D5A8;
+  --color-jade: #5B8C5A;
+  --color-plum: #D4A0A7;
+  --color-lotus: #E8A0B4;
+  --color-chrysanthemum: #DAA520;
+  --color-peach: #F5A0B0;
+  --color-orchid: #9B7CB8;
+  --color-osmanthus: #E8B84B;
+  --color-apricot: #F0986A;
+  --color-begonia: #D46A8A;
+  --color-pear: #C8B8A0;
+  --color-jasmine: #C8C060;
+  --color-rose: #D46A88;
+  --font-display: 'Noto Serif SC', serif;
+  --font-heading: 'Noto Serif SC', serif;
+  --font-body: 'Noto Sans SC', sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --shadow-sm: 0 1px 3px rgba(44,36,32,0.06);
+  --shadow-md: 0 4px 16px rgba(44,36,32,0.08);
+  --shadow-lg: 0 8px 32px rgba(44,36,32,0.10);
+  --shadow-xl: 0 16px 48px rgba(44,36,32,0.12);
+  --transition: 200ms ease;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --color-bg: #1A1714;
+  --color-bg-alt: #23201B;
+  --color-surface: #2A2621;
+  --color-surface-hover: #342F29;
+  --color-ink: #E8E0D6;
+  --color-ink-light: #BFB5A8;
+  --color-ink-muted: #8A7F72;
+  --color-border: #3A352E;
+  --color-border-light: #302B25;
+  --color-accent: #E87080;
+  --color-accent-light: #C04851;
+  --color-gold: #E0C888;
+  --color-gold-light: #A08040;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.3);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.35);
+  --shadow-xl: 0 16px 48px rgba(0,0,0,0.4);
+}
+
+/* ========== Reset & Base ========== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  line-height: 1.7;
+  min-height: 100vh;
+  transition: background var(--transition), color var(--transition);
+}
+
+/* ========== Top Nav ========== */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border-light);
+  padding: 0 24px;
+  transition: background var(--transition);
+}
+
+.top-nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  gap: 4px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 0;
+}
+
+.top-nav-inner::-webkit-scrollbar { display: none; }
+
+.top-nav-link {
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  color: var(--color-ink-light);
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 100px;
+  border: 1px solid transparent;
+  transition: all var(--transition);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.top-nav-link:hover {
+  background: var(--color-bg-alt);
+  border-color: var(--color-border);
+}
+
+.top-nav-link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.top-nav-link.active {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+}
+
+.top-nav-sep {
+  width: 1px;
+  height: 16px;
+  background: var(--color-border-light);
+  margin: 0 4px;
+  flex-shrink: 0;
+}
+
+/* ========== Skip Link ========== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  padding: 8px 16px;
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  z-index: 10000;
+  font-size: 14px;
+  text-decoration: none;
+}
+.skip-link:focus { top: 16px; }
+
+/* ========== Theme Toggle ========== */
+.theme-toggle {
+  position: fixed;
+  top: 52px;
+  right: 20px;
+  z-index: 1000;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition);
+}
+.theme-toggle:hover { transform: scale(1.08); box-shadow: var(--shadow-lg); }
+.theme-toggle:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.theme-toggle svg { width: 20px; height: 20px; color: var(--color-ink); }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+
+/* ========== Header / Hero ========== */
+.hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px 60px;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 600px 400px at 20% 30%, rgba(212,160,167,0.15), transparent),
+    radial-gradient(ellipse 500px 350px at 80% 60%, rgba(201,169,110,0.12), transparent),
+    radial-gradient(ellipse 400px 300px at 50% 80%, rgba(91,140,90,0.10), transparent);
+  pointer-events: none;
+}
+
+.hero-ornament {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 400;
+  color: var(--color-ink);
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.hero-subtitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-ink-muted);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+}
+
+.hero-desc {
+  font-size: 0.95rem;
+  color: var(--color-ink-muted);
+  max-width: 520px;
+  margin-top: 12px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-stat { text-align: center; }
+
+.hero-stat-num {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  display: block;
+}
+
+.hero-stat-label {
+  font-size: 0.8rem;
+  color: var(--color-ink-muted);
+  letter-spacing: 0.1em;
+}
+
+/* ========== Main Content ========== */
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* ========== Filter Bar ========== */
+.filter-bar {
+  position: sticky;
+  top: 44px;
+  z-index: 100;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border-light);
+  padding: 16px 0;
+  margin-bottom: 40px;
+  transition: background var(--transition);
+}
+
+.filter-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 4px;
+}
+
+.filter-bar-inner::-webkit-scrollbar { display: none; }
+
+.filter-btn {
+  flex-shrink: 0;
+  padding: 8px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  background: var(--color-surface);
+  color: var(--color-ink-light);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.filter-btn:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-ink-muted);
+}
+
+.filter-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.filter-btn.active {
+  background: var(--color-ink);
+  color: var(--color-bg);
+  border-color: var(--color-ink);
+}
+
+.filter-btn .count {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* ========== Search ========== */
+.search-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.search-input {
+  padding: 8px 16px 8px 36px;
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  width: 200px;
+  transition: all var(--transition);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(46,139,110,0.12);
+  width: 260px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: var(--color-ink-muted);
+  pointer-events: none;
+}
+
+/* ========== Section ========== */
+.flower-section {
+  margin-bottom: 56px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.section-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.section-count {
+  font-size: 0.85rem;
+  color: var(--color-ink-muted);
+  margin-left: auto;
+}
+
+/* ========== Poem Grid ========== */
+.poem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* ========== Poem Card ========== */
+.poem-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  transition: all 250ms ease;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.poem-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  border-radius: 3px 0 0 3px;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.poem-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--color-border);
+}
+
+.poem-card:hover::before { opacity: 1; }
+
+.poem-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.poem-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  line-height: 1.4;
+}
+
+.poem-badge {
+  flex-shrink: 0;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #fff;
+  margin-left: 12px;
+  align-self: flex-start;
+  margin-top: 2px;
+}
+
+.poem-author {
+  font-size: 0.85rem;
+  color: var(--color-ink-muted);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.poem-author-dynasty {
+  font-size: 0.75rem;
+  padding: 1px 6px;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-sm);
+  color: var(--color-ink-muted);
+}
+
+.poem-text {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  line-height: 2;
+  color: var(--color-ink-light);
+  letter-spacing: 0.02em;
+}
+
+.poem-text .line {
+  display: block;
+}
+
+.poem-index {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  color: var(--color-ink-muted);
+  opacity: 0.4;
+}
+
+/* ========== Flower Color Themes ========== */
+[data-flower="meihua"] .poem-card::before { background: var(--color-plum); }
+[data-flower="meihua"] .section-icon { background: rgba(212,160,167,0.15); }
+[data-flower="meihua"] .poem-badge { background: var(--color-plum); }
+
+[data-flower="mudan"] .poem-card::before { background: var(--color-accent); }
+[data-flower="mudan"] .section-icon { background: rgba(192,72,81,0.12); }
+[data-flower="mudan"] .poem-badge { background: var(--color-accent); }
+
+[data-flower="hehua"] .poem-card::before { background: var(--color-jade); }
+[data-flower="hehua"] .section-icon { background: rgba(91,140,90,0.12); }
+[data-flower="hehua"] .poem-badge { background: var(--color-jade); }
+
+[data-flower="juhua"] .poem-card::before { background: var(--color-chrysanthemum); }
+[data-flower="juhua"] .section-icon { background: rgba(218,165,32,0.12); }
+[data-flower="juhua"] .poem-badge { background: var(--color-chrysanthemum); color: #2C2420; }
+
+[data-flower="taohua"] .poem-card::before { background: var(--color-peach); }
+[data-flower="taohua"] .section-icon { background: rgba(245,160,176,0.15); }
+[data-flower="taohua"] .poem-badge { background: var(--color-peach); }
+
+[data-flower="lanhua"] .poem-card::before { background: var(--color-orchid); }
+[data-flower="lanhua"] .section-icon { background: rgba(155,124,184,0.12); }
+[data-flower="lanhua"] .poem-badge { background: var(--color-orchid); }
+
+[data-flower="xinghua"] .poem-card::before { background: var(--color-apricot); }
+[data-flower="xinghua"] .section-icon { background: rgba(240,152,106,0.12); }
+[data-flower="xinghua"] .poem-badge { background: var(--color-apricot); }
+
+[data-flower="guihua"] .poem-card::before { background: var(--color-osmanthus); }
+[data-flower="guihua"] .section-icon { background: rgba(232,184,75,0.12); }
+[data-flower="guihua"] .poem-badge { background: var(--color-osmanthus); color: #2C2420; }
+
+[data-flower="haitang"] .poem-card::before { background: var(--color-begonia); }
+[data-flower="haitang"] .section-icon { background: rgba(212,106,138,0.12); }
+[data-flower="haitang"] .poem-badge { background: var(--color-begonia); }
+
+[data-flower="lihua"] .poem-card::before { background: var(--color-pear); }
+[data-flower="lihua"] .section-icon { background: rgba(200,184,160,0.15); }
+[data-flower="lihua"] .poem-badge { background: var(--color-pear); color: #2C2420; }
+
+[data-flower="moli"] .poem-card::before { background: var(--color-jasmine); }
+[data-flower="moli"] .section-icon { background: rgba(200,192,96,0.12); }
+[data-flower="moli"] .poem-badge { background: var(--color-jasmine); color: #2C2420; }
+
+[data-flower="qiangwei"] .poem-card::before { background: var(--color-rose); }
+[data-flower="qiangwei"] .section-icon { background: rgba(212,106,136,0.12); }
+[data-flower="qiangwei"] .poem-badge { background: var(--color-rose); }
+
+[data-flower="qita"] .poem-card::before { background: var(--color-gold); }
+[data-flower="qita"] .section-icon { background: rgba(201,169,110,0.12); }
+[data-flower="qita"] .poem-badge { background: var(--color-gold); color: #2C2420; }
+
+/* ========== Footer ========== */
+footer {
+  text-align: center;
+  padding: 40px 24px;
+  border-top: 1px solid var(--color-border-light);
+  color: var(--color-ink-muted);
+  font-size: 0.85rem;
+}
+
+footer p { margin-bottom: 4px; }
+
+/* ========== Back to Top ========== */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+}
+
+.back-to-top.visible { opacity: 1; visibility: visible; }
+.back-to-top:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.back-to-top:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.back-to-top svg { width: 20px; height: 20px; color: var(--color-ink); }
+
+/* ========== Empty State ========== */
+.empty-state {
+  text-align: center;
+  padding: 80px 24px;
+  color: var(--color-ink-muted);
+}
+
+.empty-state svg {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  opacity: 0.4;
+}
+
+/* ========== Animations ========== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.poem-card { animation: fadeInUp 0.4s ease both; }
+
+.poem-grid .poem-card:nth-child(1) { animation-delay: 0ms; }
+.poem-grid .poem-card:nth-child(2) { animation-delay: 50ms; }
+.poem-grid .poem-card:nth-child(3) { animation-delay: 100ms; }
+.poem-grid .poem-card:nth-child(4) { animation-delay: 150ms; }
+.poem-grid .poem-card:nth-child(5) { animation-delay: 200ms; }
+.poem-grid .poem-card:nth-child(6) { animation-delay: 250ms; }
+
+/* ========== Reduced Motion ========== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .top-nav { padding: 0 16px; }
+  .hero { padding: 60px 20px 40px; min-height: 40vh; }
+  .hero-stats { gap: 20px; }
+  .poem-grid { grid-template-columns: 1fr; }
+  .filter-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 4px;
+}
+  .search-input { width: 150px; }
+  .search-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(46,139,110,0.12);
+  width: 200px;
+}
+  main { padding: 0 16px 60px; }
+  .theme-toggle { top: 48px; right: 12px; }
+}
+
+@media (max-width: 375px) {
+  .poem-card { padding: 18px; }
+  .hero h1 { letter-spacing: 0.04em; }
+}
+
+@media (min-width: 1024px) {
+  .poem-grid { grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); }
+}
+
+/* ========== Print ========== */
+@media print {
+  .theme-toggle, .back-to-top, .filter-bar, .search-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+  .poem-card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+  body { background: #fff; color: #000; }
+}
+</style>
+</head>
+<body data-theme="light">
+
+<a href="#main" class="skip-link">跳转到正文内容</a>
+<nav class="top-nav" aria-label="站点导航">
+<div class="top-nav-inner">
+<a href="jingdian-tongyao.html" class="top-nav-link">经典童谣</a>
+<span class="top-nav-sep"></span>
+<a href="shenglv-qimeng.html" class="top-nav-link">声律启蒙</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-tonghua.html" class="top-nav-link">少儿童话</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-qimeng-shici.html" class="top-nav-link">启蒙诗词</a>
+<span class="top-nav-sep"></span>
+<a href="hanzi-gushi.html" class="top-nav-link">汉字故事</a>
+<span class="top-nav-sep"></span>
+<a href="baihua-shici.html" class="top-nav-link active">百花诗词</a>
+<span class="top-nav-sep"></span>
+<a href="shi-wan-ge-weishenme.html" class="top-nav-link">十万个为什么</a>
+<span class="top-nav-sep"></span>
+<a href="shaoer-chengyu.html" class="top-nav-link">少儿成语</a>
+<span class="top-nav-sep"></span>
+<a href="shangxia-wuqiannian.html" class="top-nav-link">上下五千年</a>
+<span class="top-nav-sep"></span>
+<a href="sanshiliuji.html" class="top-nav-link">三十六计</a>
+<span class="top-nav-sep"></span>
+<a href="song-ci-jingxuan.html" class="top-nav-link">宋词精选</a>
+<span class="top-nav-sep"></span>
+<a href="maozedong-shici.html" class="top-nav-link">毛主席诗词</a>
+</div>
+</nav>
+
+<!-- Theme Toggle -->
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="切换深色/浅色模式">
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-ornament"></div>
+  <p class="hero-subtitle">古诗词百花吟诵</p>
+  <h1>百花诗词</h1>
+  <p class="hero-desc">精选历代文人墨客吟诵百花的经典诗词，从梅花傲骨到牡丹雍容，从荷风清韵到菊影高洁，领略千年花韵之美。</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="hero-stat-num">100</span>
+      <span class="hero-stat-label">经典诗词</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">12</span>
+      <span class="hero-stat-label">花卉品类</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">2000+</span>
+      <span class="hero-stat-label">年诗词史</span>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main id="main">
+
+  <!-- Filter Bar -->
+  <nav class="filter-bar" aria-label="花卉分类筛选">
+    <div class="filter-bar-inner">
+      <div class="search-wrap"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="text" class="search-input" placeholder="搜索诗名、作者..." id="searchInput" aria-label="搜索诗词"></div>
+      <button class="filter-btn active" data-filter="all" onclick="filterPoems('all', this)">全部<span class="count">100</span></button>
+      <button class="filter-btn" data-filter="meihua" onclick="filterPoems('meihua', this)">梅花<span class="count">14</span></button>
+      <button class="filter-btn" data-filter="mudan" onclick="filterPoems('mudan', this)">牡丹<span class="count">10</span></button>
+      <button class="filter-btn" data-filter="hehua" onclick="filterPoems('hehua', this)">荷花<span class="count">12</span></button>
+      <button class="filter-btn" data-filter="juhua" onclick="filterPoems('juhua', this)">菊花<span class="count">11</span></button>
+      <button class="filter-btn" data-filter="taohua" onclick="filterPoems('taohua', this)">桃花<span class="count">10</span></button>
+      <button class="filter-btn" data-filter="lanhua" onclick="filterPoems('lanhua', this)">兰花<span class="count">6</span></button>
+      <button class="filter-btn" data-filter="xinghua" onclick="filterPoems('xinghua', this)">杏花<span class="count">5</span></button>
+      <button class="filter-btn" data-filter="guihua" onclick="filterPoems('guihua', this)">桂花<span class="count">5</span></button>
+      <button class="filter-btn" data-filter="haitang" onclick="filterPoems('haitang', this)">海棠<span class="count">5</span></button>
+      <button class="filter-btn" data-filter="lihua" onclick="filterPoems('lihua', this)">梨花<span class="count">4</span></button>
+      <button class="filter-btn" data-filter="moli" onclick="filterPoems('moli', this)">茉莉<span class="count">3</span></button>
+      <button class="filter-btn" data-filter="qiangwei" onclick="filterPoems('qiangwei', this)">蔷薇<span class="count">5</span></button>
+      <button class="filter-btn" data-filter="qita" onclick="filterPoems('qita', this)">其他<span class="count">10</span></button>
+    </div>
+  </nav>
+
+  <!-- ==================== 梅花 ==================== -->
+  <section class="flower-section" data-flower="meihua" data-section="meihua">
+    <div class="section-header">
+      <div class="section-icon" aria-hidden="true">&#x2740;</div>
+      <h2 class="section-title">梅花</h2>
+      <span class="section-count">14 首</span>
+    </div>
+    <div class="poem-grid">
+      <article class="poem-card">
+        <span class="poem-index">01</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">梅花</h3>
+          <span class="poem-badge">梅花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 王安石</div>
+        <div class="poem-text">
+          <span class="line">墙角数枝梅，凌寒独自开。</span>
+          <span class="line">遥知不是雪，为有暗香来。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">02</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">卜算子·咏梅</h3>
+          <span class="poem-badge">梅花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 陆游</div>
+        <div class="poem-text">
+          <span class="line">驿外断桥边，寂寞开无主。</span>
+          <span class="line">已是黄昏独自愁，更著风和雨。</span>
+          <span class="line">无意苦争春，一任群芳妒。</span>
+          <span class="line">零落成泥碾作尘，只有香如故。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">03</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">墨梅</h3>
+          <span class="poem-badge">梅花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">元</span> 王冕</div>
+        <div class="poem-text">
+          <span class="line">我家洗砚池头树，朵朵花开淡墨痕。</span>
+          <span class="line">不要人夸好颜色，只留清气满乾坤。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">04</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">山园小梅</h3>
+          <span class="poem-badge">梅花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 林逋</div>
+        <div class="poem-text">
+          <span class="line">众芳摇落独暄妍，占尽风情向小园。</span>
+          <span class="line">疏影横斜水清浅，暗香浮动月黄昏。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">05</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">雪梅</h3>
+          <span class="poem-badge">梅花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 卢梅坡</div>
+        <div class="poem-text">
+          <span class="line">梅雪争春未肯降，骚人阁笔费评章。</span>
+          <span class="line">梅须逊雪三分白，雪却输梅一段香。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">06</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">梅花绝句</h3>
+          <span class="poem-badge">梅花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 陆游</div>
+        <div class="poem-text">
+          <span class="line">闻道梅花坼晓风，雪堆遍满四山中。</span>
+          <span class="line">何方可化身千亿？一树梅花一放翁。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">07</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">卜算子·咏梅</h3>
+          <span class="poem-badge">梅花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">近代</span> 毛泽东</div>
+        <div class="poem-text">
+          <span class="line">风雨送春归，飞雪迎春到。</span>
+          <span class="line">已是悬崖百丈冰，犹有花枝俏。</span>
+          <span class="line">俏也不争春，只把春来报。</span>
+          <span class="line">待到山花烂漫时，她在丛中笑。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">08</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">梅花九首·其一</h3>
+          <span class="poem-badge">梅花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">明</span> 高启</div>
+        <div class="poem-text">
+          <span class="line">琼姿只合在瑶台，谁向江南处处栽。</span>
+          <span class="line">雪满山中高士卧，月明林下美人来。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">09</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">早梅</h3>
+          <span class="poem-badge">梅花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 张谓</div>
+        <div class="poem-text">
+          <span class="line">一树寒梅白玉条，迥临村路傍溪桥。</span>
+          <span class="line">不知近水花先发，疑是经冬雪未销。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">10</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">白梅</h3>
+          <span class="poem-badge">梅花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">元</span> 王冕</div>
+        <div class="poem-text">
+          <span class="line">冰雪林中著此身，不同桃李混芳尘。</span>
+          <span class="line">忽然一夜清香发，散作乾坤万里春。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">11</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">杂诗</h3>
+          <span class="poem-badge">梅花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 王维</div>
+        <div class="poem-text">
+          <span class="line">君自故乡来，应知故乡事。</span>
+          <span class="line">来日绮窗前，寒梅著花未？</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">13</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">新栽梅</h3>
+          <span class="poem-badge">梅花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 白居易</div>
+        <div class="poem-text">
+          <span class="line">莫怕长洲桃李妒，今年好为使君开。</span>
+          <span class="line">年年犹被桃李妒，一作花心一度开。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">14</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">十一月中旬至扶风界见梅花</h3>
+          <span class="poem-badge">梅花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 李商隐</div>
+        <div class="poem-text">
+          <span class="line">匝路亭亭艳，非时裛裛香。</span>
+          <span class="line">素娥惟与月，青女不饶霜。</span>
+          <span class="line">赠远虚盈手，伤离适断肠。</span>
+          <span class="line">为谁成早秀？不待作年芳。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">15</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">与薛肇明弈棋赌梅花诗输一首</h3>
+          <span class="poem-badge">梅花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 王安石</div>
+        <div class="poem-text">
+          <span class="line">华发寻春喜见梅，一株临路雪倍堆。</span>
+          <span class="line">凤城南陌他年忆，香杳难随驿使来。</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==================== 牡丹 ==================== -->
+  <section class="flower-section" data-flower="mudan" data-section="mudan">
+    <div class="section-header">
+      <div class="section-icon" aria-hidden="true">&#x273F;</div>
+      <h2 class="section-title">牡丹</h2>
+      <span class="section-count">10 首</span>
+    </div>
+    <div class="poem-grid">
+      <article class="poem-card">
+        <span class="poem-index">16</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">赏牡丹</h3>
+          <span class="poem-badge">牡丹</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 刘禹锡</div>
+        <div class="poem-text">
+          <span class="line">庭前芍药妖无格，池上芙蕖净少情。</span>
+          <span class="line">唯有牡丹真国色，花开时节动京城。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">17</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">清平调·其一</h3>
+          <span class="poem-badge">牡丹</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 李白</div>
+        <div class="poem-text">
+          <span class="line">云想衣裳花想容，春风拂槛露华浓。</span>
+          <span class="line">若非群玉山头见，会向瑶台月下逢。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">18</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">清平调·其二</h3>
+          <span class="poem-badge">牡丹</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 李白</div>
+        <div class="poem-text">
+          <span class="line">一枝红艳露凝香，云雨巫山枉断肠。</span>
+          <span class="line">借问汉宫谁得似，可怜飞燕倚新妆。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">19</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">清平调·其三</h3>
+          <span class="poem-badge">牡丹</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 李白</div>
+        <div class="poem-text">
+          <span class="line">名花倾国两相欢，长得君王带笑看。</span>
+          <span class="line">解释春风无限恨，沉香亭北倚阑干。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">20</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">牡丹</h3>
+          <span class="poem-badge">牡丹</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 皮日休</div>
+        <div class="poem-text">
+          <span class="line">落尽残红始吐芳，佳名唤作百花王。</span>
+          <span class="line">竞夸天下无双艳，独立人间第一香。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">21</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">红牡丹</h3>
+          <span class="poem-badge">牡丹</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 王维</div>
+        <div class="poem-text">
+          <span class="line">绿艳闲且静，红衣浅复深。</span>
+          <span class="line">花心愁欲断，春色岂知心。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">22</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">牡丹芳</h3>
+          <span class="poem-badge">牡丹</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 白居易</div>
+        <div class="poem-text">
+          <span class="line">牡丹芳，牡丹芳，黄金蕊绽红玉房。</span>
+          <span class="line">千片赤英霞烂烂，百枝绛点灯煌煌。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">23</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">思黯南墅赏牡丹</h3>
+          <span class="poem-badge">牡丹</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 刘禹锡</div>
+        <div class="poem-text">
+          <span class="line">偶然相遇人间世，合在增城阿姥家。</span>
+          <span class="line">有此倾城好颜色，天教晚发赛诸花。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">24</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">洛阳牡丹</h3>
+          <span class="poem-badge">牡丹</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 殷尧藩</div>
+        <div class="poem-text">
+          <span class="line">万朵红霞绮，春风吹更香。</span>
+          <span class="line">洛阳多名花，此地最为良。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">25</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">牡丹</h3>
+          <span class="poem-badge">牡丹</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 薛能</div>
+        <div class="poem-text">
+          <span class="line">浓艳初开小药栏，人人惆怅出长安。</span>
+          <span class="line">风流却是钱塘寺，不踏红尘见牡丹。</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==================== 荷花 ==================== -->
+  <section class="flower-section" data-flower="hehua" data-section="hehua">
+    <div class="section-header">
+      <div class="section-icon" aria-hidden="true">&#x2741;</div>
+      <h2 class="section-title">荷花</h2>
+      <span class="section-count">12 首</span>
+    </div>
+    <div class="poem-grid">
+      <article class="poem-card">
+        <span class="poem-index">26</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">晓出净慈寺送林子方</h3>
+          <span class="poem-badge">荷花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 杨万里</div>
+        <div class="poem-text">
+          <span class="line">毕竟西湖六月中，风光不与四时同。</span>
+          <span class="line">接天莲叶无穷碧，映日荷花别样红。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">27</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">小池</h3>
+          <span class="poem-badge">荷花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 杨万里</div>
+        <div class="poem-text">
+          <span class="line">泉眼无声惜细流，树阴照水爱晴柔。</span>
+          <span class="line">小荷才露尖尖角，早有蜻蜓立上头。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">28</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">如梦令</h3>
+          <span class="poem-badge">荷花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 李清照</div>
+        <div class="poem-text">
+          <span class="line">常记溪亭日暮，沉醉不知归路。</span>
+          <span class="line">兴尽晚回舟，误入藕花深处。</span>
+          <span class="line">争渡，争渡，惊起一滩鸥鹭。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">29</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">采莲曲</h3>
+          <span class="poem-badge">荷花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 王昌龄</div>
+        <div class="poem-text">
+          <span class="line">荷叶罗裙一色裁，芙蓉向脸两边开。</span>
+          <span class="line">乱入池中看不见，闻歌始觉有人来。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">30</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">赠荷花</h3>
+          <span class="poem-badge">荷花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 李商隐</div>
+        <div class="poem-text">
+          <span class="line">世间花叶不相伦，花入金盆叶作尘。</span>
+          <span class="line">惟有绿荷红菡萏，卷舒开合任天真。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">31</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">夏日南亭怀辛大</h3>
+          <span class="poem-badge">荷花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 孟浩然</div>
+        <div class="poem-text">
+          <span class="line">荷风送香气，竹露滴清响。</span>
+          <span class="line">欲取鸣琴弹，恨无知音赏。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">32</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">采桑子</h3>
+          <span class="poem-badge">荷花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 欧阳修</div>
+        <div class="poem-text">
+          <span class="line">荷花开后西湖好，载酒来时。</span>
+          <span class="line">不用旌旗，前后红幢绿盖随。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">33</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">曲池荷</h3>
+          <span class="poem-badge">荷花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 卢照邻</div>
+        <div class="poem-text">
+          <span class="line">浮香绕曲岸，圆影覆华池。</span>
+          <span class="line">常恐秋风早，飘零君不知。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">34</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">莲叶</h3>
+          <span class="poem-badge">荷花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 郑谷</div>
+        <div class="poem-text">
+          <span class="line">移舟水溅差差绿，倚槛风摇柄柄香。</span>
+          <span class="line">多谢浣纱人未折，雨中留得盖鸳鸯。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">35</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">白莲</h3>
+          <span class="poem-badge">荷花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 陆龟蒙</div>
+        <div class="poem-text">
+          <span class="line">素花多蒙别艳欺，此花真合在瑶池。</span>
+          <span class="line">无情有恨何人觉？月晓风清欲坠时。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">36</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">忆江南</h3>
+          <span class="poem-badge">荷花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 白居易</div>
+        <div class="poem-text">
+          <span class="line">日出江花红胜火，春来江水绿如蓝。</span>
+          <span class="line">能不忆江南？</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">37</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">晓过荷池</h3>
+          <span class="poem-badge">荷花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 杨万里</div>
+        <div class="poem-text">
+          <span class="line">荷花入暮犹愁热，低面深藏碧伞中。</span>
+          <span class="line">想得日光风又暖，世间何物不春风。</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==================== 菊花 ==================== -->
+  <section class="flower-section" data-flower="juhua" data-section="juhua">
+    <div class="section-header">
+      <div class="section-icon" aria-hidden="true">&#x2740;</div>
+      <h2 class="section-title">菊花</h2>
+      <span class="section-count">11 首</span>
+    </div>
+    <div class="poem-grid">
+      <article class="poem-card">
+        <span class="poem-index">38</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">菊花</h3>
+          <span class="poem-badge">菊花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 元稹</div>
+        <div class="poem-text">
+          <span class="line">秋丛绕舍似陶家，遍绕篱边日渐斜。</span>
+          <span class="line">不是花中偏爱菊，此花开尽更无花。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">39</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">饮酒·其五</h3>
+          <span class="poem-badge">菊花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">东晋</span> 陶渊明</div>
+        <div class="poem-text">
+          <span class="line">结庐在人境，而无车马喧。</span>
+          <span class="line">问君何能尔？心远地自偏。</span>
+          <span class="line">采菊东篱下，悠然见南山。</span>
+          <span class="line">山气日夕佳，飞鸟相与还。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">40</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">不第后赋菊</h3>
+          <span class="poem-badge">菊花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 黄巢</div>
+        <div class="poem-text">
+          <span class="line">待到秋来九月八，我花开后百花杀。</span>
+          <span class="line">冲天香阵透长安，满城尽带黄金甲。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">41</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">题菊花</h3>
+          <span class="poem-badge">菊花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 黄巢</div>
+        <div class="poem-text">
+          <span class="line">飒飒西风满院栽，蕊寒香冷蝶难来。</span>
+          <span class="line">他年我若为青帝，报与桃花一处开。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">42</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">醉花阴</h3>
+          <span class="poem-badge">菊花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 李清照</div>
+        <div class="poem-text">
+          <span class="line">薄雾浓云愁永昼，瑞脑销金兽。</span>
+          <span class="line">佳节又重阳，玉枕纱厨，半夜凉初透。</span>
+          <span class="line">东篱把酒黄昏后，有暗香盈袖。</span>
+          <span class="line">莫道不销魂，帘卷西风，人比黄花瘦。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">43</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">重阳席上赋白菊</h3>
+          <span class="poem-badge">菊花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 白居易</div>
+        <div class="poem-text">
+          <span class="line">满园花菊郁金黄，中有孤丛色似霜。</span>
+          <span class="line">还似今朝歌酒席，白头翁入少年场。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">44</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">残菊</h3>
+          <span class="poem-badge">菊花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 王安石</div>
+        <div class="poem-text">
+          <span class="line">黄昏风雨打园林，残菊飘零满地金。</span>
+          <span class="line">折得一枝好在手，别人应笑插花吟。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">45</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">菊花</h3>
+          <span class="poem-badge">菊花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">近代</span> 秋瑾</div>
+        <div class="poem-text">
+          <span class="line">平生不借春光力，几度微霜带恨开。</span>
+          <span class="line">傲骨天生偏耐冷，敢与桃李争春来。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">46</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">菊花</h3>
+          <span class="poem-badge">菊花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">明</span> 唐寅</div>
+        <div class="poem-text">
+          <span class="line">故园三径吐幽丛，一夜玄霜坠碧空。</span>
+          <span class="line">多少天涯未归客，尽借篱落看秋风。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">47</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">画菊</h3>
+          <span class="poem-badge">菊花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">明</span> 唐寅</div>
+        <div class="poem-text">
+          <span class="line">秋风萧瑟天气凉，草木摇落露为霜。</span>
+          <span class="line">黄花本是无情物，也解慰人寂寞肠。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">11</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">寒菊</h3>
+          <span class="poem-badge">菊花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 郑思肖</div>
+        <div class="poem-text">
+          <span class="line">花开不并百花丛，独立疏篱趣未穷。</span>
+          <span class="line">宁可枝头抱香死，何曾吹落北风中。</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==================== 桃花 ==================== -->
+  <section class="flower-section" data-flower="taohua" data-section="taohua">
+    <div class="section-header">
+      <div class="section-icon" aria-hidden="true">&#x2740;</div>
+      <h2 class="section-title">桃花</h2>
+      <span class="section-count">10 首</span>
+    </div>
+    <div class="poem-grid">
+      <article class="poem-card">
+        <span class="poem-index">48</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">题都城南庄</h3>
+          <span class="poem-badge">桃花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 崔护</div>
+        <div class="poem-text">
+          <span class="line">去年今日此门中，人面桃花相映红。</span>
+          <span class="line">人面不知何处去，桃花依旧笑春风。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">49</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">大林寺桃花</h3>
+          <span class="poem-badge">桃花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 白居易</div>
+        <div class="poem-text">
+          <span class="line">人间四月芳菲尽，山寺桃花始盛开。</span>
+          <span class="line">长恨春归无觅处，不知转入此中来。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">50</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">惠崇春江晚景</h3>
+          <span class="poem-badge">桃花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 苏轼</div>
+        <div class="poem-text">
+          <span class="line">竹外桃花三两枝，春江水暖鸭先知。</span>
+          <span class="line">蒌蒿满地芦芽短，正是河豚欲上时。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">51</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">江畔独步寻花</h3>
+          <span class="poem-badge">桃花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 杜甫</div>
+        <div class="poem-text">
+          <span class="line">黄四娘家花满蹊，千朵万朵压枝低。</span>
+          <span class="line">留连戏蝶时时舞，自在娇莺恰恰啼。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">52</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">山中问答</h3>
+          <span class="poem-badge">桃花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 李白</div>
+        <div class="poem-text">
+          <span class="line">问余何意栖碧山，笑而不答心自闲。</span>
+          <span class="line">桃花流水窅然去，别有天地非人间。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">53</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">桃花溪</h3>
+          <span class="poem-badge">桃花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 张旭</div>
+        <div class="poem-text">
+          <span class="line">隐隐飞桥隔野烟，石矶西畔问渔船。</span>
+          <span class="line">桃花尽日随流水，洞在清溪何处边。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">54</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">田园乐七首·其六</h3>
+          <span class="poem-badge">桃花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 王维</div>
+        <div class="poem-text">
+          <span class="line">桃红复含宿雨，柳绿更带朝烟。</span>
+          <span class="line">花落家童未扫，莺啼山客犹眠。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">55</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">送别</h3>
+          <span class="poem-badge">桃花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 王维</div>
+        <div class="poem-text">
+          <span class="line">山中相送罢，日暮掩柴扉。</span>
+          <span class="line">春草明年绿，王孙归不归？</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">56</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">忆秋浦桃花旧游</h3>
+          <span class="poem-badge">桃花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 李白</div>
+        <div class="poem-text">
+          <span class="line">桃花春水生，白石今出没。</span>
+          <span class="line">摇荡女萝枝，半摇青天月。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">57</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">桃花</h3>
+          <span class="poem-badge">桃花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 周朴</div>
+        <div class="poem-text">
+          <span class="line">桃花春色暖先开，明媚谁人不看来。</span>
+          <span class="line">可惜狂风吹落后，殷红片片点莓苔。</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==================== 兰花 ==================== -->
+  <section class="flower-section" data-flower="lanhua" data-section="lanhua">
+    <div class="section-header">
+      <div class="section-icon" aria-hidden="true">&#x2740;</div>
+      <h2 class="section-title">兰花</h2>
+      <span class="section-count">6 首</span>
+    </div>
+    <div class="poem-grid">
+      <article class="poem-card">
+        <span class="poem-index">58</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">离骚（节选）</h3>
+          <span class="poem-badge">兰花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">战国</span> 屈原</div>
+        <div class="poem-text">
+          <span class="line">扈江离与辟芷兮，纫秋兰以为佩。</span>
+          <span class="line">兰芷变而不信兮，荃蕙化而为茅。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">59</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">兰</h3>
+          <span class="poem-badge">兰花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">清</span> 郑板桥</div>
+        <div class="poem-text">
+          <span class="line">身在千山顶上头，突岩深缝妙香稠。</span>
+          <span class="line">非无脚下浮云闹，来不相知去不留。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">60</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">古风</h3>
+          <span class="poem-badge">兰花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 李白</div>
+        <div class="poem-text">
+          <span class="line">孤兰生幽园，众草共芜没。</span>
+          <span class="line">虽照阳春晖，复悲高秋月。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">61</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">题杨次公春兰</h3>
+          <span class="poem-badge">兰花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 苏轼</div>
+        <div class="poem-text">
+          <span class="line">春兰如美人，不采羞自献。</span>
+          <span class="line">时闻风露香，蓬艾深不见。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">62</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">兰</h3>
+          <span class="poem-badge">兰花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">明</span> 张羽</div>
+        <div class="poem-text">
+          <span class="line">能白更狂黄，无人亦自芳。</span>
+          <span class="line">寸心原不大，容得许多香。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">63</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">感遇</h3>
+          <span class="poem-badge">兰花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 张九龄</div>
+        <div class="poem-text">
+          <span class="line">兰叶春葳蕤，桂华秋皎洁。</span>
+          <span class="line">欣欣此生意，自尔为佳节。</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==================== 杏花 ==================== -->
+  <section class="flower-section" data-flower="xinghua" data-section="xinghua">
+    <div class="section-header">
+      <div class="section-icon" aria-hidden="true">&#x2740;</div>
+      <h2 class="section-title">杏花</h2>
+      <span class="section-count">5 首</span>
+    </div>
+    <div class="poem-grid">
+      <article class="poem-card">
+        <span class="poem-index">64</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">游园不值</h3>
+          <span class="poem-badge">杏花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 叶绍翁</div>
+        <div class="poem-text">
+          <span class="line">应怜屐齿印苍苔，小扣柴扉久不开。</span>
+          <span class="line">春色满园关不住，一枝红杏出墙来。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">65</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">清明</h3>
+          <span class="poem-badge">杏花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 杜牧</div>
+        <div class="poem-text">
+          <span class="line">清明时节雨纷纷，路上行人欲断魂。</span>
+          <span class="line">借问酒家何处有，牧童遥指杏花村。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">66</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">临安春雨初霁</h3>
+          <span class="poem-badge">杏花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 陆游</div>
+        <div class="poem-text">
+          <span class="line">小楼一夜听春雨，深巷明朝卖杏花。</span>
+          <span class="line">矮纸斜行闲作草，晴窗细乳戏分茶。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">67</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">北陂杏花</h3>
+          <span class="poem-badge">杏花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 王安石</div>
+        <div class="poem-text">
+          <span class="line">一陂春水绕花身，花影妖娆各占春。</span>
+          <span class="line">纵被春风吹作雪，绝胜南陌碾成尘。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">68</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">玉楼春·春景</h3>
+          <span class="poem-badge">杏花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 宋祁</div>
+        <div class="poem-text">
+          <span class="line">东城渐觉风光好，縠皱波纹迎客棹。</span>
+          <span class="line">绿杨烟外晓寒轻，红杏枝头春意闹。</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==================== 桂花 ==================== -->
+  <section class="flower-section" data-flower="guihua" data-section="guihua">
+    <div class="section-header">
+      <div class="section-icon" aria-hidden="true">&#x2741;</div>
+      <h2 class="section-title">桂花</h2>
+      <span class="section-count">5 首</span>
+    </div>
+    <div class="poem-grid">
+      <article class="poem-card">
+        <span class="poem-index">69</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">鸟鸣涧</h3>
+          <span class="poem-badge">桂花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 王维</div>
+        <div class="poem-text">
+          <span class="line">人闲桂花落，夜静春山空。</span>
+          <span class="line">月出惊山鸟，时鸣春涧中。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">70</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">鹧鸪天·桂花</h3>
+          <span class="poem-badge">桂花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 李清照</div>
+        <div class="poem-text">
+          <span class="line">暗淡轻黄体性柔，情疏迹远只香留。</span>
+          <span class="line">何须浅碧深红色，自是花中第一流。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">71</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">忆江南</h3>
+          <span class="poem-badge">桂花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 白居易</div>
+        <div class="poem-text">
+          <span class="line">江南忆，最忆是杭州。</span>
+          <span class="line">山寺月中寻桂子，郡亭枕上看潮头。</span>
+          <span class="line">何日更重游？</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">72</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">灵隐寺</h3>
+          <span class="poem-badge">桂花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 宋之问</div>
+        <div class="poem-text">
+          <span class="line">桂子月中落，天香云外飘。</span>
+          <span class="line">扪萝登塔远，刳木取泉遥。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">73</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">望海潮</h3>
+          <span class="poem-badge">桂花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 柳永</div>
+        <div class="poem-text">
+          <span class="line">东南形胜，三吴都会，钱塘自古繁华。</span>
+          <span class="line">烟柳画桥，风帘翠幕，参差十万人家。</span>
+          <span class="line">有三秋桂子，十里荷花。</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==================== 海棠 ==================== -->
+  <section class="flower-section" data-flower="haitang" data-section="haitang">
+    <div class="section-header">
+      <div class="section-icon" aria-hidden="true">&#x273F;</div>
+      <h2 class="section-title">海棠</h2>
+      <span class="section-count">5 首</span>
+    </div>
+    <div class="poem-grid">
+      <article class="poem-card">
+        <span class="poem-index">74</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">海棠</h3>
+          <span class="poem-badge">海棠</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 苏轼</div>
+        <div class="poem-text">
+          <span class="line">东风袅袅泛崇光，香雾空蒙月转廊。</span>
+          <span class="line">只恐夜深花睡去，故烧高烛照红妆。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">75</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">如梦令</h3>
+          <span class="poem-badge">海棠</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 李清照</div>
+        <div class="poem-text">
+          <span class="line">昨夜雨疏风骤，浓睡不消残酒。</span>
+          <span class="line">试问卷帘人，却道海棠依旧。</span>
+          <span class="line">知否，知否？应是绿肥红瘦。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">76</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">海棠</h3>
+          <span class="poem-badge">海棠</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 陆游</div>
+        <div class="poem-text">
+          <span class="line">蜀地名花擅古今，一枝气可压千林。</span>
+          <span class="line">便令桃李能言语，也要低头的此阴。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">77</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">海棠</h3>
+          <span class="poem-badge">海棠</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 陈与义</div>
+        <div class="poem-text">
+          <span class="line">海棠不惜胭脂色，独立蒙蒙细雨中。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">78</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">同儿辈赋未开海棠</h3>
+          <span class="poem-badge">海棠</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">金</span> 元好问</div>
+        <div class="poem-text">
+          <span class="line">枝间新绿一重重，小蕾深藏数点红。</span>
+          <span class="line">爱惜芳心莫轻吐，且教桃李闹春风。</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==================== 梨花 ==================== -->
+  <section class="flower-section" data-flower="lihua" data-section="lihua">
+    <div class="section-header">
+      <div class="section-icon" aria-hidden="true">&#x2741;</div>
+      <h2 class="section-title">梨花</h2>
+      <span class="section-count">4 首</span>
+    </div>
+    <div class="poem-grid">
+      <article class="poem-card">
+        <span class="poem-index">79</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">白雪歌送武判官归京</h3>
+          <span class="poem-badge">梨花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 岑参</div>
+        <div class="poem-text">
+          <span class="line">北风卷地白草折，胡天八月即飞雪。</span>
+          <span class="line">忽如一夜春风来，千树万树梨花开。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">80</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">长恨歌（节选）</h3>
+          <span class="poem-badge">梨花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 白居易</div>
+        <div class="poem-text">
+          <span class="line">玉容寂寞泪阑干，梨花一枝春带雨。</span>
+          <span class="line">含情凝睇谢君王，一别音容两渺茫。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">81</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">寓意</h3>
+          <span class="poem-badge">梨花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 晏殊</div>
+        <div class="poem-text">
+          <span class="line">梨花院落溶溶月，柳絮池塘淡淡风。</span>
+          <span class="line">几日寂寥伤酒后，一番萧瑟禁烟中。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">82</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">春怨</h3>
+          <span class="poem-badge">梨花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 刘方平</div>
+        <div class="poem-text">
+          <span class="line">纱窗日落渐黄昏，金屋无人见泪痕。</span>
+          <span class="line">寂寞空庭春欲晚，梨花满地不开门。</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==================== 茉莉 ==================== -->
+  <section class="flower-section" data-flower="moli" data-section="moli">
+    <div class="section-header">
+      <div class="section-icon" aria-hidden="true">&#x2740;</div>
+      <h2 class="section-title">茉莉</h2>
+      <span class="section-count">3 首</span>
+    </div>
+    <div class="poem-grid">
+      <article class="poem-card">
+        <span class="poem-index">83</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">茉莉</h3>
+          <span class="poem-badge">茉莉</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 江奎</div>
+        <div class="poem-text">
+          <span class="line">他年我若修花史，列作人间第一香。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">84</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">茉莉</h3>
+          <span class="poem-badge">茉莉</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 刘克庄</div>
+        <div class="poem-text">
+          <span class="line">一卉能熏一室香，炎天犹觉玉肌凉。</span>
+          <span class="line">野人不敢扬州去，怕惹东风梦魂长。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">85</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">茉莉</h3>
+          <span class="poem-badge">茉莉</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 王十朋</div>
+        <div class="poem-text">
+          <span class="line">茉莉名佳花亦佳，远从佛国到中华。</span>
+          <span class="line">老来耻逐蝇头利，故向禅房觅此花。</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==================== 蔷薇 ==================== -->
+  <section class="flower-section" data-flower="qiangwei" data-section="qiangwei">
+    <div class="section-header">
+      <div class="section-icon" aria-hidden="true">&#x273F;</div>
+      <h2 class="section-title">蔷薇</h2>
+      <span class="section-count">5 首</span>
+    </div>
+    <div class="poem-grid">
+      <article class="poem-card">
+        <span class="poem-index">86</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">山亭夏日</h3>
+          <span class="poem-badge">蔷薇</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 高骈</div>
+        <div class="poem-text">
+          <span class="line">绿树阴浓夏日长，楼台倒影入池塘。</span>
+          <span class="line">水晶帘动微风起，满架蔷薇一院香。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">87</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">蔷薇花</h3>
+          <span class="poem-badge">蔷薇</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 杜牧</div>
+        <div class="poem-text">
+          <span class="line">朵朵精神叶叶柔，雨晴香拂醉人头。</span>
+          <span class="line">石家锦幛依然在，闲倚狂风夜不收。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">88</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">春日</h3>
+          <span class="poem-badge">蔷薇</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 秦观</div>
+        <div class="poem-text">
+          <span class="line">一夕轻雷落万丝，霁光浮瓦碧参差。</span>
+          <span class="line">有情芍药含春泪，无力蔷薇卧晓枝。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">89</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">蔷薇</h3>
+          <span class="poem-badge">蔷薇</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 李绅</div>
+        <div class="poem-text">
+          <span class="line">蔷薇繁艳满城阴，烂熳开红次第深。</span>
+          <span class="line">新蕊度香翻宿蝶，密房飘影戏晨禽。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">90</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">题蔷薇</h3>
+          <span class="poem-badge">蔷薇</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 朱庆馀</div>
+        <div class="poem-text">
+          <span class="line">根本似玫瑰，繁美刺外开。</span>
+          <span class="line">香高丛有架，红落地多苔。</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==================== 其他百花 ==================== -->
+  <section class="flower-section" data-flower="qita" data-section="qita">
+    <div class="section-header">
+      <div class="section-icon" aria-hidden="true">&#x273F;</div>
+      <h2 class="section-title">其他百花</h2>
+      <span class="section-count">10 首</span>
+    </div>
+    <div class="poem-grid">
+      <article class="poem-card">
+        <span class="poem-index">91</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">咏柳</h3>
+          <span class="poem-badge">百花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 贺知章</div>
+        <div class="poem-text">
+          <span class="line">碧玉妆成一树高，万条垂下绿丝绦。</span>
+          <span class="line">不知细叶谁裁出，二月春风似剪刀。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">92</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">登科后</h3>
+          <span class="poem-badge">百花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 孟郊</div>
+        <div class="poem-text">
+          <span class="line">昔日龌龊不足夸，今朝放荡思无涯。</span>
+          <span class="line">春风得意马蹄疾，一日看尽长安花。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">93</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">春日</h3>
+          <span class="poem-badge">百花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 朱熹</div>
+        <div class="poem-text">
+          <span class="line">胜日寻芳泗水滨，无边光景一时新。</span>
+          <span class="line">等闲识得东风面，万紫千红总是春。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">94</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">春夜喜雨</h3>
+          <span class="poem-badge">百花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 杜甫</div>
+        <div class="poem-text">
+          <span class="line">好雨知时节，当春乃发生。</span>
+          <span class="line">随风潜入夜，润物细无声。</span>
+          <span class="line">野径云俱黑，江船火独明。</span>
+          <span class="line">晓看红湿处，花重锦官城。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">95</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">己亥杂诗</h3>
+          <span class="poem-badge">百花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">清</span> 龚自珍</div>
+        <div class="poem-text">
+          <span class="line">浩荡离愁白日斜，吟鞭东指即天涯。</span>
+          <span class="line">落红不是无情物，化作春泥更护花。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">96</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">滁州西涧</h3>
+          <span class="poem-badge">百花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 韦应物</div>
+        <div class="poem-text">
+          <span class="line">独怜幽草涧边生，上有黄鹂深树鸣。</span>
+          <span class="line">春潮带雨晚来急，野渡无人舟自横。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">97</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">钱塘湖春行</h3>
+          <span class="poem-badge">百花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 白居易</div>
+        <div class="poem-text">
+          <span class="line">乱花渐欲迷人眼，浅草才能没马蹄。</span>
+          <span class="line">最爱湖东行不足，绿杨阴里白沙堤。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">98</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">春望</h3>
+          <span class="poem-badge">百花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">唐</span> 杜甫</div>
+        <div class="poem-text">
+          <span class="line">国破山河在，城春草木深。</span>
+          <span class="line">感时花溅泪，恨别鸟惊心。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">99</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">月季</h3>
+          <span class="poem-badge">百花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 苏轼</div>
+        <div class="poem-text">
+          <span class="line">花落花开无间断，春来春去不相关。</span>
+          <span class="line">牡丹最贵惟春晚，芍药虽繁只夏初。</span>
+        </div>
+      </article>
+      <article class="poem-card">
+        <span class="poem-index">100</span>
+        <div class="poem-card-header">
+          <h3 class="poem-title">游山西村</h3>
+          <span class="poem-badge">百花</span>
+        </div>
+        <div class="poem-author"><span class="poem-author-dynasty">宋</span> 陆游</div>
+        <div class="poem-text">
+          <span class="line">莫笑农家腊酒浑，丰年留客足鸡豚。</span>
+          <span class="line">山重水复疑无路，柳暗花明又一村。</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>百花诗词 — 古诗词百花吟诵精选Top100</p>
+  <p>收录梅花、牡丹、荷花、菊花、桃花、兰花、杏花、桂花、海棠、梨花、茉莉、蔷薇等花卉名篇</p>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0})" aria-label="返回顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+// Theme Toggle
+function toggleTheme() {
+  var body = document.body;
+  var isDark = body.getAttribute('data-theme') === 'dark';
+  body.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  localStorage.setItem('theme', isDark ? 'light' : 'dark');
+}
+
+// Load saved theme
+(function() {
+  var saved = localStorage.getItem('theme');
+  if (saved) {
+    document.body.setAttribute('data-theme', saved);
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.body.setAttribute('data-theme', 'dark');
+  }
+})();
+
+// Filter Poems
+function filterPoems(flower, btn) {
+  document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+
+  var sections = document.querySelectorAll('.flower-section');
+  sections.forEach(function(section) {
+    if (flower === 'all' || section.dataset.flower === flower) {
+      section.style.display = '';
+      section.querySelectorAll('.poem-card').forEach(function(card) {
+        card.style.display = '';
+      });
+    } else {
+      section.style.display = 'none';
+    }
+  });
+
+  document.getElementById('searchInput').value = '';
+
+  // Remove empty state
+  var emptyEl = document.querySelector('.empty-state');
+  if (emptyEl) emptyEl.style.display = 'none';
+}
+
+// Search
+document.getElementById('searchInput').addEventListener('input', function(e) {
+  var query = e.target.value.trim().toLowerCase();
+
+  document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+
+  var sections = document.querySelectorAll('.flower-section');
+  var totalVisible = 0;
+
+  sections.forEach(function(section) {
+    var cards = section.querySelectorAll('.poem-card');
+    var sectionVisible = 0;
+
+    cards.forEach(function(card) {
+      var title = card.querySelector('.poem-title').textContent.toLowerCase();
+      var author = card.querySelector('.poem-author').textContent.toLowerCase();
+      var text = card.querySelector('.poem-text').textContent.toLowerCase();
+      var match = !query || title.indexOf(query) !== -1 || author.indexOf(query) !== -1 || text.indexOf(query) !== -1;
+      card.style.display = match ? '' : 'none';
+      if (match) sectionVisible++;
+    });
+
+    section.style.display = sectionVisible > 0 ? '' : 'none';
+    totalVisible += sectionVisible;
+  });
+
+  var emptyEl = document.querySelector('.empty-state');
+  if (totalVisible === 0 && query) {
+    if (!emptyEl) {
+      emptyEl = document.createElement('div');
+      emptyEl.className = 'empty-state';
+      emptyEl.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><p>未找到匹配的诗词</p>';
+      document.querySelector('main').appendChild(emptyEl);
+    }
+    emptyEl.style.display = '';
+  } else if (emptyEl) {
+    emptyEl.style.display = 'none';
+  }
+});
+
+// Back to Top
+var backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 400) {
+    backToTop.classList.add('visible');
+  } else {
+    backToTop.classList.remove('visible');
+  }
+}, { passive: true });
+</script>
+
+</body>
+</html>
