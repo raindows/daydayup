@@ -46,7 +46,7 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;height:2px;backgroun
 [data-theme="dark"] .theme-toggle .icon-moon{display:none}
 [data-theme="light"] .theme-toggle .icon-sun{display:none}
 
-.hero{position:relative;min-height:max(75vh,520px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 24px;text-align:center}
+.hero{position:relative;overflow:hidden;min-height:max(75vh,520px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 24px;text-align:center}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 900px 600px at 50% 45%,rgba(201,169,110,.05),transparent);pointer-events:none}
 .hero h1{font-family:var(--font-d);font-size:clamp(3.5rem,10vw,7.5rem);font-weight:900;letter-spacing:.18em;line-height:1.15;color:var(--ink);animation:fu .8s ease both}
 .hero-line{width:56px;height:2px;background:var(--accent);margin:28px auto;border-radius:1px;animation:fu .8s ease .15s both}
@@ -86,6 +86,9 @@ footer a:hover{text-decoration:underline}
 @media(max-width:768px){.nav-hamburger{display:flex}.nav-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--bdr-l);flex-direction:column;padding:8px;overflow-x:visible;animation:menuIn .2s ease both;box-shadow:0 8px 24px rgba(44,36,32,.06)}.nav-menu.open{display:flex}.top-nav-link{padding:10px 16px;width:100%;border-radius:8px;font-size:.9rem}.nav-brand{font-size:.95rem;padding-right:12px}}
 @keyframes menuIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
 @media print{.theme-toggle,.top-nav,body::before{display:none}}
+.hero-illustration{position:absolute;bottom:0;left:0;right:0;width:100%;max-height:40%;pointer-events:none;z-index:1;line-height:0}
+.hero-illustration svg{width:100%;height:auto;display:block}
+.hero::after{content:'';position:absolute;width:min(400px,60vw);height:min(400px,60vw);border-radius:50%;background:radial-gradient(circle,var(--accent),transparent 70%);opacity:.04;pointer-events:none;top:-10%;right:-8%;z-index:0}
 </style>
 </head>
 <body data-theme="light">
@@ -121,6 +124,7 @@ footer a:hover{text-decoration:underline}
 <div class="hero-line"></div>
 <p class="hero-sub">少儿启蒙学习乐园</p>
 <p class="hero-meta">12 个模块 · 600+ 篇内容 · 100+ 位名人经典</p>
+<div class="hero-illustration" aria-hidden="true"><svg viewBox="0 0 1440 200" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 200V140c80-30 160-50 240-40s160 40 240 35 160-45 240-50 160 35 240 30 160-50 240-45V200H0z" fill="var(--accent)" opacity=".06"/><path d="M0 200V160c120-20 240-35 360-25s240 30 360 25 240-40 360-35V200H0z" fill="var(--accent)" opacity=".04"/><path d="M300 120l30-20 30 20-12-30h25l-20-18 22-12-28-5 15-25-28 10-12-28-12 28-28-10 15 25-28 5 22 12-20 18h25z" fill="var(--accent)" opacity=".08" transform="translate(500,30) scale(.7)"/><path d="M300 120l30-20 30 20-12-30h25l-20-18 22-12-28-5 15-25-28 10-12-28-12 28-28-10 15 25-28 5 22 12-20 18h25z" fill="var(--accent)" opacity=".06" transform="translate(900,20) scale(.5)"/></svg></div>
 </section>
 
 <main id="main">

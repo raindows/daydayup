@@ -118,6 +118,10 @@ footer p{margin-bottom:4px}
 @media(max-width:768px){.nav-hamburger{display:flex}.nav-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--bdr-l);flex-direction:column;padding:8px;overflow-x:visible;animation:menuIn .2s ease both;box-shadow:0 8px 24px rgba(44,36,32,.06)}.nav-menu.open{display:flex}.top-nav-link{padding:10px 16px;width:100%;border-radius:8px;font-size:.9rem}.nav-brand{font-size:.95rem;padding-right:12px}}
 @keyframes menuIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
 @media print{.theme-toggle,.back-to-top,.filter-bar,.search-wrap{position:relative;flex-shrink:0}.poem-card{break-inside:avoid;box-shadow:none;border:1px solid #ddd}body{background:#fff;color:#000}}
+.hero-illustration{position:absolute;bottom:0;left:0;right:0;width:100%;max-height:40%;pointer-events:none;z-index:1;line-height:0}
+.hero-illustration svg{width:100%;height:auto;display:block}
+.hero::after{content:'';position:absolute;width:min(400px,60vw);height:min(400px,60vw);border-radius:50%;background:radial-gradient(circle,var(--accent),transparent 70%);opacity:.04;pointer-events:none;top:-10%;right:-8%;z-index:0}
+main{background-image:radial-gradient(circle,var(--bdr-l) .5px,transparent .5px);background-size:24px 24px}
 </style>
 </head>
 <body data-theme="light">
@@ -158,6 +162,7 @@ footer p{margin-bottom:4px}
     <div class="hero-stat"><span class="hero-stat-num">6</span><span class="hero-stat-label">精选分类</span></div>
     <div class="hero-stat"><span class="hero-stat-num">300</span><span class="hero-stat-label">拼音释义</span></div>
   </div>
+<div class="hero-illustration" aria-hidden="true"><svg viewBox="0 0 1440 200" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 200V150c120-25 240-35 360-25s240 25 360 20 240-30 360-20 240 20 360 15V200H0z" fill="var(--accent)" opacity=".06"/><rect x="250" y="70" width="100" height="65" rx="3" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity=".07"/><circle cx="260" cy="70" r="8" fill="var(--gold)" opacity=".06"/><circle cx="340" cy="70" r="8" fill="var(--gold)" opacity=".06"/><line x1="260" y1="95" x2="340" y2="95" stroke="var(--gold)" stroke-width="1" opacity=".05"/><line x1="260" y1="108" x2="340" y2="108" stroke="var(--gold)" stroke-width="1" opacity=".05"/><line x1="260" y1="121" x2="340" y2="121" stroke="var(--gold)" stroke-width="1" opacity=".05"/><path d="M700 55c20-15 50-15 70 0s15 40-5 55-50 15-70 0-15-40 5-55z" fill="var(--accent)" opacity=".05" stroke="var(--accent)" stroke-width="1"/><path d="M720 65c15-10 35-10 50 0" stroke="var(--gold)" stroke-width="1" opacity=".05" fill="none"/><path d="M1100 60c15-10 40-5 50 10s0 35-15 40" stroke="var(--gold)" stroke-width="1.5" opacity=".06" fill="none"/><path d="M1120 70c10-5 25 0 30 10s-5 20-15 22" stroke="var(--gold)" stroke-width="1" opacity=".05" fill="none"/></svg></div>
 </header>
 <main id="main">
 

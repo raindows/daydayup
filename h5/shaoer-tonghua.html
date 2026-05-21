@@ -124,6 +124,10 @@ main{padding:0 16px 60px}
 .hero-sub{font-size:.85rem}
 }
 @media(prefers-reduced-motion:reduce){*{transition-duration:0s!important;animation-duration:0s!important}}
+.hero-illustration{position:absolute;bottom:0;left:0;right:0;width:100%;max-height:40%;pointer-events:none;z-index:1;line-height:0}
+.hero-illustration svg{width:100%;height:auto;display:block}
+.hero::after{content:'';position:absolute;width:min(400px,60vw);height:min(400px,60vw);border-radius:50%;background:radial-gradient(circle,var(--accent),transparent 70%);opacity:.04;pointer-events:none;top:-10%;right:-8%;z-index:0}
+main{background-image:radial-gradient(circle,var(--bdr-l) .5px,transparent .5px);background-size:24px 24px}
 </style>
 </head>
 <body data-theme="light">
@@ -164,6 +168,7 @@ main{padding:0 16px 60px}
 <div class="hero-stat"><span class="hero-stat-num">6</span><span class="hero-stat-label">主题分类</span></div>
 <div class="hero-stat"><span class="hero-stat-num">4+</span><span class="hero-stat-label">适读年龄</span></div>
 </div>
+<div class="hero-illustration" aria-hidden="true"><svg viewBox="0 0 1440 200" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 200V150c120-30 240-20 360-30s240 20 360 10 240-25 360-15 240 20 360 10V200H0z" fill="var(--rose)" opacity=".06"/><rect x="600" y="80" width="40" height="70" rx="4" fill="var(--accent)" opacity=".07"/><rect x="590" y="75" width="60" height="10" rx="3" fill="var(--accent)" opacity=".08"/><polygon points="600,80 620,40 640,80" fill="var(--gold)" opacity=".09"/><rect x="614" y="90" width="12" height="16" rx="2" fill="var(--bg)" opacity=".15"/><polygon points="610,40 620,20 630,40" fill="var(--gold)" opacity=".07"/><rect x="580" y="60" width="80" height="8" rx="3" fill="var(--accent)" opacity=".06"/><circle cx="900" cy="50" r="6" fill="var(--gold)" opacity=".1"/><circle cx="950" cy="35" r="4" fill="var(--gold)" opacity=".08"/><circle cx="1050" cy="60" r="5" fill="var(--gold)" opacity=".09"/><circle cx="1200" cy="40" r="7" fill="var(--gold)" opacity=".07"/><circle cx="300" cy="45" r="5" fill="var(--gold)" opacity=".08"/><circle cx="450" cy="55" r="4" fill="var(--gold)" opacity=".06"/></svg></div>
 </header>
 <main id="main">
 <div class="filter-bar" role="toolbar" aria-label="故事筛选">

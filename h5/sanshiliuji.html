@@ -125,6 +125,10 @@ main{padding:0 16px 60px}
 .hero-sub{font-size:.85rem}
 }
 @media(prefers-reduced-motion:reduce){*{transition-duration:0s!important;animation-duration:0s!important}}
+.hero-illustration{position:absolute;bottom:0;left:0;right:0;width:100%;max-height:40%;pointer-events:none;z-index:1;line-height:0}
+.hero-illustration svg{width:100%;height:auto;display:block}
+.hero::after{content:'';position:absolute;width:min(400px,60vw);height:min(400px,60vw);border-radius:50%;background:radial-gradient(circle,var(--accent),transparent 70%);opacity:.04;pointer-events:none;top:-10%;right:-8%;z-index:0}
+main{background-image:radial-gradient(circle,var(--bdr-l) .5px,transparent .5px);background-size:24px 24px}
 </style>
 </head>
 <body data-theme="light">
@@ -165,6 +169,7 @@ main{padding:0 16px 60px}
 <div class="hero-stat"><span class="hero-stat-num">6</span><span class="hero-stat-label">战略分类</span></div>
 <div class="hero-stat"><span class="hero-stat-num">1800+</span><span class="hero-stat-label">年历史传承</span></div>
 </div>
+<div class="hero-illustration" aria-hidden="true"><svg viewBox="0 0 1440 200" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 200V150c120-25 240-35 360-25s240 25 360 20 240-30 360-20 240 20 360 15V200H0z" fill="var(--accent)" opacity=".06"/><rect x="200" y="60" width="120" height="80" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity=".06"/><line x1="280" y1="60" x2="280" y2="140" stroke="var(--accent)" stroke-width="1" opacity=".05"/><line x1="200" y1="100" x2="320" y2="100" stroke="var(--accent)" stroke-width="1" opacity=".05"/><circle cx="240" cy="80" r="8" fill="var(--accent)" opacity=".06"/><circle cx="320" cy="80" r="8" fill="var(--gold)" opacity=".07"/><circle cx="240" cy="120" r="8" fill="var(--gold)" opacity=".06"/><circle cx="320" cy="120" r="8" fill="var(--accent)" opacity=".07"/><rect x="900" y="50" width="60" height="8" rx="1" fill="var(--accent)" opacity=".06"/><rect x="910" y="42" width="40" height="8" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".05"/><path d="M925 42l5-15 5 15" fill="var(--accent)" opacity=".06"/><polygon points="960,50 960,120 975,110 975,60" fill="var(--rose)" opacity=".06"/></svg></div>
 </header>
 <main id="main">
 <div class="filter-bar" role="toolbar" aria-label="分类筛选">

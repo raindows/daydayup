@@ -126,6 +126,10 @@ main{padding:0 16px 60px}
 .hero-sub{font-size:.85rem}
 }
 @media(prefers-reduced-motion:reduce){*{transition-duration:0s!important;animation-duration:0s!important}}
+.hero-illustration{position:absolute;bottom:0;left:0;right:0;width:100%;max-height:40%;pointer-events:none;z-index:1;line-height:0}
+.hero-illustration svg{width:100%;height:auto;display:block}
+.hero::after{content:'';position:absolute;width:min(400px,60vw);height:min(400px,60vw);border-radius:50%;background:radial-gradient(circle,var(--accent),transparent 70%);opacity:.04;pointer-events:none;top:-10%;right:-8%;z-index:0}
+main{background-image:radial-gradient(circle,var(--bdr-l) .5px,transparent .5px);background-size:24px 24px}
 </style>
 </head>
 <body data-theme="light">
@@ -166,6 +170,7 @@ main{padding:0 16px 60px}
 <div class="hero-stat"><span class="hero-stat-num">6</span><span class="hero-stat-label">分类主题</span></div>
 <div class="hero-stat"><span class="hero-stat-num">3000+</span><span class="hero-stat-label">年文字史</span></div>
 </div>
+<div class="hero-illustration" aria-hidden="true"><svg viewBox="0 0 1440 200" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 200V150c120-25 240-40 360-30s240 30 360 25 240-35 360-30 240 25 360 20V200H0z" fill="var(--accent)" opacity=".06"/><rect x="200" y="90" width="80" height="60" rx="2" fill="var(--accent)" opacity=".08" stroke="var(--accent)" stroke-width="1.5"/><line x1="200" y1="110" x2="280" y2="110" stroke="var(--accent)" stroke-width="1" opacity=".06"/><line x1="200" y1="130" x2="280" y2="130" stroke="var(--accent)" stroke-width="1" opacity=".06"/><line x1="230" y1="90" x2="230" y2="150" stroke="var(--accent)" stroke-width="1" opacity=".05"/><rect x="250" y="90" width="80" height="60" rx="2" fill="var(--accent)" opacity=".06" stroke="var(--accent)" stroke-width="1.5"/><line x1="250" y1="110" x2="330" y2="110" stroke="var(--accent)" stroke-width="1" opacity=".05"/><line x1="250" y1="130" x2="330" y2="130" stroke="var(--accent)" stroke-width="1" opacity=".05"/><path d="M900 120c-5 0-10-8-10-15s5-15 10-15 10 8 10 15-5 15-10 15z" fill="var(--gold)" opacity=".1"/><path d="M895 105c-15 15-30 40-25 60" stroke="var(--gold)" stroke-width="2.5" opacity=".08" fill="none" stroke-linecap="round"/><path d="M905 100c10 5 15 20 10 35" stroke="var(--gold)" stroke-width="1.5" opacity=".06" fill="none" stroke-linecap="round"/></svg></div>
 </header>
 <main id="main">
 <div class="filter-bar" role="toolbar" aria-label="汉字筛选">

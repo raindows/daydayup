@@ -125,6 +125,10 @@ main{padding:0 16px 60px}
 .hero-sub{font-size:.85rem}
 }
 @media(prefers-reduced-motion:reduce){*{transition-duration:0s!important;animation-duration:0s!important}}
+.hero-illustration{position:absolute;bottom:0;left:0;right:0;width:100%;max-height:40%;pointer-events:none;z-index:1;line-height:0}
+.hero-illustration svg{width:100%;height:auto;display:block}
+.hero::after{content:'';position:absolute;width:min(400px,60vw);height:min(400px,60vw);border-radius:50%;background:radial-gradient(circle,var(--accent),transparent 70%);opacity:.04;pointer-events:none;top:-10%;right:-8%;z-index:0}
+main{background-image:radial-gradient(circle,var(--bdr-l) .5px,transparent .5px);background-size:24px 24px}
 </style>
 </head>
 <body data-theme="light">
@@ -165,6 +169,7 @@ main{padding:0 16px 60px}
 <div class="hero-stat"><span class="hero-stat-num">8</span><span class="hero-stat-label">探索主题</span></div>
 <div class="hero-stat"><span class="hero-stat-num">4+</span><span class="hero-stat-label">适读年龄</span></div>
 </div>
+<div class="hero-illustration" aria-hidden="true"><svg viewBox="0 0 1440 200" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 200V150c100-25 200-35 300-25s200 25 300 20 200-30 300-20 200 20 340 15V200H0z" fill="var(--accent)" opacity=".05"/><circle cx="300" cy="60" r="35" fill="var(--c-tech)" opacity=".07"/><ellipse cx="290" cy="55" rx="35" ry="35" transform="rotate(-20 290 55)" stroke="var(--c-tech)" stroke-width="2" opacity=".06" fill="none"/><circle cx="300" cy="60" r="3" fill="var(--c-tech)" opacity=".1"/><circle cx="800" cy="50" r="25" fill="var(--c-nature)" opacity=".06"/><ellipse cx="800" cy="50" rx="40" ry="10" transform="rotate(-15 800 50)" stroke="var(--c-nature)" stroke-width="1.5" opacity=".06" fill="none"/><circle cx="800" cy="50" r="2" fill="var(--c-nature)" opacity=".09"/><circle cx="1150" cy="70" r="18" fill="var(--c-tech)" opacity=".05"/><circle cx="1150" cy="70" r="30" stroke="var(--c-tech)" stroke-width="1" opacity=".04" fill="none" stroke-dasharray="4 4"/><path d="M110 85l15-25 15 25h-10l5 10h-20l5-10z" fill="var(--c-tech)" opacity=".06"/></svg></div>
 </header>
 <main id="main">
 <div class="filter-bar" role="toolbar" aria-label="问答筛选">

@@ -118,6 +118,10 @@ footer p{margin-bottom:4px}
 .toggle-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .toggle-btn.active{background:var(--accent);color:#fff;border-style:solid;border-color:var(--accent)}
 .toggle-sep{width:1px;height:20px;background:var(--bdr-l);margin:0 4px;flex-shrink:0}
+.hero-illustration{position:absolute;bottom:0;left:0;right:0;width:100%;max-height:40%;pointer-events:none;z-index:1;line-height:0}
+.hero-illustration svg{width:100%;height:auto;display:block}
+.hero::after{content:'';position:absolute;width:min(400px,60vw);height:min(400px,60vw);border-radius:50%;background:radial-gradient(circle,var(--accent),transparent 70%);opacity:.04;pointer-events:none;top:-10%;right:-8%;z-index:0}
+main{background-image:radial-gradient(circle,var(--bdr-l) .5px,transparent .5px);background-size:24px 24px}
 </style>
 </head>
 <body data-theme="light">
@@ -158,6 +162,7 @@ footer p{margin-bottom:4px}
     <div class="hero-stat"><span class="hero-stat-num">4</span><span class="hero-stat-label">精选分类</span></div>
     <div class="hero-stat"><span class="hero-stat-num">100+</span><span class="hero-stat-label">传唱年代</span></div>
   </div>
+<div class="hero-illustration" aria-hidden="true"><svg viewBox="0 0 1440 180" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 180V130Q120 100 240 110T480 125T720 115T960 130T1200 110T1440 125V180z" fill="var(--accent)" opacity=".07"/><ellipse cx="200" cy="90" rx="18" ry="22" fill="var(--green)" opacity=".1"/><ellipse cx="200" cy="90" rx="18" ry="22" stroke="var(--green)" stroke-width="2" opacity=".1" fill="none"/><rect x="192" y="68" width="16" height="4" rx="2" fill="var(--green)" opacity=".1" transform="rotate(-15 200 70)"/><ellipse cx="380" cy="70" rx="14" ry="18" fill="var(--accent)" opacity=".08"/><ellipse cx="380" cy="70" rx="14" ry="18" stroke="var(--accent)" stroke-width="2" opacity=".08" fill="none"/><rect x="373" y="52" width="14" height="3.5" rx="2" fill="var(--accent)" opacity=".08" transform="rotate(-15 380 54)"/><path d="M550 75c0-10 8-18 18-18s18 8 18 18-8 18-18 18-18-8-18-18z" fill="var(--green)" opacity=".09"/><circle cx="850" cy="60" r="12" fill="var(--accent)" opacity=".07"/><circle cx="1050" cy="80" r="15" fill="var(--green)" opacity=".06"/><circle cx="1250" cy="55" r="10" fill="var(--accent)" opacity=".08"/></svg></div>
 </header>
 <main id="main">
 <nav class="filter-bar" aria-label="分类筛选">

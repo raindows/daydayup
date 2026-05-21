@@ -114,6 +114,10 @@ footer p{margin-bottom:4px}
 @media(max-width:768px){.nav-hamburger{display:flex}.nav-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--bdr-l);flex-direction:column;padding:8px;overflow-x:visible;animation:menuIn .2s ease both;box-shadow:0 8px 24px rgba(44,36,32,.06)}.nav-menu.open{display:flex}.top-nav-link{padding:10px 16px;width:100%;border-radius:8px;font-size:.9rem}.nav-brand{font-size:.95rem;padding-right:12px}}
 @keyframes menuIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
 @media print{.theme-toggle,.back-to-top,.filter-bar,.search-wrap{position:relative;flex-shrink:0}.poem-card{break-inside:avoid;box-shadow:none;border:1px solid #ddd}body{background:#fff;color:#000}}
+.hero-illustration{position:absolute;bottom:0;left:0;right:0;width:100%;max-height:40%;pointer-events:none;z-index:1;line-height:0}
+.hero-illustration svg{width:100%;height:auto;display:block}
+.hero::after{content:'';position:absolute;width:min(400px,60vw);height:min(400px,60vw);border-radius:50%;background:radial-gradient(circle,var(--accent),transparent 70%);opacity:.04;pointer-events:none;top:-10%;right:-8%;z-index:0}
+main{background-image:radial-gradient(circle,var(--bdr-l) .5px,transparent .5px);background-size:24px 24px}
 </style>
 </head>
 <body data-theme="light">
@@ -154,6 +158,7 @@ footer p{margin-bottom:4px}
     <div class="hero-stat"><span class="hero-stat-num">7</span><span class="hero-stat-label">历史时期</span></div>
     <div class="hero-stat"><span class="hero-stat-num">63</span><span class="hero-stat-label">年创作跨度</span></div>
   </div>
+<div class="hero-illustration" aria-hidden="true"><svg viewBox="0 0 1440 200" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 200V140c80-30 160-45 240-35s160 35 240 30 160-40 240-35 160 30 240 25 160-35 240-30V200H0z" fill="var(--accent)" opacity=".06"/><path d="M300 130L300 60c0-5 5-15 10-25l5-10c5 10 10 20 10 25v70z" fill="var(--green)" opacity=".07"/><path d="M295 80c-15 5-25 15-30 10s5-20 20-18" fill="var(--green)" opacity=".05"/><path d="M310 75c10-8 25-10 30-5s-5 18-18 15" fill="var(--green)" opacity=".05"/><path d="M300 60c-5-15-10-30-5-40" stroke="var(--green)" stroke-width="1.5" opacity=".05" fill="none"/><path d="M700 130L700 70c0-4 4-12 8-20l4-8c4 8 8 16 8 20v60z" fill="var(--green)" opacity=".06"/><path d="M1100 135L1100 80c0-3 3-10 7-18l3-7c3 7 7 14 7 18v55z" fill="var(--green)" opacity=".05"/></svg></div>
 </header>
 <main id="main">
 <nav class="filter-bar" aria-label="历史时期筛选">
