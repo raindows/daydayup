@@ -17,18 +17,28 @@ body{font-family:var(--font-b);background:var(--bg);color:var(--ink);line-height
 .skip-link{position:absolute;top:-100%;left:16px;padding:8px 16px;background:var(--accent);color:#fff;border-radius:var(--r-sm);z-index:10000;font-size:14px;text-decoration:none}
 .skip-link:focus{top:16px}
 a{color:var(--accent-d);text-decoration:none}
-.top-nav{position:sticky;top:0;z-index:1001;background:var(--surface);border-bottom:1px solid var(--bdr-l);padding:0 24px;transition:background var(--tr)}
-.top-nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;height:44px;gap:4px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
-.top-nav-inner::-webkit-scrollbar{display:none}
-.top-nav-link{font-family:var(--font-b);font-size:.84rem;color:var(--ink-l);text-decoration:none;padding:6px 14px;border-radius:100px;border:1px solid transparent;transition:all var(--tr);white-space:nowrap;flex-shrink:0}
-.top-nav-link:hover{background:var(--bg-alt);border-color:var(--bdr)}
+.top-nav{position:sticky;top:0;z-index:1001;background:var(--surface);border-bottom:1px solid var(--bdr-l);transition:background var(--tr)}
+.top-nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;height:52px;padding:0 20px;gap:4px;position:relative}
+.nav-brand{font-family:var(--font-d);font-size:1.05rem;font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:.12em;flex-shrink:0;padding-right:16px;margin-right:8px;border-right:1.5px solid var(--bdr-l);transition:color var(--tr);line-height:1}
+.nav-brand:hover{color:var(--accent)}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:36px;height:36px;padding:0;background:none;border:1px solid var(--bdr-l);border-radius:8px;cursor:pointer;flex-shrink:0;transition:all var(--tr)}
+.nav-hamburger:hover{border-color:var(--accent)}
+.nav-hamburger span{display:block;width:16px;height:1.5px;background:var(--ink);border-radius:2px;transition:all .3s ease;transform-origin:center}
+.nav-hamburger[aria-expanded="true"]{border-color:var(--accent)}
+.nav-hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-hamburger[aria-expanded="true"] span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav-hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-menu{display:flex;align-items:center;flex:1;gap:2px;overflow-x:auto;scrollbar-width:none;scroll-padding:0 4px}
+.nav-menu::-webkit-scrollbar{display:none}
+.top-nav-link{font-family:var(--font-b);font-size:.84rem;color:var(--ink-l);text-decoration:none;padding:6px 12px;border-radius:8px;transition:all var(--tr);white-space:nowrap;flex-shrink:0}
+.top-nav-link:hover{color:var(--ink);background:var(--bg)}
 .top-nav-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.top-nav-link.active{background:var(--accent);color:#fff;border-color:var(--accent)}
-.top-nav-sep{width:1px;height:16px;background:var(--bdr-l);margin:0 4px;flex-shrink:0}
-.theme-toggle{position:fixed;top:52px;right:20px;z-index:1000;width:44px;height:44px;border:1px solid var(--bdr);border-radius:50%;background:var(--surface);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-m);transition:all var(--tr)}
-.theme-toggle:hover{transform:scale(1.08);box-shadow:var(--sh-l)}
+.top-nav-link.active{color:var(--accent);font-weight:500}
+.theme-toggle{width:32px;height:32px;border:1px solid var(--bdr-l);border-radius:50%;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all var(--tr);margin-left:auto}
+.theme-toggle:hover{border-color:var(--accent)}
+.theme-toggle:hover svg{color:var(--accent)}
 .theme-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.theme-toggle svg{width:20px;height:20px;color:var(--ink)}
+.theme-toggle svg{width:16px;height:16px;color:var(--ink-m);transition:color var(--tr)}
 [data-theme="dark"] .theme-toggle .icon-moon{display:none}
 [data-theme="light"] .theme-toggle .icon-sun{display:none}
 .hero{position:relative;min-height:42vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:72px 24px 48px;overflow:hidden}
@@ -43,7 +53,7 @@ a{color:var(--accent-d);text-decoration:none}
 .hero-stat-num{font-family:var(--font-h);font-size:2rem;font-weight:700;color:var(--accent);display:block}
 .hero-stat-label{font-size:.78rem;color:var(--ink-m);letter-spacing:.08em}
 main{max-width:1280px;margin:0 auto;padding:0 24px 80px}
-.filter-bar{position:sticky;top:44px;z-index:100;background:var(--bg);border-bottom:1px solid var(--bdr-l);padding:16px 0;margin-bottom:40px;transition:background var(--tr)}
+.filter-bar{position:sticky;top:52px;z-index:100;background:var(--bg);border-bottom:1px solid var(--bdr-l);padding:16px 0;margin-bottom:40px;transition:background var(--tr)}
 .filter-bar-inner{display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
 .filter-bar-inner::-webkit-scrollbar{display:none}
 .filter-btn{flex-shrink:0;padding:8px 18px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink-l);font-family:var(--font-b);font-size:.84rem;cursor:pointer;transition:all var(--tr);white-space:nowrap;user-select:none}
@@ -106,12 +116,12 @@ footer{text-align:center;padding:40px 24px;color:var(--ink-m);font-size:.82rem;b
 .hero h1{letter-spacing:.04em}
 .hero-stats{gap:20px}
 main{padding:0 16px 60px}
-.filter-bar{position:sticky;top:44px;z-index:100;background:var(--bg);border-bottom:1px solid var(--bdr-l);padding:16px 0;margin-bottom:40px;transition:background var(--tr)}
+.filter-bar{position:sticky;top:52px;z-index:100;background:var(--bg);border-bottom:1px solid var(--bdr-l);padding:16px 0;margin-bottom:40px;transition:background var(--tr)}
 .search-wrap{position:relative;flex-shrink:0}
 .search-input{padding:8px 16px 8px 36px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink);font-family:var(--font-b);font-size:.84rem;width:150px;transition:all var(--tr)}
 .search-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(184,56,42,.12);width:200px}
 .story-grid{grid-template-columns:1fr}
-.top-nav{padding:0 16px}
+
 }
 @media(max-width:400px){
 .hero h1{font-size:2.2rem}
@@ -124,37 +134,29 @@ main{padding:0 16px 60px}
 <a href="#main" class="skip-link">跳到正文</a>
 <nav class="top-nav" aria-label="站点导航">
 <div class="top-nav-inner">
+<a href="index.html" class="nav-brand">天天向上</a>
+<button class="nav-hamburger" aria-label="菜单" aria-expanded="false" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+<div class="nav-menu" id="navMenu">
 <a href="index.html" class="top-nav-link">首页</a>
-<span class="top-nav-sep"></span>
 <a href="jingdian-tongyao.html" class="top-nav-link">经典童谣</a>
-<span class="top-nav-sep"></span>
 <a href="shenglv-qimeng.html" class="top-nav-link">声律启蒙</a>
-<span class="top-nav-sep"></span>
 <a href="shaoer-tonghua.html" class="top-nav-link">少儿童话</a>
-<span class="top-nav-sep"></span>
 <a href="shaoer-qimeng-shici.html" class="top-nav-link">启蒙诗词</a>
-<span class="top-nav-sep"></span>
 <a href="hanzi-gushi.html" class="top-nav-link">汉字故事</a>
-<span class="top-nav-sep"></span>
 <a href="baihua-shici.html" class="top-nav-link">百花诗词</a>
-<span class="top-nav-sep"></span>
 <a href="shi-wan-ge-weishenme.html" class="top-nav-link">十万个为什么</a>
-<span class="top-nav-sep"></span>
 <a href="shaoer-chengyu.html" class="top-nav-link">少儿成语</a>
-<span class="top-nav-sep"></span>
 <a href="shangxia-wuqiannian.html" class="top-nav-link active">上下五千年</a>
-<span class="top-nav-sep"></span>
 <a href="sanshiliuji.html" class="top-nav-link">三十六计</a>
-<span class="top-nav-sep"></span>
 <a href="song-ci-jingxuan.html" class="top-nav-link">宋词精选</a>
-<span class="top-nav-sep"></span>
 <a href="maozedong-shici.html" class="top-nav-link">毛主席诗词</a>
 </div>
-</nav>
-<button class="theme-toggle" aria-label="切换深色模式" title="切换深色模式">
-<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
-<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="切换深色/浅色模式">
+<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
 </button>
+</div>
+</nav>
 <header class="hero">
 <div class="hero-deco" aria-hidden="true">&#x1F3DB; &#x2694; &#x1F3F4; &#x2728;</div>
 <div class="hero-ornament" aria-hidden="true"></div>
@@ -386,14 +388,14 @@ main{padding:0 16px 60px}
 (function(){
 var themeBtn=document.querySelector('.theme-toggle');
 var body=document.body;
-var saved=localStorage.getItem('history-theme');
+var saved=localStorage.getItem('daydayup-theme');
 if(!saved&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches){saved='dark'}
 if(saved){body.setAttribute('data-theme',saved)}
 themeBtn.addEventListener('click',function(){
 var cur=body.getAttribute('data-theme');
 var next=cur==='dark'?'light':'dark';
 body.setAttribute('data-theme',next);
-localStorage.setItem('history-theme',next);
+localStorage.setItem('daydayup-theme',next);
 });
 var filterBtns=document.querySelectorAll('.filter-btn');
 var cards=document.querySelectorAll('.story-card');
@@ -447,6 +449,10 @@ backTop.addEventListener('click',function(){
 window.scrollTo({top:0,behavior:'smooth'});
 });
 })();
+
+function toggleMenu(){var b=document.querySelector('.nav-hamburger'),m=document.getElementById('navMenu'),e=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',!e);m.classList.toggle('open')}
+document.getElementById('navMenu').addEventListener('click',function(e){if(e.target.classList.contains('top-nav-link')){document.querySelector('.nav-hamburger').setAttribute('aria-expanded','false');this.classList.remove('open')}});
+document.addEventListener('click',function(e){if(!e.target.closest('.nav-hamburger')&&!e.target.closest('.nav-menu')){var b=document.querySelector('.nav-hamburger'),m=document.getElementById('navMenu');if(b&&b.getAttribute('aria-expanded')==='true'){b.setAttribute('aria-expanded','false');m.classList.remove('open')}}});
 </script>
 </body>
 </html>

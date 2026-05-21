@@ -687,6 +687,8 @@ footer p { margin-bottom: 4px; }
 }
 
 /* ========== Print ========== */
+@media(max-width:768px){.nav-hamburger{display:flex}.nav-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--bdr-l);flex-direction:column;padding:8px;overflow-x:visible;animation:menuIn .2s ease both;box-shadow:0 8px 24px rgba(44,36,32,.06)}.nav-menu.open{display:flex}.top-nav-link{padding:10px 16px;width:100%;border-radius:8px;font-size:.9rem}.nav-brand{font-size:.95rem;padding-right:12px}}
+@keyframes menuIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
 @media print {
   .theme-toggle, .back-to-top, .filter-bar, .search-wrap {
   position: relative;
@@ -2158,12 +2160,12 @@ function toggleTheme() {
   var body = document.body;
   var isDark = body.getAttribute('data-theme') === 'dark';
   body.setAttribute('data-theme', isDark ? 'light' : 'dark');
-  localStorage.setItem('theme', isDark ? 'light' : 'dark');
+  localStorage.setItem('daydayup-theme', isDark ? 'light' : 'dark');
 }
 
 // Load saved theme
 (function() {
-  var saved = localStorage.getItem('theme');
+  var saved = localStorage.getItem('daydayup-theme');
   if (saved) {
     document.body.setAttribute('data-theme', saved);
   } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -2245,6 +2247,10 @@ window.addEventListener('scroll', function() {
     backToTop.classList.remove('visible');
   }
 }, { passive: true });
+
+function toggleMenu(){var b=document.querySelector('.nav-hamburger'),m=document.getElementById('navMenu'),e=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',!e);m.classList.toggle('open')}
+document.getElementById('navMenu').addEventListener('click',function(e){if(e.target.classList.contains('top-nav-link')){document.querySelector('.nav-hamburger').setAttribute('aria-expanded','false');this.classList.remove('open')}});
+document.addEventListener('click',function(e){if(!e.target.closest('.nav-hamburger')&&!e.target.closest('.nav-menu')){var b=document.querySelector('.nav-hamburger'),m=document.getElementById('navMenu');if(b&&b.getAttribute('aria-expanded')==='true'){b.setAttribute('aria-expanded','false');m.classList.remove('open')}}});
 </script>
 
 </body>
