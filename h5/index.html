@@ -22,8 +22,9 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;height:2px;backgroun
 
 .top-nav{position:sticky;top:0;z-index:1001;background:var(--surface);border-bottom:1px solid var(--bdr-l);transition:background var(--tr)}
 .top-nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;height:52px;padding:0 20px;gap:4px;position:relative}
-.nav-brand{font-family:var(--font-d);font-size:1.05rem;font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:.12em;flex-shrink:0;padding-right:16px;margin-right:8px;border-right:1.5px solid var(--bdr-l);transition:color var(--tr);line-height:1}
+.nav-brand{font-family:var(--font-d);font-size:1.05rem;font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:.12em;flex-shrink:0;padding-right:16px;margin-right:8px;border-right:1.5px solid var(--bdr-l);transition:color var(--tr);line-height:1;display:flex;align-items:center;gap:6px}
 .nav-brand:hover{color:var(--accent)}
+.nav-brand svg{width:20px;height:20px;flex-shrink:0}
 .nav-hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:36px;height:36px;padding:0;background:none;border:1px solid var(--bdr-l);border-radius:8px;cursor:pointer;flex-shrink:0;transition:all var(--tr)}
 .nav-hamburger:hover{border-color:var(--accent)}
 .nav-hamburger span{display:block;width:16px;height:1.5px;background:var(--ink);border-radius:2px;transition:all .3s ease;transform-origin:center}
@@ -95,10 +96,9 @@ footer a:hover{text-decoration:underline}
 <a href="#main" class="skip-link">跳转到主要内容</a>
 <nav class="top-nav" aria-label="站点导航">
 <div class="top-nav-inner">
-<a href="index.html" class="nav-brand">天天向上</a>
+<a href="index.html" class="nav-brand"><svg viewBox="0 0 24 24" fill="#C04851" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2.9 6.26L22 9.27l-5 5.14L18.18 22 12 18.56 5.82 22 7 14.41l-5-5.14 7.1-1.01z"/></svg>天天向上</a>
 <button class="nav-hamburger" aria-label="菜单" aria-expanded="false" onclick="toggleMenu()"><span></span><span></span><span></span></button>
 <div class="nav-menu" id="navMenu">
-<a href="index.html" class="top-nav-link active">首页</a>
 <a href="jingdian-tongyao.html" class="top-nav-link">经典童谣</a>
 <a href="shenglv-qimeng.html" class="top-nav-link">声律启蒙</a>
 <a href="shaoer-tonghua.html" class="top-nav-link">少儿童话</a>
@@ -112,6 +112,7 @@ footer a:hover{text-decoration:underline}
 <a href="sanshiliuji.html" class="top-nav-link">三十六计</a>
 <a href="song-ci-jingxuan.html" class="top-nav-link">宋词精选</a>
 <a href="maozedong-shici.html" class="top-nav-link">毛主席诗词</a>
+<a href="mao-zedong-yulu.html" class="top-nav-link">毛主席语录</a>
 </div>
 <button class="theme-toggle" onclick="toggleTheme()" aria-label="切换深色/浅色模式">
 <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -148,6 +149,7 @@ footer a:hover{text-decoration:underline}
 <a href="sanshiliuji.html" class="module-card" style="--card-bg:#EDEFF3;--card-ink:#4D5A6E"><h3 class="module-title">三十六计</h3><p class="module-desc">古代兵法智慧谋略</p></a>
 <a href="song-ci-jingxuan.html" class="module-card" style="--card-bg:#F2ECE8;--card-ink:#6E4D5A"><h3 class="module-title">宋词精选</h3><p class="module-desc">婉约豪放宋词之美</p></a>
 <a href="maozedong-shici.html" class="module-card" style="--card-bg:#F3F0E6;--card-ink:#6E5A3D"><h3 class="module-title">毛主席诗词</h3><p class="module-desc">领袖诗词风采</p></a>
+<a href="mao-zedong-yulu.html" class="module-card" style="--card-bg:#F3ECE2;--card-ink:#8B1A1A"><h3 class="module-title">毛主席语录</h3><p class="module-desc">经典语录荟萃</p></a>
 </div>
 <button class="carousel-btn next" aria-label="下一页" onclick="scrollCarousel(1)">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
