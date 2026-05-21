@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>童趣科学 - 少儿理科启蒙96问</title>
+<meta name="description" content="精选96个少儿理科问答，涵盖趣味数学、奇妙物理、神奇化学、生命奥秘、浩瀚星空、地球探秘六大主题。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+
+:root{--c-math:#7B1FA2;--c-physics:#1565C0;--c-chemistry:#00838F;--c-biology:#2E7D32;--c-astronomy:#283593;--c-earth:#E65100;--bg:#F5F9F9;--bg-alt:#E8F4F3;--surface:#FFF;--surface-h:#F8FDFC;--ink:#1A2E2E;--ink-l:#3D5A5A;--ink-m:#6B8A8A;--bdr:#D5E5E4;--bdr-l:#E2EEED;--accent:#00838F;--accent-d:#00606B;--gold:#C9A96E;--gold-l:#E8D5A8;--font-d:'Noto Serif SC',serif;--font-h:'Noto Serif SC',serif;--font-b:'Noto Sans SC',sans-serif;--r-sm:6px;--r-md:12px;--r-lg:20px;--sh-s:0 1px 3px rgba(44,36,32,.06);--sh-m:0 4px 16px rgba(44,36,32,.08);--sh-l:0 8px 32px rgba(44,36,32,.10);--tr:200ms ease}
+[data-theme="dark"]{--c-math:#BA68C8;--c-physics:#42A5F5;--c-chemistry:#26A69A;--c-biology:#66BB6A;--c-astronomy:#5C6BC0;--c-earth:#FF8A65;--bg:#141E1E;--bg-alt:#1C2A2A;--surface:#223232;--surface-h:#2A3A3A;--ink:#D6EBEB;--ink-l:#A8C5C5;--ink-m:#6B8A8A;--bdr:#2E4444;--bdr-l:#263838;--accent:#26A69A;--accent-d:#00838F;--gold:#E0C888;--gold-l:#A08040;--sh-s:0 1px 3px rgba(0,0,0,.2);--sh-m:0 4px 16px rgba(0,0,0,.3);--sh-l:0 8px 32px rgba(0,0,0,.35)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-b);background:var(--bg);color:var(--ink);line-height:1.7;min-height:100vh;transition:background var(--tr),color var(--tr)}
+.skip-link{position:absolute;top:-100%;left:16px;padding:8px 16px;background:var(--accent);color:#fff;border-radius:var(--r-sm);z-index:10000;font-size:14px;text-decoration:none}
+.skip-link:focus{top:16px}
+a{color:var(--accent-d);text-decoration:none}
+.top-nav{position:sticky;top:0;z-index:1001;background:var(--surface);border-bottom:1px solid var(--bdr-l);transition:background var(--tr)}
+.top-nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;height:52px;padding:0 20px;gap:4px;position:relative}
+.nav-brand{font-family:var(--font-d);font-size:1.05rem;font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:.12em;flex-shrink:0;padding-right:16px;margin-right:8px;border-right:1.5px solid var(--bdr-l);transition:color var(--tr);line-height:1}
+.nav-brand:hover{color:var(--accent)}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:36px;height:36px;padding:0;background:none;border:1px solid var(--bdr-l);border-radius:8px;cursor:pointer;flex-shrink:0;transition:all var(--tr)}
+.nav-hamburger:hover{border-color:var(--accent)}
+.nav-hamburger span{display:block;width:16px;height:1.5px;background:var(--ink);border-radius:2px;transition:all .3s ease;transform-origin:center}
+.nav-hamburger[aria-expanded="true"]{border-color:var(--accent)}
+.nav-hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-hamburger[aria-expanded="true"] span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav-hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-menu{display:flex;align-items:center;flex:1;gap:2px;overflow-x:auto;scrollbar-width:none;scroll-padding:0 4px}
+.nav-menu::-webkit-scrollbar{display:none}
+.top-nav-link{font-family:var(--font-b);font-size:.84rem;color:var(--ink-l);text-decoration:none;padding:6px 12px;border-radius:8px;transition:all var(--tr);white-space:nowrap;flex-shrink:0}
+.top-nav-link:hover{color:var(--ink);background:var(--bg)}
+.top-nav-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.top-nav-link.active{color:var(--accent);font-weight:500}
+.theme-toggle{width:32px;height:32px;border:1px solid var(--bdr-l);border-radius:50%;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all var(--tr);margin-left:auto}
+.theme-toggle:hover{border-color:var(--accent)}
+.theme-toggle:hover svg{color:var(--accent)}
+.theme-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.theme-toggle svg{width:16px;height:16px;color:var(--ink-m);transition:color var(--tr)}
+[data-theme="dark"] .theme-toggle .icon-moon{display:none}
+[data-theme="light"] .theme-toggle .icon-sun{display:none}
+.hero{position:relative;min-height:42vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:72px 24px 48px;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 600px 400px at 25% 35%,rgba(91,106,175,.10),transparent),radial-gradient(ellipse 500px 350px at 75% 65%,rgba(46,125,94,.08),transparent),radial-gradient(ellipse 400px 300px at 50% 50%,rgba(91,165,201,.06),transparent);pointer-events:none}
+.hero-deco{font-size:2rem;margin-bottom:12px;letter-spacing:.4em;filter:grayscale(.1)}
+.hero-ornament{width:80px;height:2px;background:linear-gradient(90deg,transparent,var(--accent),var(--c-physics),var(--c-biology),transparent);margin-bottom:20px}
+.hero h1{font-family:var(--font-d);font-size:clamp(2.6rem,7vw,5rem);font-weight:400;color:var(--ink);letter-spacing:.06em;line-height:1.2}
+.hero-sub{font-family:var(--font-h);font-size:clamp(.92rem,2.2vw,1.12rem);color:var(--ink-m);font-weight:400;letter-spacing:.15em;margin-top:8px}
+.hero-desc{font-size:.92rem;color:var(--ink-m);max-width:560px;margin-top:16px}
+.hero-stats{display:flex;gap:32px;margin-top:28px;flex-wrap:wrap;justify-content:center}
+.hero-stat{text-align:center}
+.hero-stat-num{font-family:var(--font-h);font-size:2rem;font-weight:700;color:var(--accent);display:block}
+.hero-stat-label{font-size:.78rem;color:var(--ink-m);letter-spacing:.08em}
+main{max-width:1280px;margin:0 auto;padding:0 24px 80px}
+.filter-bar{position:sticky;top:52px;z-index:100;background:var(--bg);border-bottom:1px solid var(--bdr-l);padding:16px 0;margin-bottom:40px;transition:background var(--tr)}
+.filter-bar-inner{display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.filter-bar-inner::-webkit-scrollbar{display:none}
+.filter-btn{flex-shrink:0;padding:8px 18px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink-l);font-family:var(--font-b);font-size:.84rem;cursor:pointer;transition:all var(--tr);white-space:nowrap;user-select:none}
+.filter-btn:hover{background:var(--surface-h);border-color:var(--ink-m)}
+.filter-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.filter-btn .count{display:inline-block;margin-left:3px;font-size:.72rem;opacity:.7}
+.search-wrap{position:relative;flex-shrink:0}
+.search-input{padding:8px 16px 8px 36px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink);font-family:var(--font-b);font-size:.84rem;width:200px;transition:all var(--tr)}
+.search-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(0,131,143,.12);width:260px}
+.search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--ink-m);pointer-events:none}
+.qa-section{margin-bottom:48px;opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.qa-section.visible{opacity:1;transform:translateY(0)}
+.section-header{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--bdr-l)}
+.section-badge{font-family:var(--font-h);font-size:.75rem;font-weight:500;padding:3px 10px;border-radius:100px;color:#fff;letter-spacing:.06em}
+.section-title{font-family:var(--font-h);font-size:1.35rem;font-weight:600;color:var(--ink)}
+.section-count{font-size:.82rem;color:var(--ink-m);margin-left:auto}
+[data-cat="math"] .section-badge{background:var(--c-math)}
+[data-cat="physics"] .section-badge{background:var(--c-physics)}
+[data-cat="chemistry"] .section-badge{background:var(--c-chemistry)}
+[data-cat="biology"] .section-badge{background:var(--c-biology)}
+[data-cat="astronomy"] .section-badge{background:var(--c-astronomy)}
+[data-cat="earth"] .section-badge{background:var(--c-earth)}
+
+
+
+
+
+
+
+
+
+.qa-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
+.qa-card{background:var(--surface);display:flex;flex-direction:column;border:1px solid var(--bdr-l);border-radius:var(--r-md);padding:22px;transition:all 250ms ease;cursor:default;position:relative;overflow:hidden}
+.qa-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;border-radius:3px 0 0 3px;opacity:0;transition:opacity var(--tr)}
+[data-cat="math"] .qa-card::before{background:var(--c-math)}
+[data-cat="physics"] .qa-card::before{background:var(--c-physics)}
+[data-cat="chemistry"] .qa-card::before{background:var(--c-chemistry)}
+[data-cat="biology"] .qa-card::before{background:var(--c-biology)}
+[data-cat="earth"] .qa-card::before{background:var(--c-earth)}
+[data-cat="astronomy"] .qa-card::before{background:var(--c-astronomy)}
+.qa-card:hover{box-shadow:var(--sh-m);transform:translateY(-2px);border-color:var(--bdr)}
+.qa-card:hover::before{opacity:1}
+.qa-index{position:absolute;top:10px;right:14px;font-family:var(--font-h);font-size:.72rem;color:var(--ink-m);opacity:.3}
+.qa-card-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px}
+.qa-title{font-family:var(--font-h);font-size:1.1rem;font-weight:600;color:var(--accent);line-height:1.4}
+.qa-category{flex-shrink:0;padding:2px 8px;border-radius:100px;font-size:.65rem;font-weight:500;letter-spacing:.04em;background:var(--bg-alt);color:var(--ink-m);margin-left:10px;align-self:flex-start;margin-top:2px;white-space:nowrap}
+.qa-answer{font-family:var(--font-h);font-size:1rem;line-height:2.2;color:var(--ink-l);letter-spacing:.04em;text-align:justify;margin-bottom:12px}
+.qa-fact{margin-top:auto;padding:10px 14px;background:var(--bg-alt);border-radius:var(--r-sm);font-size:.82rem;color:var(--ink-m);border-left:3px solid var(--gold)}
+.qa-fact strong{color:var(--accent-d);font-weight:500}
+.no-results{text-align:center;padding:60px 24px;color:var(--ink-m)}
+.no-results-icon{font-size:3rem;margin-bottom:16px;opacity:.5}
+.no-results-text{font-size:1rem;margin-bottom:8px}
+.no-results-hint{font-size:.84rem;opacity:.7}
+.back-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-m);transition:all var(--tr);opacity:0;pointer-events:none;z-index:999}
+.back-top.visible{opacity:1;pointer-events:auto}
+.back-top:hover{transform:translateY(-2px);box-shadow:var(--sh-l)}
+.back-top:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.back-top svg{width:20px;height:20px}
+footer{text-align:center;padding:40px 24px;color:var(--ink-m);font-size:.82rem;border-top:1px solid var(--bdr-l)}
+@media(max-width:768px){
+.nav-hamburger{display:flex}.nav-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--bdr-l);flex-direction:column;padding:8px;overflow-x:visible;animation:menuIn .2s ease both;box-shadow:0 8px 24px rgba(44,36,32,.06)}.nav-menu.open{display:flex}.top-nav-link{padding:10px 16px;width:100%;border-radius:8px;font-size:.9rem}.nav-brand{font-size:.95rem;padding-right:12px}
+.hero{min-height:32vh;padding:56px 20px 36px}
+.hero h1{letter-spacing:.04em}
+.hero-stats{gap:20px}
+main{padding:0 16px 60px}
+.filter-bar{position:sticky;top:52px;z-index:100;background:var(--bg);border-bottom:1px solid var(--bdr-l);padding:16px 0;margin-bottom:40px;transition:background var(--tr)}
+.search-wrap{position:relative;flex-shrink:0}
+.search-input{padding:8px 16px 8px 36px;border:1px solid var(--bdr);border-radius:100px;background:var(--surface);color:var(--ink);font-family:var(--font-b);font-size:.84rem;width:150px;transition:all var(--tr)}
+.search-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(0,131,143,.12);width:200px}
+.qa-grid{grid-template-columns:1fr}
+
+}
+@media(max-width:400px){
+.hero h1{font-size:2.2rem}
+.hero-sub{font-size:.85rem}
+}
+@keyframes menuIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){*{transition-duration:0s!important;animation-duration:0s!important}}
+.hero-illustration{position:absolute;bottom:0;left:0;right:0;width:100%;max-height:40%;pointer-events:none;z-index:1;line-height:0}
+.hero-illustration svg{width:100%;height:auto;display:block}
+.hero::after{content:'';position:absolute;width:min(400px,60vw);height:min(400px,60vw);border-radius:50%;background:radial-gradient(circle,var(--accent),transparent 70%);opacity:.04;pointer-events:none;top:-10%;right:-8%;z-index:0}
+main{background-image:radial-gradient(circle,var(--bdr-l) .5px,transparent .5px);background-size:24px 24px}
+
+.qa-difficulty{flex-shrink:0;padding:2px 8px;border-radius:100px;font-size:.65rem;font-weight:500;letter-spacing:.04em;margin-left:10px;align-self:flex-start;margin-top:2px;white-space:nowrap}
+.qa-difficulty[data-level="beginner"]{background:rgba(46,125,50,.1);color:var(--c-biology)}
+.qa-difficulty[data-level="intermediate"]{background:rgba(0,131,143,.1);color:var(--c-chemistry)}
+.qa-difficulty[data-level="advanced"]{background:rgba(230,81,0,.1);color:var(--c-earth)}
+
+</style>
+</head>
+<body data-theme="light">
+<a href="#main" class="skip-link">跳到正文</a>
+<nav class="top-nav" aria-label="站点导航">
+<div class="top-nav-inner">
+<a href="index.html" class="nav-brand">天天向上</a>
+<button class="nav-hamburger" aria-label="菜单" aria-expanded="false" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+<div class="nav-menu" id="navMenu">
+<a href="index.html" class="top-nav-link">首页</a>
+<a href="jingdian-tongyao.html" class="top-nav-link">经典童谣</a>
+<a href="shenglv-qimeng.html" class="top-nav-link">声律启蒙</a>
+<a href="shaoer-tonghua.html" class="top-nav-link">少儿童话</a>
+<a href="shaoer-qimeng-shici.html" class="top-nav-link">启蒙诗词</a>
+<a href="hanzi-gushi.html" class="top-nav-link">汉字故事</a>
+<a href="baihua-shici.html" class="top-nav-link">百花诗词</a>
+<a href="shi-wan-ge-weishenme.html" class="top-nav-link">十万个为什么</a>
+<a href="tongqu-kexue.html" class="top-nav-link active">童趣科学</a>
+<a href="shaoer-chengyu.html" class="top-nav-link">少儿成语</a>
+<a href="shangxia-wuqiannian.html" class="top-nav-link">上下五千年</a>
+<a href="sanshiliuji.html" class="top-nav-link">三十六计</a>
+<a href="song-ci-jingxuan.html" class="top-nav-link">宋词精选</a>
+<a href="maozedong-shici.html" class="top-nav-link">毛主席诗词</a>
+</div>
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="切换深色/浅色模式">
+<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</div>
+</nav>
+<header class="hero">
+<div class="hero-deco" aria-hidden="true">&#x1F52D; &#x1F30C; &#x1F9EC; &#x1F33F;</div>
+<div class="hero-ornament" aria-hidden="true"></div>
+<h1>童趣科学</h1>
+<p class="hero-sub">探索科学 &#xB7; 点燃好奇 &#xB7; 启迪思维</p>
+<p class="hero-desc">精选96个少儿理科问答，涵盖趣味数学、奇妙物理、神奇化学、生命奥秘、浩瀚星空与地球探秘六大主题，带孩子走进奇妙的科学世界。</p>
+<div class="hero-stats">
+<div class="hero-stat"><span class="hero-stat-num">96</span><span class="hero-stat-label">科学问答</span></div>
+<div class="hero-stat"><span class="hero-stat-num">6</span><span class="hero-stat-label">探索主题</span></div>
+<div class="hero-stat"><span class="hero-stat-num">6-12</span><span class="hero-stat-label">适读年龄</span></div>
+</div>
+<div class="hero-illustration" aria-hidden="true"><svg viewBox="0 0 1440 200" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 200V150c100-25 200-35 300-25s200 25 300 20 200-30 300-20 200 20 340 15V200H0z" fill="var(--accent)" opacity=".05"/><circle cx="200" cy="70" r="30" fill="var(--c-math)" opacity=".06"/><text x="200" y="76" text-anchor="middle" font-size="20" fill="var(--c-math)" opacity=".1">&#x03C0;</text><circle cx="480" cy="55" r="22" fill="none" stroke="var(--c-physics)" stroke-width="1.5" opacity=".08"/><ellipse cx="480" cy="55" rx="36" ry="12" transform="rotate(-20 480 55)" stroke="var(--c-physics)" stroke-width="1" opacity=".06" fill="none"/><circle cx="480" cy="55" r="2" fill="var(--c-physics)" opacity=".1"/><circle cx="760" cy="50" r="16" fill="var(--c-chemistry)" opacity=".06"/><circle cx="746" cy="44" r="8" fill="none" stroke="var(--c-chemistry)" stroke-width="1" opacity=".06"/><line x1="760" y1="50" x2="754" y2="46" stroke="var(--c-chemistry)" stroke-width="1" opacity=".06"/><circle cx="774" cy="44" r="8" fill="none" stroke="var(--c-chemistry)" stroke-width="1" opacity=".06"/><line x1="760" y1="50" x2="766" y2="46" stroke="var(--c-chemistry)" stroke-width="1" opacity=".06"/><circle cx="1040" cy="60" r="24" fill="none" stroke="var(--c-astronomy)" stroke-width="1" opacity=".07" stroke-dasharray="3 3"/><circle cx="1040" cy="60" r="4" fill="var(--c-astronomy)" opacity=".09"/><circle cx="1040" cy="36" r="3" fill="var(--c-astronomy)" opacity=".07"/><path d="M1300 85l10-30 10 30h-6l3 8h-14l3-8z" fill="var(--c-earth)" opacity=".06"/><circle cx="1310" cy="45" r="8" fill="none" stroke="var(--c-earth)" stroke-width="1" opacity=".05" stroke-dasharray="2 2"/></svg></div>
+</header>
+<main id="main">
+<div class="filter-bar" role="toolbar" aria-label="问答筛选">
+<div class="filter-bar-inner">
+<div class="search-wrap"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="text" class="search-input" placeholder="搜索问题..." id="searchInput" aria-label="搜索问题"></div>
+<button class="filter-btn active" data-filter="all">全部<span class="count">(96)</span></button>
+<button class="filter-btn" data-filter="math">趣味数学<span class="count">(16)</span></button>
+<button class="filter-btn" data-filter="physics">奇妙物理<span class="count">(16)</span></button>
+<button class="filter-btn" data-filter="chemistry">神奇化学<span class="count">(16)</span></button>
+<button class="filter-btn" data-filter="biology">生命奥秘<span class="count">(16)</span></button>
+<button class="filter-btn" data-filter="astronomy">浩瀚星空<span class="count">(16)</span></button>
+<button class="filter-btn" data-filter="earth">地球探秘<span class="count">(16)</span></button>
+</div>
+</div>
+<section class="qa-section" data-cat="math" id="math">
+<div class="section-header">
+<span class="section-badge">趣味数学</span>
+<h2 class="section-title">趣味数学</h2>
+<span class="section-count">16个问答</span>
+</div>
+<div class="qa-grid">
+<article class="qa-card" data-cat="math" data-title="圆周率π是什么?"><span class="qa-index">#001</span><div class="qa-card-header"><h3 class="qa-title">圆周率π是什么?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">圆周率是一个神奇的数字，用希腊字母π(读作"派")来表示。它代表圆的周长和直径的比值。无论圆有多大或多小，这个比值永远是同一个数，大约是3.14159。数学家们已经用计算机算出了圆周率小数点后几十万亿位，但它的小数部分永远不会结束，也不会出现重复的规律。</div><div class="qa-fact"><strong>趣味拓展：</strong>每年3月14日被称为"π日"，因为日期3/14看起来就像3.14。人们会吃派来庆祝！</div></article>
+<article class="qa-card" data-cat="math" data-title="什么是斐波那契数列?"><span class="qa-index">#002</span><div class="qa-card-header"><h3 class="qa-title">什么是斐波那契数列?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">斐波那契数列是一组有趣的数字：1, 1, 2, 3, 5, 8, 13, 21, 34……规律很简单——每个数字都是前面两个数字之和。比如1+1=2，1+2=3，2+3=5。这组数字在大自然中随处可见：向日葵的种子排列、松果的螺旋纹、花瓣的数量，都遵循斐波那契数列的规律。</div><div class="qa-fact"><strong>趣味拓展：</strong>花瓣的数量往往是斐波那契数：百合3瓣、梅花5瓣、雏菊常有34或55或89瓣。</div></article>
+<article class="qa-card" data-cat="math" data-title="什么是黄金比例?"><span class="qa-index">#003</span><div class="qa-card-header"><h3 class="qa-title">什么是黄金比例?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">黄金比例大约等于1.618，用希腊字母φ(读作"斐")表示。如果一个长方形的长和宽的比例是黄金比例，把它切掉一个正方形后，剩下的长方形比例仍然是黄金比例。人们觉得这个比例看起来最美，所以蒙娜丽莎、帕特农神庙等都用了黄金比例。</div><div class="qa-fact"><strong>趣味拓展：</strong>你的肚脐到脚底的距离除以身高的比值，大约就接近黄金比例哦！</div></article>
+<article class="qa-card" data-cat="math" data-title="为什么一年有365天?"><span class="qa-index">#004</span><div class="qa-card-header"><h3 class="qa-title">为什么一年有365天?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">地球绕太阳公转一圈大约需要365.24天。为了方便，我们通常把一年定为365天。但是多出来的0.24天（大约四分之一天）怎么办呢？每四年就把多出来的一天加到2月，这一年就有366天，叫"闰年"。这就是为什么有"四年一闰"的说法。</div><div class="qa-fact"><strong>趣味拓展：</strong>精确地说，一年是365天5小时48分46秒，所以每100年要少闰一次，每400年又多闰一次。</div></article>
+<article class="qa-card" data-cat="math" data-title="什么是质数?"><span class="qa-index">#005</span><div class="qa-card-header"><h3 class="qa-title">什么是质数?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">质数是只能被1和它自己整除的大于1的自然数。比如2、3、5、7、11、13都是质数。4不是质数，因为它能被2整除；6也不是，因为它能被2和3整除。质数就像数字世界的"积木块"，所有的自然数都可以用质数相乘得到，这在数学上叫"唯一分解定理"。</div><div class="qa-fact"><strong>趣味拓展：</strong>2是唯一的偶数质数，也是最小的质数。目前人类发现的最大质数有超过2400万位数字！</div></article>
+<article class="qa-card" data-cat="math" data-title="什么是无穷大?"><span class="qa-index">#006</span><div class="qa-card-header"><h3 class="qa-title">什么是无穷大?</h3><span class="qa-difficulty" data-level="advanced">挑战</span></div><div class="qa-answer">无穷大不是一个具体的数字，而是一个表示"没有尽头"的概念。用一个像躺着的8的符号∞来表示。有趣的是，无穷大也有大小之分！数学家康托尔证明了自然数的无穷和实数的无穷是不同"级别"的无穷——实数的无穷比自然数的无穷"更大"。这个发现改变了整个数学的面貌。</div><div class="qa-fact"><strong>趣味拓展：</strong>如果有个旅馆有无限多个房间，而且全部住满了，这时又来了一位客人，旅馆还能住得下吗？答案是：能！让每位客人搬到房号加1的房间就行了。</div></article>
+<article class="qa-card" data-cat="math" data-title="为什么蜂巢是六边形的?"><span class="qa-index">#007</span><div class="qa-card-header"><h3 class="qa-title">为什么蜂巢是六边形的?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">蜜蜂把蜂巢建成正六边形，是因为这是最节省材料的形状。数学家证明过，如果要用相同大小的图形密铺一个平面，正三角形的周长是2.60，正方形是3.00，而正六边形只有2.59。也就是说，正六边形用的"墙壁"最少，装的"蜂蜜"最多，是最经济的选择。</div><div class="qa-fact"><strong>趣味拓展：</strong>蜜蜂早在人类发现这个数学原理几千万年前就已经在使用最优解了！大自然真是最棒的建筑师。</div></article>
+<article class="qa-card" data-cat="math" data-title="什么是概率?"><span class="qa-index">#008</span><div class="qa-card-header"><h3 class="qa-title">什么是概率?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">概率就是一件事情发生的可能性大小，用0到1之间的数字来表示。概率为0表示绝对不会发生，概率为1表示一定会发生，0.5表示一半的可能性。比如掷硬币，正面朝上的概率就是0.5。天气预报说"降水概率70%"，意思就是有七成的可能会下雨。</div><div class="qa-fact"><strong>趣味拓展：</strong>如果你有23个人在一起，其中至少两个人生日相同的概率超过50%！这叫"生日悖论"。</div></article>
+<article class="qa-card" data-cat="math" data-title="什么是勾股定理?"><span class="qa-index">#009</span><div class="qa-card-header"><h3 class="qa-title">什么是勾股定理?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">勾股定理是数学中最著名的定理之一。如果一个直角三角形两条短边（勾和股）的长度分别是a和b，最长边（弦）的长度是c，那么a² + b² = c²。比如一个直角三角形两条边分别是3和4，那最长边就是5，因为3² + 4² = 9 + 16 = 25 = 5²。</div><div class="qa-fact"><strong>趣味拓展：</strong>这个定理在中国古代叫"勾三股四弦五"，比古希腊数学家毕达哥拉斯早了好几百年就被发现了。</div></article>
+<article class="qa-card" data-cat="math" data-title="什么是分形?"><span class="qa-index">#010</span><div class="qa-card-header"><h3 class="qa-title">什么是分形?</h3><span class="qa-difficulty" data-level="advanced">挑战</span></div><div class="qa-answer">分形是一种特殊的几何图形，它的特点是：无论你放大多少倍，都能看到和原来相似的形状。最著名的例子是"雪花曲线"——从一个等边三角形开始，在每条边的中间加上一个更小的等边三角形，一直重复这个过程。分形在自然界中非常常见：海岸线、闪电、树枝、血管，都是分形的。</div><div class="qa-fact"><strong>趣味拓展：</strong>一片蕨类植物的叶子放大后，看起来就像整片叶子一样——它本身就是一片缩小版的自己。</div></article>
+<article class="qa-card" data-cat="math" data-title="零为什么这么重要?"><span class="qa-index">#011</span><div class="qa-card-header"><h3 class="qa-title">零为什么这么重要?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">零看起来什么都不是，但它是数学中最重要的发明之一。零有两个关键作用：一是作为占位符，让我们能写出10、100、1000这样的大数；二是作为一个数字本身，它表示"没有"的概念。有了零，我们才能进行加减乘除等各种运算。没有零，现代数学和计算机都不可能存在。</div><div class="qa-fact"><strong>趣味拓展：</strong>零的发明归功于古印度人。大约在公元5世纪，印度数学家首先把零当作一个正式的数字来使用。</div></article>
+<article class="qa-card" data-cat="math" data-title="什么是对称?"><span class="qa-index">#012</span><div class="qa-card-header"><h3 class="qa-title">什么是对称?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">对称就是一个物体沿中线对折后，两边能完全重合。蝴蝶的翅膀是对称的，人的脸大致是对称的，雪花也是对称的。数学上还有"旋转对称"——一个图形转一个角度后看起来和原来一样，比如正五边形转72度后就和原来一模一样。对称让事物看起来和谐美丽。</div><div class="qa-fact"><strong>趣味拓展：</strong>人类的大脑天生喜欢对称的东西，研究发现，人们认为越对称的脸越好看。</div></article>
+<article class="qa-card" data-cat="math" data-title="什么是拓扑学?"><span class="qa-index">#013</span><div class="qa-card-header"><h3 class="qa-title">什么是拓扑学?</h3><span class="qa-difficulty" data-level="advanced">挑战</span></div><div class="qa-answer">拓扑学是数学中一个很有趣的分支，它研究形状在拉伸、弯曲后不变的性质。在拓扑学家眼里，咖啡杯和甜甜圈是一样的——它们都有一个"洞"。因为你可以把一个用橡皮泥做的咖啡杯慢慢揉成甜甜圈的形状，而不需要撕裂它。拓扑学不在乎大小、角度和精确形状，只关心"洞"的数量和连通性。</div><div class="qa-fact"><strong>趣味拓展：</strong>著名的"莫比乌斯环"只有一面——把纸条扭转半圈后粘起来，蚂蚁沿着它爬就能走遍"两面"。</div></article>
+<article class="qa-card" data-cat="math" data-title="什么是二进制?"><span class="qa-index">#014</span><div class="qa-card-header"><h3 class="qa-title">什么是二进制?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">我们平时用的数字是十进制，有0到9十个数字。二进制只有两个数字：0和1。在二进制中，2写成"10"，3写成"11"，4写成"100"，5写成"101"。计算机用二进制是因为电路只有"开"和"关"两种状态，恰好对应1和0。虽然二进制看起来简单，但所有的电子设备——手机、电脑、平板——都是靠它来运行的。</div><div class="qa-fact"><strong>趣味拓展：</strong>用手指可以数到1023！每根手指代表一位二进制数，伸直是1，弯曲是0，十根手指就能表示10位二进制数。</div></article>
+<article class="qa-card" data-cat="math" data-title="什么是几何?"><span class="qa-index">#015</span><div class="qa-card-header"><h3 class="qa-title">什么是几何?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">几何是数学中研究形状、大小和空间的学科。"几何"这个词来自希腊语，意思是"测量土地"。最早的几何学就是古埃及人为了在尼罗河泛滥后重新测量土地而发展起来的。现在几何学无处不在：建筑师用它设计房屋，工程师用它造桥，GPS导航靠它计算位置。</div><div class="qa-fact"><strong>趣味拓展：</strong>三角形是最稳定的几何形状，所以桥梁、铁塔和屋顶的支架都大量使用三角形结构。</div></article>
+<article class="qa-card" data-cat="math" data-title="什么是函数?"><span class="qa-index">#016</span><div class="qa-card-header"><h3 class="qa-title">什么是函数?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">函数就像一台神奇的"输入-输出"机器：你给它一个数，它按规则处理后吐出另一个数。比如"乘以2"这个函数，输入3输出6，输入5输出10。用数学符号写成 f(x) = 2x。函数描述了世界中各种量之间的关系：温度随时间变化、距离随速度变化，都可以用函数来表达。</div><div class="qa-fact"><strong>趣味拓展：</strong>你每天不知不觉都在"用函数"：输入你的身高和体重，体重指数(BMI)函数就会输出一个健康数值。</div></article>
+</div>
+</section>
+<section class="qa-section" data-cat="physics" id="physics">
+<div class="section-header">
+<span class="section-badge">奇妙物理</span>
+<h2 class="section-title">奇妙物理</h2>
+<span class="section-count">16个问答</span>
+</div>
+<div class="qa-grid">
+<article class="qa-card" data-cat="physics" data-title="什么是重力?"><span class="qa-index">#017</span><div class="qa-card-header"><h3 class="qa-title">什么是重力?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">重力就是地球把所有东西拉向自己的力量。因为地球非常非常重（大约60万亿亿吨），所以它能产生很强的引力，把我们、建筑物、海洋、甚至空气都牢牢拉在地球表面。如果没有重力，一切东西都会飘到太空中去。苹果从树上掉下来、水往低处流，都是因为重力的作用。</div><div class="qa-fact"><strong>趣味拓展：</strong>在太空中，宇航员会"飘起来"不是因为没有了重力，而是因为他们和飞船一起在"自由落体"——像在一部永远到不了底的电梯里。</div></article>
+<article class="qa-card" data-cat="physics" data-title="光速有多快?"><span class="qa-index">#018</span><div class="qa-card-header"><h3 class="qa-title">光速有多快?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">光速是宇宙中已知最快的速度，大约每秒钟30万公里（精确值是299,792,458米/秒）。这个速度有多快呢？光在一秒钟内可以绕地球跑7圈半！太阳光到达地球需要约8分钟，所以你看到的阳光其实是8分钟前太阳发出的。爱因斯坦发现，没有任何东西能超过光速。</div><div class="qa-fact"><strong>趣味拓展：</strong>如果以光速飞行，从地球到月球只需要1.3秒，到太阳需要8分钟，到最近的恒星需要4.2年。</div></article>
+<article class="qa-card" data-cat="physics" data-title="磁铁为什么能吸铁?"><span class="qa-index">#019</span><div class="qa-card-header"><h3 class="qa-title">磁铁为什么能吸铁?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">一切物质都是由原子组成的，原子里面有小得看不见的"电子"在不停旋转。在大多数材料中，电子的旋转方向是杂乱的，互相抵消。但在铁、钴、镍等材料中，很多电子会整齐地朝同一方向旋转，产生一股合力——这就是磁性。磁铁有两极（N极和S极），同极相斥、异极相吸。</div><div class="qa-fact"><strong>趣味拓展：</strong>地球本身就是一个巨大的磁铁！地核中液态铁的流动产生了磁场，这个磁场保护我们免受太空有害射线的伤害。</div></article>
+<article class="qa-card" data-cat="physics" data-title="声音是怎么传播的?"><span class="qa-index">#020</span><div class="qa-card-header"><h3 class="qa-title">声音是怎么传播的?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">声音通过"振动"来传播。当你敲鼓时，鼓面快速地来回振动，推挤旁边的空气分子，这些分子又推挤更远的分子，形成了一波一波的"声波"。声波传到你的耳朵里，让耳膜也跟着振动，大脑就把它翻译成了声音。声音在固体中传播最快，在水中次之，在空气中最慢。</div><div class="qa-fact"><strong>趣味拓展：</strong>太空中没有空气，所以声音无法传播。如果两个宇航员在太空中面对面说话，他们是听不到对方的！</div></article>
+<article class="qa-card" data-cat="physics" data-title="什么是彩虹?"><span class="qa-index">#021</span><div class="qa-card-header"><h3 class="qa-title">什么是彩虹?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">太阳光看起来是白色的，但其实它包含了红、橙、黄、绿、蓝、靛、紫所有颜色的光。当阳光穿过空气中的小水滴时，不同颜色的光被折射（弯折）的角度不同，白光就被"拆散"成了七色光，这就是彩虹。你总是在太阳在背后、雨滴在前方时才能看到彩虹。</div><div class="qa-fact"><strong>趣味拓展：</strong>有时候你能看到"双彩虹"——外侧那道叫"霓"，颜色顺序和主虹正好相反！</div></article>
+<article class="qa-card" data-cat="physics" data-title="什么是杠杆原理?"><span class="qa-index">#022</span><div class="qa-card-header"><h3 class="qa-title">什么是杠杆原理?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">杠杆就是一根能绕一个点（支点）转动的硬棒。阿基米德发现了杠杆原理：动力×动力臂 = 阻力×阻力臂。也就是说，动力臂越长，你需要的力就越小。用撬棍搬石头就是利用杠杆——支点离石头越近、你的手离支点越远，就越省力。跷跷板、剪刀、开瓶器，都是杠杆。</div><div class="qa-fact"><strong>趣味拓展：</strong>阿基米德曾说："给我一个支点，我就能撬动地球！"当然，这只是他的夸张说法。</div></article>
+<article class="qa-card" data-cat="physics" data-title="什么是摩擦力?"><span class="qa-index">#023</span><div class="qa-card-header"><h3 class="qa-title">什么是摩擦力?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">摩擦力是两个物体接触面之间阻碍相对运动的力。走路时鞋底和地面的摩擦力让你不会滑倒；汽车轮胎和路面的摩擦力让车能前进和刹车。摩擦力有时也有害：机器零件互相摩擦会磨损发热。所以人们给机器加润滑油来减少摩擦。</div><div class="qa-fact"><strong>趣味拓展：</strong>冰面特别滑，是因为冰受压后表面会形成一层薄薄的水膜，大大减小了摩擦力。</div></article>
+<article class="qa-card" data-cat="physics" data-title="电是怎么产生的?"><span class="qa-index">#024</span><div class="qa-card-header"><h3 class="qa-title">电是怎么产生的?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">电是电子的流动。在原子中，电子围绕原子核运动。当受到外力（如磁铁或化学作用）时，电子可以被"推"着流动，形成电流。发电厂通常用巨大的磁铁在线圈中旋转来产生电（电磁感应），烧煤、用天然气、核能或者水力来驱动发电机。</div><div class="qa-fact"><strong>趣味拓展：</strong>闪电就是大自然中的电现象——云层中的水滴和冰晶互相碰撞摩擦，产生了巨大的静电，放电时就是我们看到的闪电。</div></article>
+<article class="qa-card" data-cat="physics" data-title="什么是浮力?"><span class="qa-index">#025</span><div class="qa-card-header"><h3 class="qa-title">什么是浮力?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">浮力是液体或气体对浸入其中的物体向上的托力。阿基米德发现：物体受到的浮力等于它排开液体的重量。木头能浮在水面上，是因为同样体积的水比木头重。铁块沉入水底，是因为铁比同体积的水重。但用铁做的轮船能浮起来，是因为船里面有很多空气。</div><div class="qa-fact"><strong>趣味拓展：</strong>死海含盐量极高，水的密度比人体还大，所以人可以轻松地躺在水面上看报纸！</div></article>
+<article class="qa-card" data-cat="physics" data-title="什么是牛顿三大定律?"><span class="qa-index">#026</span><div class="qa-card-header"><h3 class="qa-title">什么是牛顿三大定律?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">牛顿三大定律是经典力学的基石。第一定律（惯性定律）：物体不受力时，静止的保持静止，运动的保持匀速直线运动。第二定律：力等于质量乘以加速度（F=ma）。第三定律：每个作用力都有大小相等、方向相反的反作用力——你推墙，墙也在推你。</div><div class="qa-fact"><strong>趣味拓展：</strong>火箭能飞上天就是第三定律的应用：火箭向下喷出高温气体，气体给火箭一个向上的反作用力。</div></article>
+<article class="qa-card" data-cat="physics" data-title="为什么天空是蓝色的?"><span class="qa-index">#027</span><div class="qa-card-header"><h3 class="qa-title">为什么天空是蓝色的?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">太阳光包含了所有颜色的光。当阳光进入大气层时，蓝色和紫光的波长较短，更容易被空气分子"撞散"到四面八方（瑞利散射）。红色和橙色光波长较长，能直接穿过大气层，这就是为什么日出和日落时天空是橙红色的。</div><div class="qa-fact"><strong>趣味拓展：</strong>虽然紫光的波长比蓝光更短，但太阳光中蓝光比紫光多，而且我们的眼睛对蓝光更敏感，所以天空看起来是蓝色的。</div></article>
+<article class="qa-card" data-cat="physics" data-title="什么是能量守恒?"><span class="qa-index">#028</span><div class="qa-card-header"><h3 class="qa-title">什么是能量守恒?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">能量守恒定律是物理学最重要的定律之一：能量既不能被创造，也不能被消灭，只能从一种形式变成另一种形式。比如你吃东西获得化学能，跑步时变成动能和热能。无论怎么变，能量的总和始终不变。这也是为什么永动机不可能实现的原因。</div><div class="qa-fact"><strong>趣味拓展：</strong>你骑自行车下坡时越来越快——势能在变成动能；上坡时越来越慢——动能在变成势能。总量不变！</div></article>
+<article class="qa-card" data-cat="physics" data-title="什么是折射?"><span class="qa-index">#029</span><div class="qa-card-header"><h3 class="qa-title">什么是折射?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">折射是光从一种透明物质进入另一种时改变方向的现象。光在空气中跑得快，在水中跑得慢，所以当光从空气进入水中时会"弯"一下。把筷子斜插入水中，看起来筷子像断了，就是因为光在水面处发生了折射。</div><div class="qa-fact"><strong>趣味拓展：</strong>沙漠中看到的"海市蜃楼"就是空气温度不均匀导致的光折射现象，远处的景物被"搬"到了眼前。</div></article>
+<article class="qa-card" data-cat="physics" data-title="什么是相对论?"><span class="qa-index">#030</span><div class="qa-card-header"><h3 class="qa-title">什么是相对论?</h3><span class="qa-difficulty" data-level="advanced">挑战</span></div><div class="qa-answer">相对论是爱因斯坦提出的伟大理论。狭义相对论告诉我们：运动得越快，时间流逝得越慢，物体看起来越短。广义相对论更进一步：引力不是一种"力"，而是大质量物体弯曲了周围的时空，其他物体只是沿着弯曲的时空"滑行"。</div><div class="qa-fact"><strong>趣味拓展：</strong>GPS卫星上的时钟每天比地面快约38微秒，必须校正，否则导航会差好几公里。</div></article>
+<article class="qa-card" data-cat="physics" data-title="什么是超导体?"><span class="qa-index">#031</span><div class="qa-card-header"><h3 class="qa-title">什么是超导体?</h3><span class="qa-difficulty" data-level="advanced">挑战</span></div><div class="qa-answer">超导体是一种在特定低温下电阻完全变为零的材料。电流在超导体中可以无损耗地永远流动。此外，超导体还有"迈斯纳效应"——它能把磁力线完全排斥出去，所以磁铁可以悬浮在超导体上方。</div><div class="qa-fact"><strong>趣味拓展：</strong>磁悬浮列车就是利用超导体的迈斯纳效应，让列车悬浮在轨道上方运行，速度可以超过600公里/小时。</div></article>
+<article class="qa-card" data-cat="physics" data-title="什么是量子?"><span class="qa-index">#032</span><div class="qa-card-header"><h3 class="qa-title">什么是量子?</h3><span class="qa-difficulty" data-level="advanced">挑战</span></div><div class="qa-answer">量子是微观世界中能量的最小单位。在微观世界中，能量是一份一份的，每份就是一个"量子"。量子力学告诉我们，微观粒子可以同时处于多个状态（叠加态），观察它们会改变它们的状态，两个粒子可以"心灵感应"般地互相影响（量子纠缠）。</div><div class="qa-fact"><strong>趣味拓展：</strong>量子计算机利用量子叠加和纠缠原理，未来可能比普通电脑快亿万倍！</div></article>
+</div>
+</section>
+<section class="qa-section" data-cat="chemistry" id="chemistry">
+<div class="section-header">
+<span class="section-badge">神奇化学</span>
+<h2 class="section-title">神奇化学</h2>
+<span class="section-count">16个问答</span>
+</div>
+<div class="qa-grid">
+<article class="qa-card" data-cat="chemistry" data-title="水是由什么组成的?"><span class="qa-index">#033</span><div class="qa-card-header"><h3 class="qa-title">水是由什么组成的?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">水的化学式是H₂O，意思是每个水分子由2个氢原子(H)和1个氧原子(O)组成。氢原子和氧原子通过"共价键"连接在一起，形成了一个V字形的水分子。虽然水看起来很简单，但它是一种非常特殊的物质：冰比水轻，能浮在水面上，保护水下生物过冬。</div><div class="qa-fact"><strong>趣味拓展：</strong>地球上的水总量大约有14亿立方公里，但其中97%是海水，只有不到1%是淡水，能直接饮用的更少。</div></article>
+<article class="qa-card" data-cat="chemistry" data-title="元素周期表是什么?"><span class="qa-index">#034</span><div class="qa-card-header"><h3 class="qa-title">元素周期表是什么?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">元素周期表是一张列出宇宙中所有已知化学元素的表格，由俄国化学家门捷列夫在1869年创制。目前已发现的元素有118种，按照原子序数排列。同一列的元素性质相似。周期表就像化学世界的"字母表"，所有物质都是由这些元素组合而成的。</div><div class="qa-fact"><strong>趣味拓展：</strong>人体中含有约60种元素，其中最多的四种是氧（65%）、碳（18%）、氢（10%）和氮（3%）。</div></article>
+<article class="qa-card" data-cat="chemistry" data-title="什么是酸和碱?"><span class="qa-index">#035</span><div class="qa-card-header"><h3 class="qa-title">什么是酸和碱?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">酸会释放氢离子，味道酸（如柠檬汁含柠檬酸）；碱会释放氢氧根离子，摸起来滑腻（如肥皂含碱性物质）。科学家用pH值来衡量酸碱度：pH=7是中性，小于7是酸性，大于7是碱性。胃酸的pH约为1-2，是非常强的酸。</div><div class="qa-fact"><strong>趣味拓展：</strong>用紫甘蓝汁可以做天然的酸碱指示剂！加酸变红，加碱变绿，中性时是紫色。</div></article>
+<article class="qa-card" data-cat="chemistry" data-title="什么是晶体?"><span class="qa-index">#036</span><div class="qa-card-header"><h3 class="qa-title">什么是晶体?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">晶体是原子、分子或离子按照非常整齐的规律排列形成的固体。因为排列得整整齐齐，晶体通常有规则的形状。食盐是立方体形的小晶体，雪花是六角形的冰晶体，钻石是碳原子的晶体。把糖或盐溶在热水中，让水慢慢蒸发，就能看到漂亮的晶体长出来。</div><div class="qa-fact"><strong>趣味拓展：</strong>最大的天然晶体在墨西哥的奈卡矿洞中，有的石膏晶体长达12米，重达55吨！</div></article>
+<article class="qa-card" data-cat="chemistry" data-title="铁为什么会生锈?"><span class="qa-index">#037</span><div class="qa-card-header"><h3 class="qa-title">铁为什么会生锈?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">铁生锈是铁和氧气、水发生化学反应的结果。铁原子和氧气结合，生成氧化铁——也就是铁锈。铁锈不像铁那样结实，而且会让铁继续腐蚀。所以铁制品要保持干燥，或者涂上油漆、镀上一层不生锈的金属来保护。</div><div class="qa-fact"><strong>趣味拓展：</strong>每年全世界因生锈损失的钢铁约有几千亿美元！科学家们一直在研究更好的防锈方法。</div></article>
+<article class="qa-card" data-cat="chemistry" data-title="什么是化学反应?"><span class="qa-index">#038</span><div class="qa-card-header"><h3 class="qa-title">什么是化学反应?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">化学反应就是物质发生变化、生成新物质的过程。反应中，原来的原子并没有消失，只是重新组合了。比如氢气和氧气反应生成水，铁和氧气反应生成铁锈。有些反应放热（如燃烧），有些吸热（如光合作用）。</div><div class="qa-fact"><strong>趣味拓展：</strong>"小苏打+白醋"会产生大量气泡——这是酸碱反应产生的二氧化碳气体，就像做面包时的发酵一样。</div></article>
+<article class="qa-card" data-cat="chemistry" data-title="为什么烟花是五颜六色的?"><span class="qa-index">#039</span><div class="qa-card-header"><h3 class="qa-title">为什么烟花是五颜六色的?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">烟花的不同颜色来自不同的金属化合物。当这些化合物在高温下燃烧时，金属原子中的电子被激发到高能级，回落时会释放出特定颜色的光。锶化合物产生红色，钡产生绿色，铜产生蓝色，钠产生黄色。</div><div class="qa-fact"><strong>趣味拓展：</strong>每种元素燃烧时发出的光颜色都是独特的，化学家们就用这个原理来检测物质中含有什么元素，叫"焰色反应"。</div></article>
+<article class="qa-card" data-cat="chemistry" data-title="什么是分子?"><span class="qa-index">#040</span><div class="qa-card-header"><h3 class="qa-title">什么是分子?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">分子是由两个或多个原子通过化学键结合在一起形成的最小粒子。分子保持着原物质的化学性质。水分子保持了水的性质，氧气分子保持了我们呼吸需要的氧气的性质。一滴水中大约有1.67×10²¹个水分子。</div><div class="qa-fact"><strong>趣味拓展：</strong>如果把一个水分子放大到一粒沙子那么大，那一滴水就会变得和地球一样大！</div></article>
+<article class="qa-card" data-cat="chemistry" data-title="什么是二氧化碳?"><span class="qa-index">#041</span><div class="qa-card-header"><h3 class="qa-title">什么是二氧化碳?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">二氧化碳的化学式是CO₂，由一个碳原子和两个氧原子组成。它是我们呼出的气体之一，也是植物光合作用的原料。适量二氧化碳能保持地球温暖，但过多会导致全球变暖、冰川融化、海平面上升。</div><div class="qa-fact"><strong>趣味拓展：</strong>你喝汽水时感受到的"气"，就是溶解在水中的二氧化碳。打开瓶盖时压力减小，二氧化碳变成气泡跑出来。</div></article>
+<article class="qa-card" data-cat="chemistry" data-title="什么是溶液?"><span class="qa-index">#042</span><div class="qa-card-header"><h3 class="qa-title">什么是溶液?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">溶液是一种物质均匀地分散到另一种物质中的混合物。被溶解的物质叫"溶质"，溶解别人的物质叫"溶剂"。盐水是盐溶解在水中形成的溶液。溶液看起来是透明的、均匀的——溶质已经分散到了分子级别。</div><div class="qa-fact"><strong>趣味拓展：</strong>空气也是一种溶液——氧气、氮气、二氧化碳等气体均匀地混合在一起。</div></article>
+<article class="qa-card" data-cat="chemistry" data-title="什么是催化剂?"><span class="qa-index">#043</span><div class="qa-card-header"><h3 class="qa-title">什么是催化剂?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">催化剂是一种能加快化学反应速度，但自己不会被消耗的物质。它就像一个"媒人"——帮助反应物更容易碰到一起发生反应，反应结束后自己完好无损。汽车排气管里的三元催化器能把有害尾气变成无害气体。</div><div class="qa-fact"><strong>趣味拓展：</strong>你胃里的胃蛋白酶是一种催化剂，能在37°C和酸性环境下，把食物中的蛋白质分解成身体能吸收的小分子。</div></article>
+<article class="qa-card" data-cat="chemistry" data-title="什么是纳米技术?"><span class="qa-index">#044</span><div class="qa-card-header"><h3 class="qa-title">什么是纳米技术?</h3><span class="qa-difficulty" data-level="advanced">挑战</span></div><div class="qa-answer">纳米是一个极小的长度单位，1纳米等于十亿分之一米。纳米技术就是在纳米尺度（1-100纳米）上研究和操控物质的技术。在这个尺度上，物质会展现出完全不同的性质：金子在纳米级别不再是金色的，而是红色或紫色的。</div><div class="qa-fact"><strong>趣味拓展：</strong>壁虎能飞檐走壁就是因为它脚上有纳米级的细毛，能和墙面产生分子级别的吸引力。</div></article>
+<article class="qa-card" data-cat="chemistry" data-title="什么是聚合物?"><span class="qa-index">#045</span><div class="qa-card-header"><h3 class="qa-title">什么是聚合物?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">聚合物是由成千上万个相同的小分子像珠子串项链一样连在一起形成的大分子。塑料、橡胶、纤维、蛋白质、DNA都是聚合物。塑料袋是聚乙烯，矿泉水瓶是PET，衣服大多是涤纶或尼龙等合成聚合物。</div><div class="qa-fact"><strong>趣味拓展：</strong>你体内的DNA是一种天然聚合物——它由数十亿个"核苷酸"单体串成，如果把一个细胞的DNA拉直，大约有2米长！</div></article>
+<article class="qa-card" data-cat="chemistry" data-title="什么是燃烧?"><span class="qa-index">#046</span><div class="qa-card-header"><h3 class="qa-title">什么是燃烧?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">燃烧是一种剧烈的化学反应——可燃物和氧气在高温下快速反应，放出大量光和热。燃烧需要三个条件：可燃物、氧气和达到着火点的温度。缺了任何一个条件，燃烧就会停止。灭火器的工作原理就是去掉其中一个或多个条件。</div><div class="qa-fact"><strong>趣味拓展：</strong>蜡烛燃烧时，蜡先变成液体再变成气体，和氧气反应发出光和热。火焰最亮的部分温度约1400°C。</div></article>
+<article class="qa-card" data-cat="chemistry" data-title="什么是同位素?"><span class="qa-index">#047</span><div class="qa-card-header"><h3 class="qa-title">什么是同位素?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">同位素是同一种元素的不同"版本"。它们的质子数相同，但中子数不同。比如氢有三种同位素：氕、氘、氚，它们的化学性质几乎一样，但质量不同。有些同位素不稳定，会自动放出射线变成别的元素，叫"放射性同位素"。</div><div class="qa-fact"><strong>趣味拓展：</strong>科学家通过测定化石中碳-14同位素的含量来判断化石的年代——这就是"碳-14测年法"。</div></article>
+<article class="qa-card" data-cat="chemistry" data-title="什么是化学键?"><span class="qa-index">#048</span><div class="qa-card-header"><h3 class="qa-title">什么是化学键?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">化学键是原子之间的"连接力"，让原子能结合在一起形成分子和物质。主要有三种：共价键（原子共享电子，如水）、离子键（形成带电离子互相吸引，如食盐）、金属键（金属原子共享自由电子，使金属能导电）。</div><div class="qa-fact"><strong>趣味拓展：</strong>钻石和石墨都由纯碳组成，区别仅在于碳原子的排列方式不同。化学键的力量造就了完全不同的物质。</div></article>
+</div>
+</section>
+<section class="qa-section" data-cat="biology" id="biology">
+<div class="section-header">
+<span class="section-badge">生命奥秘</span>
+<h2 class="section-title">生命奥秘</h2>
+<span class="section-count">16个问答</span>
+</div>
+<div class="qa-grid">
+<article class="qa-card" data-cat="biology" data-title="什么是DNA?"><span class="qa-index">#049</span><div class="qa-card-header"><h3 class="qa-title">什么是DNA?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">DNA（脱氧核糖核酸）是生命的"说明书"，几乎存在于所有生物的每个细胞中。它像一个扭曲的梯子（双螺旋结构），"横档"是四种碱基：A、T、G、C。这四个字母的不同排列组合，记录了生物从头发颜色到身高的所有遗传信息。</div><div class="qa-fact"><strong>趣味拓展：</strong>如果把你身体里所有细胞的DNA拉直连起来，总长度可以从地球到太阳来回400多次！但它的直径只有2纳米——比头发丝还细4万倍。</div></article>
+<article class="qa-card" data-cat="biology" data-title="什么是光合作用?"><span class="qa-index">#050</span><div class="qa-card-header"><h3 class="qa-title">什么是光合作用?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">光合作用是植物利用阳光制造食物的过程。植物的叶片中含有叶绿素，它能吸收太阳光的能量。植物根部从土壤中吸收水分，叶片从空气中吸收二氧化碳，在阳光下把水和二氧化碳变成葡萄糖和氧气。这是地球上最重要的化学反应。</div><div class="qa-fact"><strong>趣味拓展：</strong>地球上每年通过光合作用产生的氧气约有1000亿吨，其中很大一部分来自海洋中的藻类和浮游植物。</div></article>
+<article class="qa-card" data-cat="biology" data-title="细胞是什么?"><span class="qa-index">#051</span><div class="qa-card-header"><h3 class="qa-title">细胞是什么?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">细胞是生命的基本单位，所有生物都是由细胞组成的。人体大约有37万亿个细胞。每个细胞就像一个微型工厂：细胞核是"控制中心"，线粒体是"发电站"，核糖体是"生产车间"，细胞膜是"围墙和门卫"。</div><div class="qa-fact"><strong>趣味拓展：</strong>世界上最大的细胞是鸵鸟蛋的蛋黄，直径约15厘米；最小的细胞是支原体细菌，只有0.1微米。</div></article>
+<article class="qa-card" data-cat="biology" data-title="人为什么会发烧?"><span class="qa-index">#052</span><div class="qa-card-header"><h3 class="qa-title">人为什么会发烧?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">发烧是身体的自我保护机制。当细菌或病毒入侵时，免疫系统的白细胞会释放"致热源"，把大脑中的"正常体温设定点"调高。身体为了达到新温度就会发抖和减少出汗，体温升高后能帮助免疫细胞更好地消灭病原体。</div><div class="qa-fact"><strong>趣味拓展：</strong>体温每升高1°C，免疫细胞的战斗力约增强10%。但超过40°C就很危险了，因为高温也会损伤自身细胞。</div></article>
+<article class="qa-card" data-cat="biology" data-title="什么是免疫系统?"><span class="qa-index">#053</span><div class="qa-card-header"><h3 class="qa-title">什么是免疫系统?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">免疫系统是身体的"国防部队"，负责识别和消灭入侵的病菌。第一道防线是皮肤和黏膜，第二道是吞噬细胞和杀菌物质，第三道是T细胞和B细胞。B细胞产生抗体精确打击特定病菌。打疫苗就是提前让免疫系统认识病菌。</div><div class="qa-fact"><strong>趣味拓展：</strong>你的免疫系统有"记忆"功能——得过一次水痘后，免疫细胞会记住水痘病毒，下次它再来就能快速消灭。</div></article>
+<article class="qa-card" data-cat="biology" data-title="植物怎么繁殖?"><span class="qa-index">#054</span><div class="qa-card-header"><h3 class="qa-title">植物怎么繁殖?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">植物有多种繁殖方式。有性繁殖中，花朵里的雄蕊产生花粉，雌蕊里有胚珠，授粉后胚珠发育成种子。昆虫、风、水都可以帮忙传粉。无性繁殖不需要花粉，比如草莓的匍匐茎、土豆的块茎都能长出新植物。</div><div class="qa-fact"><strong>趣味拓展：</strong>世界上最大的花是大王花，直径可达1米，但它没有根、茎、叶，寄生在其他植物上，靠散发腐肉般的臭味吸引苍蝇来传粉。</div></article>
+<article class="qa-card" data-cat="biology" data-title="食物链是什么?"><span class="qa-index">#055</span><div class="qa-card-header"><h3 class="qa-title">食物链是什么?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">食物链描述的是生物之间"谁吃谁"的关系。比如：草→兔子→狐狸。每条食物链都从"生产者"（植物）开始。多个食物链交织在一起形成"食物网"。能量沿食物链传递，但每经过一级大约损失90%。</div><div class="qa-fact"><strong>趣味拓展：</strong>为什么没有"顶级猛兽"比狮子更大的？因为能量沿食物链损失太多，养不活更大的食肉动物了。</div></article>
+<article class="qa-card" data-cat="biology" data-title="人为什么会做梦?"><span class="qa-index">#056</span><div class="qa-card-header"><h3 class="qa-title">人为什么会做梦?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">做梦主要发生在睡眠的快速眼动期（REM阶段）。科学家认为：大脑在梦中整理白天学到的东西；梦境帮助处理负面情绪和压力；在安全的梦境中练习应对危险。人每晚大约做梦4-6次，但醒来后大部分梦都会被遗忘。</div><div class="qa-fact"><strong>趣味拓展：</strong>所有哺乳动物和鸟类都有REM睡眠，说明它们可能也会做梦。狗睡觉时偶尔会抽动腿和发出呜呜声，可能正在"梦游"。</div></article>
+<article class="qa-card" data-cat="biology" data-title="细菌都有害吗?"><span class="qa-index">#057</span><div class="qa-card-header"><h3 class="qa-title">细菌都有害吗?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">细菌并不都有害！绝大多数细菌是对人体有益或无害的。人体内约有40万亿个细菌细胞——比你自己的细胞还多！它们主要集中在肠道中，帮助消化食物、合成维生素、训练免疫系统。酸奶中的乳酸菌就是有用的好细菌。</div><div class="qa-fact"><strong>趣味拓展：</strong>你的肠道菌群就像你的"第二大脑"，甚至能通过一种叫"肠脑轴"的通路影响你的情绪和决策。</div></article>
+<article class="qa-card" data-cat="biology" data-title="蝴蝶是怎么变成的?"><span class="qa-index">#058</span><div class="qa-card-header"><h3 class="qa-title">蝴蝶是怎么变成的?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">蝴蝶经历"完全变态"发育：卵→毛毛虫（拼命吃叶子长大）→蛹（内部进行惊人的"改造"，身体大部分组织会溶解重建）→成蝶（破壳而出，展翅飞翔）。整个过程叫做"变态发育"。</div><div class="qa-fact"><strong>趣味拓展：</strong>在蛹里面，毛毛虫的身体几乎完全溶解成"汤"，只有少数"成虫盘"细胞保留下来，用这锅"汤"来重建蝴蝶的身体。</div></article>
+<article class="qa-card" data-cat="biology" data-title="什么是进化论?"><span class="qa-index">#059</span><div class="qa-card-header"><h3 class="qa-title">什么是进化论?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">进化论由达尔文提出，核心思想是"自然选择"。每个物种的个体之间都有微小差异，更适应环境的个体更容易生存繁殖，把有利特征传给后代。经过漫长时间，物种会逐渐变化，甚至产生新物种。</div><div class="qa-fact"><strong>趣味拓展：</strong>达尔文在加拉帕戈斯群岛观察到的"达尔文雀"——不同岛屿上的雀鸟因适应不同食物而演化出不同形状的鸟喙——成为进化论的经典证据。</div></article>
+<article class="qa-card" data-cat="biology" data-title="为什么树叶会变色?"><span class="qa-index">#060</span><div class="qa-card-header"><h3 class="qa-title">为什么树叶会变色?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">树叶的颜色来自不同色素：叶绿素（绿色）、类胡萝卜素（黄色/橙色）和花青素（红色）。春夏叶绿素占主导，叶子呈绿色。秋天日照变短，叶绿素分解较快，类胡萝卜素显现出来。枫树会产生大量花青素，让叶子变红。</div><div class="qa-fact"><strong>趣味拓展：</strong>秋天叶子的颜色取决于天气——晴天多、白天暖晚上冷时，花青素产生更多，红叶就更加鲜艳。</div></article>
+<article class="qa-card" data-cat="biology" data-title="什么是病毒?"><span class="qa-index">#061</span><div class="qa-card-header"><h3 class="qa-title">什么是病毒?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">病毒是一种微小颗粒，比细菌还小。它由蛋白质外壳包裹着遗传物质组成。病毒自己不能繁殖，必须进入宿主细胞后"劫持"细胞的机器来复制自己。感冒、流感、新冠都是病毒引起的。抗生素对病毒无效。</div><div class="qa-fact"><strong>趣味拓展：</strong>噬菌体是专门感染细菌的病毒，每天能杀死地球上约40%的海洋细菌，是调节生态平衡的重要力量。</div></article>
+<article class="qa-card" data-cat="biology" data-title="鱼怎么在水下呼吸?"><span class="qa-index">#062</span><div class="qa-card-header"><h3 class="qa-title">鱼怎么在水下呼吸?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">鱼用"鳃"来在水下呼吸。鳃由很多薄薄的鳃片组成，上面布满了血管。当鱼吸水时，水流经过鳃片，水中溶解的氧气通过鳃膜进入血液，二氧化碳排出到水中。因为鳃片非常薄且面积很大，气体交换非常高效。</div><div class="qa-fact"><strong>趣味拓展：</strong>有些鱼有特别的呼吸方式：肺鱼有类似肺的器官可以直接呼吸空气；弹涂鱼可以用皮肤和口腔黏膜吸收空气中的氧气。</div></article>
+<article class="qa-card" data-cat="biology" data-title="什么是基因编辑?"><span class="qa-index">#063</span><div class="qa-card-header"><h3 class="qa-title">什么是基因编辑?</h3><span class="qa-difficulty" data-level="advanced">挑战</span></div><div class="qa-answer">基因编辑是用分子工具精确修改DNA序列的技术。最著名的是CRISPR-Cas9系统——它像一个"分子剪刀"，能定位到DNA特定位置并剪切。可用于治疗遗传疾病、改良农作物。</div><div class="qa-fact"><strong>趣味拓展：</strong>CRISPR技术来源于细菌的"免疫系统"——细菌用这种机制来记录并消灭入侵的病毒DNA。</div></article>
+<article class="qa-card" data-cat="biology" data-title="人为什么会打哈欠?"><span class="qa-index">#064</span><div class="qa-card-header"><h3 class="qa-title">人为什么会打哈欠?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">打哈欠是一个深吸气和伸展的动作。科学解释有："给大脑降温"——吸入凉爽空气降低大脑温度；"给身体充氧"——深呼吸增加血液中的氧气；"社交信号"——远古人类互相提醒"保持警觉"的方式。</div><div class="qa-fact"><strong>趣味拓展：</strong>打哈欠会"传染"——看到、听到甚至读到关于打哈欠的内容都可能让你打哈欠。你现在是不是想打一个了？</div></article>
+</div>
+</section>
+<section class="qa-section" data-cat="astronomy" id="astronomy">
+<div class="section-header">
+<span class="section-badge">浩瀚星空</span>
+<h2 class="section-title">浩瀚星空</h2>
+<span class="section-count">16个问答</span>
+</div>
+<div class="qa-grid">
+<article class="qa-card" data-cat="astronomy" data-title="什么是黑洞?"><span class="qa-index">#065</span><div class="qa-card-header"><h3 class="qa-title">什么是黑洞?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">黑洞是宇宙中引力极强的天体，由大质量恒星死亡坍缩形成。它的引力大到连光都逃不出去。黑洞有一个边界叫"事件视界"，任何东西一旦越过就再也回不来了。在事件视界附近，时间会变慢，空间会被严重扭曲。</div><div class="qa-fact"><strong>趣味拓展：</strong>如果你掉入黑洞，由于"面条化效应"，潮汐力会把你拉得像面条一样长。</div></article>
+<article class="qa-card" data-cat="astronomy" data-title="太阳系有几颗行星?"><span class="qa-index">#066</span><div class="qa-card-header"><h3 class="qa-title">太阳系有几颗行星?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">太阳系有8颗行星：水星、金星、地球、火星、木星、土星、天王星、海王星。前四颗是"类地行星"，后四颗是"类木行星"。2006年前冥王星也被认为是行星，但后来被降级为"矮行星"。</div><div class="qa-fact"><strong>趣味拓展：</strong>木星是太阳系最大的行星，它的体积可以装下1300多个地球！木星上的大红斑是一个持续了至少400年的超级风暴。</div></article>
+<article class="qa-card" data-cat="astronomy" data-title="宇宙是怎么诞生的?"><span class="qa-index">#067</span><div class="qa-card-header"><h3 class="qa-title">宇宙是怎么诞生的?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">目前最被接受的理论是"大爆炸"。大约138亿年前，宇宙中所有物质和能量都集中在一个无限小、无限密的点上，然后突然急剧膨胀。随着宇宙膨胀和冷却，基本粒子形成原子，原子聚合成恒星和星系。至今宇宙仍在膨胀中。</div><div class="qa-fact"><strong>趣味拓展：</strong>大爆炸后38万年，宇宙冷却到足以让光自由传播，这束"最早的光"至今仍充满整个宇宙，就是"宇宙微波背景辐射"。</div></article>
+<article class="qa-card" data-cat="astronomy" data-title="星星为什么会闪烁?"><span class="qa-index">#068</span><div class="qa-card-header"><h3 class="qa-title">星星为什么会闪烁?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">星星本身是不闪的，它们持续稳定地发光。我们看到的闪烁是因为地球大气层在"捣乱"。大气中有不同温度和密度的空气层，星光穿过时被不断折射，看起来就忽明忽暗。宇航员在太空中看星星，看到的都是稳定不闪的光点。</div><div class="qa-fact"><strong>趣味拓展：</strong>行星看起来几乎不闪烁，因为它们离地球近得多，看起来是一个小圆面而不是一个点，大气折射效果被互相抵消了。</div></article>
+<article class="qa-card" data-cat="astronomy" data-title="什么是银河系?"><span class="qa-index">#069</span><div class="qa-card-header"><h3 class="qa-title">什么是银河系?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">银河系是我们太阳系所在的星系，包含大约1000-4000亿颗恒星。它是一个巨大的"旋涡星系"，直径约10万光年。太阳系位于银河系的一条旋臂上，距离中心约2.6万光年。</div><div class="qa-fact"><strong>趣味拓展：</strong>银河系中心有一个超大质量黑洞，质量约为太阳的400万倍，叫"人马座A*"。</div></article>
+<article class="qa-card" data-cat="astronomy" data-title="什么是光年?"><span class="qa-index">#070</span><div class="qa-card-header"><h3 class="qa-title">什么是光年?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">光年是天文学中的距离单位，不是时间单位！它等于光在真空中走一年的距离，大约9.46万亿公里。离太阳最近的恒星比邻星约4.2光年远。银河系直径约10万光年，可观测宇宙直径约930亿光年。</div><div class="qa-fact"><strong>趣味拓展：</strong>因为我们看到的天体其实是它过去的样子。看到比邻星的光是4.2年前的，看到太阳的光是8分钟前的。</div></article>
+<article class="qa-card" data-cat="astronomy" data-title="月球为什么有阴晴圆缺?"><span class="qa-index">#071</span><div class="qa-card-header"><h3 class="qa-title">月球为什么有阴晴圆缺?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">月球本身不发光，我们看到的月光是它反射的太阳光。月球绕地球公转，太阳、地球、月球的相对位置不断变化。新月时月球在太阳和地球之间看不见；满月时地球在太阳和月球之间，又圆又亮。</div><div class="qa-fact"><strong>趣味拓展：</strong>月相变化的一个完整周期约29.5天，这就是中国农历一个月的天数。农历就是根据月相来制定的。</div></article>
+<article class="qa-card" data-cat="astronomy" data-title="什么是陨石?"><span class="qa-index">#072</span><div class="qa-card-header"><h3 class="qa-title">什么是陨石?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">陨石是从太空落到地球上的岩石或金属块。它们大多来自小行星带。当太空碎片进入大气层时，和空气剧烈摩擦产生高温发光——这就是"流星"。大部分流星在空中就烧完了，少数大块的落到地面上就是陨石。</div><div class="qa-fact"><strong>趣味拓展：</strong>大约6600万年前一颗直径约10公里的小行星撞击地球，导致了恐龙的灭绝。这个撞击坑在墨西哥尤卡坦半岛。</div></article>
+<article class="qa-card" data-cat="astronomy" data-title="什么是太空站?"><span class="qa-index">#073</span><div class="qa-card-header"><h3 class="qa-title">什么是太空站?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">太空站是在太空中长期运行的大型载人航天器，宇航员在上面进行科学实验。国际空间站重约420吨，相当于一个足球场大小。中国也建造了"天宫"空间站。空间站里的宇航员处于失重状态，能看到每90分钟一次的日出日落。</div><div class="qa-fact"><strong>趣味拓展：</strong>在空间站里，水不会往下流，宇航员喝水要用密封的袋子，挤出来后水会变成一个个水球飘在空中。</div></article>
+<article class="qa-card" data-cat="astronomy" data-title="什么是暗物质?"><span class="qa-index">#074</span><div class="qa-card-header"><h3 class="qa-title">什么是暗物质?</h3><span class="qa-difficulty" data-level="advanced">挑战</span></div><div class="qa-answer">暗物质是一种看不见、摸不着、不与光发生作用的神秘物质。科学家发现，星系旋转速度比预期快得多，如果没有额外"看不见的质量"提供引力，星系早就散架了。暗物质约占宇宙总质能的27%。</div><div class="qa-fact"><strong>趣味拓展：</strong>宇宙中还有约68%的"暗能量"——一种推动宇宙加速膨胀的神秘力量。也就是说，我们了解的普通物质只占宇宙的5%。</div></article>
+<article class="qa-card" data-cat="astronomy" data-title="太阳还能燃烧多久?"><span class="qa-index">#075</span><div class="qa-card-header"><h3 class="qa-title">太阳还能燃烧多久?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">太阳大约在46亿年前形成，目前通过核聚变把氢变成氦来发光发热。太阳内部有足够的氢继续燃烧约50亿年。当氢用完后，太阳会膨胀成"红巨星"，最终变成一颗白矮星。</div><div class="qa-fact"><strong>趣味拓展：</strong>50亿年后太阳变成红巨星时，地球可能会变得太热不适合居住。不过别担心，那是很久很久以后的事了。</div></article>
+<article class="qa-card" data-cat="astronomy" data-title="为什么会有日食和月食?"><span class="qa-index">#076</span><div class="qa-card-header"><h3 class="qa-title">为什么会有日食和月食?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">日食和月食都是因为太阳、地球、月球排成一条直线造成的。日食发生在新月时，月球挡住太阳光。月食发生在满月时，地球的影子落在月球上。日食时月球看起来和太阳差不多大——太阳直径是月球的400倍，但太阳也恰好远400倍。</div><div class="qa-fact"><strong>趣味拓展：</strong>日全食时，天空会变暗，能看到平时看不见的日冕。古代人看到日食非常害怕，以为是天狗吃太阳。</div></article>
+<article class="qa-card" data-cat="astronomy" data-title="火星上有人吗?"><span class="qa-index">#077</span><div class="qa-card-header"><h3 class="qa-title">火星上有人吗?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">目前火星上没有发现任何生命迹象。火星的大气很稀薄，主要成分是二氧化碳，几乎没有氧气。表面温度白天最高约20°C，夜晚低至-73°C。不过科学家发现火星上曾经有液态水。多国火星车正在寻找远古生命的证据。</div><div class="qa-fact"><strong>趣味拓展：</strong>NASA和SpaceX正在研发载人火星任务，预计在2030-2040年代人类可能首次登上火星！</div></article>
+<article class="qa-card" data-cat="astronomy" data-title="什么是超新星?"><span class="qa-index">#078</span><div class="qa-card-header"><h3 class="qa-title">什么是超新星?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">超新星是恒星生命终结时最壮观的爆炸。当大质量恒星内部核燃料耗尽后，核心突然坍缩，外层物质被抛射出去。爆炸瞬间释放的能量比太阳一生释放的还要多！超新星爆炸产生的冲击波把重元素抛洒到宇宙中。</div><div class="qa-fact"><strong>趣味拓展：</strong>你身体中的很多元素——血液中的铁、骨头中的钙、首饰中的金——都是在几十亿年前的超新星爆炸中诞生的。</div></article>
+<article class="qa-card" data-cat="astronomy" data-title="什么是系外行星?"><span class="qa-index">#079</span><div class="qa-card-header"><h3 class="qa-title">什么是系外行星?</h3><span class="qa-difficulty" data-level="advanced">挑战</span></div><div class="qa-answer">系外行星是围绕太阳以外其他恒星运行的行星。截至2026年，人类已发现超过5000颗系外行星。发现方法主要有"凌日法"和"径向速度法"。有些系外行星位于"宜居带"，可能有液态水，适宜生命存在。</div><div class="qa-fact"><strong>趣味拓展：</strong>离我们最近的系外行星比邻星b距地球约4.2光年。如果以目前飞船的速度飞过去，大约需要6万年。</div></article>
+<article class="qa-card" data-cat="astronomy" data-title="什么是中子星?"><span class="qa-index">#080</span><div class="qa-card-header"><h3 class="qa-title">什么是中子星?</h3><span class="qa-difficulty" data-level="advanced">挑战</span></div><div class="qa-answer">中子星是大质量恒星爆炸后留下的极端天体。一茶匙中子星物质重约60亿吨！直径只有约20公里，但质量是太阳的1.4-2倍。快速旋转的中子星会发射出规律的电磁脉冲，叫"脉冲星"。</div><div class="qa-fact"><strong>趣味拓展：</strong>两颗中子星碰撞合并时会产生引力波，同时合成大量金和铂等重金属——你手上戴的金戒指可能就来自远古的中子星碰撞。</div></article>
+</div>
+</section>
+<section class="qa-section" data-cat="earth" id="earth">
+<div class="section-header">
+<span class="section-badge">地球探秘</span>
+<h2 class="section-title">地球探秘</h2>
+<span class="section-count">16个问答</span>
+</div>
+<div class="qa-grid">
+<article class="qa-card" data-cat="earth" data-title="火山为什么会喷发?"><span class="qa-index">#081</span><div class="qa-card-header"><h3 class="qa-title">火山为什么会喷发?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">地球内部温度极高，地幔中的岩石在高温高压下会变成黏稠的岩浆。岩浆比周围的岩石轻，会顺着地壳裂缝向上涌。如果岩浆到达地表，就形成火山喷发。喷发时会喷出炽热的岩浆流、火山灰和气体。</div><div class="qa-fact"><strong>趣味拓展：</strong>地球上约有1500座活火山，其中约500座在过去1万年内喷发过。大部分活火山集中在"环太平洋火山带"上。</div></article>
+<article class="qa-card" data-cat="earth" data-title="什么是板块构造?"><span class="qa-index">#082</span><div class="qa-card-header"><h3 class="qa-title">什么是板块构造?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">地球表面由十多块巨大的"板块"拼成，漂浮在滚烫的地幔上缓慢移动。板块之间有三种交互方式：互相碰撞（形成山脉，如喜马拉雅山）、互相分开（形成新的大洋，如大西洋正在变宽）、互相滑过（产生地震）。</div><div class="qa-fact"><strong>趣味拓展：</strong>所有板块每年大约移动2-10厘米，和你指甲生长的速度差不多。2亿年前所有大陆连在一起叫"盘古大陆"。</div></article>
+<article class="qa-card" data-cat="earth" data-title="化石是怎么形成的?"><span class="qa-index">#083</span><div class="qa-card-header"><h3 class="qa-title">化石是怎么形成的?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">化石是远古生物的遗体或痕迹经过漫长岁月变成的石头。当生物死后，硬体部分如果很快被泥沙掩埋，隔绝了空气就不会腐烂。矿物质慢慢渗透替换了原来的有机物质，就变成了化石。</div><div class="qa-fact"><strong>趣味拓展：</strong>中国辽宁的化石遗址发现了大量带羽毛的恐龙化石，为"鸟类起源于恐龙"的理论提供了关键证据。</div></article>
+<article class="qa-card" data-cat="earth" data-title="什么是水循环?"><span class="qa-index">#084</span><div class="qa-card-header"><h3 class="qa-title">什么是水循环?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">水循环是水在地球表面和大气之间不断循环的过程。太阳加热水，水蒸发变成水蒸气升空；水蒸气冷却凝结成云；水滴足够大时以雨雪形式降落；落到地面的水汇入河流或流回海洋。地球上的水总量基本不变。</div><div class="qa-fact"><strong>趣味拓展：</strong>你现在喝的水，可能曾经是恐龙喝过的，也曾是冰川的一部分——水循环让地球上的水反复利用了数十亿年。</div></article>
+<article class="qa-card" data-cat="earth" data-title="地球内部是什么样子?"><span class="qa-index">#085</span><div class="qa-card-header"><h3 class="qa-title">地球内部是什么样子?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">地球像一颗"糖心巧克力球"，从外到内分四层：地壳（5-70公里薄壳）→地幔（约2900公里，半固态岩石缓慢流动）→外核（约2200公里，液态铁镍）→内核（半径约1200公里，固态铁镍球，温度约5500°C，比太阳表面还热）。</div><div class="qa-fact"><strong>趣味拓展：</strong>科学家至今还没有真正钻入地幔——人类挖过的最深洞（科拉超深钻孔）只有约12公里深。</div></article>
+<article class="qa-card" data-cat="earth" data-title="为什么会有地震?"><span class="qa-index">#086</span><div class="qa-card-header"><h3 class="qa-title">为什么会有地震?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">地震是地壳中岩层突然断裂或滑动产生的。板块缓慢移动时会在边界处积累巨大压力。当压力超过岩石极限时，岩层突然断裂释放能量，产生地震波。全世界每年约50万次可感地震，但破坏性大地震每年只有几次。</div><div class="qa-fact"><strong>趣味拓展：</strong>里氏震级每增加1级，释放的能量约增加32倍。8级地震的能量是7级的32倍，是6级的1000倍。</div></article>
+<article class="qa-card" data-cat="earth" data-title="什么是温室效应?"><span class="qa-index">#087</span><div class="qa-card-header"><h3 class="qa-title">什么是温室效应?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">温室效应是地球保持温暖的自然机制。太阳光到达地面，地面以红外线形式向外辐射。大气中的温室气体能让太阳光通过，但会吸收部分红外线，把热量"困"在大气中。适量的温室效应是好的，但过多温室气体导致全球变暖。</div><div class="qa-fact"><strong>趣味拓展：</strong>金星的大气中96%是二氧化碳，温室效应极其强烈，表面温度高达465°C——比离太阳更近的水星还热。</div></article>
+<article class="qa-card" data-cat="earth" data-title="什么是潮汐?"><span class="qa-index">#088</span><div class="qa-card-header"><h3 class="qa-title">什么是潮汐?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">潮汐是海水周期性涨落的现象，主要由月球和太阳的引力引起。月球离地球最近，引力影响最大。面向月球那一侧涨潮，背对月球那一侧因离心力也涨潮。太阳、月球、地球排成一线时产生"大潮"。</div><div class="qa-fact"><strong>趣味拓展：</strong>钱塘江大潮是中国最壮观的潮汐现象，最大潮差可达9米，潮水如万马奔腾般涌来。</div></article>
+<article class="qa-card" data-cat="earth" data-title="什么是冰川?"><span class="qa-index">#089</span><div class="qa-card-header"><h3 class="qa-title">什么是冰川?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">冰川是由多年积雪压缩形成的巨大冰体。在高山上或极地，每年冬天的降雪来不及融化，新雪压旧雪，经过多年压缩变成致密的冰。当冰积累到足够厚时，在自身重力推动下会缓慢流动，就像一条"冰河"。冰川覆盖了地球陆地面积的10%。</div><div class="qa-fact"><strong>趣味拓展：</strong>如果地球上所有的冰川都融化，海平面将上升约70米，很多沿海城市和岛国将被淹没。</div></article>
+<article class="qa-card" data-cat="earth" data-title="什么是矿物?"><span class="qa-index">#090</span><div class="qa-card-header"><h3 class="qa-title">什么是矿物?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">矿物是自然界中由地质作用形成的、具有一定化学成分和内部结构的固体无机物。目前已知有5000多种矿物，但最常见的只有约30种。石英（沙子的主要成分）是最常见的矿物之一。金刚石是碳的矿物，是自然界最硬的物质。</div><div class="qa-fact"><strong>趣味拓展：</strong>你的手机里含有超过30种矿物元素：屏幕里有铟和硅，电池里有锂和钴，外壳里有铝和镁。</div></article>
+<article class="qa-card" data-cat="earth" data-title="什么是珊瑚礁?"><span class="qa-index">#091</span><div class="qa-card-header"><h3 class="qa-title">什么是珊瑚礁?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">珊瑚礁是由微小珊瑚虫分泌的石灰质骨骼经过千百年积累形成的。珊瑚虫和虫黄藻共生——藻类为珊瑚提供食物，珊瑚为藻类提供住所。珊瑚礁只占海洋面积不到1%，却养育了25%的海洋生物。最大的珊瑚礁是澳大利亚大堡礁。</div><div class="qa-fact"><strong>趣味拓展：</strong>海水温度升高会导致珊瑚排出虫黄藻而变白（白化），如果温度持续过高，珊瑚就会饿死。全球变暖正在威胁珊瑚礁的生存。</div></article>
+<article class="qa-card" data-cat="earth" data-title="什么是沙漠化?"><span class="qa-index">#092</span><div class="qa-card-header"><h3 class="qa-title">什么是沙漠化?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">沙漠化是指原本可以生长植被的土地逐渐变成荒漠的过程。主要原因包括：过度放牧、过度开垦、滥砍乱伐以及气候变干旱。全球每年约1200万公顷土地变成沙漠。中国的"三北防护林"工程就是为了阻止沙漠化。</div><div class="qa-fact"><strong>趣味拓展：</strong>撒哈拉沙漠是世界上最大的热沙漠，面积和整个中国差不多大。但大约6000年前，那里还是一片绿色的草原。</div></article>
+<article class="qa-card" data-cat="earth" data-title="地球有几年历史?"><span class="qa-index">#093</span><div class="qa-card-header"><h3 class="qa-title">地球有几年历史?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">地球大约有45.4亿年的历史。科学家通过测定岩石和陨石中放射性同位素来确定这个年龄。如果把地球45亿年历史压缩成一天24小时，人类文明只占最后0.1秒。恐龙统治地球约1.6亿年，大约占了53分钟。</div><div class="qa-fact"><strong>趣味拓展：</strong>地球形成初期非常炎热，表面覆盖着岩浆海洋。大约41亿年后地球冷却到足以让液态水存在，最早的生命才开始出现。</div></article>
+<article class="qa-card" data-cat="earth" data-title="什么是大气层?"><span class="qa-index">#094</span><div class="qa-card-header"><h3 class="qa-title">什么是大气层?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">大气层是包裹地球的一层厚厚的气体，由氮气（78%）、氧气（21%）、氩气（0.93%）和少量其他气体组成。分为：对流层（天气现象）、平流层（臭氧层保护我们）、中间层、热层、散逸层。大气层还能阻挡陨石、调节温度。</div><div class="qa-fact"><strong>趣味拓展：</strong>国际空间站在约400公里高空运行，已在大气层的"热层"中。虽然空气极其稀薄，但仍有微小空气阻力。</div></article>
+<article class="qa-card" data-cat="earth" data-title="什么是石油?"><span class="qa-index">#095</span><div class="qa-card-header"><h3 class="qa-title">什么是石油?</h3><span class="qa-difficulty" data-level="intermediate">进阶</span></div><div class="qa-answer">石油是古代海洋生物遗体在缺氧环境下经过数百万年高温高压分解形成的黑色液体。石油是重要的能源和化工原料：汽油、柴油、塑料、合成纤维、沥青、化妆品都是石油化工产品。石油是不可再生资源。</div><div class="qa-fact"><strong>趣味拓展：</strong>石油的英文名"petroleum"来自希腊语"petra"（石头）和"oleum"（油），意思是"石头里的油"。</div></article>
+<article class="qa-card" data-cat="earth" data-title="地球为什么是圆的?"><span class="qa-index">#096</span><div class="qa-card-header"><h3 class="qa-title">地球为什么是圆的?</h3><span class="qa-difficulty" data-level="beginner">入门</span></div><div class="qa-answer">地球是圆的因为引力的作用。地球的质量非常大，引力把所有物质都拉向中心。在各个方向上引力大小相等，所以物质最终会形成一个球体——这是引力作用下最稳定的形状。实际上地球是一个"扁球体"——赤道处比两极稍鼓。</div><div class="qa-fact"><strong>趣味拓展：</strong>在宇宙中，所有质量足够大的天体都是圆的，但小天体因为引力不够强，可以是不规则形状。</div></article>
+</div>
+</section>
+</main>
+<div class="no-results" id="noResults" style="display:none"><div class="no-results-icon">&#x1F52C;</div><div class="no-results-text">没有找到匹配的问题</div><div class="no-results-hint">试试其他关键词或切换分类</div></div>
+<button class="back-top" id="backTop" aria-label="返回顶部"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></button>
+<footer><p>童趣科学 · 少儿理科启蒙96问 · 每日一问，探索科学世界</p></footer>
+<script>
+(function(){
+const body=document.body;
+const saved=localStorage.getItem('daydayup-theme');if(saved)body.setAttribute('data-theme',saved);
+body.addEventListener('theme-changed',()=>{localStorage.setItem('daydayup-theme',body.getAttribute('data-theme'))});
+const filterBtns=document.querySelectorAll('.filter-btn');
+const sections=document.querySelectorAll('.qa-section');
+const cards=document.querySelectorAll('.qa-card');
+const noResults=document.getElementById('noResults');
+const searchInput=document.getElementById('searchInput');
+let currentFilter='all',searchTerm='';
+function applyFilters(){
+let visible=0;
+cards.forEach(c=>{const cat=c.getAttribute('data-cat'),title=c.getAttribute('data-title')||'',answer=c.querySelector('.qa-answer')?c.querySelector('.qa-answer').textContent:'';
+const matchFilter=currentFilter==='all'||cat===currentFilter;
+const matchSearch=!searchTerm||title.includes(searchTerm)||answer.includes(searchTerm);
+if(matchFilter&&matchSearch){c.style.display='';visible++}else{c.style.display='none'}});
+sections.forEach(s=>{let vis=0;s.querySelectorAll('.qa-card').forEach(c=>{if(c.style.display!=='none')vis++});s.style.display=vis?'':'none'});
+if(noResults)noResults.style.display=visible?'none':'block'}
+filterBtns.forEach(b=>b.addEventListener('click',()=>{filterBtns.forEach(x=>x.classList.remove('active'));b.classList.add('active');currentFilter=b.getAttribute('data-filter');applyFilters()}));
+let timer;
+if(searchInput){searchInput.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(()=>{searchTerm=searchInput.value.trim();applyFilters()},200)})}
+const backTop=document.getElementById('backTop');
+if(backTop){window.addEventListener('scroll',()=>{backTop.classList.toggle('visible',window.scrollY>600)},{passive:true});backTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})}
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0});
+document.querySelectorAll('.qa-section').forEach(function(s){obs.observe(s)});
+})();
+
+function toggleTheme(){var t=document.body.getAttribute('data-theme');document.body.setAttribute('data-theme',t==='dark'?'light':'dark');document.body.dispatchEvent(new Event('theme-changed'))}
+
+function toggleMenu(){var b=document.querySelector('.nav-hamburger'),m=document.getElementById('navMenu'),e=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',!e);m.classList.toggle('open')}
+document.getElementById('navMenu').addEventListener('click',function(e){if(e.target.classList.contains('top-nav-link')){document.querySelector('.nav-hamburger').setAttribute('aria-expanded','false');this.classList.remove('open')}});
+document.addEventListener('click',function(e){if(!e.target.closest('.nav-hamburger')&&!e.target.closest('.nav-menu')){var b=document.querySelector('.nav-hamburger'),m=document.getElementById('navMenu');if(b&&b.getAttribute('aria-expanded')==='true'){b.setAttribute('aria-expanded','false');m.classList.remove('open')}}});
+</script>
+</body>
+</html>

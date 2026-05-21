@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 项目概述
 
-DayDayUp（天天向上）是一个面向少儿的中华传统文化启蒙网站，包含 12 个学习模块。纯静态 HTML 页面，内联 CSS/JS，零构建工具，零依赖。
+DayDayUp（天天向上）是一个面向少儿的中华传统文化启蒙网站，包含 13 个学习模块。纯静态 HTML 页面，内联 CSS/JS，零构建工具，零依赖。
 
 **线上地址：** https://raindows.github.io/daydayup/
 
@@ -31,7 +31,7 @@ open h5/shaoer-tonghua.html
 - CSS 自定义属性做主题色（`--bg`、`--surface`、`--ink`、`--accent` 等）
 - 深色模式通过 `[data-theme="dark"]` 属性覆盖变量实现
 - 主题偏好通过 `localStorage('daydayup-theme')` 持久化
-- 顶部 sticky 导航栏，链接到全部 12 个模块
+- 顶部 sticky 导航栏，链接到全部 13 个模块
 - IntersectionObserver 实现滚动入场动画
 - 响应式断点：960px（平板）、640px（手机）
 
